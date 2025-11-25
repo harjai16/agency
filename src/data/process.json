@@ -3,28 +3,28 @@
     "id": "discovery",
     "step": "01",
     "label": "Discovery & Alignment",
-    "description": "We unpack your goals, constraints, existing stack and success metrics so we’re solving for the right problems from day one.",
-    "meta": "Stakeholder interviews, stack review, data check"
+    "description": "We understand your business, brand voice, target audience and technical needs to define what success looks like for your website.",
+    "meta": "Brand strategy, goals, competitor & SEO research"
   },
   {
     "id": "scoping",
     "step": "02",
-    "label": "Scope & Experience Design",
-    "description": "We define the smallest valuable version of the product or automation and design how it should feel for your users.",
-    "meta": "User journeys, UX flows, low-fi & hi-fi mocks"
+    "label": "Structure, Content & UX",
+    "description": "We map out content, page structure and user flows so every section has a purpose — driving engagement and conversion.",
+    "meta": "Sitemap, wireframes, messaging & UX planning"
   },
   {
     "id": "build",
     "step": "03",
-    "label": "Build, Integrate & Validate",
-    "description": "We plug into your infra, wire up models and tools, then validate performance with real usage and tight feedback loops.",
-    "meta": "Implementation, evals, QA, pilot rollout"
+    "label": "Visual Design & Development",
+    "description": "We create a premium, responsive design and then develop it using modern, SEO-friendly technologies optimized for speed and scalability.",
+    "meta": "UI design, front-end build, CMS setup, SEO foundation"
   },
   {
     "id": "launch",
     "step": "04",
-    "label": "Launch, Learn & Iterate",
-    "description": "We help you roll out, measure impact and prioritize the next set of improvements so the product keeps earning its place.",
-    "meta": "Launch support, analytics, next-iteration roadmap"
+    "label": "Launch, Optimize & Maintain",
+    "description": "We deploy your website, monitor performance, refine content and continuously improve results through analytics and A/B testing.",
+    "meta": "Hosting, security, updates & conversion optimization"
   }
 ]

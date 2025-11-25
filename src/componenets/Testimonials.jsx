@@ -39,24 +39,28 @@ const Testimonials = () => {
     >
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
-        <div className="max-w-xl space-y-3">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
-            Testimonials
-          </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
-            Teams who ship with us
-            <br className="hidden md:block" /> don’t go back to “just ideas”.
-          </h2>
-          <p className="text-sm md:text-base text-gray-500 max-w-lg">
-            A small snapshot of what it feels like to work together. Strategy,
-            design and engineering, all pointed at outcomes your team cares
-            about.
-          </p>
-        </div>
+       <div className="max-w-7xl space-y-3">
+  <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
+    Testimonials
+  </p>
 
-        <Button variant="ghost" className="self-start md:self-auto">
-          Book a chemistry call
-        </Button>
+  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+    Brands that build with us
+    <br className="hidden md:block" /> keep coming back for results.
+  </h2>
+
+  <p className="text-sm md:text-base text-gray-500 max-w-5xl">
+    From the first kickoff call to post-launch support — our clients trust us to
+    deliver websites that are fast, beautiful, and built to convert. Here’s what
+    they have to say.
+  </p>
+</div>
+
+
+<Button variant="ghost" className="self-start md:self-auto">
+  Get a free website audit
+</Button>
+
       </div>
 
       {/* Grid area – becomes a slider when pages > 1 */}
