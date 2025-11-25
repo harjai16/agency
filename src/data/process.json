@@ -1,0 +1,30 @@
+[
+  {
+    "id": "discovery",
+    "step": "01",
+    "label": "Discovery & Alignment",
+    "description": "We unpack your goals, constraints, existing stack and success metrics so we’re solving for the right problems from day one.",
+    "meta": "Stakeholder interviews, stack review, data check"
+  },
+  {
+    "id": "scoping",
+    "step": "02",
+    "label": "Scope & Experience Design",
+    "description": "We define the smallest valuable version of the product or automation and design how it should feel for your users.",
+    "meta": "User journeys, UX flows, low-fi & hi-fi mocks"
+  },
+  {
+    "id": "build",
+    "step": "03",
+    "label": "Build, Integrate & Validate",
+    "description": "We plug into your infra, wire up models and tools, then validate performance with real usage and tight feedback loops.",
+    "meta": "Implementation, evals, QA, pilot rollout"
+  },
+  {
+    "id": "launch",
+    "step": "04",
+    "label": "Launch, Learn & Iterate",
+    "description": "We help you roll out, measure impact and prioritize the next set of improvements so the product keeps earning its place.",
+    "meta": "Launch support, analytics, next-iteration roadmap"
+  }
+]

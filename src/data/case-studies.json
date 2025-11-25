@@ -1,0 +1,38 @@
+[
+  {
+    "id": "saas-support",
+    "client": "Northwind SaaS",
+    "industry": "B2B SaaS",
+    "title": "AI support copilot that cut response times by 47%",
+    "snippet": "We designed and deployed a custom support copilot that drafts responses, surfaces relevant docs, and suggests next best actions inside the existing helpdesk.",
+    "metric": "47% faster responses",
+    "meta": "Launched in 10 weeks",
+    "href": "/case-studies/saas-support",
+    "image": "/images/casestudy/project-deep.webp",
+    "imageAlt": "Dashboard view of AI copilot assisting support team"
+  },
+  {
+    "id": "ecom-automation",
+    "client": "Lumen Retail",
+    "industry": "E-commerce",
+    "title": "Automated product workflows across 4 internal tools",
+    "snippet": "We built agents that sync inventory, generate product copy, and alert ops when anomalies are detected across sales channels.",
+    "metric": "22 hrs saved / week",
+    "meta": "Ops automation across stack",
+    "href": "/case-studies/ecom-automation",
+    "image": "/images/casestudy/project-deep.webp",
+    "imageAlt": "Product catalog automation interface"
+  },
+  {
+    "id": "finops-analytics",
+    "client": "Atlas Finance",
+    "industry": "Fintech",
+    "title": "Executive AI dashboard for real-time portfolio insights",
+    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions in natural language and get chart-ready answers.",
+    "metric": "3x faster decisions",
+    "meta": "From brief to v1 in 8 weeks",
+    "href": "/case-studies/finops-analytics",
+    "image": "/images/casestudy/project-deep.webp",
+    "imageAlt": "Finance dashboard with charts and metrics"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "timeline",
+    "question": "How long does a typical project take?",
+    "answer": "Most projects land between 4–12 weeks depending on scope. A focused AI feature or workflow automation is usually closer to 4–6 weeks. Larger initiatives with multiple stakeholders can take longer, but we always define clear milestones."
+  },
+  {
+    "id": "pricing",
+    "question": "What do your projects usually cost?",
+    "answer": "We scope around outcomes, not hours. As a rough guide, most client engagements start around $Xk+ for a focused engagement and go up from there based on complexity, integrations and ongoing support."
+  },
+  {
+    "id": "stack",
+    "question": "Can you work with our existing stack and models?",
+    "answer": "Yes. We plug into your current stack—whether that’s OpenAI, Anthropic, open-source models, or custom infra. Part of our discovery phase is mapping what you already have so we reuse as much as possible instead of rebuilding from scratch."
+  },
+  {
+    "id": "team",
+    "question": "Who will we work with day-to-day?",
+    "answer": "You’ll work directly with a small senior team across product, design and engineering. No big handoffs—just one group owning the project with you from idea to launch."
+  },
+  {
+    "id": "engagement",
+    "question": "Do you offer ongoing support after launch?",
+    "answer": "Yes. Most clients keep us on for a lighter ongoing iteration and measurement phase. That might look like a monthly retainer to refine prompts, improve UX, add experiments and keep an eye on metrics."
+  }
+]

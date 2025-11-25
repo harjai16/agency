@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/componenets/global/Navbar";
 import Footer from "@/componenets/global/Footer";
+import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
+import CustomCursor from "@/componenets/global/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,11 +23,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <body className="bg-white text-black">
+        <CustomCursor />
+       {/* Fixed header: stripe + navbar */}
+      <div className="fixed top-0 left-0 w-full z-50">
+        <CapabilitiesStrip />
         <Navbar />
-       <main>{children}</main>
+      </div>
+        <main className="pt-34">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
