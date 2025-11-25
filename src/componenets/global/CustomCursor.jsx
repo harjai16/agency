@@ -37,22 +37,24 @@ const CustomCursor = () => {
   return (
     <>
       {/* Outer circle (smooth lag) */}
-      <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-[80] hidden md:flex items-center justify-center rounded-full border border-gray-300/80 bg-white/30 backdrop-blur-sm"
-        style={{
-          width: 36,
-          height: 36,
-          x: position.x - 18,
-          y: position.y - 18,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 250,
-          damping: 25,
-          mass: 0.4,
-        }}
-      />
+<motion.div
+  className="pointer-events-none fixed top-0 left-0 z-[80] hidden md:flex 
+             items-center justify-center rounded-full 
+             border border-orange-300/80 bg-transparent"
+  style={{
+    width: 46,
+    height: 46,
+    x: position.x - 18,
+    y: position.y - 18,
+    opacity: visible ? 1 : 0,
+  }}
+  transition={{
+    type: "spring",
+    stiffness: 250,
+    damping: 25,
+    mass: 0.4,
+  }}
+/>
 
       {/* Inner dot (sticks to cursor) */}
       <motion.div

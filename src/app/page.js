@@ -5,9 +5,10 @@ import Process from "@/componenets/Process";
 import Testimonials from "@/componenets/Testimonials";
 import Contact from "@/componenets/Contact";
 
-import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
+
 import Faq from "@/componenets/Faq";
 import Navbar from "@/componenets/global/Navbar";
+import LogosStrip from "@/componenets/LogosStrip";
 
 
 export default function Home() {
@@ -17,7 +18,9 @@ export default function Home() {
 
       <Hero />
       <Services />
+           <LogosStrip/>
            <CaseStudies />
+      
              <Process />
                 <Testimonials />
                 <Faq />
