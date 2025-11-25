@@ -45,7 +45,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-sm md:text-base text-gray-500 max-w-md leading-relaxed"
+            className="text-sm md:text-base text-gray-500 max-w-3xl leading-relaxed"
           >
             Strategy, design and development for modern brands.  
             Fast, responsive and SEO-driven websites that turn visitors into customers.
