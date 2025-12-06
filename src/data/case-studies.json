@@ -39,7 +39,7 @@
     "imageAlt": "Dashboard view of AI copilot assisting support team"
   },
   {
-    "id": "ecom-automation",
+    "id": "ecom-automationss",
     "client": "Lumen Retail",
     "industry": "E-commerce",
     "title": "Automated product workflows across 4 internal tools",
@@ -64,7 +64,7 @@
     },
     "metric": "22 hrs saved / week",
     "meta": "Ops automation across stack",
-    "href": "/case-studies/ecom-automation",
+    "href": "/case-studies/ecom-automationss",
     "liveUrl": "https://lumenretail.com",
     "image": "/casestudy/projectdeep.png",
     "images": [
@@ -100,6 +100,76 @@
     "metric": "3x faster decisions",
     "meta": "From brief to v1 in 8 weeks",
     "href": "/case-studies/finops-analytics",
+    "liveUrl": "https://atlasfinance.ai",
+    "image": "/casestudy/skillcrest.png",
+    "images": [
+      "/casestudy/skillcrest.png",
+      "/casestudy/skillcrest-2.png"
+    ],
+    "imageAlt": "Finance dashboard with charts and metrics"
+  },
+   {
+    "id": "finops-analyticss",
+    "client": "Atlas Finance",
+    "industry": "Fintech",
+    "title": "Executive AI dashboard for real-time portfolio insights",
+    "heroTitle": "Helping leaders ask questions in natural language and get answers instantly",
+    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions like \"What's our most profitable segment?\"",
+    "challenge": "Executives were waiting on analysts for insights, spending hours building manual reports.",
+    "solution": "We built an AI dashboard that lets leaders query the data in natural language and get summaries, insights and charts.",
+    "impact": "The leadership team can make decisions 3x faster with no reporting bottleneck.",
+    "services": [
+      "AI-assisted analytics",
+      "Dashboard UX design",
+      "Data pipeline integration"
+    ],
+    "deliverables": [
+      "Executive dashboard",
+      "Data querying engine",
+      "Security + access controls"
+    ],
+    "testimonial": {
+      "name": "Director of Analytics",
+      "quote": "It’s like having a data analyst available 24/7."
+    },
+    "metric": "3x faster decisions",
+    "meta": "From brief to v1 in 8 weeks",
+    "href": "/case-studies/finops-analyticss",
+    "liveUrl": "https://atlasfinance.ai",
+    "image": "/casestudy/skillcrest.png",
+    "images": [
+      "/casestudy/skillcrest.png",
+      "/casestudy/skillcrest-2.png"
+    ],
+    "imageAlt": "Finance dashboard with charts and metrics"
+  },
+   {
+    "id": "finops-analytic",
+    "client": "Atlas Finance",
+    "industry": "Fintech",
+    "title": "Executive AI dashboard for real-time portfolio insights",
+    "heroTitle": "Helping leaders ask questions in natural language and get answers instantly",
+    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions like \"What's our most profitable segment?\"",
+    "challenge": "Executives were waiting on analysts for insights, spending hours building manual reports.",
+    "solution": "We built an AI dashboard that lets leaders query the data in natural language and get summaries, insights and charts.",
+    "impact": "The leadership team can make decisions 3x faster with no reporting bottleneck.",
+    "services": [
+      "AI-assisted analytics",
+      "Dashboard UX design",
+      "Data pipeline integration"
+    ],
+    "deliverables": [
+      "Executive dashboard",
+      "Data querying engine",
+      "Security + access controls"
+    ],
+    "testimonial": {
+      "name": "Director of Analytics",
+      "quote": "It’s like having a data analyst available 24/7."
+    },
+    "metric": "3x faster decisions",
+    "meta": "From brief to v1 in 8 weeks",
+    "href": "/case-studies/finops-analytic",
     "liveUrl": "https://atlasfinance.ai",
     "image": "/casestudy/skillcrest.png",
     "images": [
