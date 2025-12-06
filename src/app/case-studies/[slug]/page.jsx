@@ -17,13 +17,17 @@ const fadeUp = (delay = 0) => ({
 });
 
 const CaseStudyPage = () => {
-  const params = useParams();
-  const rawSlug = params?.slug;
-  const slug = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug;
+const params = useParams();
+const rawSlug = params?.slug;
 
-  const currentIndex = caseStudies.findIndex((cs) => cs.id === slug);
-  const caseStudy = currentIndex !== -1 ? caseStudies[currentIndex] : null;
+// Normalize slug (because on dynamic catch routes slug could be array)
+const slug = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug || "";
 
+// Find case study
+const currentIndex = caseStudies.findIndex((cs) => cs.id === slug);
+
+// Return null if not found
+const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
   if (!caseStudy) {
     return (
       <main className="bg-white text-gray-900">
