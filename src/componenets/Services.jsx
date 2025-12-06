@@ -81,9 +81,7 @@ const Services = () => {
                 </span>{" "}
                 {service.outcome}
               </p>
-              <button className="text-[11px] font-medium text-gray-700 underline-offset-4 group-hover:underline">
-                Learn more
-              </button>
+             
             </div>
 
             {/* Subtle hover overlay */}

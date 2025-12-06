@@ -1,14 +1,41 @@
 [
   {
     "id": "saas-support",
+   
     "client": "Northwind SaaS",
     "industry": "B2B SaaS",
     "title": "AI support copilot that cut response times by 47%",
+    "heroTitle": "Reducing support response time with an AI copilot inside their helpdesk",
     "snippet": "We designed and deployed a custom support copilot that drafts responses, surfaces relevant docs, and suggests next best actions inside the existing helpdesk.",
+    "challenge": "Support agents were wasting time searching docs, rewriting messages and waiting for manager approvals — slowing customer responses to an average of 2.4 hours.",
+    "solution": "We built an AI copilot that drafts replies, pulls customer conversation history, suggests shortcuts, and recommends docs. Everything runs inside their existing CRM workflow.",
+    "impact": "Response time dropped by 47%, accuracy improved and customer satisfaction increased without hiring more support agents.",
+    "services": [
+      "Workflow automation",
+      "AI integration",
+      "UX/UI design",
+      "CRM integration"
+    ],
+    "deliverables": [
+      "AI copilot inside helpdesk",
+      "UI screens & flows",
+      "Prompt strategy",
+      "Internal training handbook"
+    ],
+    "testimonial": {
+      "name": "Head of Support",
+      "quote": "This changed how our team works. We reply faster, more confidently and customer satisfaction has never been higher."
+    },
     "metric": "47% faster responses",
     "meta": "Launched in 10 weeks",
     "href": "/case-studies/saas-support",
+    "liveUrl": "https://northwindsupport.ai",
     "image": "/casestudy/bodhiguru.png",
+    "images": [
+      "/casestudy/bodhiguru.png",
+      "/casestudy/bodhiguru-2.png",
+      "/casestudy/bodhiguru-3.png"
+    ],
     "imageAlt": "Dashboard view of AI copilot assisting support team"
   },
   {
@@ -16,11 +43,34 @@
     "client": "Lumen Retail",
     "industry": "E-commerce",
     "title": "Automated product workflows across 4 internal tools",
+    "heroTitle": "Automating product operations for a multichannel retailer",
     "snippet": "We built agents that sync inventory, generate product copy, and alert ops when anomalies are detected across sales channels.",
+    "challenge": "Managing stock, updating descriptions and syncing listings across platforms required manual effort and constant spreadsheet updates.",
+    "solution": "We deployed automations that sync inventory, detect anomalies and push updates across channels like Shopify, Amazon and internal ERP.",
+    "impact": "Ops reclaimed 22+ hours per week, listings became consistent, and launch cycles moved much faster.",
+    "services": [
+      "Automation",
+      "Custom integrations",
+      "Monitoring dashboards"
+    ],
+    "deliverables": [
+      "Inventory sync system",
+      "Copy generator workflow",
+      "Monitoring dashboard"
+    ],
+    "testimonial": {
+      "name": "Ops Manager",
+      "quote": "We got back an entire day every week. The workflows pay for themselves."
+    },
     "metric": "22 hrs saved / week",
     "meta": "Ops automation across stack",
     "href": "/case-studies/ecom-automation",
+    "liveUrl": "https://lumenretail.com",
     "image": "/casestudy/projectdeep.png",
+    "images": [
+      "/casestudy/projectdeep.png",
+      "/casestudy/projectdeep-2.png"
+    ],
     "imageAlt": "Product catalog automation interface"
   },
   {
@@ -28,24 +78,34 @@
     "client": "Atlas Finance",
     "industry": "Fintech",
     "title": "Executive AI dashboard for real-time portfolio insights",
-    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions in natural language and get chart-ready answers.",
+    "heroTitle": "Helping leaders ask questions in natural language and get answers instantly",
+    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions like \"What's our most profitable segment?\"",
+    "challenge": "Executives were waiting on analysts for insights, spending hours building manual reports.",
+    "solution": "We built an AI dashboard that lets leaders query the data in natural language and get summaries, insights and charts.",
+    "impact": "The leadership team can make decisions 3x faster with no reporting bottleneck.",
+    "services": [
+      "AI-assisted analytics",
+      "Dashboard UX design",
+      "Data pipeline integration"
+    ],
+    "deliverables": [
+      "Executive dashboard",
+      "Data querying engine",
+      "Security + access controls"
+    ],
+    "testimonial": {
+      "name": "Director of Analytics",
+      "quote": "It’s like having a data analyst available 24/7."
+    },
     "metric": "3x faster decisions",
     "meta": "From brief to v1 in 8 weeks",
     "href": "/case-studies/finops-analytics",
+    "liveUrl": "https://atlasfinance.ai",
     "image": "/casestudy/skillcrest.png",
-    "imageAlt": "Finance dashboard with charts and metrics"
-  },
-   {
-    "id": "finops-analytics",
-    "client": "Atlas Finance",
-    "industry": "Fintech",
-    "title": "Executive AI dashboard for real-time portfolio insights",
-    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions in natural language and get chart-ready answers.",
-    "metric": "3x faster decisions",
-    "meta": "From brief to v1 in 8 weeks",
-    "href": "/case-studies/finops-analytics",
-    "image": "/casestudy/tipsy.png",
+    "images": [
+      "/casestudy/skillcrest.png",
+      "/casestudy/skillcrest-2.png"
+    ],
     "imageAlt": "Finance dashboard with charts and metrics"
   }
-
 ]
