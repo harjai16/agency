@@ -26,11 +26,11 @@ const Footer = () => {
           <div className="flex items-center gap-2 mb-4">
             <span className="h-7 w-7 rounded-full border border-gray-300" />
             <span className="text-sm font-semibold tracking-[0.18em] uppercase">
-              AGENCY AI
+              SWAGATAM TECH
             </span>
           </div>
           <p className="text-sm text-gray-500 max-w-xs leading-relaxed">
-            Transforming businesses with AI-powered digital solutions.
+            We design websites that convert visitors into customers.
           </p>
         </div>
 

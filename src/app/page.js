@@ -4,6 +4,7 @@ import CaseStudies from "@/componenets/CaseStudies";
 import Process from "@/componenets/Process";
 import Testimonials from "@/componenets/Testimonials";
 import Contact from "@/componenets/Contact";
+import WhyChoose from "@/componenets/WhyChoose";
 
 
 import Faq from "@/componenets/Faq";
@@ -18,13 +19,13 @@ export default function Home() {
 
       <Hero />
       <Services />
-           <LogosStrip/>
+           {/* <LogosStrip/> */}
            <CaseStudies />
       
              <Process />
                 <Testimonials />
-                <Faq />
-             
+                {/* <Faq /> */}
+             <WhyChoose />
                  <Contact />
                  
       {/* other sections will come here */}

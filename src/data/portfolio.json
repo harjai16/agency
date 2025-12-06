@@ -1,0 +1,38 @@
+[
+  {
+    "id": "northwind",
+    "brand": "Northwind SaaS",
+    "title": "Modern website redesign + conversion boost",
+    "snippet": "We built a fast, responsive marketing site focused on demo signups.",
+    "url": "https://northwind.com",
+    "image": "/casestudy/bodhiguru.png",
+    "imageAlt": "Northwind SaaS website preview"
+  },
+  {
+    "id": "lumen",
+    "brand": "Lumen Retail",
+    "title": "Scalable web presence for e-commerce expansion",
+    "snippet": "Improved storytelling, product clarity and page speed.",
+    "url": "https://lumen-retail.com",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "Lumen Retail landing preview"
+  },
+  {
+    "id": "atlas",
+    "brand": "Atlas Finance",
+    "title": "Fintech website with improved UX and lead flow",
+    "snippet": "High-performance site built for conversions and trust.",
+    "url": "https://atlasfinance.com",
+    "image": "/casestudy/skillcrest.png",
+    "imageAlt": "Atlas Finance website preview"
+  },
+  {
+    "id": "tipsy",
+    "brand": "Tipsy Shots",
+    "title": "Premium brand website with interactive sections",
+    "snippet": "Modern shopping experience built for engagement.",
+    "url": "https://tipsyshots.com",
+    "image": "/casestudy/tipsy.png",
+    "imageAlt": "Tipsy Shots website preview"
+  }
+]

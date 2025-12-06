@@ -1,11 +1,70 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { useRouter } from "next/navigation";
 import Button from "./ui/Button";
 import Section from "./ui/Section";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+// Animated stat counter for the card
+const StatCounter = ({ value, suffix = "+" }) => {
+  const ref = React.useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-20% 0px" });
+
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, {
+    stiffness: 40, // slower for smoother feel
+    damping: 18,
+  });
+
+  const [display, setDisplay] = React.useState(0);
+
+  React.useEffect(() => {
+    if (inView) {
+      motionValue.set(value);
+    }
+  }, [inView, value, motionValue]);
+
+  React.useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
+      if (latest <= value) {
+        setDisplay(Math.round(latest));
+      }
+    });
+    return unsubscribe;
+  }, [springValue, value]);
+
+  return (
+    <div
+      ref={ref}
+      className="text-xl md:text-2xl font-semibold text-gray-900"
+    >
+      {display}
+      {suffix}
+    </div>
+  );
+};
+
+// Logos for mini strip under the card
+const HERO_LOGOS = [
+  { name: "ProjectDeep", src: "/brands/projectdeep.svg" },
+  { name: "SkillCrest", src: "/brands/skillcrest.png" },
+  { name: "tipsy.webp", src: "/brands/tipsy.webp" },
+
+ 
+];
+
+// duplicate for seamless loop
+const HERO_LOGOS_LOOP = [...HERO_LOGOS, ...HERO_LOGOS];
+
 const Hero = () => {
   const router = useRouter();
+
   return (
     <Section
       id="hero"
@@ -47,8 +106,8 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.12 }}
             className="text-sm md:text-base text-gray-500 max-w-3xl leading-relaxed"
           >
-            Strategy, design and development for modern brands.  
-            Fast, responsive and SEO-driven websites that turn visitors into customers.
+            Strategy, design and development for modern brands. Fast, responsive
+            and SEO-driven websites that turn visitors into customers.
           </motion.p>
 
           {/* CTAs */}
@@ -59,21 +118,24 @@ const Hero = () => {
             className="flex flex-wrap items-center gap-3"
           >
             <Button
-    onClick={() =>
-      document.getElementById("contact")?.scrollIntoView({
-        behavior: "smooth",
-      })
-    }
-  >
-    Schedule a call
-  </Button>
-          
-            <Button variant="ghost" onClick={() => router.push("/portfolio")}>
-  View portfolio
-</Button>
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+            >
+              Schedule a call
+            </Button>
+
+            <Button
+              variant="ghost"
+              onClick={() => router.push("/portfolio")}
+            >
+              View portfolio
+            </Button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats (static row under hero text) */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,21 +143,27 @@ const Hero = () => {
             className="flex flex-wrap gap-6 pt-2 text-xs md:text-sm text-gray-500"
           >
             <div>
-              <div className="font-semibold text-gray-900 text-base">120+</div>
+              <div className="font-semibold text-gray-900 text-base">
+                120+
+              </div>
               <div>Websites Delivered</div>
             </div>
             <div>
-              <div className="font-semibold text-gray-900 text-base">98%</div>
+              <div className="font-semibold text-gray-900 text-base">
+                98%
+              </div>
               <div>Client success score</div>
             </div>
             <div>
-              <div className="font-semibold text-gray-900 text-base">4–6 weeks</div>
+              <div className="font-semibold text-gray-900 text-base">
+                4–6 weeks
+              </div>
               <div>Average timeline</div>
             </div>
           </motion.div>
         </div>
 
-        {/* Right visual */}
+        {/* Right visual – stats card + logo strip */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -107,41 +175,83 @@ const Hero = () => {
 
           {/* Main card */}
           <div className="relative rounded-3xl border border-gray-100 bg-white/80 backdrop-blur p-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between mb-5">
               <div>
                 <div className="text-xs uppercase tracking-[0.16em] text-gray-500">
-                  Live performance
+                  By the numbers
                 </div>
                 <div className="text-sm font-medium text-gray-900">
-                  SEO health score
+                  A quick look at our track record.
                 </div>
               </div>
               <span className="text-[11px] rounded-full border border-emerald-100 bg-emerald-50 px-2 py-1 text-emerald-700">
-                92/100
+                Updated live
               </span>
             </div>
 
-            {/* Simple graph */}
-            <div className="grid grid-cols-4 gap-2 h-24 items-end mb-6">
-              <div className="rounded-full bg-gray-100" style={{ height: "40%" }} />
-              <div className="rounded-full bg-gray-100" style={{ height: "60%" }} />
-              <div className="rounded-full bg-gray-200" style={{ height: "80%" }} />
-              <div className="rounded-full bg-black" style={{ height: "100%" }} />
+            {/* Horizontal stats row */}
+            <div className="flex items-center justify-between gap-4 md:gap-8">
+              <div className="flex flex-col items-center flex-1">
+                <StatCounter value={40} suffix="+" />
+                <span className="text-[10px] md:text-[11px] text-gray-500 mt-1 whitespace-nowrap">
+                  Happy Clients
+                </span>
+              </div>
+
+              <div className="flex flex-col items-center flex-1">
+                <StatCounter value={120} suffix="+" />
+                <span className="text-[10px] md:text-[11px] text-gray-500 mt-1 whitespace-nowrap">
+                  Projects Delivered
+                </span>
+              </div>
+
+              <div className="flex flex-col items-center flex-1">
+                <StatCounter value={8} suffix="+" />
+                <span className="text-[10px] md:text-[11px] text-gray-500 mt-1 whitespace-nowrap">
+                  Years Experience
+                </span>
+              </div>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] text-gray-500">
-              <div>
-                <div className="font-medium text-gray-900 text-sm">
-                  Performance-first design
-                </div>
-                <div>Improves conversion & visibility</div>
-              </div>
-              <div className="text-right">
-                <div className="font-semibold text-gray-900 text-sm">
-                  +38%
-                </div>
-                <div>Avg conversion increase</div>
-              </div>
+            <p className="mt-4 text-[11px] text-gray-400">
+              Based on completed projects, repeat clients and long-term
+              partnerships across different industries.
+            </p>
+          </div>
+
+          {/* Mini logo strip under the card */}
+          <div className="mt-4 rounded-2xl border border-gray-100 bg-white/80 backdrop-blur-sm px-4 py-3">
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <span className="text-[10px] uppercase tracking-[0.18em] text-gray-500">
+                Brands we&apos;ve worked with
+              </span>
+            </div>
+
+            <div className="relative overflow-hidden">
+              <motion.div
+                className="flex items-center gap-6"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 22,
+                  ease: "linear",
+                }}
+              >
+                {HERO_LOGOS_LOOP.map((logo, idx) => (
+                  <div
+                    key={logo.name + idx}
+                    className="relative h-9 w-24 flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      fill
+                      className="object-contain"
+                      sizes="96px"
+                    />
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </motion.div>

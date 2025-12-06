@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
-
+import { useRouter } from "next/navigation";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
@@ -15,7 +15,7 @@ const navItems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+const router = useRouter();
   const openMenu = () => {
     setOpen(true);
     if (typeof document !== "undefined") {
@@ -170,7 +170,12 @@ const Navbar = () => {
                 transition={{ delay: 0.3 }}
                 className="mt-10"
               >
-                <Button className="w-full">Book a strategy call</Button>
+                <Button
+        className="w-full"
+        onClick={() => router.push("/contact")}
+      >
+        Book a strategy call
+      </Button>
               </motion.div>
             </motion.div>
           </>

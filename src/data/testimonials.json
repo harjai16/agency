@@ -3,78 +3,54 @@
     "id": "northwind",
     "name": "Aarav Mehta",
     "role": "VP Product, Northwind SaaS",
-    "quote": "They didn’t just ship an AI feature. They helped us rethink our experience end-to-end and prove the impact with real numbers.",
+    "quote": "Working with Swagatam Tech felt like having a strategic product partner, not an outsourced agency. The AI-powered features they built transformed our workflow and directly improved customer retention. They’re the best website development team I’ve worked with in the SaaS space.",
     "company": "Northwind SaaS",
-    "badge": "Support copilot • 47% faster responses",
+    "badge": "AI Support Platform • 47% faster resolutions",
     "avatar": "/images/testimonials/aarav.webp"
   },
   {
     "id": "lumen",
     "name": "Sara Kapoor",
     "role": "Head of Operations, Lumen Retail",
-    "quote": "Our team stopped doing copy-paste work and started focusing on decisions. The automation has quietly become part of how we work.",
+    "quote": "We expected a website revamp — what we got was a full digital transformation. Their automation layer eliminated repetitive tasks and freed our team to focus on strategic decisions. If you're looking for a premium web agency that delivers real ROI, this is the one.",
     "company": "Lumen Retail",
-    "badge": "Ops automation • 22 hrs/week saved",
+    "badge": "Ops Automation • 22 hrs/week saved",
     "avatar": "/images/testimonials/sara.webp"
   },
   {
     "id": "atlas",
     "name": "Jonathan Lee",
     "role": "Chief Strategy Officer, Atlas Finance",
-    "quote": "The AI layer they built felt native from day one. Adoption wasn’t a fight because it genuinely made our leadership meetings better.",
+    "quote": "The decision-support dashboard they built became essential from day one. It didn’t feel bolted on — it felt native to our ecosystem. Our leadership meetings are faster, clearer and more data-driven. A world-class engineering experience.",
     "company": "Atlas Finance",
-    "badge": "Exec dashboard • 3x faster decisions",
+    "badge": "Executive Analytics • 3x faster decisions",
     "avatar": "/images/testimonials/jonathan.webp"
   },
   {
-    "id": "extra-1",
+    "id": "vertex",
     "name": "Emily Stone",
     "role": "Growth Lead, Vertex Labs",
-    "quote": "The experiments we launched with them paid for the engagement in weeks, not months.",
+    "quote": "We’ve worked with agencies before — but nobody understood scalability and growth like these guys do. Their CRO ideas helped us cut cost-per-lead and scale paid campaigns efficiently. Hands down the best tech partner we’ve hired.",
     "company": "Vertex Labs",
-    "badge": "Experimentation • CPL down 19%",
+    "badge": "Growth Experiments • CPL down 19%",
     "avatar": "/images/testimonials/emily.webp"
   },
-    {
-    "id": "extra-1",
-    "name": "Emily Stone",
-    "role": "Growth Lead, Vertex Labs",
-    "quote": "The experiments we launched with them paid for the engagement in weeks, not months.",
-    "company": "Vertex Labs",
-    "badge": "Experimentation • CPL down 19%",
-    "avatar": "/images/testimonials/emily.webp"
-  }, {
-    "id": "extra-1",
-    "name": "Emily Stone",
-    "role": "Growth Lead, Vertex Labs",
-    "quote": "The experiments we launched with them paid for the engagement in weeks, not months.",
-    "company": "Vertex Labs",
-    "badge": "Experimentation • CPL down 19%",
-    "avatar": "/images/testimonials/emily.webp"
+  {
+    "id": "zen",
+    "name": "Michael Roberts",
+    "role": "CMO, ZenCare Healthtech",
+    "quote": "The new site loads insanely fast and ranks higher on Google for competitive health-tech keywords. SEO strategy + flawless execution — that’s the winning combo these folks bring. Our inbound leads increased within 3 weeks.",
+    "company": "ZenCare Health",
+    "badge": "SEO & Performance • 38% more inbound leads",
+    "avatar": "/images/testimonials/michael.webp"
   },
-   {
-    "id": "extra-1",
-    "name": "Emily Stone",
-    "role": "Growth Lead, Vertex Labs",
-    "quote": "The experiments we launched with them paid for the engagement in weeks, not months.",
-    "company": "Vertex Labs",
-    "badge": "Experimentation • CPL down 19%",
-    "avatar": "/images/testimonials/emily.webp"
-  }, {
-    "id": "extra-1",
-    "name": "Emily Stone",
-    "role": "Growth Lead, Vertex Labs",
-    "quote": "The experiments we launched with them paid for the engagement in weeks, not months.",
-    "company": "Vertex Labs",
-    "badge": "Experimentation • CPL down 19%",
-    "avatar": "/images/testimonials/emily.webp"
-  }, {
-    "id": "extra-1",
-    "name": "Emily Stone",
-    "role": "Growth Lead, Vertex Labs",
-    "quote": "The experiments we launched with them paid for the engagement in weeks, not months.",
-    "company": "Vertex Labs",
-    "badge": "Experimentation • CPL down 19%",
-    "avatar": "/images/testimonials/emily.webp"
+  {
+    "id": "orbit",
+    "name": "Neha Verma",
+    "role": "Founder, OrbitEdu LMS",
+    "quote": "The design team took our complex LMS flows and turned them into a clean, intuitive user experience. Parents and students love it. Swagatam Tech isn’t just a dev agency — they’re partners in our growth strategy.",
+    "company": "OrbitEdu",
+    "badge": "UX Revamp • 2.3x engagement",
+    "avatar": "/images/testimonials/neha.webp"
   }
 ]

@@ -1,3 +1,23 @@
 @import "tailwindcss";
 
 
+ body {
+  cursor: none;
+}
+
+/* In case you want the real hand as backup */
+a,
+button,
+[role="button"] {
+  cursor: pointer;
+} 
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
