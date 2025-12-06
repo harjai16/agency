@@ -156,19 +156,7 @@ const CaseStudies = () => {
           })}
         </div>
 
-        {/* Progress bar */}
-        <div className="mt-4 h-1.5 w-full rounded-full bg-gray-200/70 overflow-hidden">
-          <motion.div
-            key={activeIndex}
-            className="h-full bg-gray-900"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{
-              duration: SLIDE_DURATION / 1000,
-              ease: "linear",
-            }}
-          />
-        </div>
+       
       </div>
     </Section>
   );
