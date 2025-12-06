@@ -72,7 +72,7 @@ const CaseStudies = () => {
         <Button
           variant="ghost"
           className="self-start md:self-auto"
-          onClick={() => router.push("/case-study")}
+          onClick={() => router.push("/case-studies")}
         >
           View all case studies
         </Button>

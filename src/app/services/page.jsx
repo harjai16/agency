@@ -422,7 +422,7 @@ const ServicesPage = () => {
             </Button>
             <Button
               variant="ghost"
-            onClick={() => router.push("/case-study")}
+            onClick={() => router.push("/case-studies")}
             >
               View case studies
             </Button>
