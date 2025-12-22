@@ -42,30 +42,30 @@ const router = useRouter();
 
   return (
     <nav className="w-full fixed left-0 z-50 bg-white/90 sm:bg-white/80 backdrop-blur-xl border-b border-gray-100">
-      <div className="max-w-fullhd mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20 py-2.5 sm:py-3 md:py-4 flex items-center justify-between">
+      <div className="max-w-fullhd mx-auto px-3 sm:px-4 md:px-4 min-[700px]:px-6 lg:px-8 xl:px-12 2xl:px-20 py-2.5 sm:py-3 md:py-3 min-[700px]:py-4 flex items-center justify-between">
         
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 group transition-all"
+          className="flex items-center gap-1.5 min-[700px]:gap-2 group transition-all"
         >
           <motion.span
             whileHover={{ rotate: 10, scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="h-6 w-6 rounded-full border border-gray-300"
+            className="h-5 w-5 min-[700px]:h-6 min-[700px]:w-6 rounded-full border border-gray-300"
           />
-          <span className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase group-hover:opacity-70 transition">
+          <span className="text-[10px] min-[700px]:text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase group-hover:opacity-70 transition">
             Swagatam Tech
           </span>
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-4 lg:gap-6 xl:gap-8 text-xs font-medium tracking-wide text-gray-600">
+        <ul className="hidden md:flex gap-2 min-[700px]:gap-3 lg:gap-6 xl:gap-8 text-[10px] min-[700px]:text-xs font-medium tracking-wide text-gray-600">
           {navItems.map((item) => (
             <li key={item.label} className="relative group">
               <Link
                 href={item.href}
-                className="hover:text-black transition-colors"
+                className="hover:text-black transition-colors whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -82,7 +82,10 @@ const router = useRouter();
           whileHover={{ scale: 1.04 }}
           className="hidden md:flex"
         >
-          <Button>Book a strategy call</Button>
+          <Button className="text-[10px] min-[700px]:text-xs px-2.5 min-[700px]:px-4 py-1.5 min-[700px]:py-2.5 min-h-[32px] min-[700px]:min-h-[44px] whitespace-nowrap">
+            <span className="hidden min-[800px]:inline">Book a strategy call</span>
+            <span className="min-[800px]:hidden">Book Call</span>
+          </Button>
         </motion.div>
 
         {/* Mobile Hamburger */}
