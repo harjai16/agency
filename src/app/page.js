@@ -26,7 +26,7 @@ export default function Home() {
                 <Testimonials />
                 {/* <Faq /> */}
              <WhyChoose />
-                 <Contact />
+                 <Contact pageName="Home" />
                  
       {/* other sections will come here */}
     </>

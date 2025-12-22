@@ -21,9 +21,9 @@ const page = () => {
       <Section
         id="about-hero"
         aria-label="About our website development agency"
-        className="pt-4 pb-16 md:pt-4 md:pb-20"
+        className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20"
       >
-        <div className="grid gap-10 md:grid-cols-2 items-center">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 items-center">
           {/* Left: main text */}
           <motion.div
             {...fadeUp(0)}
@@ -34,14 +34,14 @@ const page = () => {
               ABOUT THE STUDIO
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
               Design, development & growth{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
                 engineered for modern brands.
               </span>
             </h1>
 
-            <p className="text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
               We&apos;re a small, senior team focused on one thing: building
               high-performance websites that become revenue engines — not
               just pretty brochures on the internet.
@@ -65,11 +65,11 @@ const page = () => {
       Our story
     </p>
 
-    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
-      Started in 2024 — built to challenge the “agency way”.
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
+      Started in 2024 — built to challenge the "agency way".
     </h2>
 
-    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
       Born in 2024, we’re a modern web studio shaped by developers, designers and
       builders who care more about outcomes than buzzwords. In just a short time,
       we’ve helped ambitious founders and growing brands turn rough ideas into
@@ -97,7 +97,7 @@ const page = () => {
  <Section
         id="about-hero"
         aria-label="About our website development agency"
-        className="pt-4 pb-16 md:pt-4 md:pb-20"
+        className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20"
       >
 <motion.div
   {...fadeUp(0.1)}
@@ -162,14 +162,14 @@ const page = () => {
       <Section
         id="who-we-are"
         aria-label="Who we are"
-        className="py-14 md:py-18 bg-white"
+        className="py-10 sm:py-12 md:py-14 lg:py-18 bg-white"
       >
-        <div className="grid gap-10 md:grid-cols-2 max-w-fullhd mx-auto">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 max-w-fullhd mx-auto">
           <motion.div {...fadeUp(0)}>
-            <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
+            <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
               Who we are
             </h2>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">
               We&apos;re a small, senior studio of designers and developers who
               care about the details most users never consciously notice — the
               load time before first paint, the spacing in your type, the way a
@@ -220,9 +220,9 @@ const page = () => {
       {/* STATS BAND */}
       <Section
         aria-label="Agency stats"
-        className="py-10 md:py-12 bg-gray-50"
+        className="py-8 sm:py-10 md:py-12 bg-gray-50"
       >
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-center md:text-left">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
           <motion.div {...fadeUp(0)} className="flex-1 min-w-[140px]">
             <div className="text-2xl md:text-3xl font-semibold text-gray-900">
               120+
@@ -262,18 +262,18 @@ const page = () => {
       <Section
         id="about-process"
         aria-label="Our process preview"
-        className="py-16 md:py-20"
+        className="py-12 sm:py-16 md:py-20"
       >
-        <div className="max-w-fullhd mx-auto space-y-8">
+        <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
           <motion.div {...fadeUp(0)} className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
               <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
                 Process
               </p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
                 A simple, clear flow from kickoff to launch.
               </h2>
-              <p className="mt-3 text-sm md:text-base text-gray-500 max-w-xl">
+              <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-xl">
                 No mystery. No disappearing devs. Just a transparent series of
                 steps you can follow — and show your stakeholders.
               </p>
@@ -292,7 +292,7 @@ const page = () => {
 
           <motion.ol
             {...fadeUp(0.05)}
-            className="grid gap-4 md:grid-cols-4 text-sm text-gray-600"
+            className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-xs sm:text-sm text-gray-600"
           >
             {[
               {
@@ -334,17 +334,17 @@ const page = () => {
       {/* TECH & STACK */}
       <Section
         aria-label="Tech stack"
-        className="py-16 md:py-18 bg-gray-50"
+        className="py-12 sm:py-16 md:py-18 bg-gray-50"
       >
-        <div className="max-w-fullhd mx-auto grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-start">
+        <div className="max-w-fullhd mx-auto grid gap-8 sm:gap-10 md:grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-start">
           <motion.div {...fadeUp(0)}>
             <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
               Stack
             </p>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-3">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-2 sm:mb-3">
               Modern tools for fast, maintainable websites.
             </h2>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">
               We work with a focused, modern stack so we&apos;re never fighting
               our tools. Everything we choose is based on speed, security and
               how easy it is for your team to maintain after handoff.
@@ -401,10 +401,10 @@ const page = () => {
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-900 mb-3">
             Ready to talk?
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
             Let&apos;s make your website your best salesperson.
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share where you are today, where you want to be, and we&apos;ll
             map out the simplest, highest-impact version of your next website.
           </p>

@@ -112,9 +112,9 @@ const ServicesPage = () => {
       <Section
         id="services-hero"
         aria-label="Website development services"
-        className="pt-4 pb-16 md:pt-4 md:pb-20"
+        className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20"
       >
-        <div className="grid gap-10 md:grid-cols-2 items-center">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 items-center">
           {/* Left text */}
           <motion.div {...fadeUp(0)} className="space-y-6 max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
@@ -122,7 +122,7 @@ const ServicesPage = () => {
               SERVICES
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
               Website services designed to{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
                 move your metrics
@@ -130,7 +130,7 @@ const ServicesPage = () => {
               , not just your brand.
             </h1>
 
-            <p className="text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
               From strategy and UX to development and performance, we help you
               build, launch and grow websites that are fast, flexible and built
               for real business results.
@@ -210,9 +210,9 @@ const ServicesPage = () => {
       <Section
         id="services-list"
         aria-label="Detailed services"
-        className="py-16 md:py-20 bg-white"
+        className="py-12 sm:py-16 md:py-20 bg-white"
       >
-        <div className="max-w-fullhd mx-auto space-y-8">
+        <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
           <motion.div
             {...fadeUp(0)}
             className="flex flex-col md:flex-row md:items-end md:justify-between gap-4"
@@ -221,10 +221,10 @@ const ServicesPage = () => {
               <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
                 What we do
               </p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
                 Everything you need to design, build and grow your website.
               </h2>
-              <p className="mt-3 text-sm md:text-base text-gray-500 max-w-xl">
+              <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-xl">
                 Choose a single service or partner with us end-to-end. Either
                 way, you get a senior team focused on performance and
                 conversions.
@@ -234,7 +234,7 @@ const ServicesPage = () => {
 
           <motion.div
             {...fadeUp(0.05)}
-            className="grid gap-5 md:grid-cols-2"
+            className="grid gap-4 sm:gap-5 md:grid-cols-2"
           >
             {services.map((service, index) => (
               <motion.article
@@ -284,17 +284,17 @@ const ServicesPage = () => {
       {/* ENGAGEMENT MODELS */}
       <Section
         aria-label="How we work"
-        className="py-16 md:py-20 bg-gray-50"
+        className="py-12 sm:py-16 md:py-20 bg-gray-50"
       >
-        <div className="max-w-fullhd mx-auto space-y-8">
+        <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
           <motion.div {...fadeUp(0)} className="max-w-3xl">
             <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
               How we work
             </p>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
               Simple, flexible ways to work together.
             </h2>
-            <p className="mt-3 text-sm md:text-base text-gray-500">
+            <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500">
               Whether you&apos;re launching something new or leveling up what
               you already have, we&apos;ll suggest the model that fits your
               stage, budget and team.
@@ -303,7 +303,7 @@ const ServicesPage = () => {
 
           <motion.div
             {...fadeUp(0.05)}
-            className="grid gap-5 md:grid-cols-3"
+            className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3"
           >
             {engagementModels.map((model, index) => (
               <div
@@ -336,21 +336,21 @@ const ServicesPage = () => {
       {/* MICRO FAQ BLOCK */}
       <Section
         aria-label="Service FAQs"
-        className="py-14 md:py-16 bg-white"
+        className="py-10 sm:py-12 md:py-14 lg:py-16 bg-white"
       >
-        <div className="max-w-fullhd mx-auto space-y-6">
+        <div className="max-w-fullhd mx-auto space-y-4 sm:space-y-6">
           <motion.div {...fadeUp(0)} className="max-w-3xl">
             <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
               FAQs
             </p>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
               A few quick answers before we talk.
             </h2>
           </motion.div>
 
           <motion.div
             {...fadeUp(0.05)}
-            className="grid gap-4 md:grid-cols-2 text-sm text-gray-600"
+            className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 text-xs sm:text-sm text-gray-600"
           >
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-900 text-sm">
@@ -406,10 +406,10 @@ const ServicesPage = () => {
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
             Next step
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
             Tell us what you&apos;re trying to ship.
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             One quick call, zero pressure. If we&apos;re a fit, we&apos;ll map
             out a concrete plan for your next website release — timelines,
             budget and deliverables included.

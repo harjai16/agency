@@ -25,9 +25,9 @@ const router = useRouter();
       <Section
         id="portfolio-hero"
         aria-label="Portfolio of work"
-        className="pt-4 pb-16 md:pt-4 md:pb-20"
+        className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20"
       >
-        <div className="grid gap-10 md:grid-cols-2 items-center">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 items-center">
           {/* Left text */}
           <motion.div {...fadeUp(0)} className="space-y-6 max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
@@ -35,7 +35,7 @@ const router = useRouter();
               Portfolio
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
               Websites and digital products{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
                 we&apos;ve shipped
@@ -43,7 +43,7 @@ const router = useRouter();
               for teams who care about results.
             </h1>
 
-            <p className="text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
               A curated snapshot of recent work across SaaS, e-commerce,
               fintech and modern service brands. Every project started with a
               clear metric — faster load times, higher conversions, fewer
@@ -155,9 +155,9 @@ const router = useRouter();
       <Section
         id="portfolio-list"
         aria-label="Portfolio projects"
-        className="pb-20 md:pb-24 bg-white"
+        className="pb-12 sm:pb-16 md:pb-20 lg:pb-24 bg-white"
       >
-        <div className="max-w-fullhd mx-auto space-y-8">
+        <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
           {/* Filter row (visual only for now) */}
           <motion.div
             {...fadeUp(0)}
@@ -184,7 +184,7 @@ const router = useRouter();
           </motion.div>
 
           {/* Grid of remaining projects */}
-         <div className="grid gap-6 md:grid-cols-3">
+         <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   {portfolio.map((item, index) => (
     <motion.article
       key={item.id}
@@ -240,7 +240,7 @@ const router = useRouter();
       {/* FINAL CTA */}
       <Section
         aria-label="Portfolio final CTA"
-        className="pb-16 md:pb-20 bg-gray-50"
+        className="pb-12 sm:pb-16 md:pb-20 bg-gray-50"
       >
         <motion.div
           {...fadeUp(0)}
@@ -249,10 +249,10 @@ const router = useRouter();
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
             Seen enough?
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
             Let&apos;s talk about your next launch.
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share what you&apos;re building, who it&apos;s for and what success
             looks like. We&apos;ll come back with a clear plan, rough timeline
             and recommended starting point.

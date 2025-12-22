@@ -7,6 +7,8 @@ const quickLinks = [
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -19,7 +21,7 @@ const socials = [
 const Footer = () => {
   return (
     <footer className="w-full border-t border-gray-100 bg-white">
-      <div className="fullhd  mx-auto px-20 py-14 grid gap-10 md:grid-cols-3">
+      <div className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-10 md:py-12 lg:py-14 grid gap-8 sm:gap-10 md:grid-cols-3">
         
         {/* Brand */}
         <div>
@@ -29,7 +31,7 @@ const Footer = () => {
               SWAGATAM TECH
             </span>
           </div>
-          <p className="text-sm text-gray-500 max-w-xs leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-500 max-w-xs leading-relaxed">
             We design websites that convert visitors into customers.
           </p>
         </div>
@@ -39,7 +41,7 @@ const Footer = () => {
           <h4 className="text-xs font-semibold tracking-wide text-gray-700 mb-4 uppercase">
             Quick Links
           </h4>
-          <ul className="space-y-2 text-sm text-gray-600">
+          <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
             {quickLinks.map((item) => (
               <li key={item.label}>
                 <Link
@@ -58,7 +60,7 @@ const Footer = () => {
           <h4 className="text-xs font-semibold tracking-wide text-gray-700 mb-4 uppercase">
             Follow Us
           </h4>
-          <div className="flex gap-5 text-sm text-gray-600">
+          <div className="flex gap-4 sm:gap-5 text-xs sm:text-sm text-gray-600">
             {socials.map((s) => (
               <motion.a
                 whileHover={{ scale: 1.08 }}
@@ -76,7 +78,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Strip */}
-      <div className="border-t border-gray-100 py-5 text-center text-xs text-gray-500">
+      <div className="border-t border-gray-100 py-3 sm:py-4 md:py-5 text-center text-[10px] sm:text-xs text-gray-500">
         © {new Date().getFullYear()} AGENCY AI — All Rights Reserved.
       </div>
     </footer>

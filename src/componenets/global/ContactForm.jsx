@@ -1,29 +1,66 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@/componenets/ui/Button";
+import { useToast } from "./Toast";
 
-const ContactForm = () => {
+const ContactForm = ({ pageName = "Unknown Page" }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { showToast } = useToast();
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: 0.1 }}
-      className="relative rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm p-6 md:p-7 shadow-[0_18px_45px_rgba(15,23,42,0.06)]"
+      className="relative rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm p-4 sm:p-5 md:p-6 lg:p-7 shadow-[0_18px_45px_rgba(15,23,42,0.06)]"
     >
       {/* Glow accent */}
       <div className="pointer-events-none absolute -top-10 right-10 h-28 w-28 rounded-full bg-gradient-to-tr from-gray-100 via-white to-gray-50 blur-2xl" />
 
       <form
         className="relative z-[1] space-y-5"
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          // TODO: hook up to API / form tool (Formspree, Web3Forms, custom API, etc.)
+          setIsSubmitting(true);
+
+          const formData = new FormData(e.target);
+          const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            company: formData.get("company"),
+            projectType: formData.get("projectType"),
+            message: formData.get("message"),
+            pageName: pageName,
+          };
+
+          try {
+            const response = await fetch("/api/request-query", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+              showToast("Form submitted successfully!", "success");
+              e.target.reset();
+            } else {
+              showToast(result.error || "Failed to submit form", "error");
+            }
+          } catch (error) {
+            console.error("Error submitting form:", error);
+            showToast("Failed to submit form. Please try again.", "error");
+          } finally {
+            setIsSubmitting(false);
+          }
         }}
       >
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2">
           {/* Name */}
           <div className="space-y-1.5">
             <label
@@ -125,8 +162,8 @@ const ContactForm = () => {
 
         {/* Submit + note */}
         <div className="flex flex-col gap-2 pt-2">
-          <Button type="submit" className="w-full md:w-auto">
-            Send message
+          <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send message"}
           </Button>
           <p className="text-[11px] text-gray-400">
             Swagatam Tech will only use your details to respond to this inquiry.

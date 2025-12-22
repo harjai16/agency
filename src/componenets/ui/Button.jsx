@@ -9,13 +9,13 @@ const Button = ({
   ...props 
 }) => {
   const base =
-    "inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200";
+    "inline-flex items-center justify-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-sm font-medium transition-all duration-200 min-h-[44px] sm:min-h-0";
 
   const variants = {
     solid:
-      "bg-black text-white hover:bg-black/90 border border-black",
+      "bg-black text-white hover:bg-black/90 border border-black disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black",
     ghost:
-      "bg-white text-black border border-gray-200 hover:border-black/40 hover:bg-gray-50"
+      "bg-white text-black border border-gray-200 hover:border-black/40 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
   };
 
   return (

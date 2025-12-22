@@ -8,15 +8,15 @@ const Process = () => {
     <section
       id="process"
       aria-label="Our workflow"
-      className="py-20 md:py-24 bg-white"
+      className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white"
     >
-      <div className="max-w-fullhd mx-auto px-6 md:px-8">
+      <div className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         {/* Header */}
-        <div className="text-center mb-14 md:mb-16">
-          <p className="text-xs uppercase tracking-[0.22em] text-gray-400">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
+          <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gray-400">
             Workflow
           </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">
+          <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">
             How we work
           </h2>
         </div>
@@ -27,7 +27,7 @@ const Process = () => {
             {/* horizontal line */}
             <div className="absolute left-0 right-0 top-10 h-px bg-gray-200" />
 
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {processSteps.map((step, index) => {
                 const stepNumber = String(index + 1).padStart(2, "0");
                 return (
