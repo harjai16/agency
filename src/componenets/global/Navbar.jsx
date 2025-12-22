@@ -136,13 +136,13 @@ const router = useRouter();
 
                 <button
                   onClick={closeMenu}
-                  className="flex items-center justify-center h-8 w-8 rounded-full border border-gray-200"
+                  className="flex items-center justify-center h-10 w-10 rounded-full border-2 border-gray-300 bg-white hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-sm"
                   aria-label="Close menu"
                 >
                   <span className="sr-only">Close</span>
-                  <div className="relative h-3 w-3">
-                    <span className="absolute inset-0 h-[1px] w-full bg-black rotate-45" />
-                    <span className="absolute inset-0 h-[1px] w-full bg-black -rotate-45" />
+                  <div className="relative h-4 w-4">
+                    <span className="absolute top-1/2 left-0 h-[2px] w-full bg-gray-800 rotate-45 -translate-y-1/2" />
+                    <span className="absolute top-1/2 left-0 h-[2px] w-full bg-gray-800 -rotate-45 -translate-y-1/2" />
                   </div>
                 </button>
               </div>
