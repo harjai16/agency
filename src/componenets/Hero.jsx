@@ -42,7 +42,7 @@ const StatCounter = ({ value, suffix = "+" }) => {
   return (
     <div
       ref={ref}
-      className="text-xl md:text-2xl font-semibold text-gray-900"
+      className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900"
     >
       {display}
       {suffix}
@@ -69,19 +69,19 @@ const Hero = () => {
     <Section
       id="hero"
       aria-label="Website development agency hero section"
-      className="pt-10 pb-10 md:pt-10 md:pb-20 bg-white"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
     >
-      <div className="grid gap-12 md:grid-cols-2 items-center">
+      <div className="grid gap-8 sm:gap-10 md:gap-12 lg:gap-14 grid-cols-1 md:grid-cols-2 items-start md:items-center">
         {/* Left side: Text content */}
-        <div className="space-y-7">
+        <div className="space-y-5 sm:space-y-6 md:space-y-7 order-1 md:order-1">
           {/* Top pill */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 bg-white/70 backdrop-blur"
+            className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-gray-200 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-gray-600 bg-white/70 backdrop-blur"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-emerald-500" />
             BUILDING BRANDS ONLINE
           </motion.div>
 
@@ -90,10 +90,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="text-3xl md:text-5xl lg:text-[3.1rem] font-semibold tracking-tight text-gray-900"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.1rem] font-semibold tracking-tight text-gray-900 leading-[1.2] sm:leading-tight md:leading-tight"
           >
             We craft high-performance{" "}
-            <span className="inline-block border-b border-gray-300 pb-1">
+            <span className="inline-block border-b-2 border-gray-300 pb-1 sm:pb-1.5">
               websites
             </span>{" "}
             that grow your business.
@@ -104,7 +104,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="text-sm md:text-base text-gray-500 max-w-3xl leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-500 max-w-3xl leading-relaxed"
           >
             Strategy, design and development for modern brands. Fast, responsive
             and SEO-driven websites that turn visitors into customers.
@@ -115,7 +115,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.18 }}
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3"
           >
             <Button
               onClick={() =>
@@ -123,6 +123,7 @@ const Hero = () => {
                   behavior: "smooth",
                 })
               }
+              className="w-full sm:w-auto"
             >
               Schedule a call
             </Button>
@@ -130,6 +131,7 @@ const Hero = () => {
             <Button
               variant="ghost"
               onClick={() => router.push("/portfolio")}
+              className="w-full sm:w-auto"
             >
               View portfolio
             </Button>
@@ -140,25 +142,25 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.24 }}
-            className="flex flex-wrap gap-6 pt-2 text-xs md:text-sm text-gray-500"
+            className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-5 md:pt-6 text-xs sm:text-sm md:text-base text-gray-500"
           >
-            <div>
-              <div className="font-semibold text-gray-900 text-base">
+            <div className="text-center sm:text-left">
+              <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
                 120+
               </div>
-              <div>Websites Delivered</div>
+              <div className="text-[10px] sm:text-xs leading-tight">Websites Delivered</div>
             </div>
-            <div>
-              <div className="font-semibold text-gray-900 text-base">
+            <div className="text-center sm:text-left">
+              <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
                 98%
               </div>
-              <div>Client success score</div>
+              <div className="text-[10px] sm:text-xs leading-tight">Client success score</div>
             </div>
-            <div>
-              <div className="font-semibold text-gray-900 text-base">
+            <div className="text-center sm:text-left">
+              <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
                 4–6 weeks
               </div>
-              <div>Average timeline</div>
+              <div className="text-[10px] sm:text-xs leading-tight">Average timeline</div>
             </div>
           </motion.div>
         </div>
@@ -168,68 +170,68 @@ const Hero = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative"
+          className="relative order-2 md:order-2 w-full"
         >
           {/* Soft gradient blob */}
-          <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-gradient-to-tr from-gray-100 via-gray-50 to-white blur-2xl" />
+          <div className="pointer-events-none absolute -top-6 -right-6 sm:-top-8 sm:-right-8 md:-top-10 md:-right-10 h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-tr from-gray-100 via-gray-50 to-white blur-2xl opacity-50 sm:opacity-100" />
 
           {/* Main card */}
-          <div className="relative rounded-3xl border border-gray-100 bg-white/80 backdrop-blur p-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
-            <div className="flex items-center justify-between mb-5">
-              <div>
-                <div className="text-xs uppercase tracking-[0.16em] text-gray-500">
+          <div className="relative rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/90 sm:bg-white/80 backdrop-blur p-4 sm:p-5 md:p-6 lg:p-7 shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-4 sm:mb-5 md:mb-6">
+              <div className="flex-1 min-w-0">
+                <div className="text-[10px] sm:text-xs uppercase tracking-[0.16em] text-gray-500">
                   By the numbers
                 </div>
-                <div className="text-sm font-medium text-gray-900">
+                <div className="text-sm sm:text-base md:text-lg font-medium text-gray-900 mt-1">
                   A quick look at our track record.
                 </div>
               </div>
-              <span className="text-[11px] rounded-full border border-emerald-100 bg-emerald-50 px-2 py-1 text-emerald-700">
+              <span className="text-[10px] sm:text-xs rounded-full border border-emerald-100 bg-emerald-50 px-2 sm:px-2.5 py-1 sm:py-1.5 text-emerald-700 self-start sm:self-auto whitespace-nowrap">
                 Updated live
               </span>
             </div>
 
             {/* Horizontal stats row */}
-            <div className="flex items-center justify-between gap-4 md:gap-8">
-              <div className="flex flex-col items-center flex-1">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
+              <div className="flex flex-col items-center">
                 <StatCounter value={40} suffix="+" />
-                <span className="text-[10px] md:text-[11px] text-gray-500 mt-1 whitespace-nowrap">
+                <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   Happy Clients
                 </span>
               </div>
 
-              <div className="flex flex-col items-center flex-1">
+              <div className="flex flex-col items-center">
                 <StatCounter value={120} suffix="+" />
-                <span className="text-[10px] md:text-[11px] text-gray-500 mt-1 whitespace-nowrap">
+                <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   Projects Delivered
                 </span>
               </div>
 
-              <div className="flex flex-col items-center flex-1">
+              <div className="flex flex-col items-center">
                 <StatCounter value={8} suffix="+" />
-                <span className="text-[10px] md:text-[11px] text-gray-500 mt-1 whitespace-nowrap">
+                <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   Years Experience
                 </span>
               </div>
             </div>
 
-            <p className="mt-4 text-[11px] text-gray-400">
+            <p className="mt-4 sm:mt-5 text-[10px] sm:text-xs text-gray-400 leading-relaxed">
               Based on completed projects, repeat clients and long-term
               partnerships across different industries.
             </p>
           </div>
 
           {/* Mini logo strip under the card */}
-          <div className="mt-4 rounded-2xl border border-gray-100 bg-white/80 backdrop-blur-sm px-4 py-3">
-            <div className="flex items-center justify-between gap-3 mb-2">
-              <span className="text-[10px] uppercase tracking-[0.18em] text-gray-500">
+          <div className="mt-4 sm:mt-5 rounded-xl sm:rounded-2xl border border-gray-100 bg-white/90 sm:bg-white/80 backdrop-blur-sm px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4">
+            <div className="flex items-center justify-between gap-2 sm:gap-3 mb-2 sm:mb-2.5">
+              <span className="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.18em] text-gray-500 font-medium">
                 Brands we&apos;ve worked with
               </span>
             </div>
 
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden -mx-1">
               <motion.div
-                className="flex items-center gap-6"
+                className="flex items-center gap-6 sm:gap-8 md:gap-10"
                 animate={{ x: ["0%", "-50%"] }}
                 transition={{
                   repeat: Infinity,
@@ -240,14 +242,14 @@ const Hero = () => {
                 {HERO_LOGOS_LOOP.map((logo, idx) => (
                   <div
                     key={logo.name + idx}
-                    className="relative h-9 w-24 flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity"
+                    className="relative h-8 w-20 sm:h-9 sm:w-24 md:h-10 md:w-28 flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Image
                       src={logo.src}
                       alt={logo.name}
                       fill
                       className="object-contain"
-                      sizes="96px"
+                      sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
                     />
                   </div>
                 ))}

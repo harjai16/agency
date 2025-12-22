@@ -27,7 +27,7 @@ const slug = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug || "";
 const currentIndex = caseStudies.findIndex((cs) => cs.id === slug);
 
 // Return null if not found
-const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
+const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
   if (!caseStudy) {
     return (
       <main className="bg-white text-gray-900">
@@ -81,8 +81,8 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,_rgba(209,213,219,0.35),_transparent_65%)]" />
 
-        <Section className="pt-10 pb-16 md:pt-16 md:pb-20 relative z-[1]">
-          <div className="max-w-fullhd mx-auto grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-start">
+        <Section className="pt-8 sm:pt-10 md:pt-16 pb-12 sm:pb-16 md:pb-20 relative z-[1]">
+          <div className="max-w-fullhd mx-auto grid gap-8 sm:gap-10 md:grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-start">
             {/* Left: copy */}
             <motion.div {...fadeUp(0)} className="space-y-6">
               {/* Breadcrumbs */}
@@ -97,11 +97,11 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
                 <span>{client}</span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
                 {heroTitle || title}
               </h1>
 
-              <p className="text-sm md:text-base text-gray-600 max-w-xl leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl leading-relaxed">
                 {snippet}
               </p>
 
@@ -164,16 +164,16 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
       </section>
 
       {/* CHALLENGE / SOLUTION / IMPACT */}
-      <Section className="py-14 md:py-18 bg-white">
-        <div className="max-w-fullhd mx-auto grid gap-10 md:grid-cols-3 md:items-start">
+      <Section className="py-10 sm:py-12 md:py-14 lg:py-18 bg-white">
+        <div className="max-w-fullhd mx-auto grid gap-8 sm:gap-10 md:grid-cols-1 lg:grid-cols-3 md:items-start">
           <motion.div {...fadeUp(0)} className="space-y-3">
             <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
               Challenge
             </p>
-            <h2 className="text-lg md:text-xl font-semibold text-gray-900">
+            <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900">
               Where things were breaking.
             </h2>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
               {challenge}
             </p>
           </motion.div>
@@ -214,8 +214,8 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
       </Section>
 
       {/* SERVICES / DELIVERABLES + GALLERY */}
-      <Section className="py-14 md:py-20 bg-gray-50">
-        <div className="max-w-fullhd mx-auto grid gap-10 lg:grid-cols-[1.1fr_minmax(0,0.9fr)] items-start">
+      <Section className="py-10 sm:py-12 md:py-14 lg:py-20 bg-gray-50">
+        <div className="max-w-fullhd mx-auto grid gap-8 sm:gap-10 md:grid-cols-1 lg:grid-cols-[1.1fr_minmax(0,0.9fr)] items-start">
           {/* Left: gallery */}
           <motion.div {...fadeUp(0)} className="space-y-4">
             <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-1">
@@ -377,15 +377,15 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : nul
       </Section>
 
       {/* FINAL CTA */}
-      <Section className="py-16 md:py-20 bg-gray-50">
+      <Section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <motion.div {...fadeUp(0)} className="max-w-fullhd mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
             Plan your own project
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
             Want results like this for your brand?
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-6">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share what you&apos;re working on, and we&apos;ll map out how Swagatam
             Tech would approach a similar build — from structure and design to
             launch.

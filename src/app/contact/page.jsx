@@ -18,22 +18,22 @@ const ContactPage = () => {
     <main className="bg-white text-gray-900">
 
       {/* 🔥 BANNER / HERO */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-gray-50 to-white text-center">
+      <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-gray-50 to-white text-center">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.4),transparent_70%)]" />
 
         <motion.div
           {...fadeUp(0)}
-          className="max-w-fullhd mx-auto px-6 space-y-6"
+          className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 space-y-4 sm:space-y-6"
         >
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
             Get in touch
           </p>
 
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900">
-            Let’s build something meaningful together.
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900">
+            Let's build something meaningful together.
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Tell us where you are today and where you want to go. Swagatam Tech helps brands turn modern, high-performance websites into real business results.
           </p>
 
@@ -54,9 +54,9 @@ const ContactPage = () => {
       <Section
         id="contact-page-hero"
         aria-label="Contact Swagatam Tech"
-        className="pt-6 pb-20 md:pt-10 md:pb-24"
+        className="pt-6 sm:pt-8 md:pt-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24"
       >
-        <div className="grid gap-10 md:gap-16 md:grid-cols-[1.1fr_minmax(0,1fr)] items-start max-w-6xl mx-auto">
+        <div className="grid gap-8 sm:gap-10 md:gap-16 md:grid-cols-1 lg:grid-cols-[1.1fr_minmax(0,1fr)] items-start max-w-6xl mx-auto">
           
           {/* Left: page copy */}
           <motion.div {...fadeUp(0)} className="space-y-6">
@@ -65,11 +65,11 @@ const ContactPage = () => {
               Contact Swagatam Tech
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
               Let&apos;s plan your next website launch.
             </h2>
 
-            <p className="text-sm md:text-base text-gray-500 max-w-xl leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-xl leading-relaxed">
               Whether you're starting from scratch or leveling up an existing site, we help you plan, prioritize and ship the highest-impact version — fast.
             </p>
 

@@ -35,21 +35,19 @@ const Testimonials = () => {
     <Section
       id="testimonials"
       aria-label="Client testimonials"
-      className="py-20 md:py-28 bg-white"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
     >
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
-       <div className="max-w-7xl space-y-3">
-  <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
-    Testimonials
-  </p>
-
-  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
-    Brands that build with us
-    <br className="hidden md:block" /> keep coming back for results.
-  </h2>
-
-  <p className="text-sm md:text-base text-gray-500 max-w-5xl">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
+        <div className="space-y-2 sm:space-y-3 max-w-7xl">
+          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gray-500">
+            Testimonials
+          </p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
+            Brands that build with us
+            <br className="hidden md:block" /> keep coming back for results.
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-5xl">
     From the first kickoff call to post-launch support — our clients trust us to
     deliver websites that are fast, beautiful, and built to convert. Here’s what
     they have to say.
@@ -72,7 +70,7 @@ const Testimonials = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="grid gap-6 md:grid-cols-3"
+            className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           >
             {currentPageItems.map((item, index) => (
               <motion.article
@@ -81,43 +79,43 @@ const Testimonials = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.45, delay: index * 0.06 }}
-                className="group relative flex flex-col justify-between rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm p-5 md:p-6 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
+                className="group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm p-4 sm:p-5 md:p-6 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
               >
                 {/* Avatar + name row */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative h-10 w-10 rounded-full overflow-hidden border border-gray-100 bg-gray-100">
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full overflow-hidden border border-gray-100 bg-gray-100 flex-shrink-0">
                     {item.avatar && (
                       <Image
                         src={item.avatar}
                         alt={item.name}
                         fill
                         className="object-cover"
-                        sizes="40px"
+                        sizes="(max-width: 640px) 32px, 40px"
                       />
                     )}
                   </div>
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900">
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm font-semibold text-gray-900 truncate">
                       {item.name}
                     </div>
-                    <div className="text-[11px] text-gray-500">
+                    <div className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-500 truncate">
                       {item.role}
                     </div>
                   </div>
                 </div>
 
                 {/* Quote */}
-                <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                  “{item.quote}”
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3 sm:mb-4">
+                  "{item.quote}"
                 </p>
 
                 {/* Footer */}
-                <div className="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-2">
-                  <div className="flex items-center justify-between gap-2 mt-2">
-                    <span className="text-[11px] rounded-full border border-gray-100 bg-gray-50 px-2 py-1 text-gray-600">
+                <div className="mt-auto pt-3 sm:pt-4 border-t border-gray-100 flex flex-col gap-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[9px] sm:text-[10px] md:text-[11px] rounded-full border border-gray-100 bg-gray-50 px-1.5 sm:px-2 py-0.5 sm:py-1 text-gray-600 truncate">
                       {item.company}
                     </span>
-                    <span className="text-[11px] text-gray-400 text-right">
+                    <span className="text-[9px] sm:text-[10px] md:text-[11px] text-gray-400 text-right whitespace-nowrap">
                       {item.badge}
                     </span>
                   </div>

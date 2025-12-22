@@ -51,18 +51,18 @@ const CaseStudies = () => {
     <Section
       id="work"
       aria-label="Website case studies and recent work"
-      className="py-20 md:py-28 bg-white"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
     >
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-14">
-        <div className="max-w-7xl space-y-3">
-          <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
+        <div className="space-y-2 sm:space-y-3 max-w-7xl">
+          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gray-500">
             Case studies
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
             A few websites we&apos;ve designed and built for growing brands.
           </h2>
-          <p className="text-sm md:text-base text-gray-500 max-w-5xl">
+          <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-5xl">
             From marketing sites to product dashboards, we partner with teams to
             launch fast, responsive and SEO-friendly websites that actually move
             the numbers—load time, conversion and revenue.
@@ -97,11 +97,11 @@ const CaseStudies = () => {
                 transition={{ duration: 0.45, delay: index * 0.06 }}
                 whileHover={{ y: -6 }}
                 className={`
-                  group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 
+                  group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 
                   bg-white/80 backdrop-blur-sm shadow-[0_18px_40px_rgba(15,23,42,0.04)] 
                   transition-all snap-start shrink-0
-                  w-[88%] sm:w-[70%] md:w-[48%] lg:w-[32%]
-                  ${isTall ? "h-[420px] md:h-[450px]" : "h-[400px] md:h-[420px]"}
+                  w-[85%] sm:w-[70%] md:w-[48%] lg:w-[32%]
+                  ${isTall ? "h-[380px] sm:h-[400px] md:h-[420px] lg:h-[450px]" : "h-[360px] sm:h-[380px] md:h-[400px] lg:h-[420px]"}
                 `}
               >
                 {/* Top visual */}
@@ -114,17 +114,17 @@ const CaseStudies = () => {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-                  <div className="relative flex h-full items-end justify-between px-4 pb-3">
+                  <div className="relative flex h-full items-end justify-between px-3 sm:px-4 pb-2 sm:pb-3">
                     <div>
-                      <div className="text-[11px] uppercase tracking-[0.18em] text-gray-200">
+                      <div className="text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-gray-200">
                         {item.industry}
                       </div>
-                      <div className="text-sm font-semibold text-white">
+                      <div className="text-xs sm:text-sm font-semibold text-white">
                         {item.client}
                       </div>
                     </div>
                     {item.metric && (
-                      <span className="text-[11px] rounded-full border border-emerald-100 bg-emerald-50/95 px-2 py-1 text-emerald-700">
+                      <span className="text-[9px] sm:text-[10px] md:text-[11px] rounded-full border border-emerald-100 bg-emerald-50/95 px-1.5 sm:px-2 py-0.5 sm:py-1 text-emerald-700">
                         {item.metric}
                       </span>
                     )}
@@ -132,15 +132,15 @@ const CaseStudies = () => {
                 </div>
 
                 {/* Body */}
-                <div className="flex flex-1 flex-col px-4 py-4">
-                  <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-2">
+                <div className="flex flex-1 flex-col px-3 sm:px-4 py-3 sm:py-4">
+                  <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5 sm:mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs md:text-sm text-gray-500 leading-relaxed mb-3 line-clamp-4">
+                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-2 sm:mb-3 line-clamp-4">
                     {item.snippet}
                   </p>
 
-                  <div className="mt-auto flex items-center justify-between text-[11px] text-gray-500">
+                  <div className="mt-auto flex items-center justify-between text-[9px] sm:text-[10px] md:text-[11px] text-gray-500">
                     <span>{item.meta}</span>
                     <a
                       href={item.href}

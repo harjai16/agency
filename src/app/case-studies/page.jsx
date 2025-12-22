@@ -24,16 +24,16 @@ const CaseStudiesPage = () => {
       <Section
         id="case-studies-hero"
         aria-label="Case studies hero"
-        className="pt-6 pb-10 md:pt-10 md:pb-14"
+        className="pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-14"
       >
-        <div className="max-w-fullhd mx-auto space-y-6 text-left">
+        <div className="max-w-fullhd mx-auto space-y-4 sm:space-y-6 text-left">
           <motion.div {...fadeUp(0)} className="space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
               Case studies
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
               Real projects that{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
                 shipped
@@ -41,7 +41,7 @@ const CaseStudiesPage = () => {
               — and what they actually achieved.
             </h1>
 
-            <p className="text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
+            <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
               A closer look at how we design and build websites and products
               that move the numbers: faster load times, shorter support queues,
               better funnels and more revenue. No hypotheticals, just shipped
@@ -76,9 +76,9 @@ const CaseStudiesPage = () => {
       <Section
         id="case-studies-list"
         aria-label="Case studies list"
-        className="pb-20 md:pb-24 bg-white"
+        className="pb-12 sm:pb-16 md:pb-20 lg:pb-24 bg-white"
       >
-        <div className="max-w-fullhd mx-auto space-y-6">
+        <div className="max-w-fullhd mx-auto space-y-4 sm:space-y-6">
           {/* Optional small label row */}
           <div className="flex items-center justify-between gap-4 text-xs md:text-sm text-gray-500">
             <span>{caseStudies.length} projects</span>
@@ -87,7 +87,7 @@ const CaseStudiesPage = () => {
             </span>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((item, index) => (
               <motion.article
                 key={item.id + index}

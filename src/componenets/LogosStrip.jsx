@@ -19,13 +19,13 @@ const LogosStrip = () => {
   return (
     <Section
       aria-label="Client logos"
-      className="md:py-2 bg-white"
+      className="py-2 sm:py-3 md:py-4 bg-white"
     >
-                <div className="text-sm md:text-2xl whitespace-nowrap mb-2 md:mb-0 pb-2 mt-10">
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-2xl whitespace-nowrap mb-2 md:mb-0 pb-2 mt-6 sm:mt-8 md:mt-10">
             Trusted by product, ops and growth teams at
           </div>
       <div className="border-y border-gray-100 bg-white/80 backdrop-blur-sm">
-        <div className="max-w-fullhd mx-auto px-6 py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-4 sm:py-5 md:py-6 flex flex-col gap-3 sm:gap-4 md:flex-row md:items-center md:justify-between">
 
           {/* Text */}
 

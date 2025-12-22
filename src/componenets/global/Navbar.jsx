@@ -40,8 +40,8 @@ const router = useRouter();
   }, []);
 
   return (
-    <nav className="w-full fixed  left-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
-      <div className="max-w-fullhd mx-auto px-20 py-4 flex items-center justify-between">
+    <nav className="w-full fixed left-0 z-50 bg-white/90 sm:bg-white/80 backdrop-blur-xl border-b border-gray-100">
+      <div className="max-w-fullhd mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20 py-2.5 sm:py-3 md:py-4 flex items-center justify-between">
         
         {/* Logo */}
         <Link
@@ -53,13 +53,13 @@ const router = useRouter();
             transition={{ duration: 0.2 }}
             className="h-6 w-6 rounded-full border border-gray-300"
           />
-          <span className="text-sm font-semibold tracking-[0.18em] uppercase group-hover:opacity-70 transition">
+          <span className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase group-hover:opacity-70 transition">
             Swagatam Tech
           </span>
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-xs font-medium tracking-wide text-gray-600">
+        <ul className="hidden md:flex gap-4 lg:gap-6 xl:gap-8 text-xs font-medium tracking-wide text-gray-600">
           {navItems.map((item) => (
             <li key={item.label} className="relative group">
               <Link

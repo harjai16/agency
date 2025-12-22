@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <CapabilitiesStrip />
         <Navbar />
       </div>
-        <main className="pt-34">
+        <main className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
           {children}
         </main>
         <Footer />
