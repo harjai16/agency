@@ -4,6 +4,7 @@ import Navbar from "@/componenets/global/Navbar";
 import Footer from "@/componenets/global/Footer";
 import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
 import CustomCursor from "@/componenets/global/CustomCursor";
+import ConditionalLayout from "./ConditionalLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,18 +23,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-    <body className="bg-white text-black">
-        <CustomCursor />
-       {/* Fixed header: stripe + navbar */}
-      <div className="fixed top-0 left-0 w-full z-50">
-        <CapabilitiesStrip />
-        <Navbar />
-      </div>
-        <main className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-white text-black" suppressHydrationWarning>
+        <ConditionalLayout>
           {children}
-        </main>
-        <Footer />
+        </ConditionalLayout>
       </body>
     </html>
   );
