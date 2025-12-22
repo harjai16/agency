@@ -30,11 +30,12 @@ const ContactPage = () => {
           </p>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900">
-            Let's build something meaningful together.
+           Let’s talk about what you’re building
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Tell us where you are today and where you want to go. Swagatam Tech helps brands turn modern, high-performance websites into real business results.
+            Tell us where you are today and what you’re trying to achieve. <br />
+At Swagatam Tech, we help teams plan and build modern, high-performance websites with clear goals and realistic timelines.
           </p>
 
           <Button
@@ -62,32 +63,32 @@ const ContactPage = () => {
           <motion.div {...fadeUp(0)} className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Contact Swagatam Tech
+             Planning a new website or an improvement?
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              Let&apos;s plan your next website launch.
+           Let’s plan your next launch
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-xl leading-relaxed">
-              Whether you're starting from scratch or leveling up an existing site, we help you plan, prioritize and ship the highest-impact version — fast.
+             Whether you’re starting from scratch or improving an existing site, we’ll help you prioritize what matters most and outline a clear path forward.
             </p>
 
             <div className="space-y-2 text-xs md:text-sm text-gray-500">
               <p>
                 You can also email us directly at{" "}
                 <a
-                  href="mailto:hello@swagatamtech.com"
+                  href="mailto:ashwaniharjai.softwaredev@gmail.com"
                   className="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-800"
                 >
-                  hello@swagatamtech.com
+                  ashwaniharjai.softwaredev@gmail.com
                 </a>
                 .
               </p>
               <p>
-                We typically reply within{" "}
+               We usually respond within{" "}
                 <span className="font-medium text-gray-900">
-                  one business day
+                  one business day.
                 </span>
                 .
               </p>
@@ -95,7 +96,7 @@ const ContactPage = () => {
 
             <div className="text-xs md:text-sm text-gray-400 pt-2">
               Already have a brief? 
-              Paste the key notes in the form or share a link.
+           Paste the key details in the form or share a document or link — whatever’s easiest.
             </div>
           </motion.div>
 

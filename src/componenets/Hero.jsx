@@ -106,8 +106,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.12 }}
             className="text-sm sm:text-base md:text-lg text-gray-500 max-w-3xl leading-relaxed"
           >
-            Strategy, design and development for modern brands. Fast, responsive
-            and SEO-driven websites that turn visitors into customers.
+           Strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design.
           </motion.p>
 
           {/* CTAs */}
@@ -125,7 +124,7 @@ const Hero = () => {
               }
               className="w-full sm:w-auto"
             >
-              Schedule a call
+              Get a free conversion audit
             </Button>
 
             <Button
@@ -146,7 +145,7 @@ const Hero = () => {
           >
             <div className="text-center sm:text-left">
               <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
-                120+
+                10+
               </div>
               <div className="text-[10px] sm:text-xs leading-tight">Websites Delivered</div>
             </div>
@@ -194,21 +193,21 @@ const Hero = () => {
             {/* Horizontal stats row */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
               <div className="flex flex-col items-center">
-                <StatCounter value={40} suffix="+" />
+                <StatCounter value={10} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   Happy Clients
                 </span>
               </div>
 
               <div className="flex flex-col items-center">
-                <StatCounter value={120} suffix="+" />
+                <StatCounter value={10} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   Projects Delivered
                 </span>
               </div>
 
               <div className="flex flex-col items-center">
-                <StatCounter value={8} suffix="+" />
+                <StatCounter value={6} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   Years Experience
                 </span>

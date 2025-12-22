@@ -36,18 +36,15 @@ const router = useRouter();
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              Websites and digital products{" "}
+             Work we’ve shipped for teams {" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                we&apos;ve shipped
+               
               </span>{" "}
-              for teams who care about results.
+             that value clarity and performance
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-              A curated snapshot of recent work across SaaS, e-commerce,
-              fintech and modern service brands. Every project started with a
-              clear metric — faster load times, higher conversions, fewer
-              support tickets — and shipped with those goals in mind.
+             A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each project started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -71,15 +68,15 @@ const router = useRouter();
             <div className="flex flex-wrap gap-6 pt-2 text-xs md:text-sm text-gray-500">
               <div>
                 <div className="font-semibold text-gray-900 text-base">
-                  120+
+                  10+
                 </div>
-                <div>Web projects delivered</div>
+                <div>Projects delivered</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">
-                  40+
+                  10+
                 </div>
-                <div>Clients across industries</div>
+                <div>Happy clients</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">

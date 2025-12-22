@@ -25,24 +25,23 @@ const Contact = ({ pageName = "Home" }) => {
             Contact
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.4rem] font-semibold tracking-tight text-gray-900">
-            Ready to launch a website
-            <br className="hidden md:block" /> your brand is proud of?
+           Let’s build a website that works 
+            <br className="hidden md:block" /> for your business
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-lg leading-relaxed">
-            Tell us a bit about your business, what you&apos;re selling and what a
-            &quot;win&quot; looks like for your new website. Swagatam Tech will come
-            back within one business day with next steps — usually a short
-            strategy call.
+            Tell us about your product, goals, and what success looks like.
+We’ll review it and get back within one business day with clear next steps.
+
           </p>
 
           <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-500">
             <p>
-              Prefer email? Drop us a line at{" "}
+              Reach us at{" "}
               <a
-                href="mailto:hello@swagatamtech.com"
+                href="mailto:ashwaniharjai.softwaredev@gmail.com"
                 className="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-800"
               >
-                hello@swagatamtech.com
+                ashwaniharjai.softwaredev@gmail.com
               </a>
               .
             </p>

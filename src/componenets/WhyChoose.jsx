@@ -6,33 +6,34 @@ import { motion } from "framer-motion";
 const reasons = [
   {
     id: 1,
-    label: "Outcome-driven",
-    title: "We focus on measurable results",
+    label: "Outcome-focused",
+    title: "Built with clear business goals in mind",
     description:
-      "Every project is tied to clear KPIs—conversion, lead quality, engagement or revenue—so design work is always aligned with business outcomes.",
+      "We align every design and development decision with measurable goals like conversions, lead quality, and engagement—so the website supports real business outcomes, not just visuals.",
   },
   {
     id: 2,
-    label: "Senior only",
-    title: "You work with a lean expert team",
+    label: "Hands-on team",
+    title: "Work directly with the people building your site",
     description:
-      "No handoffs between layers of account managers. You speak directly with the designers and strategists doing the work.",
+      "You collaborate closely with the designers and developers doing the work, ensuring faster feedback, clearer communication, and better execution throughout the project.",
   },
   {
     id: 3,
-    label: "Fast & reliable",
-    title: "Ship weeks faster, without chaos",
+    label: "Structured & efficient",
+    title: "A process that keeps projects moving",
     description:
-      "Opinionated process, tight feedback loops and async communication keep projects moving without endless meetings.",
+      "Clear scope, defined milestones, and async-first communication help us ship efficiently without unnecessary meetings or last-minute surprises.",
   },
   {
     id: 4,
-    label: "Built to last",
-    title: "Websites that are easy to maintain",
+    label: "Built for longevity",
+    title: "Websites that are easy to evolve over time",
     description:
-      "Clean, component-based builds on modern stacks so your team can evolve pages, not rebuild them from scratch.",
+      "We build clean, maintainable systems on modern stacks so updates and improvements are straightforward as your business grows.",
   },
 ];
+
 
 const WhyChoose = () => {
   return (
@@ -49,12 +50,11 @@ const WhyChoose = () => {
             Why choose us
           </p>
           <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
-            A partner that feels like part of your team.
+           A partner that works like your in-house growth team
           </h2>
           <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-slate-300 max-w-2xl mx-auto text-slate-900 px-4">
-            We combine product thinking, brand clarity and modern engineering
-            to build websites that look sharp, load fast and actually move
-            the business forward.
+           We don’t just design websites.
+We think like product owners, marketers, and engineers — building websites that load fast, convert visitors, and support real business growth.
           </p>
         </div>
 
@@ -93,9 +93,9 @@ const WhyChoose = () => {
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gray-500 mb-1">
               Projects
             </p>
-            <p className="text-lg sm:text-xl font-semibold text-gray-900">50+ launches</p>
+            <p className="text-lg sm:text-xl font-semibold text-gray-900">10+ launches</p>
             <p className="text-[10px] sm:text-xs mt-1 text-gray-600">
-              Across SaaS, agencies, B2B and DTC brands.
+              Static sites, CMS and e-commerce projects.
             </p>
           </div>
           <div>
@@ -103,10 +103,10 @@ const WhyChoose = () => {
               Performance
             </p>
             <p className="text-lg sm:text-xl font-semibold text-gray-900">
-              &lt; 2s avg. load
+              Speed-first builds  
             </p>
             <p className="text-[10px] sm:text-xs mt-1 text-gray-600">
-              Core web vitals baked into the process.
+             Clean code with Core Web Vitals in mind.
             </p>
           </div>
           <div>
@@ -114,10 +114,10 @@ const WhyChoose = () => {
               Relationships
             </p>
             <p className="text-lg sm:text-xl font-semibold text-gray-900">
-              90% repeat clients
+              Long-term work 
             </p>
             <p className="text-[10px] sm:text-xs mt-1 text-gray-600">
-              Most teams stay with us for multiple product cycles.
+             Clients return for updates and new launches.
             </p>
           </div>
         </div>

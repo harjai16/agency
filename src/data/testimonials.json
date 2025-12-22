@@ -1,56 +1,47 @@
 [
   {
-    "id": "northwind",
-    "name": "Aarav Mehta",
-    "role": "VP Product, Northwind SaaS",
-    "quote": "Working with Swagatam Tech felt like having a strategic product partner, not an outsourced agency. The AI-powered features they built transformed our workflow and directly improved customer retention. They’re the best website development team I’ve worked with in the SaaS space.",
-    "company": "Northwind SaaS",
-    "badge": "AI Support Platform • 47% faster resolutions",
-    "avatar": "/images/testimonials/aarav.webp"
+    "id": "khushali-ngo",
+    "name": "Khushali Mehta",
+    "role": "Trustee, NGO",
+    "quote": "Our earlier WordPress site kept breaking with updates and was hard to manage. Swagatam Tech rebuilt it with a custom theme, and since then the site has been stable and much easier to update. The design also feels more aligned with our work.",
+    "company": "NGO Website",
+    "badge": "Custom WordPress rebuild",
+    "avatar": "/images/testimonials/khushali.webp"
   },
   {
-    "id": "lumen",
-    "name": "Sara Kapoor",
-    "role": "Head of Operations, Lumen Retail",
-    "quote": "We expected a website revamp — what we got was a full digital transformation. Their automation layer eliminated repetitive tasks and freed our team to focus on strategic decisions. If you're looking for a premium web agency that delivers real ROI, this is the one.",
-    "company": "Lumen Retail",
-    "badge": "Ops Automation • 22 hrs/week saved",
-    "avatar": "/images/testimonials/sara.webp"
+    "id": "labelwala",
+    "name": "Akshit Gupta",
+    "role": "Founder, Label Wala",
+    "quote": "We needed a fast, professional website that represented our brand properly. The team built it in Next.js with a strong focus on performance and SEO. The site loads quickly and works well across devices.",
+    "company": "Label Wala",
+    "badge": "Next.js brand website",
+    "avatar": "/images/testimonials/akshit.webp"
   },
   {
-    "id": "atlas",
-    "name": "Jonathan Lee",
-    "role": "Chief Strategy Officer, Atlas Finance",
-    "quote": "The decision-support dashboard they built became essential from day one. It didn’t feel bolted on — it felt native to our ecosystem. Our leadership meetings are faster, clearer and more data-driven. A world-class engineering experience.",
-    "company": "Atlas Finance",
-    "badge": "Executive Analytics • 3x faster decisions",
-    "avatar": "/images/testimonials/jonathan.webp"
+    "id": "nutsquare",
+    "name": "Navneet",
+    "role": "Founder, NutSquare",
+    "quote": "Our requirement was a simple e-commerce setup without forcing users to log in. Swagatam Tech understood this clearly and delivered a smooth, fast website with an easy checkout flow. The experience has been very practical.",
+    "company": "NutSquare",
+    "badge": "Custom e-commerce build",
+    "avatar": "/images/testimonials/navneet.webp"
   },
   {
-    "id": "vertex",
-    "name": "Emily Stone",
-    "role": "Growth Lead, Vertex Labs",
-    "quote": "We’ve worked with agencies before — but nobody understood scalability and growth like these guys do. Their CRO ideas helped us cut cost-per-lead and scale paid campaigns efficiently. Hands down the best tech partner we’ve hired.",
-    "company": "Vertex Labs",
-    "badge": "Growth Experiments • CPL down 19%",
-    "avatar": "/images/testimonials/emily.webp"
+    "id": "recytronics",
+    "name": "Recytronics Foundation",
+    "role": "Non-Profit Organization",
+    "quote": "We wanted a clean, modern website to communicate our mission around sustainability and community impact. The new site is fast, well-structured, and easy to navigate, helping us present our work more clearly.",
+    "company": "Recytronics Foundation",
+    "badge": "Next.js non-profit website",
+    "avatar": "/images/testimonials/recytronics.webp"
   },
   {
-    "id": "zen",
-    "name": "Michael Roberts",
-    "role": "CMO, ZenCare Healthtech",
-    "quote": "The new site loads insanely fast and ranks higher on Google for competitive health-tech keywords. SEO strategy + flawless execution — that’s the winning combo these folks bring. Our inbound leads increased within 3 weeks.",
-    "company": "ZenCare Health",
-    "badge": "SEO & Performance • 38% more inbound leads",
-    "avatar": "/images/testimonials/michael.webp"
-  },
-  {
-    "id": "orbit",
-    "name": "Neha Verma",
-    "role": "Founder, OrbitEdu LMS",
-    "quote": "The design team took our complex LMS flows and turned them into a clean, intuitive user experience. Parents and students love it. Swagatam Tech isn’t just a dev agency — they’re partners in our growth strategy.",
-    "company": "OrbitEdu",
-    "badge": "UX Revamp • 2.3x engagement",
-    "avatar": "/images/testimonials/neha.webp"
+    "id": "ads-enviro",
+    "name": "ADS Enviro Group",
+    "role": "Environmental Services Company",
+    "quote": "Swagatam Tech helped us build a professional company website that clearly explains our services. The site is fast, optimized for search, and gives us a solid digital presence without unnecessary complexity.",
+    "company": "ADS Enviro Group",
+    "badge": "Corporate website development",
+    "avatar": "/images/testimonials/ads.webp"
   }
 ]

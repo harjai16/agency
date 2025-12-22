@@ -34,18 +34,16 @@ const CaseStudiesPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              Real projects that{" "}
+             Real projects. {" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                shipped
+               
               </span>{" "}
-              — and what they actually achieved.
+            Real outcomes.
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-              A closer look at how we design and build websites and products
-              that move the numbers: faster load times, shorter support queues,
-              better funnels and more revenue. No hypotheticals, just shipped
-              work.
+             A closer look at websites we’ve designed and built — focused on speed, stability, and usability.
+From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. No hypotheticals. Just real work.
             </p>
           </motion.div>
 
@@ -66,7 +64,7 @@ const CaseStudiesPage = () => {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Browse all case studies
+              Browse case studies
             </Button>
           </motion.div>
         </div>
@@ -159,6 +157,37 @@ const CaseStudiesPage = () => {
           </div>
         </div>
       </Section>
+
+<Section
+        aria-label="Portfolio final CTA"
+        className="pb-12 sm:pb-16 md:pb-20 bg-gray-50"
+      >
+        <motion.div
+          {...fadeUp(0)}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
+           Seen something relevant?
+          </p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
+           Let’s talk about your use case
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
+           If one of these projects feels close to what you’re building, let’s discuss it.
+Share a bit about your goals and constraints, and we’ll suggest a clear approach and realistic next steps.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+           
+            <Button
+              variant="ghost"
+             onClick={() => router.push("/contact")}
+            >
+              Send project details
+            </Button>
+          </div>
+        </motion.div>
+      </Section>
+
     </main>
   );
 };

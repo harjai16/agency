@@ -17,56 +17,56 @@ const services = [
   {
     id: "strategy",
     tag: "Strategy",
-    title: "Website Strategy & Architecture",
+    title: "Website Strategy & Structure",
     summary:
-      "We define your site structure, key pages and user journeys so every screen has a clear job.",
-    outcome: "Clear sitemap, page priorities and messaging framework.",
-    meta: "Ideal before redesigns or new builds",
+      "We plan page structure, content hierarchy, and user flows so visitors quickly understand what you do and what to do next.",
+    outcome: "Clear sitemap, focused messaging, and defined page goals.",
+    meta: "Useful before new builds or redesigns",
   },
   {
     id: "ux-ui",
     tag: "Design",
     title: "UX & UI Website Design",
     summary:
-      "Modern, on-brand interfaces that feel intuitive, mobile-first and conversion-focused.",
-    outcome: "High-fidelity designs ready to hand off or build.",
-    meta: "Includes responsive states & key interactions",
+      "Clean, mobile-first interfaces designed to be easy to use and aligned with your brand.",
+    outcome: "Polished designs ready for development or handoff.",
+    meta: "Responsive layouts with key interaction states",
   },
   {
     id: "development",
     tag: "Development",
     title: "Custom Website Development",
     summary:
-      "Fast, secure websites built on Next.js, React and modern tooling — no bloated themes.",
-    outcome: "High-performance site tailored to your brand and goals.",
-    meta: "Best for SaaS, agencies & service brands",
+      "Fast, reliable websites built with modern frameworks like Next.js and React — no heavy themes or shortcuts.",
+    outcome: "A performance-focused site tailored to your business needs.",
+    meta: "Well-suited for SaaS, service brands, and custom builds",
   },
   {
     id: "cms",
     tag: "CMS",
-    title: "CMS & Content Systems",
+    title: "CMS & Content Management",
     summary:
-      "Flexible content management using WordPress or headless CMS so your team can make updates easily.",
-    outcome: "Editable pages, blog, SEO fields and reusable blocks.",
-    meta: "Training + documentation included",
+      "Flexible CMS setups using WordPress or headless solutions so your team can manage content confidently.",
+    outcome: "Editable pages, structured content, and SEO-ready fields.",
+    meta: "Includes basic training and documentation",
   },
   {
     id: "performance",
     tag: "Performance & SEO",
-    title: "Performance & SEO Optimization",
+    title: "Performance & SEO Improvements",
     summary:
-      "We audit, fix and tune your site for Core Web Vitals, technical SEO and real-world speed.",
-    outcome: "Better rankings, improved UX and reduced drop-offs.",
-    meta: "Great for existing websites",
+      "We review and improve site speed, technical SEO, and Core Web Vitals to support real-world usage.",
+    outcome: "Faster load times, better usability, and stronger visibility.",
+    meta: "Best for existing or growing websites",
   },
   {
     id: "support",
     tag: "Support",
-    title: "Ongoing Support & Iteration",
+    title: "Ongoing Support & Improvements",
     summary:
-      "A proactive partner to keep your site updated, secure and improving month over month.",
-    outcome: "Roadmap, A/B tests and continuous improvements.",
-    meta: "Retainers from 10–40 hours/month",
+      "We help keep your site stable, secure, and improving as your product or business evolves.",
+    outcome: "Planned updates, small iterations, and ongoing refinements.",
+    meta: "Flexible monthly support options",
   },
 ];
 
@@ -74,34 +74,35 @@ const engagementModels = [
   {
     title: "Project-based builds",
     description:
-      "Perfect for full website launches, redesigns or migrations with a clear beginning and end.",
+      "Best for teams that need a complete website build, redesign, or migration with a defined scope.",
     bullets: [
-      "Fixed scope & pricing",
-      "Ideal for new sites or major overhauls",
-      "4–8 week average timelines",
+      "Clear scope and predictable timelines",
+      "Good fit for new launches or major changes",
+      "Typically delivered in 4–6 weeks",
     ],
   },
   {
     title: "Ongoing product partner",
     description:
-      "Best for teams who want a dedicated design & dev partner without hiring in-house.",
+      "For teams who want consistent design and development support without expanding headcount.",
     bullets: [
-      "Monthly retainer with flexible hours",
-      "Continuous experiments & improvements",
-      "Great for SaaS & high-growth teams",
+      "Monthly engagement with flexible usage",
+      "Ongoing updates, fixes, and improvements",
+      "Works well for SaaS and evolving products",
     ],
   },
   {
     title: "White-label for agencies",
     description:
-      "We handle design and/or development behind the scenes while you manage the client.",
+      "We support agencies by handling design and development while you stay client-facing.",
     bullets: [
-      "Your process, our execution",
-      "Invisible partner, NDA-friendly",
-      "Reliable capacity for your projects",
+      "Adaptable to your workflows",
+      "Discreet and NDA-friendly",
+      "Reliable delivery capacity",
     ],
   },
 ];
+
 
 const ServicesPage = () => {
 
@@ -123,51 +124,48 @@ const ServicesPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              Website services designed to{" "}
+             Website services built to generate leads, sales, {" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                move your metrics
+                and real growth.
               </span>
-              , not just your brand.
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-              From strategy and UX to development and performance, we help you
-              build, launch and grow websites that are fast, flexible and built
-              for real business results.
+             Strategy, design, and development focused on performance — fast websites that convert visitors into customers.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
               <Button
                onClick={() => router.push("/contact")}
               >
-                Book a strategy call
+                Get a free website plan
               </Button>
               <Button
                 variant="ghost"
-                onClick={() => router.push("/services")}
+                onClick={() => router.push("/portfolio")}
               >
-                Explore all services
+                View real projects
               </Button>
             </div>
 
             <div className="flex flex-wrap gap-6 pt-2 text-xs md:text-sm text-gray-500">
               <div>
                 <div className="font-semibold text-gray-900 text-base">
-                  120+
+                  10+
                 </div>
-                <div>Websites launched</div>
+                <div>projects delivered</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">
                   4–6 weeks
                 </div>
-                <div>Average build time</div>
+                <div>weeks typical launch</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">
-                  98%
+                Performance-focused
                 </div>
-                <div>Client satisfaction</div>
+                <div>Performance-first builds</div>
               </div>
             </div>
           </motion.div>
@@ -182,7 +180,7 @@ const ServicesPage = () => {
                     Typical project
                   </div>
                   <div className="text-sm font-medium text-gray-900">
-                    From audit to launch.
+                  What a typical website project includes
                   </div>
                 </div>
                 <span className="text-[11px] rounded-full border border-emerald-100 bg-emerald-50 px-2 py-1 text-emerald-700">
@@ -191,15 +189,14 @@ const ServicesPage = () => {
               </div>
 
               <ul className="space-y-3 text-xs md:text-sm text-gray-600">
-                <li>• Strategy & sitemap aligned to your goals</li>
-                <li>• UX/UI design for key pages and flows</li>
-                <li>• Next.js build with responsive layouts</li>
-                <li>• SEO, performance and analytics wired in</li>
+                <li>• Clear strategy aligned with your business goals</li>
+                <li>• UX & UI for key pages and conversion flows</li>
+                <li>• Performance-focused Next.js or WordPress build</li>
+                <li>• SEO, analytics, and launch support baked in</li>
               </ul>
 
               <p className="text-[11px] text-gray-400">
-                Every engagement is scoped around your goals, timeline and team
-                capacity — no copy-paste “packages”.
+               No templates. No copy-paste packages. Built for your needs.
               </p>
             </div>
           </motion.div>
@@ -354,40 +351,37 @@ const ServicesPage = () => {
           >
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-900 text-sm">
-                How long does a typical website project take?
+               How long does a typical website project take?
               </h3>
               <p className="text-xs md:text-sm text-gray-600">
-                Most projects land between 4–6 weeks depending on scope,
-                content readiness and integrations. We&apos;ll give you a clear
-                timeline before we start.
+               Most projects are completed in 4–6 weeks. Timelines depend on scope, content readiness, and feedback cycles. We’ll confirm a clear timeline before starting.
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-900 text-sm">
-                Do you only work end-to-end, or just design / dev?
+               Do you handle full projects or just specific parts?
               </h3>
               <p className="text-xs md:text-sm text-gray-600">
-                Both. You can bring us in for full strategy + design + build,
-                or just the part your team needs help with.
+                Both. We can manage everything from strategy to launch, or support your team
+  with design or development only.
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-900 text-sm">
-                Will we be able to update the website ourselves?
+              Can our team update content after launch?
               </h3>
               <p className="text-xs md:text-sm text-gray-600">
-                Yes. We build with CMS and reusable components so your team can
-                edit content without touching code.
+                Yes. We use CMS and reusable components so your team can update pages, text,
+  and SEO fields without technical help.
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="font-semibold text-gray-900 text-sm">
-                How do we get started?
+                What’s the first step to get started?
               </h3>
               <p className="text-xs md:text-sm text-gray-600">
-                Start with a short call where we understand your goals, timeline
-                and constraints. From there, we propose scope, pricing and a
-                clear path to launch.
+              We start with a short call to understand your goals and constraints. After
+  that, we share a clear scope, timeline, and next steps.
               </p>
             </div>
           </motion.div>
@@ -407,18 +401,16 @@ const ServicesPage = () => {
             Next step
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-            Tell us what you&apos;re trying to ship.
+          Let’s plan a website that actually delivers results
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
-            One quick call, zero pressure. If we&apos;re a fit, we&apos;ll map
-            out a concrete plan for your next website release — timelines,
-            budget and deliverables included.
+          One short call. Clear next steps. No pressure.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button
                onClick={() => router.push("/contact")}
             >
-              Book a strategy call
+            Get a free website plan
             </Button>
             <Button
               variant="ghost"

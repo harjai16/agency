@@ -83,7 +83,7 @@ const Testimonials = () => {
               >
                 {/* Avatar + name row */}
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                  <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full overflow-hidden border border-gray-100 bg-gray-100 flex-shrink-0">
+                  {/* <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full overflow-hidden border border-gray-100 bg-gray-100 flex-shrink-0">
                     {item.avatar && (
                       <Image
                         src={item.avatar}
@@ -93,7 +93,7 @@ const Testimonials = () => {
                         sizes="(max-width: 640px) 32px, 40px"
                       />
                     )}
-                  </div>
+                  </div> */}
                   <div className="min-w-0">
                     <div className="text-xs sm:text-sm font-semibold text-gray-900 truncate">
                       {item.name}
@@ -106,7 +106,7 @@ const Testimonials = () => {
 
                 {/* Quote */}
                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3 sm:mb-4">
-                  "{item.quote}"
+                  {item.quote}
                 </p>
 
                 {/* Footer */}

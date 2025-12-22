@@ -86,7 +86,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
               htmlFor="email"
               className="text-xs font-medium text-gray-700"
             >
-              Work email
+              Email
             </label>
             <input
               id="email"
@@ -95,7 +95,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
               autoComplete="email"
               required
               className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-gray-900 outline-none transition focus:border-gray-900 focus:ring-0"
-              placeholder="you@company.com"
+              placeholder="Your email address"
             />
           </div>
         </div>

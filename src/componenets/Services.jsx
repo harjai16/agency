@@ -28,10 +28,10 @@ const Services = () => {
             Services
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-            From concept to a fully launched website, we partner with you at every stage.
+            Built to increase enquiries, not just impressions.
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-6xl">
-            We design, develop and optimize high-performance websites built to convert. No guesswork — just measurable improvements in visibility and revenue.
+            From concept to a fully launched website, we partner with you at every stage.
           </p>
         </div>
       </div>

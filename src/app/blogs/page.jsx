@@ -66,17 +66,16 @@ const BlogsPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              Insights, guides &{" "}
+            Practical insights {" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                updates
+                from
               </span>{" "}
-              from our team.
+             building real websites
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-              Learn about web design, development, SEO, and digital marketing strategies 
-              that help businesses grow online. Practical tips and real-world insights 
-              from our experience building high-performance websites.
+            Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory. <br />
+Short, useful reads focused on what actually works when building and shipping websites.
             </p>
           </motion.div>
         </div>
@@ -176,7 +175,40 @@ const BlogsPage = () => {
       </Section>
 
       {/* Contact Form Section */}
-      <Contact pageName="Blogs" />
+      {/* <Contact pageName="Blogs" /> */}
+
+
+     {/* FINAL CTA */}
+      <Section
+        aria-label="Portfolio final CTA"
+        className="pb-12 sm:pb-16 md:pb-20 bg-gray-50"
+      >
+        <motion.div
+          {...fadeUp(0)}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
+          Found this useful?
+          </p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
+           Let’s talk when you’re ready
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
+          If something here sparked an idea or raised a question, feel free to reach out.
+Share a bit about what you’re exploring and we’ll help you think through the next steps.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+           
+            <Button
+              variant="ghost"
+             onClick={() => router.push("/contact")}
+            >
+              Start a conversation
+            </Button>
+          </div>
+        </motion.div>
+      </Section>
+
     </main>
   );
 };
