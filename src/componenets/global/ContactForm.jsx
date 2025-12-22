@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@/componenets/ui/Button";
+import { useToast } from "./Toast";
 
-const ContactForm = () => {
+const ContactForm = ({ pageName = "Unknown Page" }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { showToast } = useToast();
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -18,9 +21,43 @@ const ContactForm = () => {
 
       <form
         className="relative z-[1] space-y-5"
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          // TODO: hook up to API / form tool (Formspree, Web3Forms, custom API, etc.)
+          setIsSubmitting(true);
+
+          const formData = new FormData(e.target);
+          const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            company: formData.get("company"),
+            projectType: formData.get("projectType"),
+            message: formData.get("message"),
+            pageName: pageName,
+          };
+
+          try {
+            const response = await fetch("/api/request-query", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+              showToast("Form submitted successfully!", "success");
+              e.target.reset();
+            } else {
+              showToast(result.error || "Failed to submit form", "error");
+            }
+          } catch (error) {
+            console.error("Error submitting form:", error);
+            showToast("Failed to submit form. Please try again.", "error");
+          } finally {
+            setIsSubmitting(false);
+          }
         }}
       >
         <div className="grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2">
@@ -125,8 +162,8 @@ const ContactForm = () => {
 
         {/* Submit + note */}
         <div className="flex flex-col gap-2 pt-2">
-          <Button type="submit" className="w-full md:w-auto">
-            Send message
+          <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send message"}
           </Button>
           <p className="text-[11px] text-gray-400">
             Swagatam Tech will only use your details to respond to this inquiry.

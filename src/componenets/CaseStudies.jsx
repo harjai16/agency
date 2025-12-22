@@ -51,7 +51,7 @@ const CaseStudies = () => {
     <Section
       id="work"
       aria-label="Website case studies and recent work"
-      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
+      className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white"
     >
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
@@ -86,8 +86,6 @@ const CaseStudies = () => {
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-6 hide-scrollbar"
         >
           {caseStudies.map((item, index) => {
-            const isTall = index % 2 === 0;
-
             return (
               <motion.article
                 key={item.id}
@@ -96,13 +94,13 @@ const CaseStudies = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, delay: index * 0.06 }}
                 whileHover={{ y: -6 }}
-                className={`
+                className="
                   group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 
                   bg-white/80 backdrop-blur-sm shadow-[0_18px_40px_rgba(15,23,42,0.04)] 
                   transition-all snap-start shrink-0
                   w-[85%] sm:w-[70%] md:w-[48%] lg:w-[32%]
-                  ${isTall ? "h-[380px] sm:h-[400px] md:h-[420px] lg:h-[450px]" : "h-[360px] sm:h-[380px] md:h-[400px] lg:h-[420px]"}
-                `}
+                  h-[380px] sm:h-[400px] md:h-[420px] lg:h-[450px]
+                "
               >
                 {/* Top visual */}
                 <div className="relative h-1/2 md:h-[55%] overflow-hidden">

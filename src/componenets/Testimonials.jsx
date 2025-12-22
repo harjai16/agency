@@ -35,7 +35,7 @@ const Testimonials = () => {
     <Section
       id="testimonials"
       aria-label="Client testimonials"
-      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
+      className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white"
     >
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">

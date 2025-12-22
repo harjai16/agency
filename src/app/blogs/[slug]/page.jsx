@@ -7,6 +7,7 @@ import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
+import Contact from "@/componenets/Contact";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -299,6 +300,9 @@ const BlogDetailPage = () => {
           </div>
         </Section>
       )}
+
+      {/* Contact Form Section */}
+      <Contact pageName={`Blog: ${slug}`} />
     </main>
   );
 };

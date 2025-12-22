@@ -69,7 +69,7 @@ const Hero = () => {
     <Section
       id="hero"
       aria-label="Website development agency hero section"
-      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
+      className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white"
     >
       <div className="grid gap-8 sm:gap-10 md:gap-12 lg:gap-14 grid-cols-1 md:grid-cols-2 items-start md:items-center">
         {/* Left side: Text content */}

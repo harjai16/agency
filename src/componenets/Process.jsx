@@ -8,7 +8,7 @@ const Process = () => {
     <section
       id="process"
       aria-label="Our workflow"
-      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white"
+      className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white"
     >
       <div className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         {/* Header */}

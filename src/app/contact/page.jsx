@@ -100,7 +100,7 @@ const ContactPage = () => {
           </motion.div>
 
           {/* Right: global contact form */}
-          <ContactForm />
+          <ContactForm pageName="Contact" />
         </div>
       </Section>
     </main>

@@ -13,9 +13,9 @@ const Button = ({
 
   const variants = {
     solid:
-      "bg-black text-white hover:bg-black/90 border border-black",
+      "bg-black text-white hover:bg-black/90 border border-black disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black",
     ghost:
-      "bg-white text-black border border-gray-200 hover:border-black/40 hover:bg-gray-50"
+      "bg-white text-black border border-gray-200 hover:border-black/40 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
   };
 
   return (

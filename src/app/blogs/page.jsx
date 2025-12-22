@@ -7,6 +7,7 @@ import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Contact from "@/componenets/Contact";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -173,6 +174,9 @@ const BlogsPage = () => {
           )}
         </div>
       </Section>
+
+      {/* Contact Form Section */}
+      <Contact pageName="Blogs" />
     </main>
   );
 };

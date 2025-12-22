@@ -6,14 +6,16 @@ import Navbar from "@/componenets/global/Navbar";
 import Footer from "@/componenets/global/Footer";
 import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
 import CustomCursor from "@/componenets/global/CustomCursor";
+import { ToastProvider } from "@/componenets/global/Toast";
 
 export default function ConditionalLayout({ children }) {
   const pathname = usePathname();
   const isBlogPostPage = pathname === '/blog-post' || pathname?.startsWith('/blog-post');
+  const isRequestQueryPage = pathname === '/request-query';
 
   useEffect(() => {
     // Show normal cursor on admin pages
-    if (isBlogPostPage) {
+    if (isBlogPostPage || isRequestQueryPage) {
       document.body.style.cursor = 'auto';
       // Also ensure all elements show normal cursor
       const style = document.createElement('style');
@@ -43,22 +45,22 @@ export default function ConditionalLayout({ children }) {
         existingStyle.remove();
       }
     }
-  }, [isBlogPostPage]);
+  }, [isBlogPostPage, isRequestQueryPage]);
 
-  if (isBlogPostPage) {
-    // Blog post page - no navbar, footer, or custom cursor
+  if (isBlogPostPage || isRequestQueryPage) {
+    // Blog post page or Request Query page - no navbar, footer, or custom cursor
     return (
-      <>
+      <ToastProvider>
         <main className="min-h-screen">
           {children}
         </main>
-      </>
+      </ToastProvider>
     );
   }
 
   // All other pages - include navbar and footer
   return (
-    <>
+    <ToastProvider>
       <CustomCursor />
       {/* Fixed header: stripe + navbar */}
       <div className="fixed top-0 left-0 w-full z-50">
@@ -69,7 +71,7 @@ export default function ConditionalLayout({ children }) {
         {children}
       </main>
       <Footer />
-    </>
+    </ToastProvider>
   );
 }
 
