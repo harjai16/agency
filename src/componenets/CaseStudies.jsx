@@ -146,8 +146,8 @@ const CaseStudies = () => {
                       href={item.href}
                       className="inline-flex items-center gap-1 font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all"
                     >
-                      Read case study
-                      <span className="text-xs">↗</span>
+                      Read case study  
+                      <span className="text-xs">↗</span>  
                     </a>
                   </div>
                 </div>
