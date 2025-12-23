@@ -55,6 +55,10 @@ const HERO_LOGOS = [
   { name: "ProjectDeep", src: "/brands/projectdeep.svg" },
   { name: "SkillCrest", src: "/brands/skillcrest.png" },
   { name: "tipsy.webp", src: "/brands/tipsy.webp" },
+    { name: "ads_enviro", src: "/brands/ads_enviro.png" },
+      { name: "tipsy.webp", src: "/brands/Logo-Nut-Square-Final.png" },
+        { name: "tipsy.webp", src: "/brands/recy-logo.webp" },
+  
 
  
 ];

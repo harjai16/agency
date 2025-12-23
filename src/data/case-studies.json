@@ -1,181 +1,203 @@
 [
   {
-    "id": "saas-support",
-   
-    "client": "Northwind SaaS",
-    "industry": "B2B SaaS",
-    "title": "AI support copilot that cut response times by 47%",
-    "heroTitle": "Reducing support response time with an AI copilot inside their helpdesk",
-    "snippet": "We designed and deployed a custom support copilot that drafts responses, surfaces relevant docs, and suggests next best actions inside the existing helpdesk.",
-    "challenge": "Support agents were wasting time searching docs, rewriting messages and waiting for manager approvals — slowing customer responses to an average of 2.4 hours.",
-    "solution": "We built an AI copilot that drafts replies, pulls customer conversation history, suggests shortcuts, and recommends docs. Everything runs inside their existing CRM workflow.",
-    "impact": "Response time dropped by 47%, accuracy improved and customer satisfaction increased without hiring more support agents.",
+    "id": "ngo-wordpress-rebuild",
+    "client": "Khushali Mehta",
+    "industry": "Non-Profit",
+    "title": "Stabilising an NGO website with a custom WordPress rebuild",
+    "heroTitle": "Rebuilding an NGO website to eliminate update issues and improve maintainability",
+    "snippet": "We redesigned and rebuilt an NGO website using a custom WordPress theme to fix frequent breakages caused by theme and version updates.",
+    "challenge": "The previous website relied on a default WordPress theme and frequently broke after updates, making content changes risky and time-consuming.",
+    "solution": "We rebuilt the website using a custom WordPress theme with clean layouts and a stable update process, tailored to the NGO’s content needs.",
+    "impact": "The website became stable, easier to update, and no longer broke during routine WordPress updates.",
     "services": [
-      "Workflow automation",
-      "AI integration",
-      "UX/UI design",
-      "CRM integration"
+      "Website redesign",
+      "Custom WordPress development",
+      "UX & content structure"
     ],
     "deliverables": [
-      "AI copilot inside helpdesk",
-      "UI screens & flows",
-      "Prompt strategy",
-      "Internal training handbook"
+      "Custom WordPress theme",
+      "Responsive layouts",
+      "CMS configuration"
     ],
     "testimonial": {
-      "name": "Head of Support",
-      "quote": "This changed how our team works. We reply faster, more confidently and customer satisfaction has never been higher."
+      "name": "NGO Trustee",
+      "quote": "Managing the website is much easier now. Updates no longer break the site, and the design feels more aligned with our work."
     },
-    "metric": "47% faster responses",
-    "meta": "Launched in 10 weeks",
-    "href": "/case-studies/saas-support",
-    "liveUrl": "https://northwindsupport.ai",
-    "image": "/casestudy/bodhiguru.png",
-    "images": [
-      "/casestudy/bodhiguru.png",
-      "/casestudy/bodhiguru-2.png",
-      "/casestudy/bodhiguru-3.png"
-    ],
-    "imageAlt": "Dashboard view of AI copilot assisting support team"
-  },
-  {
-    "id": "ecom-automationss",
-    "client": "Lumen Retail",
-    "industry": "E-commerce",
-    "title": "Automated product workflows across 4 internal tools",
-    "heroTitle": "Automating product operations for a multichannel retailer",
-    "snippet": "We built agents that sync inventory, generate product copy, and alert ops when anomalies are detected across sales channels.",
-    "challenge": "Managing stock, updating descriptions and syncing listings across platforms required manual effort and constant spreadsheet updates.",
-    "solution": "We deployed automations that sync inventory, detect anomalies and push updates across channels like Shopify, Amazon and internal ERP.",
-    "impact": "Ops reclaimed 22+ hours per week, listings became consistent, and launch cycles moved much faster.",
-    "services": [
-      "Automation",
-      "Custom integrations",
-      "Monitoring dashboards"
-    ],
-    "deliverables": [
-      "Inventory sync system",
-      "Copy generator workflow",
-      "Monitoring dashboard"
-    ],
-    "testimonial": {
-      "name": "Ops Manager",
-      "quote": "We got back an entire day every week. The workflows pay for themselves."
-    },
-    "metric": "22 hrs saved / week",
-    "meta": "Ops automation across stack",
-    "href": "/case-studies/ecom-automationss",
-    "liveUrl": "https://lumenretail.com",
+    "metric": "Stable & easy updates",
+    "meta": "Delivered in 4–6 weeks",
+    "href": "/case-studies/ngo-wordpress-rebuild",
+    "liveUrl": "",
     "image": "/casestudy/projectdeep.png",
-    "images": [
-      "/casestudy/projectdeep.png",
-      "/casestudy/projectdeep-2.png"
+    "images": ["/casestudy/projectdeep.png","/casestudy/project2.png"],
+    "imageAlt": "NGO website redesign"
+  },
+
+
+
+
+
+   {
+    "id": "labelwala-nextjs",
+    "client": "Label Wala",
+    "industry": "Manufacturing / Printing",
+    "title": "High-performance brand website built with Next.js",
+    "heroTitle": "Building a fast, SEO-ready website for a printing brand",
+    "snippet": "We built a modern brand website in Next.js focused on speed, performance, and search visibility.",
+    "challenge": "The business needed a fast, professional website that represented their brand clearly and performed well across devices.",
+    "solution": "We designed and developed a Next.js website with performance-first layouts, responsive design, and SEO best practices.",
+    "impact": "The website achieved 90+ performance scores on mobile and desktop, loading quickly and providing a strong foundation for SEO.",
+    "services": [
+      "Website design",
+      "Next.js development",
+      "Performance optimization",
+      "SEO setup"
     ],
-    "imageAlt": "Product catalog automation interface"
+    "deliverables": [
+      "Next.js website",
+      "Responsive UI",
+      "SEO-ready pages"
+    ],
+    "testimonial": {
+      "name": "Akshit Gupta",
+      "quote": "The site loads fast, looks clean, and works smoothly across devices. Exactly what we needed."
+    },
+    "metric": "90+ performance score",
+    "meta": "SEO & speed focused build",
+    "href": "/case-studies/labelwala-nextjs",
+    "liveUrl": "",
+    "image": "/casestudy/labelwaala1.png",
+    "images": ["/casestudy/labelwaala1.png","/casestudy/label2.png"],
+    "imageAlt": "Label Wala website"
+  },
+   {
+    "id": "nutsquare-ecommerce",
+    "client": "NutSquare",
+    "industry": "E-commerce / Food",
+    "title": "Custom e-commerce website without login friction",
+    "heroTitle": "Designing a fast e-commerce experience for a healthy snacks brand",
+    "snippet": "We built a custom e-commerce website that allows users to browse, add to cart, and checkout without forced login.",
+    "challenge": "The client wanted a simple buying experience with smooth checkout and no user login requirement.",
+    "solution": "We developed a React-based e-commerce site with add-to-cart, order flow, and payment integration focused on simplicity.",
+    "impact": "The website delivers a fast, frictionless shopping experience with strong performance and SEO readiness.",
+    "services": [
+      "E-commerce design",
+      "React development",
+      "Payment integration",
+      "Performance optimization"
+    ],
+    "deliverables": [
+      "Custom storefront",
+      "Cart & checkout flow",
+      "Responsive layouts"
+    ],
+    "testimonial": {
+      "name": "Navneet",
+      "quote": "The checkout flow is simple and fast, exactly how we wanted it for our customers."
+    },
+    "metric": "90+ performance score",
+    "meta": "Custom React build",
+    "href": "/case-studies/nutsquare-ecommerce",
+    "liveUrl": "",
+     "image": "/casestudy/nuts.png",
+    "images": ["/casestudy/nuts1.png","/casestudy/nuts3.png"],
+    "imageAlt": "NutSquare e-commerce website"
   },
   {
-    "id": "finops-analytics",
-    "client": "Atlas Finance",
-    "industry": "Fintech",
-    "title": "Executive AI dashboard for real-time portfolio insights",
-    "heroTitle": "Helping leaders ask questions in natural language and get answers instantly",
-    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions like \"What's our most profitable segment?\"",
-    "challenge": "Executives were waiting on analysts for insights, spending hours building manual reports.",
-    "solution": "We built an AI dashboard that lets leaders query the data in natural language and get summaries, insights and charts.",
-    "impact": "The leadership team can make decisions 3x faster with no reporting bottleneck.",
+    "id": "recytronics-foundation",
+    "client": "Recytronics Foundation",
+    "industry": "Non-Profit / Sustainability",
+    "title": "Performance-focused NGO website built with Next.js",
+    "heroTitle": "Helping a sustainability-focused NGO communicate impact clearly",
+    "snippet": "We built a clean, fast website to support awareness, outreach, and long-term content growth.",
+    "challenge": "The foundation needed a modern website that communicated its mission clearly while remaining fast and accessible.",
+    "solution": "We designed and developed a Next.js website with structured content, clean UI, and SEO-friendly pages.",
+    "impact": "The website loads quickly, scores 90+ in performance, and presents the foundation’s work with clarity.",
     "services": [
-      "AI-assisted analytics",
-      "Dashboard UX design",
-      "Data pipeline integration"
+      "Website design",
+      "Next.js development",
+      "SEO optimization"
     ],
     "deliverables": [
-      "Executive dashboard",
-      "Data querying engine",
-      "Security + access controls"
+      "Next.js website",
+      "Content structure",
+      "SEO-ready pages"
     ],
     "testimonial": {
-      "name": "Director of Analytics",
-      "quote": "It’s like having a data analyst available 24/7."
+      "name": "Foundation Team",
+      "quote": "The website feels clean, fast, and clearly communicates our mission."
     },
-    "metric": "3x faster decisions",
-    "meta": "From brief to v1 in 8 weeks",
-    "href": "/case-studies/finops-analytics",
-    "liveUrl": "https://atlasfinance.ai",
-    "image": "/casestudy/skillcrest.png",
-    "images": [
-      "/casestudy/skillcrest.png",
-      "/casestudy/skillcrest-2.png"
-    ],
-    "imageAlt": "Finance dashboard with charts and metrics"
+    "metric": "90+ performance score",
+    "meta": "Built for clarity & impact",
+    "href": "/case-studies/recytronics-foundation",
+    "liveUrl": "https://www.recytronicsfoundation.org",
+"image": "/casestudy/r.png",
+    "images": ["/casestudy/r1.png","/casestudy/r2.png"],
+    "imageAlt": "Recytronics Foundation website"
   },
-   {
-    "id": "finops-analyticss",
-    "client": "Atlas Finance",
-    "industry": "Fintech",
-    "title": "Executive AI dashboard for real-time portfolio insights",
-    "heroTitle": "Helping leaders ask questions in natural language and get answers instantly",
-    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions like \"What's our most profitable segment?\"",
-    "challenge": "Executives were waiting on analysts for insights, spending hours building manual reports.",
-    "solution": "We built an AI dashboard that lets leaders query the data in natural language and get summaries, insights and charts.",
-    "impact": "The leadership team can make decisions 3x faster with no reporting bottleneck.",
+{
+    "id": "ads-enviro",
+    "client": "ADS Enviro Group",
+    "industry": "Environmental Services",
+    "title": "Corporate website built for clarity and speed",
+    "heroTitle": "Building a professional, SEO-ready website for an environmental services company",
+    "snippet": "We built a clean company website focused on performance, structure, and long-term maintainability.",
+    "challenge": "The company needed a modern website to clearly explain services and improve digital presence.",
+    "solution": "We developed a Next.js-based website with clean layouts, fast load times, and SEO best practices.",
+    "impact": "The website delivers strong performance, clear messaging, and a professional online presence.",
     "services": [
-      "AI-assisted analytics",
-      "Dashboard UX design",
-      "Data pipeline integration"
+      "Website design",
+      "Next.js development",
+      "SEO optimization"
     ],
     "deliverables": [
-      "Executive dashboard",
-      "Data querying engine",
-      "Security + access controls"
+      "Corporate website",
+      "Responsive layouts",
+      "SEO structure"
     ],
     "testimonial": {
-      "name": "Director of Analytics",
-      "quote": "It’s like having a data analyst available 24/7."
+      "name": "ADS Enviro Team",
+      "quote": "The website presents our work clearly and performs well across devices."
     },
-    "metric": "3x faster decisions",
-    "meta": "From brief to v1 in 8 weeks",
-    "href": "/case-studies/finops-analyticss",
-    "liveUrl": "https://atlasfinance.ai",
-    "image": "/casestudy/skillcrest.png",
-    "images": [
-      "/casestudy/skillcrest.png",
-      "/casestudy/skillcrest-2.png"
-    ],
-    "imageAlt": "Finance dashboard with charts and metrics"
+    "metric": "Fast & optimized build",
+    "meta": "Next.js corporate site",
+    "href": "/case-studies/ads-enviro",
+    "liveUrl": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "images": ["/casestudy/a1.png","/casestudy/a2.png"],
+    "imageAlt": "ADS Enviro Group website"
   },
-   {
-    "id": "finops-analytic",
-    "client": "Atlas Finance",
-    "industry": "Fintech",
-    "title": "Executive AI dashboard for real-time portfolio insights",
-    "heroTitle": "Helping leaders ask questions in natural language and get answers instantly",
-    "snippet": "We created an AI-assisted analytics layer that lets leaders ask questions like \"What's our most profitable segment?\"",
-    "challenge": "Executives were waiting on analysts for insights, spending hours building manual reports.",
-    "solution": "We built an AI dashboard that lets leaders query the data in natural language and get summaries, insights and charts.",
-    "impact": "The leadership team can make decisions 3x faster with no reporting bottleneck.",
-    "services": [
-      "AI-assisted analytics",
-      "Dashboard UX design",
-      "Data pipeline integration"
-    ],
-    "deliverables": [
-      "Executive dashboard",
-      "Data querying engine",
-      "Security + access controls"
-    ],
-    "testimonial": {
-      "name": "Director of Analytics",
-      "quote": "It’s like having a data analyst available 24/7."
-    },
-    "metric": "3x faster decisions",
-    "meta": "From brief to v1 in 8 weeks",
-    "href": "/case-studies/finops-analytic",
-    "liveUrl": "https://atlasfinance.ai",
-    "image": "/casestudy/skillcrest.png",
-    "images": [
-      "/casestudy/skillcrest.png",
-      "/casestudy/skillcrest-2.png"
-    ],
-    "imageAlt": "Finance dashboard with charts and metrics"
-  }
+  {
+  "id": "tipsy-ai-connection-platform",
+  "client": "Tipsy (Internal Product)",
+  "industry": "AI / Social Product",
+  "title": "AI-powered platform for intent-based conversations",
+  "heroTitle": "Building an AI-assisted platform for meaningful, mindset-based connections",
+  "snippet": "We built a product that uses AI-guided questions to help users connect through shared intent and mindset rather than swipes or random chats.",
+  "challenge": "Most chat platforms prioritize engagement over understanding, leading to shallow or noisy conversations. The challenge was to design a system that encourages intentional interaction without turning AI into a replacement for human connection.",
+  "solution": "We designed and developed a full-stack web application using Gemini-powered question flows, mindset-based matching, and real-time chat. Users can connect one-on-one or create groups based on shared interests and responses.",
+  "impact": "The platform enables slower, more intentional conversations and demonstrates responsible AI usage focused on guidance rather than automation.",
+  "services": [
+    "Product design",
+    "Full-stack development",
+    "AI integration",
+    "Real-time features"
+  ],
+  "deliverables": [
+    "AI-guided question flow",
+    "Personality-based matching logic",
+    "1:1 chat and group conversations",
+    "Scalable backend architecture"
+  ],
+  "testimonial": {
+    "name": "Internal Product Team",
+    "quote": "Tipsy helped us explore how AI can support meaningful human conversations without replacing them."
+  },
+  "metric": "AI-assisted matching & real-time chat",
+  "meta": "Next.js, Node.js, MongoDB, Gemini",
+  "href": "/case-studies/tipsy",
+  "liveUrl": "",
+  "image": "/casestudy/tipsy.png",
+  "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
+  "imageAlt": "Tipsy AI-powered conversation platform"
+}
 ]
