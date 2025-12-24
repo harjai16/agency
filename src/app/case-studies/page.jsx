@@ -73,7 +73,7 @@ const CaseStudiesPage = () => {
               <span className="inline-block border-b border-gray-300 pb-1">
                
               </span>{" "}
-            Real outcomes.
+            Real outcomes.   
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
