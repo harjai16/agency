@@ -3,7 +3,8 @@ import "./globals.css";
 
 import ConditionalLayout from "./ConditionalLayout";
 import StructuredData from "@/componenets/global/StructuredData";
-
+     
+  
 
 
 export const metadata = {
