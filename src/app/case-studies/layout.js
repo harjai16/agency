@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
   description: "A closer look at websites we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. Detailed case studies showing challenges, solutions, and measurable results.",
   keywords: [

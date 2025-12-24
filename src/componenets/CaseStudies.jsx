@@ -103,13 +103,14 @@ const CaseStudies = () => {
                 "
               >
                 {/* Top visual */}
-                <div className="relative h-1/2 md:h-[55%] overflow-hidden">
+                <div className="relative w-full h-1/2 md:h-[55%] overflow-hidden bg-gray-50">
                   <Image
                     src={item.image}
                     alt={item.imageAlt || item.title}
                     fill
                     priority={index === 0}
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
                   <div className="relative flex h-full items-end justify-between px-3 sm:px-4 pb-2 sm:pb-3">

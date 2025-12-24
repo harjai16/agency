@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Blog - Web Design & Development Insights | Swagatam Tech',
   description: 'Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites.',
   keywords: [

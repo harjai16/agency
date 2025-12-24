@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "About Us - Modern Web Studio | Swagatam Tech",
   description: "We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability. 10+ websites delivered, 98% client satisfaction, 4-6 week average build time.",
   keywords: [

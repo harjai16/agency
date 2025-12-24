@@ -133,14 +133,15 @@ From faster load times to smoother flows and clearer content, these are shipped 
               >
                 <Link href={item.href} className="flex flex-col h-full">
                   {/* Top image area */}
-                  <div className="relative h-40 md:h-44 overflow-hidden">
+                  <div className="relative w-full h-40 md:h-44 overflow-hidden bg-gray-50">
                     {item.image && (
                       <Image
                         src={item.image}
                         alt={item.imageAlt || item.title}
                         fill
                         priority={index === 0}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       />
                     )}

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Contact Us - Get a Free Website Plan | Swagatam Tech",
   description: "Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. We help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Email: ashwaniharjai.softwaredev@gmail.com. We usually respond within one business day.",
   keywords: [

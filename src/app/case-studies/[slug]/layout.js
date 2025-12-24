@@ -3,7 +3,7 @@ import caseStudies from '@/data/case-studies.json';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export async function generateMetadata({ params }): Promise<Metadata> {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
   const caseStudy = caseStudies.find((cs) => cs.id === slug);
 

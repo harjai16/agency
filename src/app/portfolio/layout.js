@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Portfolio - Our Website Development Projects | Swagatam Tech",
   description: "Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses. 10+ projects delivered including Next.js websites, WordPress rebuilds, e-commerce platforms, and custom web applications.",
   keywords: [
