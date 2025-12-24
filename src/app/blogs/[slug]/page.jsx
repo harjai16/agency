@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import Contact from "@/componenets/Contact";
+import StructuredData from "@/componenets/global/StructuredData";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -152,8 +153,67 @@ const BlogDetailPage = () => {
     );
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+  const blogUrl = `${siteUrl}/blogs/${slug}`;
+
+  const articleSchema = blog ? {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": blog.title,
+    "description": blog.metaDescription || blog.excerpt || blog.title,
+    "image": blog.featuredImage ? [blog.featuredImage] : [],
+    "datePublished": blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
+    "dateModified": blog.updatedAt ? new Date(blog.updatedAt).toISOString() : blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
+    "author": {
+      "@type": "Person",
+      "name": blog.author || "Swagatam Tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Swagatam Tech",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/logo.png`
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": blogUrl
+    },
+    "keywords": blog.keywords || "",
+    "articleSection": "Web Development",
+    "inLanguage": "en-US"
+  } : null;
+
+  const breadcrumbSchema = blog ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": `${siteUrl}/blogs`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": blog.title,
+        "item": blogUrl
+      }
+    ]
+  } : null;
+
   return (
     <main className="bg-white text-gray-900">
+      {articleSchema && <StructuredData data={articleSchema} />}
+      {breadcrumbSchema && <StructuredData data={breadcrumbSchema} />}
       {/* HERO / BANNER */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,_rgba(209,213,219,0.35),_transparent_65%)]" />

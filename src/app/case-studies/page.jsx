@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import caseStudies from "@/data/case-studies.json";
 import { useRouter } from "next/navigation";
+import StructuredData from "@/componenets/global/StructuredData";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -18,8 +19,42 @@ const fadeUp = (delay = 0) => ({
 
 const CaseStudiesPage = () => {
     const router = useRouter();
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+
+    const collectionSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Case Studies - Swagatam Tech",
+      "description": "A closer look at websites we've designed and built — focused on speed, stability, and usability. Real projects, not concepts.",
+      "url": `${siteUrl}/case-studies`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": caseStudies.length,
+        "itemListElement": caseStudies.slice(0, 10).map((caseStudy, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "CaseStudy",
+            "name": caseStudy.heroTitle || caseStudy.title,
+            "description": caseStudy.snippet,
+            "url": `${siteUrl}${caseStudy.href || `/case-studies/${caseStudy.id}`}`,
+            "image": caseStudy.image ? (caseStudy.image.startsWith('http') ? caseStudy.image : `${siteUrl}${caseStudy.image}`) : undefined,
+            "about": {
+              "@type": "Thing",
+              "name": caseStudy.industry
+            },
+            "client": {
+              "@type": "Organization",
+              "name": caseStudy.client
+            }
+          }
+        }))
+      }
+    };
+
   return (
     <main className="bg-white text-gray-900">
+      <StructuredData data={collectionSchema} />
       {/* Banner / Hero */}
       <Section
         id="case-studies-hero"

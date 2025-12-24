@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Contact from "@/componenets/Contact";
+import StructuredData from "@/componenets/global/StructuredData";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -50,8 +51,39 @@ const BlogsPage = () => {
     });
   };
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+  
+  const blogCollectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog - Swagatam Tech",
+    "description": "Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO.",
+    "url": `${siteUrl}/blogs`,
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": blogs.length,
+      "itemListElement": blogs.slice(0, 10).map((blog, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "BlogPosting",
+          "headline": blog.title,
+          "description": blog.excerpt || blog.title,
+          "url": `${siteUrl}/blogs/${blog.slug}`,
+          "image": blog.featuredImage || undefined,
+          "datePublished": blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
+          "author": {
+            "@type": "Person",
+            "name": blog.author || "Swagatam Tech"
+          }
+        }
+      }))
+    }
+  };
+
   return (
     <main className="bg-white text-gray-900">
+      <StructuredData data={blogCollectionSchema} />
       {/* Banner / Hero */}
       <Section
         id="blogs-hero"
