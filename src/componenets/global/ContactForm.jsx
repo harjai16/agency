@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Button from "../ui/Button";
+import Button from "@/componenets/ui/Button";
 import { useToast } from "./Toast";
 
 const ContactForm = ({ pageName = "Unknown Page" }) => {

@@ -1,10 +1,10 @@
-import Hero from "../componenets/Hero";
-import Services from "../componenets/Services";
-import CaseStudies from "../componenets/CaseStudies";
-import Process from "../componenets/Process";
-import Testimonials from "../componenets/Testimonials";
-import Contact from "../componenets/Contact";
-import WhyChoose from "../componenets/WhyChoose";
+import Hero from "@/componenets/Hero";
+import Services from "@/componenets/Services";
+import CaseStudies from "@/componenets/CaseStudies";
+import Process from "@/componenets/Process";
+import Testimonials from "@/componenets/Testimonials";
+import Contact from "@/componenets/Contact";
+import WhyChoose from "@/componenets/WhyChoose";
 
 
 import StructuredData from "../componenets/global/StructuredData";

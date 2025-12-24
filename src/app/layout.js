@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import ConditionalLayout from "./ConditionalLayout";
-import StructuredData from "../componenets/global/StructuredData";
+import StructuredData from "@/componenets/global/StructuredData";
 
 
 
