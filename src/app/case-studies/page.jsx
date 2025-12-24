@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import caseStudies from "@/data/case-studies.json";
 import { useRouter } from "next/navigation";
+import StructuredData from "@/componenets/global/StructuredData";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -18,8 +19,42 @@ const fadeUp = (delay = 0) => ({
 
 const CaseStudiesPage = () => {
     const router = useRouter();
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+
+    const collectionSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Case Studies - Swagatam Tech",
+      "description": "A closer look at websites we've designed and built — focused on speed, stability, and usability. Real projects, not concepts.",
+      "url": `${siteUrl}/case-studies`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": caseStudies.length,
+        "itemListElement": caseStudies.slice(0, 10).map((caseStudy, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "CaseStudy",
+            "name": caseStudy.heroTitle || caseStudy.title,
+            "description": caseStudy.snippet,
+            "url": `${siteUrl}${caseStudy.href || `/case-studies/${caseStudy.id}`}`,
+            "image": caseStudy.image ? (caseStudy.image.startsWith('http') ? caseStudy.image : `${siteUrl}${caseStudy.image}`) : undefined,
+            "about": {
+              "@type": "Thing",
+              "name": caseStudy.industry
+            },
+            "client": {
+              "@type": "Organization",
+              "name": caseStudy.client
+            }
+          }
+        }))
+      }
+    };
+
   return (
     <main className="bg-white text-gray-900">
+      <StructuredData data={collectionSchema} />
       {/* Banner / Hero */}
       <Section
         id="case-studies-hero"
@@ -98,14 +133,15 @@ From faster load times to smoother flows and clearer content, these are shipped 
               >
                 <Link href={item.href} className="flex flex-col h-full">
                   {/* Top image area */}
-                  <div className="relative h-40 md:h-44 overflow-hidden">
+                  <div className="relative w-full h-40 md:h-44 overflow-hidden bg-gray-50">
                     {item.image && (
                       <Image
                         src={item.image}
                         alt={item.imageAlt || item.title}
                         fill
                         priority={index === 0}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       />
                     )}

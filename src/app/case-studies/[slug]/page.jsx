@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import caseStudies from "@/data/case-studies.json";
+import StructuredData from "@/componenets/global/StructuredData";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -75,8 +76,109 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
       ? caseStudies[currentIndex + 1]
       : null;
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+  const caseStudyUrl = `${siteUrl}/case-studies/${slug}`;
+  const imageUrl = heroImage ? (heroImage.startsWith('http') ? heroImage : `${siteUrl}${heroImage}`) : `${siteUrl}/og-image.jpg`;
+
+  // Case Study Structured Data
+  const caseStudySchema = {
+    "@context": "https://schema.org",
+    "@type": "CaseStudy",
+    "name": heroTitle || title,
+    "description": snippet,
+    "url": caseStudyUrl,
+    "image": imageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "Swagatam Tech"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": industry
+    },
+    "client": {
+      "@type": "Organization",
+      "name": client
+    },
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": caseStudyUrl
+    }
+  };
+
+  // Article Schema for Case Study
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": heroTitle || title,
+    "description": snippet,
+    "image": imageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "Swagatam Tech",
+      "url": siteUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Swagatam Tech",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/logo.png`
+      }
+    },
+    "datePublished": new Date().toISOString(),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": caseStudyUrl
+    },
+    "articleSection": industry,
+    "keywords": services ? services.join(', ') : ''
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": `${siteUrl}/case-studies`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": caseStudyUrl
+      }
+    ]
+  };
+
+  // Service Schema
+  const serviceSchema = services && services.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": services.join(', '),
+    "provider": {
+      "@type": "Organization",
+      "name": "Swagatam Tech"
+    },
+    "areaServed": "Worldwide"
+  } : null;
+
   return (
     <main className="bg-white text-gray-900">
+      <StructuredData data={caseStudySchema} />
+      <StructuredData data={articleSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      {serviceSchema && <StructuredData data={serviceSchema} />}
       {/* HERO / BANNER */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,_rgba(209,213,219,0.35),_transparent_65%)]" />

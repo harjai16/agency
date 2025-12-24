@@ -14,23 +14,40 @@ export async function generateMetadata({ params }) {
       };
     }
 
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+    const blogUrl = `${siteUrl}/blogs/${slug}`;
+    
     return {
       title: `${blog.metaTitle || blog.title} | Swagatam Tech Blog`,
       description: blog.metaDescription || blog.excerpt || blog.title,
       keywords: blog.keywords || '',
+      authors: blog.author ? [{ name: blog.author }] : [],
       openGraph: {
         title: blog.metaTitle || blog.title,
         description: blog.metaDescription || blog.excerpt || '',
         type: 'article',
-        images: blog.featuredImage ? [blog.featuredImage] : [],
+        url: blogUrl,
+        images: blog.featuredImage ? [
+          {
+            url: blog.featuredImage,
+            width: 1200,
+            height: 630,
+            alt: blog.title,
+          }
+        ] : [],
         publishedTime: blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
         authors: blog.author ? [blog.author] : [],
+        siteName: 'Swagatam Tech',
       },
       twitter: {
         card: 'summary_large_image',
         title: blog.metaTitle || blog.title,
         description: blog.metaDescription || blog.excerpt || '',
         images: blog.featuredImage ? [blog.featuredImage] : [],
+        creator: '@swagatamtech',
+      },
+      alternates: {
+        canonical: blogUrl,
       },
     };
   } catch (error) {

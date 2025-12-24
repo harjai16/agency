@@ -1,0 +1,7 @@
+# Vercel Domain Verification
+# Add your verification code here
+# This file is used to verify domain ownership for swagatamtech.com
+# 
+# After adding the TXT record at _vercel.swagatamtech.com in your DNS,
+# update this file with the verification code provided by Vercel (if required)
+
