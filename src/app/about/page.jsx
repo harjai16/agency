@@ -255,7 +255,7 @@ const page = () => {
               Client satisfaction & repeat work
             </div>
           </motion.div>
-        </div>
+        </div>   
       </Section>
   
       {/* OUR PROCESS PREVIEW */}
