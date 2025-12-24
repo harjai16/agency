@@ -73,7 +73,7 @@ const CaseStudiesPage = () => {
               <span className="inline-block border-b border-gray-300 pb-1">
                
               </span>{" "}
-            Real outcomes.   
+            Real outcomes.     
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
@@ -105,7 +105,7 @@ From faster load times to smoother flows and clearer content, these are shipped 
         </div>
       </Section>
 
-      {/* Listing grid */}
+      {/* Listing grid */}    
       <Section
         id="case-studies-list"
         aria-label="Case studies list"
