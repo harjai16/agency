@@ -86,7 +86,7 @@ const Hero = () => {
             className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-gray-200 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-gray-600 bg-white/70 backdrop-blur"
           >
             <span className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-emerald-500" />
-            BUILDING BRANDS ONLINE
+            BUILDING BRANDS ONLINE Ashwani
           </motion.div>
 
           {/* Heading */}
