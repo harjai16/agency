@@ -257,7 +257,7 @@ const page = () => {
           </motion.div>
         </div>
       </Section>
-
+  
       {/* OUR PROCESS PREVIEW */}
       <Section
         id="about-process"
