@@ -156,7 +156,8 @@ const BlogDetailPage = () => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
   const blogUrl = `${siteUrl}/blogs/${slug}`;
 
-  const articleSchema = blog ? {
+  // Auto-generated schema (fallback)
+  const defaultArticleSchema = blog ? {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": blog.title,
@@ -184,6 +185,25 @@ const BlogDetailPage = () => {
     "articleSection": "Web Development",
     "inLanguage": "en-US"
   } : null;
+
+  // Use custom schema if provided and valid, otherwise use default
+  let articleSchema = null;
+  if (blog) {
+    if (blog.customSchemaJson && blog.customSchemaJson.trim()) {
+      try {
+        // Parse and validate custom JSON schema
+        const customSchema = JSON.parse(blog.customSchemaJson);
+        articleSchema = customSchema;
+      } catch (error) {
+        // If JSON is invalid, fall back to default schema
+        console.warn('Invalid custom schema JSON, using default schema:', error);
+        articleSchema = defaultArticleSchema;
+      }
+    } else {
+      // No custom schema, use default
+      articleSchema = defaultArticleSchema;
+    }
+  }
 
   const breadcrumbSchema = blog ? {
     "@context": "https://schema.org",

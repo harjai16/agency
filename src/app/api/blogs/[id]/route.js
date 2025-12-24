@@ -44,6 +44,7 @@ export async function PUT(request, { params }) {
       keywords,
       status,
       featuredImage,
+      customSchemaJson,
     } = body;
 
     // Check if slug already exists (excluding current blog)
@@ -70,6 +71,7 @@ export async function PUT(request, { params }) {
       ...(keywords !== undefined && { keywords }),
       ...(status && { status }),
       ...(featuredImage !== undefined && { featuredImage }),
+      ...(customSchemaJson !== undefined && { customSchemaJson }),
       updatedAt: new Date(),
     };
 

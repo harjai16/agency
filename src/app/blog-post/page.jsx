@@ -30,6 +30,7 @@ const BlogPostAdmin = () => {
     keywords: '',
     status: 'draft',
     featuredImage: '',
+    customSchemaJson: '',
   });
   
   // Track manual edits
@@ -167,6 +168,7 @@ const BlogPostAdmin = () => {
       keywords: blog.keywords || '',
       status: blog.status || 'draft',
       featuredImage: blog.featuredImage || '',
+      customSchemaJson: blog.customSchemaJson || '',
     });
     // Reset manual edits when editing existing blog
     setManualEdits({ slug: false, metaTitle: false });
@@ -184,6 +186,7 @@ const BlogPostAdmin = () => {
       keywords: '',
       status: 'draft',
       featuredImage: '',
+      customSchemaJson: '',
     });
     // Reset manual edits
     setManualEdits({ slug: false, metaTitle: false });
@@ -487,6 +490,22 @@ const BlogPostAdmin = () => {
                         className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
                         placeholder="keyword1, keyword2, keyword3"
                       />
+                    </div>
+
+                    <div className="md:col-span-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Custom Schema JSON (SEO) <span className="text-xs text-gray-500 font-normal">(Optional - JSON-LD schema for advanced SEO)</span>
+                      </label>
+                      <textarea
+                        value={formData.customSchemaJson}
+                        onChange={(e) => setFormData({ ...formData, customSchemaJson: e.target.value })}
+                        rows={8}
+                        className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black font-mono text-sm"
+                        placeholder='{"@context": "https://schema.org", "@type": "BlogPosting", ...}'
+                      />
+                      <p className="mt-1 text-xs text-gray-500">
+                        Leave empty to use auto-generated schema. If provided, this will override the default schema. Make sure it's valid JSON.
+                      </p>
                     </div>
                   </div>
 

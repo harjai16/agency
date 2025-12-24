@@ -41,7 +41,8 @@ export async function POST(request) {
       keywords,
       status = 'draft',
       featuredImage,
-      author = 'Admin'
+      author = 'Admin',
+      customSchemaJson
     } = body;
 
     // Validate required fields
@@ -72,6 +73,7 @@ export async function POST(request) {
       status,
       featuredImage: featuredImage || '',
       author,
+      customSchemaJson: customSchemaJson || '',
       createdAt: new Date(),
       updatedAt: new Date(),
     };
