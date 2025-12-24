@@ -8,7 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import caseStudies from "@/data/case-studies.json";
 import { useRouter } from "next/navigation";
-import StructuredData from "@/componenets/global/StructuredData";
+import StructuredData from "@/componenets/global/StructuredData"; 
+
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
