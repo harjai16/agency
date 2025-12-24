@@ -1,21 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/componenets/global/Navbar";
-import Footer from "@/componenets/global/Footer";
-import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
-import CustomCursor from "@/componenets/global/CustomCursor";
+
 import ConditionalLayout from "./ConditionalLayout";
-import StructuredData from "@/componenets/global/StructuredData";
+import StructuredData from "../componenets/global/StructuredData";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com'),

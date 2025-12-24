@@ -2,11 +2,11 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-import Navbar from "@/componenets/global/Navbar";
-import Footer from "@/componenets/global/Footer";
-import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
-import CustomCursor from "@/componenets/global/CustomCursor";
-import { ToastProvider } from "@/componenets/global/Toast";
+import Navbar from "../componenets/global/Navbar";
+import Footer from "../componenets/global/Footer";
+import CapabilitiesStrip from "../componenets/CapabilitiesStrip";
+import CustomCursor from "../componenets/global/CustomCursor";
+import { ToastProvider } from "../componenets/global/Toast";
 
 export default function ConditionalLayout({ children }) {
   const pathname = usePathname();

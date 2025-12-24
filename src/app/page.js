@@ -1,15 +1,14 @@
-import Hero from "@/componenets/Hero";
-import Services from "@/componenets/Services";
-import CaseStudies from "@/componenets/CaseStudies";
-import Process from "@/componenets/Process";
-import Testimonials from "@/componenets/Testimonials";
-import Contact from "@/componenets/Contact";
-import WhyChoose from "@/componenets/WhyChoose";
-import Faq from "@/componenets/Faq";
-import Navbar from "@/componenets/global/Navbar";
-import LogosStrip from "@/componenets/LogosStrip";
-import StructuredData from "@/componenets/global/StructuredData";
-import { Metadata } from "next";
+import Hero from "../componenets/Hero";
+import Services from "../componenets/Services";
+import CaseStudies from "../componenets/CaseStudies";
+import Process from "../componenets/Process";
+import Testimonials from "../componenets/Testimonials";
+import Contact from "../componenets/Contact";
+import WhyChoose from "../componenets/WhyChoose";
+
+
+import StructuredData from "../componenets/global/StructuredData";
+
 
 export const metadata = {
   title: "High-Performance Website Development Agency | Swagatam Tech",
