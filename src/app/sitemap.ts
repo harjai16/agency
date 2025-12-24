@@ -7,7 +7,6 @@
  * The sitemap includes:
  * - All static pages (home, about, services, contact, portfolio, case-studies, blogs)
  * - All published blog posts (from MongoDB)
- * - All case studies (from JSON file)
  * 
  * Update frequency and priorities are set based on page importance.
  */
@@ -117,31 +116,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Fetch case studies from JSON file
-  let caseStudyRoutes: MetadataRoute.Sitemap = [];
-  try {
-    const caseStudies = await import('@/data/case-studies.json');
-    const caseStudiesData = caseStudies.default || caseStudies;
-    
-    if (Array.isArray(caseStudiesData)) {
-      caseStudyRoutes = caseStudiesData.map((caseStudy) => ({
-        url: `${siteUrl}${caseStudy.href || `/case-studies/${caseStudy.id}`}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      }));
-    }
-  } catch (error) {
-    console.error('Error fetching case studies for sitemap:', error);
-  }
-
   // Combine all routes
   const allRoutes: MetadataRoute.Sitemap = [
     ...baseRoutes,
     ...blogRoutes,
-    ...caseStudyRoutes,
   ];
 
   return allRoutes;
 }
-
