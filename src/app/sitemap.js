@@ -77,7 +77,7 @@ export default async function sitemap() {
           : blog.createdAt 
             ? new Date(blog.createdAt) 
             : new Date(),
-        changeFrequency: 'monthly' as const,
+        changeFrequency: 'monthly',
         priority: 0.7,
       }));
     }
@@ -107,7 +107,7 @@ export default async function sitemap() {
               : blog.createdAt 
                 ? new Date(blog.createdAt) 
                 : new Date(),
-            changeFrequency: 'monthly' as const,
+            changeFrequency: 'monthly',
             priority: 0.7,
           }));
         }
@@ -127,7 +127,7 @@ export default async function sitemap() {
       caseStudyRoutes = caseStudiesData.map((caseStudy) => ({
         url: `${siteUrl}${caseStudy.href || `/case-studies/${caseStudy.id}`}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
+        changeFrequency: 'monthly',
         priority: 0.7,
       }));
     }
