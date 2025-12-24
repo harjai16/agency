@@ -17,6 +17,7 @@ export async function GET(request, { params }) {
       );
     }
 
+    
     return NextResponse.json({ success: true, blog });
   } catch (error) {
     console.error('Error fetching blog:', error);
