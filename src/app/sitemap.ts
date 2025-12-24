@@ -16,8 +16,8 @@ import { MetadataRoute } from 'next';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
-export default async function sitemap() {
-  const baseRoutes = [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseRoutes: MetadataRoute.Sitemap = [
     {
       url: `${siteUrl}`,
       lastModified: new Date(),
@@ -63,7 +63,7 @@ export default async function sitemap() {
   ];
 
   // Fetch blog posts from database
-  let blogRoutes = [];
+  let blogRoutes: MetadataRoute.Sitemap = [];
   try {
     const { connectToDatabase } = await import('@/lib/mongodb');
     const { db } = await connectToDatabase();
@@ -77,7 +77,7 @@ export default async function sitemap() {
           : blog.createdAt 
             ? new Date(blog.createdAt) 
             : new Date(),
-        changeFrequency: 'monthly',
+        changeFrequency: 'monthly' as const,
         priority: 0.7,
       }));
     }
@@ -107,7 +107,7 @@ export default async function sitemap() {
               : blog.createdAt 
                 ? new Date(blog.createdAt) 
                 : new Date(),
-            changeFrequency: 'monthly',
+            changeFrequency: 'monthly' as const,
             priority: 0.7,
           }));
         }
@@ -118,7 +118,7 @@ export default async function sitemap() {
   }
 
   // Fetch case studies from JSON file
-  let caseStudyRoutes = [];
+  let caseStudyRoutes: MetadataRoute.Sitemap = [];
   try {
     const caseStudies = await import('@/data/case-studies.json');
     const caseStudiesData = caseStudies.default || caseStudies;
@@ -127,7 +127,7 @@ export default async function sitemap() {
       caseStudyRoutes = caseStudiesData.map((caseStudy) => ({
         url: `${siteUrl}${caseStudy.href || `/case-studies/${caseStudy.id}`}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly',
+        changeFrequency: 'monthly' as const,
         priority: 0.7,
       }));
     }
@@ -136,7 +136,7 @@ export default async function sitemap() {
   }
 
   // Combine all routes
-  const allRoutes = [
+  const allRoutes: MetadataRoute.Sitemap = [
     ...baseRoutes,
     ...blogRoutes,
     ...caseStudyRoutes,
