@@ -261,7 +261,7 @@ const page = () => {
       {/* OUR PROCESS PREVIEW */}
       <Section
         id="about-process"
-        aria-label="Our process preview"
+        aria-label="Our process preview"   
         className="py-12 sm:py-16 md:py-20"
       >
         <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
