@@ -7,7 +7,7 @@ import Contact from "@/componenets/Contact";
 import WhyChoose from "@/componenets/WhyChoose";
 
 
-import StructuredData from "../componenets/global/StructuredData";
+import StructuredData from "@/componenets/global/StructuredData";
 
 
 export const metadata = {
