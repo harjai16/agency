@@ -7,10 +7,22 @@ export async function GET(request) {
     const { db } = await connectToDatabase();
     const { searchParams } = new URL(request.url);
     const status = searchParams.get('status'); // 'draft' or 'published'
+    const search = searchParams.get('search'); // Search query
 
     let query = {};
     if (status) {
       query.status = status;
+    }
+
+    // Add search functionality
+    if (search && search.trim()) {
+      const searchRegex = new RegExp(search.trim(), 'i');
+      query.$or = [
+        { title: searchRegex },
+        { excerpt: searchRegex },
+        { keywords: searchRegex },
+        { content: searchRegex }
+      ];
     }
 
     const blogs = await db.collection('blogs').find(query).sort({ createdAt: -1 }).toArray();
