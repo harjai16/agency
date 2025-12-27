@@ -13,7 +13,7 @@ const SocialShare = ({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
   const shareUrl = url ? `${siteUrl}${url}` : typeof window !== 'undefined' ? window.location.href : siteUrl;
   const shareTitle = title || "Swagatam Tech - Website Development Agency";
-  const shareDescription = description || "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.";
+  const shareDescription = description || "Transform your website into a revenue engine. We build fast, conversion-focused websites with strategy, UX design, and modern development.";
 
   const shareLinks = {
     twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`,

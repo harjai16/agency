@@ -12,7 +12,7 @@ import StructuredData from "@/componenets/global/StructuredData";
 
 export const metadata = {
   title: "Website Development Agency | Swagatam Tech",
-  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects delivered, 98% satisfaction.",
+  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects, 98% satisfaction.",
   keywords: [
     "website development agency",
     "custom website design",
@@ -105,7 +105,7 @@ export default function Home() {
     "@type": "WebSite",
     "name": "Swagatam Tech",
     "url": siteUrl,
-    "description": "High-performance website development agency focused on strategy, UX, and development that drives leads, conversions, and measurable growth.",
+    "description": "Transform your website into a revenue engine. We build fast, conversion-focused websites with strategy, UX design, and modern development that drives measurable growth.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
@@ -120,7 +120,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Swagatam Tech",
-    "description": "Website development services including strategy, UX/UI design, custom development, CMS setup, performance optimization, and SEO.",
+    "description": "Complete website services: strategy, UX/UI design, custom development, CMS setup, performance optimization, and SEO. Built to convert visitors.",
     "url": siteUrl,
     "serviceType": [
       "Website Development",

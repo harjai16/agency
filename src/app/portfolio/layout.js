@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-  description: "Portfolio of our website development projects. Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses.",
+  description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses. Fast, conversion-focused websites that drive measurable growth.",
   keywords: [
     "web development portfolio",
     "website design portfolio",
@@ -47,7 +47,7 @@ export const metadata = {
   publisher: "Swagatam Tech",
   openGraph: {
     title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-    description: "Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, and service businesses.",
+    description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses. Fast, conversion-focused websites.",
     url: `${siteUrl}/portfolio`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -64,7 +64,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-    description: "Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products.",
+    description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses.",
     images: [`${siteUrl}/og-image.jpg`],
     creator: "@swagatamtech",
   },

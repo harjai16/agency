@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: 'Blog - Web Design & Development Insights | Swagatam Tech',
-  description: 'Blog with web design and development insights. Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory.',
+  description: 'Learn from real website projects. Practical insights on web design, development, performance, and SEO from building conversion-focused websites. Real projects, not theory.',
   keywords: [
     'web design blog',
     'web development blog',
@@ -48,7 +48,7 @@ export const metadata = {
   publisher: 'Swagatam Tech',
   openGraph: {
     title: 'Blog - Web Design & Development Insights | Swagatam Tech',
-    description: 'Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory.',
+    description: 'Learn from real website projects. Practical insights on web design, development, performance, and SEO from building conversion-focused websites.',
     url: `${siteUrl}/blogs`,
     type: 'website',
     siteName: 'Swagatam Tech',
@@ -65,7 +65,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Blog - Web Design & Development Insights | Swagatam Tech',
-    description: 'Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO.',
+    description: 'Learn from real website projects. Practical insights on web design, development, performance, and SEO from building conversion-focused websites.',
     images: [`${siteUrl}/og-image.jpg`],
     creator: '@swagatamtech',
   },

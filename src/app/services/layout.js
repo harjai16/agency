@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Website Development Services | Swagatam Tech",
-  description: "Website development services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance. Fast websites that convert visitors into customers. 4-6 week typical launch.",
+  description: "Transform your website into a revenue engine. Complete website services: strategy, UX design, custom development, and performance optimization. 4-6 week launches.",
   keywords: [
     "website development services",
     "web design services",
@@ -51,7 +51,7 @@ export const metadata = {
   publisher: "Swagatam Tech",
   openGraph: {
     title: "Website Development Services | Swagatam Tech",
-    description: "Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast websites that convert visitors into customers.",
+    description: "Transform your website into a revenue engine. Complete website development services: strategy, UX design, custom development, and performance optimization.",
     url: `${siteUrl}/services`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -68,7 +68,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Website Development Services | Swagatam Tech",
-    description: "Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance.",
+    description: "Transform your website into a revenue engine. Complete website development services: strategy, UX design, custom development, and performance optimization.",
     images: [`${siteUrl}/og-image.jpg`],
     creator: "@swagatamtech",
   },

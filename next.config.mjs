@@ -2,6 +2,8 @@
 const nextConfig = {
   async redirects() {
     return [
+      // Redirect non-www to www (301 permanent redirect)
+      // This works as a fallback if middleware doesn't catch it
       {
         source: '/:path*',
         has: [
@@ -11,7 +13,7 @@ const nextConfig = {
           },
         ],
         destination: 'https://www.swagatamtech.com/:path*',
-        permanent: true,
+        permanent: true, // 301 redirect
       },
     ];
   },

@@ -1,16 +1,16 @@
 {
   "name": "Swagatam Tech - Website Development Agency",
   "short_name": "Swagatam Tech",
-  "description": "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
+  "description": "Transform your website into a revenue engine. We build fast, conversion-focused websites with strategy, UX design, and modern development.",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
