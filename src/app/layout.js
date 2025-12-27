@@ -17,7 +17,7 @@ export const metadata = {
   keywords: [
     "website development",
     "web design agency",
-    "Next.js development",
+    "Next.js development",    
     "React development",
     "custom website design",
     "SEO optimization",
