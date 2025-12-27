@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Website Development Services | Swagatam Tech",
-  description: "Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast websites that convert visitors into customers. 4-6 week typical launch. Services include: Website Strategy, UX/UI Design, Custom Development, CMS Setup, Performance & SEO, Ongoing Support.",
+  description: "Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast websites that convert visitors into customers.",
   keywords: [
     "website development services",
     "web design services",
@@ -25,7 +25,26 @@ export const metadata = {
     "web development pricing",
     "website maintenance",
     "headless CMS",
-    "custom web applications"
+    "custom web applications",
+    "website development packages",
+    "web design and development",
+    "website development solutions",
+    "custom web development services",
+    "responsive website development",
+    "website development consultation",
+    "website development planning",
+    "website development strategy",
+    "professional website development",
+    "website development agency services",
+    "website development company services",
+    "website development outsourcing",
+    "website development India",
+    "affordable website development",
+    "website development support",
+    "website development maintenance",
+    "website development updates",
+    "website development training",
+    "website development consulting"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",

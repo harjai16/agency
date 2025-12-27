@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import Contact from "@/componenets/Contact";
 import StructuredData from "@/componenets/global/StructuredData";
+import SEOHead from "@/componenets/global/SEOHead";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -232,6 +233,14 @@ const BlogDetailPage = () => {
 
   return (
     <main className="bg-white text-gray-900">
+      <SEOHead
+        title={blog.metaTitle || blog.title}
+        description={blog.metaDescription || blog.excerpt || blog.title}
+        keywords={blog.keywords}
+        image={blog.featuredImage}
+        type="article"
+        noindex={blog.status !== 'published'}
+      />
       {articleSchema && <StructuredData data={articleSchema} />}
       {breadcrumbSchema && <StructuredData data={breadcrumbSchema} />}
       {/* HERO / BANNER */}

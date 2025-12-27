@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "About Us - Modern Web Studio | Swagatam Tech",
-  description: "We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability. 10+ websites delivered, 98% client satisfaction, 4-6 week average build time.",
+  description: "We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability.",
   keywords: [
     "web development agency",
     "website design studio",
@@ -18,7 +18,23 @@ export const metadata = {
     "web design agency India",
     "website development services",
     "professional web developers",
-    "senior web development team"
+    "senior web development team",
+    "web development company about",
+    "website design agency team",
+    "experienced web developers",
+    "web development studio India",
+    "website development experts",
+    "web design professionals",
+    "custom website developers",
+    "full-stack web developers",
+    "web development agency profile",
+    "website development company team",
+    "web design studio team",
+    "web development services provider",
+    "website development agency India",
+    "web development company culture",
+    "website design agency values",
+    "web development team expertise"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",

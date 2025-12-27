@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import caseStudies from '@/data/case-studies.json';
+import { generateArticleMetadata as generateSEO } from '@/lib/seo';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
@@ -29,10 +30,10 @@ export async function generateMetadata({ params }) {
     image,
   } = caseStudy;
 
-  const metaTitle = `${heroTitle || title} | Swagatam Tech Case Study`;
+  const metaTitle = heroTitle || title;
   const metaDescription = `${snippet} ${challenge ? `Challenge: ${challenge.substring(0, 100)}...` : ''} ${solution ? `Solution: ${solution.substring(0, 100)}...` : ''}`.substring(0, 160);
-  const caseStudyUrl = `${siteUrl}/case-studies/${slug}`;
-  const imageUrl = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : `${siteUrl}/og-image.jpg`;
+  const caseStudyUrl = `/case-studies/${slug}`;
+  const imageUrl = image || '/og-image.jpg';
 
   const keywords = [
     'case study',
@@ -48,45 +49,38 @@ export async function generateMetadata({ params }) {
     'WordPress case study',
     'performance optimization',
     'SEO case study',
+    'website development case study',
+    'web design case study example',
+    'website redesign case study',
+    'web development project case study',
+    'website development success story',
+    'web development portfolio case study',
+    'website performance case study',
+    'conversion optimization case study',
+    'website development example',
+    'web development case study India',
+    'website development project example',
+    'web design case study portfolio',
+    'website development results',
+    'web development project results',
+    'website development outcomes',
+    'web development case study analysis',
+    'website development before and after',
+    'web development transformation',
+    'website development improvement',
+    'web development ROI case study',
   ];
 
-  return {
+  return generateSEO({
     title: metaTitle,
     description: metaDescription,
-    keywords: keywords.join(', '),
-    authors: [{ name: 'Swagatam Tech' }],
-    openGraph: {
-      title: metaTitle,
-      description: metaDescription,
-      url: caseStudyUrl,
-      type: 'article',
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${client} - ${title}`,
-        },
-      ],
-      siteName: 'Swagatam Tech',
-      publishedTime: new Date().toISOString(),
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: metaTitle,
-      description: metaDescription,
-      images: [imageUrl],
-      creator: '@swagatamtech',
-    },
-    alternates: {
-      canonical: caseStudyUrl,
-    },
-    other: {
-      'article:author': 'Swagatam Tech',
-      'article:section': industry,
-      'article:tag': keywords.join(','),
-    },
-  };
+    keywords,
+    path: caseStudyUrl,
+    image: imageUrl,
+    publishedTime: new Date().toISOString(),
+    author: 'Swagatam Tech',
+    section: industry,
+  });
 }
 
 export default function CaseStudySlugLayout({ children }) {

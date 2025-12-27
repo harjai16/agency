@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Contact Us - Get a Free Website Plan | Swagatam Tech",
-  description: "Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. We help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Email: ashwaniharjai.softwaredev@gmail.com. We usually respond within one business day.",
+  description: "Let's talk about what you're building. We help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Get a free consultation today.",
   keywords: [
     "contact web development agency",
     "website consultation",
@@ -18,7 +18,26 @@ export const metadata = {
     "web design consultation",
     "website development contact",
     "hire web developers",
-    "web agency contact"
+    "web agency contact",
+    "website development inquiry form",
+    "web development consultation free",
+    "website development quote request",
+    "contact website developers",
+    "website development contact form",
+    "web development agency contact",
+    "website development consultation India",
+    "free website consultation",
+    "website development inquiry India",
+    "web development quote India",
+    "contact web design agency",
+    "website development contact number",
+    "web development consultation services",
+    "website development inquiry form",
+    "get website development quote",
+    "website development consultation free",
+    "contact website development company",
+    "web development agency inquiry",
+    "website development contact email"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",

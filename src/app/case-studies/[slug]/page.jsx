@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import caseStudies from "@/data/case-studies.json";
 import StructuredData from "@/componenets/global/StructuredData";
+import SEOHead from "@/componenets/global/SEOHead";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -173,8 +174,25 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
     "areaServed": "Worldwide"
   } : null;
 
+  const metaDescription = `${snippet} ${challenge ? `Challenge: ${challenge.substring(0, 100)}...` : ''} ${solution ? `Solution: ${solution.substring(0, 100)}...` : ''}`.substring(0, 160);
+  const keywords = [
+    'case study',
+    'web development case study',
+    'website design case study',
+    client,
+    industry.toLowerCase(),
+    ...(services || []).map(s => s.toLowerCase()),
+  ];
+
   return (
     <main className="bg-white text-gray-900">
+      <SEOHead
+        title={heroTitle || title}
+        description={metaDescription}
+        keywords={keywords}
+        image={heroImage || image}
+        type="article"
+      />
       <StructuredData data={caseStudySchema} />
       <StructuredData data={articleSchema} />
       <StructuredData data={breadcrumbSchema} />

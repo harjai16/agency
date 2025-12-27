@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { connectToDatabase } from '@/lib/mongodb';
+import { generateArticleMetadata as generateSEO } from '@/lib/seo';
 
 export async function generateMetadata({ params }) {
   try {
@@ -15,41 +16,25 @@ export async function generateMetadata({ params }) {
     }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
-    const blogUrl = `${siteUrl}/blogs/${slug}`;
+    const blogUrl = `/blogs/${slug}`;
     
-    return {
-      title: `${blog.metaTitle || blog.title} | Swagatam Tech Blog`,
+    // Use SEO utility for consistent metadata generation
+    const keywords = blog.keywords 
+      ? (typeof blog.keywords === 'string' ? blog.keywords.split(',').map(k => k.trim()) : blog.keywords)
+      : [];
+    
+    return generateSEO({
+      title: blog.metaTitle || blog.title,
       description: blog.metaDescription || blog.excerpt || blog.title,
-      keywords: blog.keywords || '',
-      authors: blog.author ? [{ name: blog.author }] : [],
-      openGraph: {
-        title: blog.metaTitle || blog.title,
-        description: blog.metaDescription || blog.excerpt || '',
-        type: 'article',
-        url: blogUrl,
-        images: blog.featuredImage ? [
-          {
-            url: blog.featuredImage,
-            width: 1200,
-            height: 630,
-            alt: blog.title,
-          }
-        ] : [],
-        publishedTime: blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
-        authors: blog.author ? [blog.author] : [],
-        siteName: 'Swagatam Tech',
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: blog.metaTitle || blog.title,
-        description: blog.metaDescription || blog.excerpt || '',
-        images: blog.featuredImage ? [blog.featuredImage] : [],
-        creator: '@swagatamtech',
-      },
-      alternates: {
-        canonical: blogUrl,
-      },
-    };
+      keywords,
+      path: blogUrl,
+      image: blog.featuredImage || '/og-image.jpg',
+      publishedTime: blog.createdAt,
+      modifiedTime: blog.updatedAt || blog.createdAt,
+      author: blog.author || 'Swagatam Tech',
+      section: 'Web Development',
+      noindex: blog.status !== 'published',
+    });
   } catch (error) {
     console.error('Error generating metadata:', error);
     return {

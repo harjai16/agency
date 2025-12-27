@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-  description: "Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses. 10+ projects delivered including Next.js websites, WordPress rebuilds, e-commerce platforms, and custom web applications.",
+  description: "Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses.",
   keywords: [
     "web development portfolio",
     "website design portfolio",
@@ -22,7 +22,25 @@ export const metadata = {
     "web development work",
     "website design examples",
     "Next.js portfolio",
-    "React portfolio"
+    "React portfolio",
+    "web development portfolio India",
+    "website design portfolio examples",
+    "web development projects showcase",
+    "website development case studies",
+    "web design portfolio India",
+    "custom website portfolio",
+    "website development examples",
+    "web development work samples",
+    "website design work portfolio",
+    "web development agency portfolio",
+    "website development company portfolio",
+    "web development projects India",
+    "website design projects showcase",
+    "web development portfolio samples",
+    "website development showcase",
+    "web design portfolio examples",
+    "website development work portfolio",
+    "custom web development portfolio"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",

@@ -12,7 +12,7 @@ import StructuredData from "@/componenets/global/StructuredData";
 
 export const metadata = {
   title: "High-Performance Website Development Agency | Swagatam Tech",
-  description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% client satisfaction, 4-6 week average timeline. Services: Website Strategy, UX/UI Design, Custom Development, CMS Setup, Performance & SEO.",
+  description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% client satisfaction.",
   keywords: [
     "website development agency",
     "custom website design",
@@ -33,7 +33,23 @@ export const metadata = {
     "website redesign",
     "web development services",
     "website development India",
-    "best web development agency"
+    "best web development agency",
+    "web development company India",
+    "website design company",
+    "custom web application development",
+    "WordPress development",
+    "headless CMS development",
+    "website performance optimization",
+    "UX UI design services",
+    "website strategy consulting",
+    "digital agency",
+    "web development studio",
+    "website maintenance services",
+    "responsive web design",
+    "mobile-first web design",
+    "progressive web app development",
+    "website analytics setup",
+    "website security services"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",

@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-  description: "A closer look at websites we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. Detailed case studies showing challenges, solutions, and measurable results.",
+  description: "A closer look at websites we've designed and built — focused on speed, stability, and usability. Detailed case studies showing challenges, solutions, and measurable results.",
   keywords: [
     "web development case studies",
     "website design case studies",
@@ -20,7 +20,26 @@ export const metadata = {
     "web development success stories",
     "website performance case study",
     "SEO case studies",
-    "custom website case studies"
+    "custom website case studies",
+    "web development case studies India",
+    "website development case studies",
+    "web design case studies examples",
+    "website redesign case studies",
+    "web development project case studies",
+    "website development success stories",
+    "web development portfolio case studies",
+    "website performance case studies",
+    "conversion rate optimization case studies",
+    "website development examples",
+    "web development case study examples",
+    "website development project examples",
+    "web design case study portfolio",
+    "website development case study India",
+    "web development success case studies",
+    "website development results",
+    "web development project results",
+    "website development outcomes",
+    "web development case study analysis"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",

@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: 'Blog - Web Design & Development Insights | Swagatam Tech',
-  description: 'Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites.',
+  description: 'Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory.',
   keywords: [
     'web design blog',
     'web development blog',
@@ -22,7 +22,26 @@ export const metadata = {
     'development insights',
     'website performance blog',
     'SEO tips blog',
-    'web development guides'
+    'web development guides',
+    'web development blog India',
+    'website development blog',
+    'web design articles',
+    'web development insights',
+    'website development tutorials',
+    'web development tips and tricks',
+    'website performance optimization blog',
+    'SEO optimization blog',
+    'web development best practices',
+    'website development guides',
+    'web design tutorials',
+    'website development resources',
+    'web development learning',
+    'website development education',
+    'web development industry insights',
+    'website development trends',
+    'web development case studies blog',
+    'website development news',
+    'web development expert blog'
   ],
   authors: [{ name: 'Swagatam Tech' }],
   creator: 'Swagatam Tech',
