@@ -29,21 +29,18 @@ const Footer = () => {
         <div>
           <Link
             href="/"
-            className="flex items-center gap-2 mb-4 group"
+            className="flex items-center mb-4 group"
             aria-label="Swagatam Tech - Home"
           >
-            <div className="relative h-8 w-8 sm:h-9 sm:w-9">
+            <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
               <Image
                 src="/logo.png"
                 alt="Swagatam Tech Logo - Website Development Agency"
                 fill
                 className="object-contain group-hover:opacity-80 transition-opacity"
-                sizes="(max-width: 640px) 32px, 36px"
+                sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 128px, 144px"
               />
             </div>
-            <span className="text-sm font-semibold tracking-[0.18em] uppercase">
-              Swagatam Tech
-            </span>
           </Link>
           <p className="text-xs sm:text-sm text-gray-500 max-w-xs leading-relaxed">
             We design websites that convert visitors into customers.

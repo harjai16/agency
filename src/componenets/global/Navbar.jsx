@@ -43,31 +43,28 @@ const router = useRouter();
 
   return (
     <nav className="w-full fixed left-0 z-50 bg-white/90 sm:bg-white/80 backdrop-blur-xl border-b border-gray-100">
-      <div className="max-w-fullhd mx-auto px-3 sm:px-4 md:px-4 min-[700px]:px-6 lg:px-8 xl:px-12 2xl:px-20 py-2.5 sm:py-3 md:py-3 min-[700px]:py-4 flex items-center justify-between">
+      <div className="max-w-fullhd mx-auto px-3 sm:px-4 md:px-4 min-[700px]:px-6 lg:px-8 xl:px-12 2xl:px-20 flex items-center justify-between">
         
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-1.5 min-[700px]:gap-2 group transition-all"
+          className="flex items-center group transition-all"
           aria-label="Swagatam Tech - Home"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="relative h-6 w-6 min-[700px]:h-7 min-[700px]:w-7 sm:h-8 sm:w-8"
+            className="relative h-10 w-10 min-[700px]:h-12 min-[700px]:w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
           >
             <Image
               src="/logo.png"
               alt="Swagatam Tech Logo - Website Development Agency"
               fill
               className="object-contain"
-              sizes="(max-width: 700px) 24px, (max-width: 768px) 28px, 32px"
+              sizes="(max-width: 700px) 40px, (max-width: 768px) 48px, (max-width: 1024px) 56px, 64px"
               priority
             />
           </motion.div>
-          <span className="text-[10px] min-[700px]:text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase group-hover:opacity-70 transition">
-            Swagatam Tech
-          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -140,22 +137,19 @@ const router = useRouter();
               <div className="flex items-center justify-between mb-10">
                 <Link
                   href="/"
-                  className="flex items-center gap-2"
+                  className="flex items-center"
                   onClick={closeMenu}
                   aria-label="Swagatam Tech - Home"
                 >
-                  <div className="relative h-6 w-6">
+                  <div className="relative h-12 w-12">
                     <Image
                       src="/logo.png"
                       alt="Swagatam Tech Logo"
                       fill
                       className="object-contain"
-                      sizes="24px"
+                      sizes="48px"
                     />
                   </div>
-                  <span className="text-xs font-semibold tracking-[0.18em] uppercase">
-                    Swagatam Tech
-                  </span>
                 </Link>
 
                 <button
