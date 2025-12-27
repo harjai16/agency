@@ -192,14 +192,20 @@ const router = useRouter();
       className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
     >
       {/* IMAGE */}
-      <div className="relative h-40 md:h-44 overflow-hidden">
-        <Image
-          src={item.image}
-          alt={item.imageAlt}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-        />
+      <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
+        {item.image ? (
+          <Image
+            src={item.image}
+            alt={item.imageAlt || item.brand}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          />
+        ) : (
+          <div className="flex items-center justify-center h-full text-gray-400 text-xs">
+            No image available
+          </div>
+        )}
       </div>
 
       {/* CONTENT */}

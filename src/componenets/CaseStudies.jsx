@@ -132,9 +132,9 @@ const CaseStudies = () => {
 
                 {/* Body */}
                 <div className="flex flex-1 flex-col px-3 sm:px-4 py-3 sm:py-4">
-                  <div className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5 sm:mb-2">
+                  <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5 sm:mb-2">
                     {item.title}
-                  </div>
+                  </h3>
                   <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-2 sm:mb-3 line-clamp-4">
                     {item.snippet}
                   </p>

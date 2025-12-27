@@ -13,7 +13,7 @@ export const metadata = {
     default: "Swagatam Tech - Website Development Agency",
     template: "%s | Swagatam Tech"
   },
-  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects delivered.",
+  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects, 98% satisfaction.",
   keywords: [
     "website development",
     "web design agency",
@@ -71,19 +71,19 @@ export const metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
-      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
-      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     shortcut: [
       { url: '/favicon.ico' },
     ],
     other: [
-      { rel: 'mask-icon', url: '/logo.png', color: '#000000' },
+      { rel: 'mask-icon', url: '/apple-touch-icon.png', color: '#000000' },
       { rel: 'manifest', url: '/site.webmanifest' },
     ],
   },
@@ -109,7 +109,7 @@ const organizationSchema = {
     "height": 200
   },
   "image": `${siteUrl}/logo.png`,
-  "description": "High-performance website development agency focused on strategy, UX, and development that drives leads, conversions, and measurable growth.",
+  "description": "Transform your website into a revenue engine. Fast, conversion-focused websites with strategy, UX design, and modern development that drive growth.",
   "sameAs": [
     "https://twitter.com/swagatamtech",
     "https://linkedin.com/company/swagatamtech",

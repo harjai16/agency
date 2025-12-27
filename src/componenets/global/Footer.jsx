@@ -92,7 +92,7 @@ const Footer = () => {
             <SocialShare 
               url="/"
               title="Swagatam Tech - Website Development Agency"
-              description="High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth."
+              description="Transform your website into a revenue engine. We build fast, conversion-focused websites with strategy, UX design, and modern development."
               variant="compact"
             />
           </div>

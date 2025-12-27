@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-  description: "Case studies showing real projects and real outcomes. A closer look at websites we've designed and built — focused on speed, stability, and usability. Detailed case studies showing challenges, solutions, and measurable results.",
+  description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines through strategy, design, and performance optimization.",
   keywords: [
     "web development case studies",
     "website design case studies",
@@ -46,7 +46,7 @@ export const metadata = {
   publisher: "Swagatam Tech",
   openGraph: {
     title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-    description: "A closer look at websites we've designed and built — focused on speed, stability, and usability. Real projects, not concepts.",
+    description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
     url: `${siteUrl}/case-studies`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -63,7 +63,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-    description: "A closer look at websites we've designed and built — focused on speed, stability, and usability.",
+    description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
     images: [`${siteUrl}/og-image.jpg`],
     creator: "@swagatamtech",
   },

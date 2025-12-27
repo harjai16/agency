@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "About Us - Modern Web Studio | Swagatam Tech",
-  description: "About Swagatam Tech - Modern web studio. We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability.",
+  description: "About Swagatam Tech - Modern web studio transforming websites into revenue engines. Small, senior team building high-performance sites. Started 2024.",
   keywords: [
     "web development agency",
     "website design studio",
@@ -41,7 +41,7 @@ export const metadata = {
   publisher: "Swagatam Tech",
   openGraph: {
     title: "About Us - Modern Web Studio | Swagatam Tech",
-    description: "We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability.",
+    description: "Modern web studio transforming websites into revenue engines. Small, senior team building high-performance sites. Started 2024.",
     url: `${siteUrl}/about`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -58,7 +58,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Us - Modern Web Studio | Swagatam Tech",
-    description: "We're a small, senior team focused on building high-performance websites that become revenue engines.",
+    description: "Modern web studio transforming websites into revenue engines. Small, senior team building high-performance sites.",
     images: [`${siteUrl}/og-image.jpg`],
     creator: "@swagatamtech",
   },
