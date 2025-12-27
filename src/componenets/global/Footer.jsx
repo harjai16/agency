@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SocialShare from "./SocialShare";
 
@@ -26,12 +27,24 @@ const Footer = () => {
         
         {/* Brand */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="h-7 w-7 rounded-full border border-gray-300" />
+          <Link
+            href="/"
+            className="flex items-center gap-2 mb-4 group"
+            aria-label="Swagatam Tech - Home"
+          >
+            <div className="relative h-8 w-8 sm:h-9 sm:w-9">
+              <Image
+                src="/logo.png"
+                alt="Swagatam Tech Logo - Website Development Agency"
+                fill
+                className="object-contain group-hover:opacity-80 transition-opacity"
+                sizes="(max-width: 640px) 32px, 36px"
+              />
+            </div>
             <span className="text-sm font-semibold tracking-[0.18em] uppercase">
-              SWAGATAM TECH
+              Swagatam Tech
             </span>
-          </div>
+          </Link>
           <p className="text-xs sm:text-sm text-gray-500 max-w-xs leading-relaxed">
             We design websites that convert visitors into customers.
           </p>

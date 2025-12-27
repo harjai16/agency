@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
 import { useRouter } from "next/navigation";
@@ -48,12 +49,22 @@ const router = useRouter();
         <Link
           href="/"
           className="flex items-center gap-1.5 min-[700px]:gap-2 group transition-all"
+          aria-label="Swagatam Tech - Home"
         >
-          <motion.span
-            whileHover={{ rotate: 10, scale: 1.05 }}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="h-5 w-5 min-[700px]:h-6 min-[700px]:w-6 rounded-full border border-gray-300"
-          />
+            className="relative h-6 w-6 min-[700px]:h-7 min-[700px]:w-7 sm:h-8 sm:w-8"
+          >
+            <Image
+              src="/logo.png"
+              alt="Swagatam Tech Logo - Website Development Agency"
+              fill
+              className="object-contain"
+              sizes="(max-width: 700px) 24px, (max-width: 768px) 28px, 32px"
+              priority
+            />
+          </motion.div>
           <span className="text-[10px] min-[700px]:text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase group-hover:opacity-70 transition">
             Swagatam Tech
           </span>
@@ -127,12 +138,25 @@ const router = useRouter();
             >
               {/* Top row with logo + close */}
               <div className="flex items-center justify-between mb-10">
-                <div className="flex items-center gap-2">
-                  <span className="h-6 w-6 rounded-full border border-gray-300" />
+                <Link
+                  href="/"
+                  className="flex items-center gap-2"
+                  onClick={closeMenu}
+                  aria-label="Swagatam Tech - Home"
+                >
+                  <div className="relative h-6 w-6">
+                    <Image
+                      src="/logo.png"
+                      alt="Swagatam Tech Logo"
+                      fill
+                      className="object-contain"
+                      sizes="24px"
+                    />
+                  </div>
                   <span className="text-xs font-semibold tracking-[0.18em] uppercase">
-                    AGENCY AI
+                    Swagatam Tech
                   </span>
-                </div>
+                </Link>
 
                 <button
                   onClick={closeMenu}

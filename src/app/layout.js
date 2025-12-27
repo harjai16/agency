@@ -70,15 +70,21 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: [
+      { url: '/favicon.ico' },
     ],
     other: [
-      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#000000' },
+      { rel: 'mask-icon', url: '/logo.png', color: '#000000' },
+      { rel: 'manifest', url: '/site.webmanifest' },
     ],
   },
   verification: {
@@ -89,14 +95,20 @@ export const metadata = {
   },
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Swagatam Tech",
   "url": siteUrl,
-  "logo": `${siteUrl}/logo.png`,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/logo.png`,
+    "width": 200,
+    "height": 200
+  },
+  "image": `${siteUrl}/logo.png`,
   "description": "High-performance website development agency focused on strategy, UX, and development that drives leads, conversions, and measurable growth.",
   "sameAs": [
     "https://twitter.com/swagatamtech",
