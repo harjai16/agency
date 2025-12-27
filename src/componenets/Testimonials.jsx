@@ -55,8 +55,16 @@ const Testimonials = () => {
 </div>
 
 
-<Button variant="ghost" className="self-start md:self-auto">
-  Get a free website audit
+<Button 
+  variant="ghost" 
+  className="self-start md:self-auto"
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+  }}
+>
+  Request website audit
 </Button>
 
       </div>

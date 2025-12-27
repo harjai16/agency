@@ -76,9 +76,9 @@ We think like product owners, marketers, and engineers — building websites tha
                 <p className="inline-flex items-center text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-gray-500">
                   {item.label}
                 </p>
-                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
+                <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
                   {item.title}
-                </h3>
+                </div>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   {item.description}
                 </p>

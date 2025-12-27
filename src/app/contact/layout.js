@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Contact Us - Get a Free Website Plan | Swagatam Tech",
-  description: "Let's talk about what you're building. We help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Get a free consultation today.",
+  description: "Contact us to get a free website plan. Let's talk about what you're building. We help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Get a free consultation today.",
   keywords: [
     "contact web development agency",
     "website consultation",

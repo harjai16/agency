@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import SocialShare from "./SocialShare";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -47,32 +48,43 @@ const Footer = () => {
                 <Link
                   href={item.href}
                   className="hover:text-black transition-colors"
+                  aria-label={`Navigate to ${item.label} page`}
                 >
-                  {item.label}
+                  {item.label === "Contact" ? "Get in touch" : item.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Socials */}
-        <div>
-          <h4 className="text-xs font-semibold tracking-wide text-gray-700 mb-4 uppercase">
-            Follow Us
-          </h4>
-          <div className="flex gap-4 sm:gap-5 text-xs sm:text-sm text-gray-600">
-            {socials.map((s) => (
-              <motion.a
-                whileHover={{ scale: 1.08 }}
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-black transition-colors"
-              >
-                {s.label}
-              </motion.a>
-            ))}
+        {/* Socials & Share */}
+        <div className="space-y-4">
+          <div>
+            <h4 className="text-xs font-semibold tracking-wide text-gray-700 mb-4 uppercase">
+              Follow Us
+            </h4>
+            <div className="flex gap-4 sm:gap-5 text-xs sm:text-sm text-gray-600">
+              {socials.map((s) => (
+                <motion.a
+                  whileHover={{ scale: 1.08 }}
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-black transition-colors"
+                >
+                  {s.label}
+                </motion.a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <SocialShare 
+              url="/"
+              title="Swagatam Tech - Website Development Agency"
+              description="High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth."
+              variant="compact"
+            />
           </div>
         </div>
       </div>

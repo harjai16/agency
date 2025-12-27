@@ -35,16 +35,14 @@ const page = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              Design, development & growth{" "}
+              About Swagatam Tech{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                engineered for modern brands.
+                Modern Web Studio
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-              We&apos;re a small, senior team focused on one thing: building
-              high-performance websites that become revenue engines — not
-              just pretty brochures on the internet.
+              We&apos;re a small, senior team focused on building high-performance websites that become revenue engines. Design, development and growth engineered for modern brands. We&apos;re a modern web studio shaped by developers, designers and builders who care more about outcomes than buzzwords.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -402,7 +400,7 @@ const page = () => {
             Ready to talk?
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-            Let&apos;s make your website your best salesperson.
+            Transform your website into your best salesperson.
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share where you are today, where you want to be, and we&apos;ll

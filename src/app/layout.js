@@ -8,12 +8,12 @@ import StructuredData from "@/componenets/global/StructuredData";
 
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com'),
   title: {
-    default: "Swagatam Tech - High-Performance Website Development Agency",
+    default: "Swagatam Tech - Website Development Agency",
     template: "%s | Swagatam Tech"
   },
-  description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% client satisfaction.",
+  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects delivered.",
   keywords: [
     "website development",
     "web design agency",
@@ -47,8 +47,8 @@ export const metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Swagatam Tech",
-    title: "Swagatam Tech - High-Performance Website Development Agency",
-    description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth.",
+    title: "Swagatam Tech - Website Development Agency",
+    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
     images: [
       {
         url: "/og-image.jpg",
@@ -60,13 +60,26 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swagatam Tech - High-Performance Website Development Agency",
-    description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth.",
+    title: "Swagatam Tech - Website Development Agency",
+    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
     images: ["/og-image.jpg"],
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.swagatamtech.com/",
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#000000' },
+    ],
   },
   verification: {
     // Add your verification codes here when available

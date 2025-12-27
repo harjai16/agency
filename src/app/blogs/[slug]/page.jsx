@@ -10,6 +10,7 @@ import { useParams, useRouter } from "next/navigation";
 import Contact from "@/componenets/Contact";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOHead from "@/componenets/global/SEOHead";
+import SocialShare from "@/componenets/global/SocialShare";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -272,7 +273,7 @@ const BlogDetailPage = () => {
 
                 {blog.excerpt && (
                   <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl leading-relaxed">
-                    {blog.excerpt}
+                    {blog.excerpt}. This article covers {blog.title.toLowerCase()} and provides practical insights for web development and design.
                   </p>
                 )}
 
@@ -294,6 +295,16 @@ const BlogDetailPage = () => {
                       {blog.keywords.split(',')[0].trim()}
                     </div>
                   )}
+                </div>
+
+                {/* Social Share */}
+                <div className="pt-4">
+                  <SocialShare 
+                    url={`/blogs/${slug}`}
+                    title={blog.title}
+                    description={blog.excerpt || blog.title}
+                    variant="compact"
+                  />
                 </div>
               </motion.div>
 

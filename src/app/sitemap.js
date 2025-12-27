@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { connectToDatabase } from '@/lib/mongodb';
 import caseStudies from '@/data/case-studies.json';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
 export default async function sitemap() {
   const baseUrl = siteUrl;

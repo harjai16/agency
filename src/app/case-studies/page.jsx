@@ -70,16 +70,14 @@ const CaseStudiesPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Real projects. {" "}
+             Case Studies{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-               
-              </span>{" "}
-            Real outcomes.     
+                Real Projects, Real Outcomes
+              </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-             A closer look at websites we’ve designed and built — focused on speed, stability, and usability.
-From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. No hypotheticals. Just real work.
+             Real projects, real outcomes. A closer look at websites we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. No hypotheticals. Just real work.
             </p>
           </motion.div>
 
@@ -207,7 +205,7 @@ From faster load times to smoother flows and clearer content, these are shipped 
            Seen something relevant?
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-           Let’s talk about your use case
+           Discuss your project with our team
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
            If one of these projects feels close to what you’re building, let’s discuss it.

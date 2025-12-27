@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "About Us - Modern Web Studio | Swagatam Tech",
-  description: "We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability.",
+  description: "About Swagatam Tech - Modern web studio. We're a small, senior team focused on building high-performance websites that become revenue engines. Started in 2024, we challenge the 'agency way' with lean execution, clear communication, and accountability.",
   keywords: [
     "web development agency",
     "website design studio",

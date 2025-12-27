@@ -52,9 +52,9 @@ const Process = () => {
                         {stepNumber}
                       </span>
 
-                      <h3 className="relative text-base md:text-lg font-semibold text-gray-900">
+                      <div className="relative text-base md:text-lg font-semibold text-gray-900">
                         {step.label}
-                      </h3>
+                      </div>
                       <p className="relative mt-3 text-sm text-gray-500 max-w-xs mx-auto">
                         {step.description}
                       </p>
@@ -81,9 +81,9 @@ const Process = () => {
                 <p className="text-xs font-medium text-gray-600 mb-1">
                   Step {stepNumber}
                 </p>
-                <h3 className="text-base font-semibold text-gray-900">
+                <div className="text-base font-semibold text-gray-900">
                   {step.label}
-                </h3>
+                </div>
                 <p className="mt-2 text-sm text-gray-500">
                   {step.description}
                 </p>

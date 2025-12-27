@@ -10,6 +10,7 @@ import { useParams } from "next/navigation";
 import caseStudies from "@/data/case-studies.json";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOHead from "@/componenets/global/SEOHead";
+import SocialShare from "@/componenets/global/SocialShare";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -222,7 +223,7 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
               </h1>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl leading-relaxed">
-                {snippet}
+                {snippet}. This case study details how we helped {client} with {heroTitle || title}. We'll explore the challenges, solutions, and measurable results achieved.
               </p>
 
               {/* Meta strip */}
@@ -259,6 +260,16 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
                 <Button variant="ghost" asChild>
                   <Link href="/contact">Discuss a similar project</Link>
                 </Button>
+              </div>
+
+              {/* Social Share */}
+              <div className="pt-4">
+                <SocialShare 
+                  url={`/case-studies/${slug}`}
+                  title={metaTitle}
+                  description={snippet}
+                  variant="compact"
+                />
               </div>
             </motion.div>
 
@@ -503,7 +514,7 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
             Plan your own project
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-            Want results like this for your brand?
+            Achieve similar results for your brand.
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share what you&apos;re working on, and we&apos;ll map out how Swagatam

@@ -96,11 +96,10 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.1rem] font-semibold tracking-tight text-gray-900 leading-[1.2] sm:leading-tight md:leading-tight"
           >
-            We craft high-performance{" "}
+            Website Development Agency{" "}
             <span className="inline-block border-b-2 border-gray-300 pb-1 sm:pb-1.5">
-              websites
-            </span>{" "}
-            that grow your business.
+              That Grows Your Business
+            </span>
           </motion.h1>
 
           {/* Subtext */}
@@ -110,7 +109,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.12 }}
             className="text-sm sm:text-base md:text-lg text-gray-500 max-w-3xl leading-relaxed"
           >
-           Strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design.
+           We are a website development agency that grows your business. We craft high-performance websites with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. 10+ projects delivered, 98% client satisfaction.
           </motion.p>
 
           {/* CTAs */}

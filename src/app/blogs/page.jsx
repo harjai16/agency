@@ -98,16 +98,14 @@ const BlogsPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-            Practical insights {" "}
+            Blog{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                from
-              </span>{" "}
-             building real websites
+                Web Design & Development Insights
+              </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-            Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory. <br />
-Short, useful reads focused on what actually works when building and shipping websites.
+            Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites.
             </p>
           </motion.div>
         </div>
@@ -222,8 +220,8 @@ Short, useful reads focused on what actually works when building and shipping we
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
           Found this useful?
           </p>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-           Let’s talk when you’re ready
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
+           Ready to discuss your website project?
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
           If something here sparked an idea or raised a question, feel free to reach out.

@@ -30,12 +30,14 @@ const ContactPage = () => {
           </p>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900">
-           Let’s talk about what you’re building
+           Contact Us{" "}
+           <span className="inline-block border-b border-gray-300 pb-1">
+             Get a Free Website Plan
+           </span>
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Tell us where you are today and what you’re trying to achieve. <br />
-At Swagatam Tech, we help teams plan and build modern, high-performance websites with clear goals and realistic timelines.
+            Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. At Swagatam Tech, we help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Get a free website plan today.
           </p>
 
           <Button
@@ -67,7 +69,7 @@ At Swagatam Tech, we help teams plan and build modern, high-performance websites
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-           Let’s plan your next launch
+           Get started with your website project
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-xl leading-relaxed">

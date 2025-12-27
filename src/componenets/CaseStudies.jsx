@@ -132,9 +132,9 @@ const CaseStudies = () => {
 
                 {/* Body */}
                 <div className="flex flex-1 flex-col px-3 sm:px-4 py-3 sm:py-4">
-                  <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5 sm:mb-2">
+                  <div className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5 sm:mb-2">
                     {item.title}
-                  </h3>
+                  </div>
                   <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-2 sm:mb-3 line-clamp-4">
                     {item.snippet}
                   </p>
@@ -144,8 +144,9 @@ const CaseStudies = () => {
                     <a
                       href={item.href}
                       className="inline-flex items-center gap-1 font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all"
+                      aria-label={`Read ${item.client} case study`}
                     >
-                      Read case study  
+                      View {item.client} project  
                       <span className="text-xs">↗</span>  
                     </a>
                   </div>

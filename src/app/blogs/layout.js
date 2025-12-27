@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: 'Blog - Web Design & Development Insights | Swagatam Tech',
-  description: 'Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory.',
+  description: 'Blog with web design and development insights. Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory.',
   keywords: [
     'web design blog',
     'web development blog',

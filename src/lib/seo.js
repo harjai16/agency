@@ -3,7 +3,7 @@
  * Backend and frontend SEO helpers for dynamic metadata generation
  */
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
 /**
  * Generate base metadata for any page

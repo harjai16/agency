@@ -124,14 +124,14 @@ const ServicesPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Website services built to generate leads, sales, {" "}
+             Website Development Services{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                and real growth.
+                Built to Generate Leads, Sales, and Real Growth
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-             Strategy, design, and development focused on performance — fast websites that convert visitors into customers.
+             Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast websites that convert visitors into customers. 4-6 week typical launch.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -219,12 +219,12 @@ const ServicesPage = () => {
                 What we do
               </p>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-                Everything you need to design, build and grow your website.
+                Complete website development services for your business.
               </h2>
               <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-xl">
                 Choose a single service or partner with us end-to-end. Either
                 way, you get a senior team focused on performance and
-                conversions.
+                conversions. Everything you need to design, build and grow your website.
               </p>
             </div>
           </motion.div>
@@ -289,7 +289,7 @@ const ServicesPage = () => {
               How we work
             </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-              Simple, flexible ways to work together.
+              Flexible engagement models for every business.
             </h2>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500">
               Whether you&apos;re launching something new or leveling up what
@@ -341,7 +341,7 @@ const ServicesPage = () => {
               FAQs
             </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-              A few quick answers before we talk.
+              Frequently asked questions about our services.
             </h2>
           </motion.div>
 
@@ -401,7 +401,7 @@ const ServicesPage = () => {
             Next step
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-          Let’s plan a website that actually delivers results
+          Ready to build a website that delivers results?
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
           One short call. Clear next steps. No pressure.

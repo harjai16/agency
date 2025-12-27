@@ -36,15 +36,14 @@ const router = useRouter();
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Work we’ve shipped for teams {" "}
+             Portfolio{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-               
-              </span>{" "}
-             that value clarity and performance
+                Our Website Development Projects
+              </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-             A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each project started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind.
+             Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each project started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -247,7 +246,7 @@ const router = useRouter();
             Seen enough?
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-            Let&apos;s talk about your next launch.
+            Ready to start your next website project?
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share what you&apos;re building, who it&apos;s for and what success

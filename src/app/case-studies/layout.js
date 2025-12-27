@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-  description: "A closer look at websites we've designed and built — focused on speed, stability, and usability. Detailed case studies showing challenges, solutions, and measurable results.",
+  description: "Case studies showing real projects and real outcomes. A closer look at websites we've designed and built — focused on speed, stability, and usability. Detailed case studies showing challenges, solutions, and measurable results.",
   keywords: [
     "web development case studies",
     "website design case studies",

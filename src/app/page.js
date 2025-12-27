@@ -11,8 +11,8 @@ import StructuredData from "@/componenets/global/StructuredData";
 
 
 export const metadata = {
-  title: "High-Performance Website Development Agency | Swagatam Tech",
-  description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% client satisfaction.",
+  title: "Website Development Agency | Swagatam Tech",
+  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects delivered, 98% satisfaction.",
   keywords: [
     "website development agency",
     "custom website design",
@@ -55,8 +55,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "High-Performance Website Development Agency | Swagatam Tech",
-    description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth.",
+    title: "Website Development Agency | Swagatam Tech",
+    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
     url: "/",
     type: "website",
     siteName: "Swagatam Tech",
@@ -65,20 +65,20 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Swagatam Tech - High-Performance Website Development Agency",
+        alt: "Swagatam Tech - Website Development Agency",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "High-Performance Website Development Agency | Swagatam Tech",
-    description: "We craft high-performance websites that grow your business. Strategy, UX, and development focused on leads, conversions, and measurable growth.",
+    title: "Website Development Agency | Swagatam Tech",
+    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
     images: ["/og-image.jpg"],
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.swagatamtech.com/",
   },
   robots: {
     index: true,

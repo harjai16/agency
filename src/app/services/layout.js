@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
   title: "Website Development Services | Swagatam Tech",
-  description: "Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast websites that convert visitors into customers.",
+  description: "Website development services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance. Fast websites that convert visitors into customers. 4-6 week typical launch.",
   keywords: [
     "website development services",
     "web design services",

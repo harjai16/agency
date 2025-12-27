@@ -3,28 +3,28 @@
     "id": "discovery",
     "step": "01",
     "label": "Deep Discovery (We Find the Money Leaks)",
-    "description": "Before we design anything, we deep-dive into your business goals, audience psychology, competitors, and current website gaps.We identify what’s blocking conversions and define clear success metrics — leads, sales, or sign-ups.",
+    "description": "We start by deep-diving into your business goals, audience psychology, competitors, and current website gaps. We identify what's blocking conversions and define clear success metrics — leads, sales, or sign-ups.",
     "meta": "A clear growth roadmap, not guesswork."
   },
   {
     "id": "scoping",
     "step": "02",
     "label": "Conversion Strategy, Content & UX",
-    "description": "We structure pages, messaging, and user journeys so every section has one job: move visitors closer to action. No random sections. No filler content. Every scroll earns its place.",
+    "description": "Our team structures pages, messaging, and user journeys so every section has one job: move visitors closer to action. No random sections. No filler content. Every scroll earns its place.",
     "meta": "Visitors understand, trust, and take action faster."
   },
   {
     "id": "build",
     "step": "03",
     "label": "High-Performance Design & Development",
-    "description": "We design a premium, mobile-first interface and build it using fast, SEO-optimized technology. Your website loads in seconds, ranks better, and works flawlessly across devices.",
+    "description": "Our designers create a premium, mobile-first interface and build it using fast, SEO-optimized technology. Your website loads in seconds, ranks better, and works flawlessly across devices.",
     "meta": "A website that looks premium and performs under pressure."
   },
   {
     "id": "launch",
     "step": "04",
     "label": "Launch, Optimize & Scale",
-    "description": "After launch, we track real user behavior, measure performance, and optimize continuously. Through analytics and A/B testing, we refine what works and eliminate what doesn’t.",
+    "description": "Post-launch, our team tracks real user behavior, measures performance, and optimizes continuously. Through analytics and A/B testing, we refine what works and eliminate what doesn't.",
     "meta": "Better results month after month — not a “set and forget” site."
   }
 ]
