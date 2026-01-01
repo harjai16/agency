@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Long filename files (Windows path length issues)
+public/brands/Outdoor portrait of young entrepreneurs working at coffee bar. _ Free Photo*
