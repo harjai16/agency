@@ -19,44 +19,36 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      // Stock photo services (8)
+      // Stock photo services (6) - removed freeimages.com, dreamstime.com
       { protocol: 'https', hostname: 'media.istockphoto.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.shutterstock.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.gettyimages.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.adobe.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.depositphotos.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.alamy.com', pathname: '/**' },
-      { protocol: 'https', hostname: '**.dreamstime.com', pathname: '/**' },
-      { protocol: 'https', hostname: '**.freeimages.com', pathname: '/**' },
       
-      // Free image services (6)
+      // Free image services (5) - removed staticflickr.com
       { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
       { protocol: 'https', hostname: 'source.unsplash.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.pexels.com', pathname: '/**' },
       { protocol: 'https', hostname: 'cdn.pixabay.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.flickr.com', pathname: '/**' },
-      { protocol: 'https', hostname: '**.staticflickr.com', pathname: '/**' },
       
-      // Image hosting services (5)
+      // Image hosting services (3) - removed imgbox.com, photobucket.com
       { protocol: 'https', hostname: '**.imgur.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.ibb.co', pathname: '/**' },
       { protocol: 'https', hostname: '**.postimg.cc', pathname: '/**' },
-      { protocol: 'https', hostname: '**.imgbox.com', pathname: '/**' },
-      { protocol: 'https', hostname: '**.photobucket.com', pathname: '/**' },
       
-      // Social media platforms (8)
+      // Social media platforms (6) - removed redd.it, licdn.com
       { protocol: 'https', hostname: '**.instagram.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.cdninstagram.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.fbcdn.net', pathname: '/**' },
       { protocol: 'https', hostname: '**.twimg.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.pinimg.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.pinterest.com', pathname: '/**' },
-      { protocol: 'https', hostname: '**.redd.it', pathname: '/**' },
-      { protocol: 'https', hostname: '**.licdn.com', pathname: '/**' },
       
-      // Creative platforms (5)
+      // Creative platforms (4) - removed deviantart.net
       { protocol: 'https', hostname: '**.deviantart.com', pathname: '/**' },
-      { protocol: 'https', hostname: '**.deviantart.net', pathname: '/**' },
       { protocol: 'https', hostname: '**.artstation.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.behance.net', pathname: '/**' },
       { protocol: 'https', hostname: '**.dribbble.com', pathname: '/**' },
@@ -69,7 +61,7 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.giphy.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.tenor.com', pathname: '/**' },
       
-      // CDN and optimization services (9)
+      // CDN and optimization services (9) - removed letsenhance.io patterns
       { protocol: 'https', hostname: 'res.cloudinary.com', pathname: '/**' },
       { protocol: 'https', hostname: 'images.ctfassets.net', pathname: '/**' },
       { protocol: 'https', hostname: '**.amazonaws.com', pathname: '/**' },
@@ -80,9 +72,9 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.wordpress.com', pathname: '/**' },
       { protocol: 'https', hostname: '**.imagekit.io', pathname: '/**' },
       
-      // Let's Enhance (the one causing the error) (2)
-      { protocol: 'https', hostname: 'letsenhance.io', pathname: '/**' },
-      { protocol: 'https', hostname: '**.letsenhance.io', pathname: '/**' },
+      // Google Drive (2) - essential for blog images
+      { protocol: 'https', hostname: 'drive.google.com', pathname: '/**' },
+      { protocol: 'https', hostname: '**.drive.google.com', pathname: '/**' },
       
       // Placeholder services (2)
       { protocol: 'https', hostname: 'via.placeholder.com', pathname: '/**' },
