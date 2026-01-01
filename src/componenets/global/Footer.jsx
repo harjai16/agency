@@ -43,6 +43,7 @@ const Footer = () => {
                 alt="Swagatam Tech Logo - Website Development Agency"
                 fill
                 className="object-contain group-hover:opacity-80 transition-opacity"
+                style={{ backgroundColor: 'transparent' }}
                 sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 128px, 144px"
               />
             </div>

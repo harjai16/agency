@@ -66,6 +66,7 @@ const Navbar = () => {
               alt="Swagatam Tech Logo - Website Development Agency"
               fill
               className="object-contain"
+              style={{ backgroundColor: 'transparent' }}
               sizes="(max-width: 700px) 40px, (max-width: 768px) 48px, (max-width: 1024px) 56px, 64px"
               priority
             />
@@ -159,6 +160,7 @@ const Navbar = () => {
                       alt="Swagatam Tech Logo"
                       fill
                       className="object-contain"
+                      style={{ backgroundColor: 'transparent' }}
                       sizes="128px"
                     />
                   </div>

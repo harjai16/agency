@@ -36,3 +36,11 @@ button,
   animation: infinite-scroll 20s linear infinite;
   will-change: transform;
 }
+
+/* Ensure logo images have transparent background */
+img[src*="logo.png"],
+img[alt*="Logo"],
+img[alt*="logo"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
