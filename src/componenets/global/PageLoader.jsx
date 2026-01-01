@@ -42,6 +42,7 @@ const PageLoader = ({ isLoading }) => {
                   alt="Swagatam Tech Logo"
                   fill
                   className="object-contain"
+                  style={{ backgroundColor: 'transparent' }}
                   sizes="112px"
                   priority
                 />
