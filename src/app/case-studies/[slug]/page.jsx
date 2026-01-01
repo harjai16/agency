@@ -266,7 +266,7 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
               <div className="pt-4">
                 <SocialShare 
                   url={`/case-studies/${slug}`}
-                  title={metaTitle}
+                  title={heroTitle || title}
                   description={snippet}
                   variant="compact"
                 />

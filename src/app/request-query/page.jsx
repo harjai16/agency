@@ -273,6 +273,16 @@ const RequestQueryPage = () => {
                             {submission.email}
                           </p>
                         </div>
+                        {submission.phone && (
+                          <div>
+                            <p className="text-[10px] uppercase tracking-wider text-gray-500 mb-1">
+                              Phone
+                            </p>
+                            <p className="text-sm text-gray-900">
+                              {submission.phone}
+                            </p>
+                          </div>
+                        )}
                         {submission.company && (
                           <div>
                             <p className="text-[10px] uppercase tracking-wider text-gray-500 mb-1">

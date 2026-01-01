@@ -5,7 +5,8 @@ import clsx from "clsx";
 const Button = ({ 
   children, 
   className = "", 
-  variant = "solid", 
+  variant = "solid",
+  asChild = false,
   ...props 
 }) => {
   const base =
@@ -18,9 +19,19 @@ const Button = ({
       "bg-white text-black border border-gray-200 hover:border-black/40 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
   };
 
+  const buttonClasses = clsx(base, variants[variant], className);
+
+  // If asChild is true, clone the child element and add the classes
+  if (asChild) {
+    return React.cloneElement(React.Children.only(children), {
+      className: clsx(buttonClasses, children.props?.className),
+      ...props,
+    });
+  }
+
   return (
     <button
-      className={clsx(base, variants[variant], className)}
+      className={buttonClasses}
       {...props}
     >
       {children}

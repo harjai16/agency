@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
 import { useRouter } from "next/navigation";
+import { useLeadPopup } from "./LeadPopupContext";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
@@ -17,7 +18,8 @@ const navItems = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-const router = useRouter();
+  const router = useRouter();
+  const { openPopup } = useLeadPopup();
   const openMenu = () => {
     setOpen(true);
     if (typeof document !== "undefined") {
@@ -90,7 +92,10 @@ const router = useRouter();
           whileHover={{ scale: 1.04 }}
           className="hidden md:flex"
         >
-          <Button className="text-[10px] min-[700px]:text-xs px-2.5 min-[700px]:px-4 py-1.5 min-[700px]:py-2.5 min-h-[32px] min-[700px]:min-h-[44px] whitespace-nowrap">
+          <Button 
+            onClick={openPopup}
+            className="text-[10px] min-[700px]:text-xs px-2.5 min-[700px]:px-4 py-1.5 min-[700px]:py-2.5 min-h-[32px] min-[700px]:min-h-[44px] whitespace-nowrap"
+          >
             <span className="hidden min-[800px]:inline">Book a strategy call</span>
             <span className="min-[800px]:hidden">Book Call</span>
           </Button>
@@ -193,11 +198,14 @@ const router = useRouter();
                 className="mt-10"
               >
                 <Button
-        className="w-full"
-        onClick={() => router.push("/contact")}
-      >
-        Book a strategy call
-      </Button>
+                  className="w-full"
+                  onClick={() => {
+                    closeMenu();
+                    openPopup();
+                  }}
+                >
+                  Book a strategy call
+                </Button>
               </motion.div>
             </motion.div>
           </>

@@ -40,6 +40,7 @@ export async function POST(request) {
     const {
       name,
       email,
+      phone,
       company,
       projectType,
       message,
@@ -57,6 +58,7 @@ export async function POST(request) {
     const submission = {
       name,
       email,
+      phone: phone || '',
       company: company || '',
       projectType: projectType || '',
       message: message || '',
