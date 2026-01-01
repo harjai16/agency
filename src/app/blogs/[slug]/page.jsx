@@ -31,8 +31,13 @@ const BlogDetailPage = () => {
 
   useEffect(() => {
     if (slug) {
+      // Reset state when slug changes
+      setLoading(true);
+      setBlog(null);
       fetchBlog();
       fetchRelatedBlogs();
+    } else {
+      setLoading(false);
     }
   }, [slug]);
 
@@ -72,10 +77,31 @@ const BlogDetailPage = () => {
 
   const fetchBlog = async () => {
     try {
-      const response = await fetch(`/api/blogs/slug/${slug}`);
+      if (!slug) {
+        console.error('No slug provided');
+        setLoading(false);
+        return;
+      }
+
+      console.log('Fetching blog with slug:', slug);
+      const apiUrl = `/api/blogs/slug/${encodeURIComponent(slug)}`;
+      console.log('API URL:', apiUrl);
+
+      const response = await fetch(apiUrl);
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Failed to fetch blog:', response.status, response.statusText, errorData);
+        setBlog(null);
+        setLoading(false);
+        return;
+      }
+
       const data = await response.json();
+      console.log('API Response:', data);
 
       if (data.success && data.blog) {
+        console.log('Blog fetched successfully:', data.blog.title);
         setBlog(data.blog);
         // Update page title and meta tags for SEO
         if (typeof document !== 'undefined') {
@@ -86,6 +112,7 @@ const BlogDetailPage = () => {
           }
         }
       } else {
+        console.error('Blog not found or error:', data.error || 'Unknown error', data);
         setBlog(null);
       }
     } catch (error) {
@@ -121,6 +148,23 @@ const BlogDetailPage = () => {
       month: 'long', 
       day: 'numeric' 
     });
+  };
+
+  // Convert Google Drive share link to direct image URL
+  const convertGoogleDriveUrl = (url) => {
+    if (!url) return url;
+    
+    // Check if it's a Google Drive share link
+    const driveSharePattern = /drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/;
+    const match = url.match(driveSharePattern);
+    
+    if (match && match[1]) {
+      // Convert to direct image URL
+      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+    }
+    
+    // Return original URL if not a Google Drive share link
+    return url;
   };
 
   if (loading) {
@@ -164,7 +208,7 @@ const BlogDetailPage = () => {
     "@type": "BlogPosting",
     "headline": blog.title,
     "description": blog.metaDescription || blog.excerpt || blog.title,
-    "image": blog.featuredImage ? [blog.featuredImage] : [],
+    "image": blog.featuredImage ? [convertGoogleDriveUrl(blog.featuredImage)] : [],
     "datePublished": blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
     "dateModified": blog.updatedAt ? new Date(blog.updatedAt).toISOString() : blog.createdAt ? new Date(blog.createdAt).toISOString() : undefined,
     "author": {
@@ -238,7 +282,7 @@ const BlogDetailPage = () => {
         title={blog.metaTitle || blog.title}
         description={blog.metaDescription || blog.excerpt || blog.title}
         keywords={blog.keywords}
-        image={blog.featuredImage}
+        image={convertGoogleDriveUrl(blog.featuredImage)}
         type="article"
         noindex={blog.status !== 'published'}
       />
@@ -316,7 +360,7 @@ const BlogDetailPage = () => {
                 >
                   <div className="relative h-60 md:h-72 lg:h-80">
                     <Image
-                      src={blog.featuredImage}
+                      src={convertGoogleDriveUrl(blog.featuredImage)}
                       alt={blog.title}
                       fill
                       className="object-cover"
@@ -331,15 +375,26 @@ const BlogDetailPage = () => {
       </section>
 
       {/* CONTENT */}
-      <Section className="py-10 sm:py-12 md:py-14 lg:py-18 bg-white">
-        <div className="max-w-fullhd mx-auto">
-          <motion.div
-            {...fadeUp(0)}
-            className="prose prose-sm sm:prose-base md:prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-strong:text-gray-900 prose-ul:text-gray-600 prose-ol:text-gray-600 blog-content"
-            dangerouslySetInnerHTML={{ __html: blog.content }}
-          />
-        </div>
-      </Section>
+      {blog.content && (
+        <Section className="py-10 sm:py-12 md:py-14 lg:py-18 bg-white">
+          <div className="max-w-fullhd mx-auto">
+            <motion.div
+              {...fadeUp(0)}
+              className="prose prose-sm sm:prose-base md:prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-strong:text-gray-900 prose-ul:text-gray-600 prose-ol:text-gray-600 blog-content"
+              dangerouslySetInnerHTML={{ __html: blog.content }}
+            />
+          </div>
+        </Section>
+      )}
+      
+      {/* Show message if content is missing */}
+      {!blog.content && (
+        <Section className="py-10 sm:py-12 md:py-14 lg:py-18 bg-white">
+          <div className="max-w-fullhd mx-auto text-center">
+            <p className="text-sm text-gray-500">Content is being prepared. Please check back soon.</p>
+          </div>
+        </Section>
+      )}
 
       {/* RELATED BLOGS */}
       {relatedBlogs.length > 0 && (
@@ -369,7 +424,7 @@ const BlogDetailPage = () => {
                     {relatedBlog.featuredImage && (
                       <div className="relative h-40 md:h-44 overflow-hidden">
                         <Image
-                          src={relatedBlog.featuredImage}
+                          src={convertGoogleDriveUrl(relatedBlog.featuredImage)}
                           alt={relatedBlog.title}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"

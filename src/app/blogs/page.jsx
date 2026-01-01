@@ -32,7 +32,9 @@ const BlogsPage = () => {
       const data = await response.json();
       
       if (data.success) {
-        setBlogs(data.blogs || []);
+        const blogsList = data.blogs || [];
+        console.log('Fetched blogs:', blogsList.map(b => ({ slug: b.slug, title: b.title, status: b.status })));
+        setBlogs(blogsList);
       }
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -49,6 +51,23 @@ const BlogsPage = () => {
       month: 'long', 
       day: 'numeric' 
     });
+  };
+
+  // Convert Google Drive share link to direct image URL
+  const convertGoogleDriveUrl = (url) => {
+    if (!url) return url;
+    
+    // Check if it's a Google Drive share link
+    const driveSharePattern = /drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/;
+    const match = url.match(driveSharePattern);
+    
+    if (match && match[1]) {
+      // Convert to direct image URL
+      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+    }
+    
+    // Return original URL if not a Google Drive share link
+    return url;
   };
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
@@ -152,7 +171,7 @@ const BlogsPage = () => {
                       {blog.featuredImage && (
                         <div className="relative h-40 md:h-44 overflow-hidden">
                           <Image
-                            src={blog.featuredImage}
+                            src={convertGoogleDriveUrl(blog.featuredImage)}
                             alt={blog.title}
                             fill
                             priority={index === 0}
