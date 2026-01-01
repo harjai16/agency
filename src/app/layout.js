@@ -81,7 +81,7 @@ export const metadata = {
     ],
     shortcut: [
       { url: '/faviconicon.png' },
-    ],
+    ],    
     other: [
       { rel: 'mask-icon', url: '/apple-touch-icon.png', color: '#000000' },
       { rel: 'manifest', url: '/site.webmanifest' },
