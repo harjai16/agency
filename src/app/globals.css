@@ -38,7 +38,7 @@ button,
 }
 
 /* Ensure logo images have transparent background */
-img[src*="logo.png"],
+img[src*="logo.jpeg"],
 img[alt*="Logo"],
 img[alt*="logo"] {
   background-color: transparent !important;

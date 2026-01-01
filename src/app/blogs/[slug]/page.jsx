@@ -220,7 +220,7 @@ const BlogDetailPage = () => {
       "name": "Swagatam Tech",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/logo.png`
+        "url": `${siteUrl}/logo.jpeg`
       }
     },
     "mainEntityOfPage": {

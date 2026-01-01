@@ -42,7 +42,7 @@ const CareersPage = () => {
     "@type": "Organization",
     "name": "Swagatam Tech",
     "url": siteUrl,
-    "logo": `${siteUrl}/logo.png`,
+    "logo": `${siteUrl}/logo.jpeg`,
     "description": "Website development and digital agency offering career opportunities.",
     "sameAs": [
       "https://twitter.com/swagatamtech",

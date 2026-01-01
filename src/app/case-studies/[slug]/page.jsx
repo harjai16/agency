@@ -80,7 +80,7 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
   const caseStudyUrl = `${siteUrl}/case-studies/${slug}`;
-  const imageUrl = heroImage ? (heroImage.startsWith('http') ? heroImage : `${siteUrl}${heroImage}`) : `${siteUrl}/logo.png`;
+  const imageUrl = heroImage ? (heroImage.startsWith('http') ? heroImage : `${siteUrl}${heroImage}`) : `${siteUrl}/logo.jpeg`;
 
   // Case Study Structured Data
   const caseStudySchema = {
@@ -125,7 +125,7 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
       "name": "Swagatam Tech",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/logo.png`
+        "url": `${siteUrl}/logo.jpeg`
       }
     },
     "datePublished": new Date().toISOString(),

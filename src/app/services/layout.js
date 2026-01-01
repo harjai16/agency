@@ -57,13 +57,13 @@ export const metadata = {
     siteName: "Swagatam Tech",
     images: [
       {
-        url: `${siteUrl}/logo.png`,
+        url: `${siteUrl}/logo.jpeg`,
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Website Development Services",
       },
       {
-        url: `${siteUrl}/logo.png`,
+        url: `${siteUrl}/logo.jpeg`,
         width: 800,
         height: 600,
         alt: "Swagatam Tech Logo",
@@ -75,7 +75,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Website Development Services | Swagatam Tech",
     description: "Transform your website into a revenue engine. Complete website development services: strategy, UX design, custom development, and performance optimization.",
-    images: [`${siteUrl}/logo.png`],
+    images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",
     creator: "@swagatamtech",
   },

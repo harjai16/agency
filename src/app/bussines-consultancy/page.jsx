@@ -24,7 +24,7 @@ const BusinessConsultancyPage = () => {
       "@type": "Organization",
       "name": "Swagatam Tech",
       "url": siteUrl,
-      "logo": `${siteUrl}/logo.png`
+      "logo": `${siteUrl}/logo.jpeg`
     },
     "serviceType": [
       "Business Consulting",
@@ -93,7 +93,7 @@ const BusinessConsultancyPage = () => {
     "@type": "Organization",
     "name": "Swagatam Tech",
     "url": siteUrl,
-    "logo": `${siteUrl}/logo.png`,
+    "logo": `${siteUrl}/logo.jpeg`,
     "description": "Business consulting and website development agency providing strategic guidance and digital solutions.",
     "sameAs": [
       "https://twitter.com/swagatamtech",
