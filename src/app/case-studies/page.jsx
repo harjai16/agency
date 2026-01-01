@@ -222,7 +222,25 @@ Share a bit about your goals and constraints, and we’ll suggest a clear approa
           </div>
         </motion.div>
       </Section>
-
+      {/* Hidden backlinks for SEO */}
+      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+        <a href="/">Website Agency</a>
+        <a href="/about">Web Development Agency</a>
+        <a href="/services">Digital Marketing Agency</a>
+        <a href="/portfolio">Website Design Agency</a>
+        <a href="/blogs">Web Design Services</a>
+        <a href="/contact">Website Development Services</a>
+        <a href="/bussines-consultancy">Business Consultancy Services</a>
+        <a href="/careers">Digital Agency Careers</a>
+        <a href="/services">Custom Website Development</a>
+        <a href="/portfolio">Website Design Company</a>
+        <a href="/blogs">Web Development Company</a>
+        <a href="/contact">Digital Marketing Services</a>
+        <a href="/about">Website Agency Contact</a>
+        <a href="/">Professional Web Agency</a>
+        <a href="/services">Website Development Agency India</a>
+        <a href="/portfolio">Best Web Development Agency</a>
+      </div>
     </main>
   );
 };

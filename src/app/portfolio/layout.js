@@ -53,10 +53,16 @@ export const metadata = {
     siteName: "Swagatam Tech",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/logo.png`,
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Portfolio",
+      },
+      {
+        url: `${siteUrl}/logo.png`,
+        width: 800,
+        height: 600,
+        alt: "Swagatam Tech Logo",
       },
     ],
     locale: "en_US",
@@ -65,7 +71,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "Portfolio - Our Website Development Projects | Swagatam Tech",
     description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/logo.png`],
+    site: "@swagatamtech",
     creator: "@swagatamtech",
   },
   alternates: {

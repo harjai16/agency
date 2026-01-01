@@ -51,10 +51,16 @@ export const metadata = {
     description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Website Development Agency",
+      },
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Swagatam Tech Logo",
       },
     ],
   },
@@ -62,8 +68,9 @@ export const metadata = {
     card: "summary_large_image",
     title: "Swagatam Tech - Website Development Agency",
     description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
-    images: ["/og-image.jpg"],
+    images: ["/logo.png"],
     creator: "@swagatamtech",
+    site: "@swagatamtech",
   },
   alternates: {
     canonical: "https://www.swagatamtech.com/",
@@ -105,10 +112,23 @@ const organizationSchema = {
   "logo": {
     "@type": "ImageObject",
     "url": `${siteUrl}/logo.png`,
-    "width": 200,
-    "height": 200
+    "width": 512,
+    "height": 512
   },
-  "image": `${siteUrl}/logo.png`,
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 512,
+      "height": 512
+    }
+  ],
   "description": "Transform your website into a revenue engine. Fast, conversion-focused websites with strategy, UX design, and modern development that drive growth.",
   "sameAs": [
     "https://twitter.com/swagatamtech",
@@ -118,11 +138,18 @@ const organizationSchema = {
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "ashwaniharjai.softwaredev@gmail.com",
-    "contactType": "Customer Service"
+    "contactType": "Customer Service",
+    "availableLanguage": "English"
   },
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "IN"
+    "addressCountry": "IN",
+    "addressLocality": "India"
+  },
+  "foundingDate": "2024",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "5-10"
   }
 };
 

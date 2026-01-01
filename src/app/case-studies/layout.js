@@ -52,10 +52,16 @@ export const metadata = {
     siteName: "Swagatam Tech",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/logo.png`,
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Case Studies",
+      },
+      {
+        url: `${siteUrl}/logo.png`,
+        width: 800,
+        height: 600,
+        alt: "Swagatam Tech Logo",
       },
     ],
     locale: "en_US",
@@ -64,7 +70,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
     description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/logo.png`],
+    site: "@swagatamtech",
     creator: "@swagatamtech",
   },
   alternates: {

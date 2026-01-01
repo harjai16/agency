@@ -352,19 +352,36 @@ const BlogPostAdmin = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              onClick={() => { setShowForm(false); setEditingBlog(null); resetForm(); }}
             >
               <motion.div
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
-                onClick={(e) => e.stopPropagation()}
                 className="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto"
               >
-                <div className="p-6 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <div className="p-6 border-b border-gray-200 sticky top-0 bg-white z-10 flex items-center justify-between">
                   <h2 className="text-xl font-semibold text-gray-900">
                     {editingBlog ? 'Edit Blog Post' : 'Create New Blog Post'}
                   </h2>
+                  <button
+                    onClick={() => { setShowForm(false); setEditingBlog(null); resetForm(); }}
+                    className="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100 transition-colors"
+                    aria-label="Close"
+                  >
+                    <svg
+                      className="w-5 h-5 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
                 </div>
 
                 <form onSubmit={handleSubmit} className="p-6 space-y-6">
@@ -596,6 +613,25 @@ const BlogPostAdmin = () => {
             </div>
           )}
         </div>
+      </div>
+      {/* Hidden backlinks for SEO */}
+      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+        <a href="/">Website Agency</a>
+        <a href="/about">Web Development Agency</a>
+        <a href="/services">Digital Marketing Agency</a>
+        <a href="/portfolio">Website Design Agency</a>
+        <a href="/case-studies">Web Design Services</a>
+        <a href="/blogs">Website Development Services</a>
+        <a href="/contact">Business Consultancy Services</a>
+        <a href="/bussines-consultancy">Digital Agency Careers</a>
+        <a href="/careers">Custom Website Development</a>
+        <a href="/services">Website Design Company</a>
+        <a href="/portfolio">Web Development Company</a>
+        <a href="/case-studies">Digital Marketing Services</a>
+        <a href="/contact">Website Agency Contact</a>
+        <a href="/about">Professional Web Agency</a>
+        <a href="/services">Website Development Agency India</a>
+        <a href="/portfolio">Best Web Development Agency</a>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
 import { useRouter } from "next/navigation";
 import { useLeadPopup } from "./LeadPopupContext";
+import { useLoading } from "./LoadingContext";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
@@ -20,6 +21,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const { openPopup } = useLeadPopup();
+  const { setLoading } = useLoading();
   const openMenu = () => {
     setOpen(true);
     if (typeof document !== "undefined") {
@@ -52,11 +54,12 @@ const Navbar = () => {
           href="/"
           className="flex items-center group transition-all"
           aria-label="Swagatam Tech - Home"
+          onClick={() => setLoading(true)}
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="relative h-10 w-10 min-[700px]:h-12 min-[700px]:w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
+            className="relative h-12 w-32 min-[700px]:h-12 min-[700px]:w-20 sm:h-14 sm:w-24 md:h-16 md:w-28"
           >
             <Image
               src="/logo.png"
@@ -76,6 +79,7 @@ const Navbar = () => {
               <Link
                 href={item.href}
                 className="hover:text-black transition-colors whitespace-nowrap"
+                onClick={() => setLoading(true)}
               >
                 {item.label}
               </Link>
@@ -136,23 +140,26 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.35 }}
-              className="fixed top-0 left-0 w-[80%] sm:w-[60%] h-screen bg-white/90 backdrop-blur-xl z-[60] border-r border-gray-100 flex flex-col justify-between px-10 py-8 md:hidden"
+              className="fixed top-0 left-0 w-[80%] sm:w-[60%] h-screen bg-white/90 backdrop-blur-xl z-[60] border-r border-gray-100 flex flex-col justify-between px-10 py-8 md:hidden overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
             >
               {/* Top row with logo + close */}
               <div className="flex items-center justify-between mb-10">
                 <Link
                   href="/"
                   className="flex items-center"
-                  onClick={closeMenu}
+                  onClick={() => {
+                    closeMenu();
+                    setLoading(true);
+                  }}
                   aria-label="Swagatam Tech - Home"
                 >
-                  <div className="relative h-12 w-12">
+                  <div className="relative h-14 w-32">
                     <Image
                       src="/logo.png"
                       alt="Swagatam Tech Logo"
                       fill
                       className="object-contain"
-                      sizes="48px"
+                      sizes="128px"
                     />
                   </div>
                 </Link>
@@ -182,7 +189,10 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       className="hover:text-black transition"
-                      onClick={closeMenu}
+                      onClick={() => {
+                        closeMenu();
+                        setLoading(true);
+                      }}
                     >
                       {item.label}
                     </Link>
@@ -195,10 +205,10 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="mt-10"
+                className="mt-10 pb-4"
               >
                 <Button
-                  className="w-full"
+                  className="w-full py-3 text-base font-semibold"
                   onClick={() => {
                     closeMenu();
                     openPopup();

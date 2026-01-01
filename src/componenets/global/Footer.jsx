@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SocialShare from "./SocialShare";
+import { useLoading } from "./LoadingContext";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -22,6 +23,8 @@ const socials = [
 ];
 
 const Footer = () => {
+  const { setLoading } = useLoading();
+
   return (
     <footer className="w-full border-t border-gray-100 bg-white">
       <div className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-10 md:py-12 lg:py-14 grid gap-8 sm:gap-10 md:grid-cols-3">
@@ -32,6 +35,7 @@ const Footer = () => {
             href="/"
             className="flex items-center mb-4 group"
             aria-label="Swagatam Tech - Home"
+            onClick={() => setLoading(true)}
           >
             <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
               <Image
@@ -60,6 +64,7 @@ const Footer = () => {
                   href={item.href}
                   className="hover:text-black transition-colors"
                   aria-label={`Navigate to ${item.label} page`}
+                  onClick={() => setLoading(true)}
                 >
                   {item.label === "Contact" ? "Get in touch" : item.label}
                 </Link>

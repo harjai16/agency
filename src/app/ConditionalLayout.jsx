@@ -8,6 +8,7 @@ import CapabilitiesStrip from "@/componenets/CapabilitiesStrip";
 import CustomCursor from "@/componenets/global/CustomCursor";
 import { ToastProvider } from "@/componenets/global/Toast";
 import { LeadPopupProvider } from "@/componenets/global/LeadPopupContext";
+import { LoadingProvider } from "@/componenets/global/LoadingContext";
 import LeadPopup from "@/componenets/global/LeadPopup";
 
 export default function ConditionalLayout({ children }) {
@@ -57,9 +58,11 @@ export default function ConditionalLayout({ children }) {
     return (
       <ToastProvider>
         <LeadPopupProvider>
-          <main className="min-h-screen">
-            {children}
-          </main>
+          <LoadingProvider>
+            <main className="min-h-screen">
+              {children}
+            </main>
+          </LoadingProvider>
         </LeadPopupProvider>
       </ToastProvider>
     );
@@ -69,17 +72,19 @@ export default function ConditionalLayout({ children }) {
   return (
     <ToastProvider>
       <LeadPopupProvider>
-        <CustomCursor />
-        <LeadPopup />
-        {/* Fixed header: stripe + navbar */}
-        <div className="fixed top-0 left-0 w-full z-50">
-          <CapabilitiesStrip />
-          <Navbar />
-        </div>
-        <main className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
-          {children}
-        </main>
-        <Footer />
+        <LoadingProvider>
+          <CustomCursor />
+          <LeadPopup />
+          {/* Fixed header: stripe + navbar */}
+          <div className="fixed top-0 left-0 w-full z-50">
+            <CapabilitiesStrip />
+            <Navbar />
+          </div>
+          <main className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36">
+            {children}
+          </main>
+          <Footer />
+        </LoadingProvider>
       </LeadPopupProvider>
     </ToastProvider>
   );
