@@ -58,7 +58,7 @@ const CustomCursor = () => {
     <>
       {/* Outer ring */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-[80] hidden md:flex rounded-full border"
+        className="pointer-events-none fixed top-0 left-0 z-[10000] hidden md:flex rounded-full border"
         style={{
           width: isPointer ? 52 : 46,
           height: isPointer ? 52 : 46,
@@ -77,7 +77,7 @@ const CustomCursor = () => {
 
       {/* Inner dot */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-[81] hidden md:flex rounded-full"
+        className="pointer-events-none fixed top-0 left-0 z-[10001] hidden md:flex rounded-full"
         style={{
           width: isPointer ? 10 : 6,
           height: isPointer ? 10 : 6,

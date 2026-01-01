@@ -13,7 +13,7 @@ export function generateBaseMetadata({
   description,
   keywords = [],
   path = '/',
-  image = '/og-image.jpg',
+  image = '/logo.png',
   type = 'website',
   publishedTime,
   modifiedTime,
@@ -189,7 +189,12 @@ export function generateStructuredData(type, data) {
         '@type': 'Organization',
         name: 'Swagatam Tech',
         url: baseUrl,
-        logo: `${baseUrl}/logo.png`,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${baseUrl}/logo.png`,
+          width: 512,
+          height: 512,
+        },
         description: data.description || 'High-performance website development agency',
         sameAs: data.sameAs || [
           'https://twitter.com/swagatamtech',
@@ -213,7 +218,7 @@ export function generateStructuredData(type, data) {
         '@type': 'BlogPosting',
         headline: data.title,
         description: data.description,
-        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/og-image.jpg`,
+        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/logo.png`,
         datePublished: data.publishedTime ? new Date(data.publishedTime).toISOString() : new Date().toISOString(),
         dateModified: data.modifiedTime ? new Date(data.modifiedTime).toISOString() : new Date().toISOString(),
         author: {
@@ -226,6 +231,8 @@ export function generateStructuredData(type, data) {
           logo: {
             '@type': 'ImageObject',
             url: `${baseUrl}/logo.png`,
+            width: 512,
+            height: 512,
           },
         },
         mainEntityOfPage: {
@@ -244,7 +251,7 @@ export function generateStructuredData(type, data) {
         name: data.title,
         description: data.description,
         url: `${baseUrl}${data.path}`,
-        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/og-image.jpg`,
+        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/logo.png`,
         author: {
           '@type': 'Organization',
           name: 'Swagatam Tech',

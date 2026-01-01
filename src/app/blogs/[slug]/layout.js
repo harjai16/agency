@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
       description: blog.metaDescription || blog.excerpt || blog.title,
       keywords,
       path: blogUrl,
-      image: blog.featuredImage || '/og-image.jpg',
+      image: blog.featuredImage || '/logo.png',
       publishedTime: blog.createdAt,
       modifiedTime: blog.updatedAt || blog.createdAt,
       author: blog.author || 'Swagatam Tech',

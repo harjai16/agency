@@ -62,10 +62,16 @@ export const metadata = {
     siteName: "Swagatam Tech",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Website Development Agency",
+      },
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Swagatam Tech Logo",
       },
     ],
     locale: "en_US",
@@ -74,7 +80,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "Website Development Agency | Swagatam Tech",
     description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
-    images: ["/og-image.jpg"],
+    images: ["/logo.png"],
+    site: "@swagatamtech",
     creator: "@swagatamtech",
   },
   alternates: {
@@ -106,6 +113,18 @@ export default function Home() {
     "name": "Swagatam Tech",
     "url": siteUrl,
     "description": "Transform your website into a revenue engine. We build fast, conversion-focused websites with strategy, UX design, and modern development that drives measurable growth.",
+    "image": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 1200,
+      "height": 630
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 512,
+      "height": 512
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
@@ -122,6 +141,18 @@ export default function Home() {
     "name": "Swagatam Tech",
     "description": "Complete website services: strategy, UX/UI design, custom development, CMS setup, performance optimization, and SEO. Built to convert visitors.",
     "url": siteUrl,
+    "image": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 1200,
+      "height": 630
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 512,
+      "height": 512
+    },
     "serviceType": [
       "Website Development",
       "Web Design",
@@ -255,6 +286,25 @@ export default function Home() {
                  <Contact pageName="Home" />
                  
       {/* other sections will come here */}
+      {/* Hidden backlinks for SEO */}
+      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+        <a href="/about">Website Agency</a>
+        <a href="/services">Web Development Agency</a>
+        <a href="/portfolio">Digital Marketing Agency</a>
+        <a href="/case-studies">Website Design Agency</a>
+        <a href="/blogs">Web Design Services</a>
+        <a href="/contact">Website Development Services</a>
+        <a href="/bussines-consultancy">Business Consultancy Services</a>
+        <a href="/careers">Digital Agency Careers</a>
+        <a href="/services">Custom Website Development</a>
+        <a href="/portfolio">Website Design Company</a>
+        <a href="/case-studies">Web Development Company</a>
+        <a href="/blogs">Digital Marketing Services</a>
+        <a href="/contact">Website Agency Contact</a>
+        <a href="/about">Professional Web Agency</a>
+        <a href="/services">Website Development Agency India</a>
+        <a href="/portfolio">Best Web Development Agency</a>
+      </div>
     </>
   );
 }

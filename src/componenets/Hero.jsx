@@ -57,14 +57,11 @@ const HERO_LOGOS = [
   { name: "tipsy.webp", src: "/brands/tipsy.webp" },
     { name: "ads_enviro", src: "/brands/ads_enviro.png" },
       { name: "tipsy.webp", src: "/brands/Logo-Nut-Square-Final.png" },
-        { name: "tipsy.webp", src: "/brands/recy-logo.webp" },
-  
-
- 
+        { name: "tipsy.webp", src: "/brands/recy-logo.webp" }, 
 ];
 
-// duplicate for seamless loop
-const HERO_LOGOS_LOOP = [...HERO_LOGOS, ...HERO_LOGOS];
+// duplicate multiple times for seamless infinite loop
+const HERO_LOGOS_LOOP = [...HERO_LOGOS, ...HERO_LOGOS, ...HERO_LOGOS];
 
 const Hero = () => {
   const router = useRouter();
@@ -232,18 +229,10 @@ const Hero = () => {
             </div>
 
             <div className="relative overflow-hidden -mx-1">
-              <motion.div
-                className="flex items-center gap-6 sm:gap-8 md:gap-10"
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 22,
-                  ease: "linear",
-                }}
-              >
+              <div className="flex items-center gap-6 sm:gap-8 md:gap-10 logos-scroll">
                 {HERO_LOGOS_LOOP.map((logo, idx) => (
                   <div
-                    key={logo.name + idx}
+                    key={`${logo.name}-${idx}`}
                     className="relative h-8 w-20 sm:h-9 sm:w-24 md:h-10 md:w-28 flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Image
@@ -255,7 +244,7 @@ const Hero = () => {
                     />
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
         </motion.div>

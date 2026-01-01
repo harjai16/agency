@@ -18,7 +18,7 @@ export default function SEOHead({
   const pathname = usePathname();
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
   const fullTitle = title?.includes('Swagatam Tech') ? title : `${title} | Swagatam Tech`;
-  const imageUrl = image?.startsWith('http') ? image : image ? `${siteUrl}${image}` : `${siteUrl}/og-image.jpg`;
+  const imageUrl = image?.startsWith('http') ? image : image ? `${siteUrl}${image}` : `${siteUrl}/logo.png`;
   const canonicalUrl = `${siteUrl}${pathname}`;
 
   useEffect(() => {

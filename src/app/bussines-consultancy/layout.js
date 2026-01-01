@@ -61,10 +61,16 @@ export const metadata = {
     siteName: "Swagatam Tech",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/logo.png`,
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Business Consulting Services",
+      },
+      {
+        url: `${siteUrl}/logo.png`,
+        width: 800,
+        height: 600,
+        alt: "Swagatam Tech Logo",
       },
     ],
     locale: "en_US",
@@ -73,7 +79,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "Business Consulting Services | Strategic Business Consulting | Swagatam Tech",
     description: "Expert business consulting services to help you make better decisions, optimize operations, and scale your business.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/logo.png`],
+    site: "@swagatamtech",
     creator: "@swagatamtech",
   },
   alternates: {

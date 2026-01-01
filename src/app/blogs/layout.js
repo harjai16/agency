@@ -54,10 +54,16 @@ export const metadata = {
     siteName: 'Swagatam Tech',
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/logo.png`,
         width: 1200,
         height: 630,
         alt: 'Swagatam Tech Blog',
+      },
+      {
+        url: `${siteUrl}/logo.png`,
+        width: 800,
+        height: 600,
+        alt: 'Swagatam Tech Logo',
       },
     ],
     locale: 'en_US',
@@ -66,7 +72,8 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Blog - Web Design & Development Insights | Swagatam Tech',
     description: 'Learn from real website projects. Practical insights on web design, development, performance, and SEO from building conversion-focused websites.',
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/logo.png`],
+    site: '@swagatamtech',
     creator: '@swagatamtech',
   },
   alternates: {

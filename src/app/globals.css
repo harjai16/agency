@@ -21,3 +21,18 @@ button,
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
 }
+
+/* Infinite scroll animation for logos */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.logos-scroll {
+  animation: infinite-scroll 20s linear infinite;
+  will-change: transform;
+}
