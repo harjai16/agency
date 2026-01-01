@@ -70,17 +70,17 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/faviconicon.png', sizes: 'any' },
+      { url: '/faviconicon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/faviconicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/faviconicon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/faviconicon.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     shortcut: [
-      { url: '/favicon.ico' },
+      { url: '/faviconicon.png' },
     ],
     other: [
       { rel: 'mask-icon', url: '/apple-touch-icon.png', color: '#000000' },
@@ -93,7 +93,7 @@ export const metadata = {
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },
-};
+};   
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
