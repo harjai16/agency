@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Section from "./ui/Section";
-import ContactForm from "@/componenets/global/ContactForm";    
+import ContactForm from "@/componenets/global/ContactForm";       
 
 const Contact = ({ pageName = "Home" }) => {
   return (
