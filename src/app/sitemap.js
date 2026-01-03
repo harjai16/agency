@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://swagatamtech.com";
+  const baseUrl = "https://www.swagatamtech.com";
 
   return [
     {
