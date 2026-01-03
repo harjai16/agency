@@ -2,6 +2,7 @@
 
 import React, { use } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import { useRouter } from "next/navigation";
