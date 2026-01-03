@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Button from "@/componenets/ui/Button";
 import { useToast } from "./Toast";
 import { useLeadPopup } from "./LeadPopupContext";
+import { trackFormSubmit, trackClick } from "@/lib/gtag";
 
 const LeadPopup = () => {
   const { isOpen: contextIsOpen, openPopup, closePopup } = useLeadPopup();
@@ -99,6 +100,11 @@ const LeadPopup = () => {
       const result = await response.json();
 
       if (result.success) {
+        // Track successful popup form submission
+        trackFormSubmit("Lead Popup Form", "popup", {
+          page_name: pageName,
+          project_type: data.projectType,
+        });
         showToast("Thank you! We'll get back to you soon.", "success");
         localStorage.setItem('leadPopupSubmitted', 'true');
         e.target.reset();
@@ -150,7 +156,10 @@ const LeadPopup = () => {
 
               {/* Close Button */}
               <button
-                onClick={handleClose}
+                onClick={() => {
+                  trackClick("Close Popup", "popup");
+                  handleClose();
+                }}
                 className="absolute top-4 right-4 z-10 flex items-center justify-center h-8 w-8 rounded-full border border-gray-200 bg-white/80 hover:bg-gray-50 hover:border-gray-300 text-gray-400 hover:text-gray-600 transition-all duration-200 shadow-sm"
                 aria-label="Close popup"
               >
@@ -298,6 +307,7 @@ const LeadPopup = () => {
                     type="submit"
                     className="w-full"
                     disabled={isSubmitting}
+                    eventLabel="Get Started - Popup"
                   >
                     {isSubmitting ? "Submitting..." : "Get Started"}
                   </Button>

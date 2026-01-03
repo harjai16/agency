@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import SocialShare from "./SocialShare";
 import { useLoading } from "./LoadingContext";
+import { trackClick, trackOutboundLink } from "@/lib/gtag";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -35,7 +36,10 @@ const Footer = () => {
             href="/"
             className="flex items-center mb-4 group"
             aria-label="Swagatam Tech - Home"
-            onClick={() => setLoading(true)}
+            onClick={() => {
+              trackClick("Logo - Footer", "navigation");
+              setLoading(true);
+            }}
           >
             <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
               <Image
@@ -65,7 +69,12 @@ const Footer = () => {
                   href={item.href}
                   className="hover:text-black transition-colors"
                   aria-label={`Navigate to ${item.label} page`}
-                  onClick={() => setLoading(true)}
+                  onClick={() => {
+                    trackClick(`${item.label} - Footer`, "navigation", {
+                      destination: item.href,
+                    });
+                    setLoading(true);
+                  }}
                 >
                   {item.label === "Contact" ? "Get in touch" : item.label}
                 </Link>
@@ -89,6 +98,13 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-black transition-colors"
+                  onClick={() => {
+                    trackOutboundLink(s.href, `${s.label} - Footer`);
+                    trackClick(`${s.label} - Footer`, "social_link", {
+                      platform: s.label.toLowerCase(),
+                      url: s.href,
+                    });
+                  }}
                 >
                   {s.label}
                 </motion.a>

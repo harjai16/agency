@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { trackOutboundLink, trackClick } from "@/lib/gtag";
 
 const SocialShare = ({ 
   url, 
@@ -26,6 +27,12 @@ const SocialShare = ({
   const handleShare = (platform) => {
     const link = shareLinks[platform];
     if (link) {
+      // Track social share click
+      trackOutboundLink(link, `Share on ${platform}`);
+      trackClick(`Share on ${platform}`, "social_share", {
+        platform: platform,
+        url: shareUrl,
+      });
       window.open(link, '_blank', 'width=600,height=400,scrollbars=yes,resizable=yes');
     }
   };
@@ -33,6 +40,11 @@ const SocialShare = ({
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(shareUrl);
+      // Track copy link action
+      trackClick("Copy Link", "social_share", {
+        action: "copy_link",
+        url: shareUrl,
+      });
       // You could add a toast notification here
       alert('Link copied to clipboard!');
     } catch (err) {

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@/componenets/ui/Button";
 import { useToast } from "./Toast";
+import { trackFormSubmit } from "@/lib/gtag";
 
 const ContactForm = ({ pageName = "Unknown Page" }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +48,11 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
             const result = await response.json();
 
             if (result.success) {
+              // Track successful form submission
+              trackFormSubmit("Contact Form", "contact", {
+                page_name: pageName,
+                project_type: data.projectType,
+              });
               showToast("Form submitted successfully!", "success");
               e.target.reset();
             } else {

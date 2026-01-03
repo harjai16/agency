@@ -3,6 +3,7 @@ import "./globals.css";
 
 import ConditionalLayout from "./ConditionalLayout";
 import StructuredData from "@/componenets/global/StructuredData";
+import GoogleAnalytics from "@/componenets/global/GoogleAnalytics";
      
   
 
@@ -160,6 +161,7 @@ export default function RootLayout({ children }) {
         <StructuredData data={organizationSchema} />
       </head>
       <body className="bg-white text-black" suppressHydrationWarning>
+        <GoogleAnalytics />
         <ConditionalLayout>
           {children}
         </ConditionalLayout>

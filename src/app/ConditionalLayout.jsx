@@ -10,12 +10,17 @@ import { ToastProvider } from "@/componenets/global/Toast";
 import { LeadPopupProvider } from "@/componenets/global/LeadPopupContext";
 import { LoadingProvider } from "@/componenets/global/LoadingContext";
 import LeadPopup from "@/componenets/global/LeadPopup";
+import useGoogleAnalytics from "@/hooks/useGoogleAnalytics";
+import GlobalClickTracker from "@/componenets/global/GlobalClickTracker";
 
 export default function ConditionalLayout({ children }) {
   const pathname = usePathname();
   const isBlogPostPage = pathname === '/blog-post' || pathname?.startsWith('/blog-post');
   const isRequestQueryPage = pathname === '/request-query';
   const isJobPostPage = pathname === '/job-post' || pathname?.startsWith('/job-post');
+  
+  // Track page views with Google Analytics
+  useGoogleAnalytics();
 
   useEffect(() => {
     const isAdminPage = isBlogPostPage || isRequestQueryPage || isJobPostPage;
@@ -59,6 +64,7 @@ export default function ConditionalLayout({ children }) {
       <ToastProvider>
         <LeadPopupProvider>
           <LoadingProvider>
+            <GlobalClickTracker />
             <main className="min-h-screen">
               {children}
             </main>
@@ -73,6 +79,7 @@ export default function ConditionalLayout({ children }) {
     <ToastProvider>
       <LeadPopupProvider>
         <LoadingProvider>
+          <GlobalClickTracker />
           <CustomCursor />
           <LeadPopup />
           {/* Fixed header: stripe + navbar */}
