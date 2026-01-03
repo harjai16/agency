@@ -8,6 +8,7 @@ import WhyChoose from "@/componenets/WhyChoose";
 
    
 import StructuredData from "@/componenets/global/StructuredData";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 
      
 export const metadata = {
