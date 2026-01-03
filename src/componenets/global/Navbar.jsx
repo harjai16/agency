@@ -63,15 +63,15 @@ const Navbar = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            className="relative h-12 w-32 min-[700px]:h-12 min-[700px]:w-20 sm:h-14 sm:w-24 md:h-16 md:w-28"
+            className="relative h-12 w-60 min-[700px]:h-12 min-[700px]:w-20 sm:h-14 sm:w-24 md:h-16 md:w-64 text-center flex items-center justify-center"
           >
-            <Image
-              src="/logo.jpeg"
+            <img
+              src="/our_logo/logo-removebg-preview.png"
               alt="Swagatam Tech Logo - Website Development Agency"
               fill
               className="object-contain"
               style={{ backgroundColor: 'transparent' }}
-              sizes="(max-width: 700px) 40px, (max-width: 768px) 48px, (max-width: 1024px) 56px, 64px"
+              sizes="(max-width: 700px) 60px, (max-width: 768px) 48px, (max-width: 1024px) 56px, 64px"
               priority
             />
           </motion.div>
@@ -170,13 +170,13 @@ const Navbar = () => {
                   }}
                   aria-label="Swagatam Tech - Home"
                 >
-                  <div className="relative h-14 w-32">
-                    <Image
-                      src="/logo.jpeg"
+                  <div className="relative h-14 w-54">
+                    <img
+                      src="/our_logo/logo-removebg-preview.png"
                       alt="Swagatam Tech Logo"
                       fill
                       className="object-contain"
-                      style={{ backgroundColor: 'transparent' }}
+                     
                       sizes="128px"
                     />
                   </div>

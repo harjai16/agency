@@ -41,9 +41,9 @@ const Footer = () => {
               setLoading(true);
             }}
           >
-            <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
-              <Image
-                src="/logo.jpeg"
+            <div className="relative w-60  sm:w-47  md:w-32  lg:w-53">
+              <img
+                src="/our_logo/logo-removebg-preview.png"
                 alt="Swagatam Tech Logo - Website Development Agency"
                 fill
                 className="object-contain group-hover:opacity-80 transition-opacity"
