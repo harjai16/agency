@@ -82,10 +82,10 @@ const ContactPage = () => {
               <p>
                 You can also email us directly at{" "}
                 <a
-                  href="mailto:ashwaniharjai.softwaredev@gmail.com"
+                  href="mailto:contact@swagatamtech.com"
                   className="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-800"
                 >
-                  ashwaniharjai.softwaredev@gmail.com
+                  contact@swagatamtech.com
                 </a>
                 .
               </p>

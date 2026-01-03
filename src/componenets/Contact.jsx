@@ -38,10 +38,10 @@ We’ll review it and get back within one business day with clear next steps.
             <p>
               Reach us at{" "}
               <a
-                href="mailto:ashwaniharjai.softwaredev@gmail.com"
+                href="mailto:contact@swagatamtech.com"
                 className="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-800"
               >
-                ashwaniharjai.softwaredev@gmail.com
+                contact@swagatamtech.com
               </a>
               .
             </p>

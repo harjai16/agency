@@ -103,7 +103,7 @@ const BusinessConsultancyPage = () => {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
-      "email": "ashwaniharjai.softwaredev@gmail.com"
+      "email": "contact@swagatamtech.com"
     }
   };
 

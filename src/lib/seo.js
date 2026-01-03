@@ -203,7 +203,7 @@ export function generateStructuredData(type, data) {
         ],
         contactPoint: {
           '@type': 'ContactPoint',
-          email: 'ashwaniharjai.softwaredev@gmail.com',
+          email: 'contact@swagatamtech.com',
           contactType: 'Customer Service',
         },
         address: {
