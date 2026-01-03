@@ -1,12 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@/componenets/ui/Button";
 import { useLeadPopup } from "@/componenets/global/LeadPopupContext";
 
 const JobCard = ({ job, index }) => {
   const { openPopup } = useLeadPopup();
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  // Limit description to 150 characters
+  const maxLength = 150;
+  const description = job.description || "";
+  const isLongDescription = description.length > maxLength;
+  const truncatedDescription = isLongDescription 
+    ? description.substring(0, maxLength).trim() + "..."
+    : description;
+  const displayDescription = isExpanded ? description : truncatedDescription;
 
   return (
     <motion.div
@@ -14,7 +24,7 @@ const JobCard = ({ job, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.45, delay: index * 0.05 }}
-      className="rounded-3xl border border-gray-100 bg-white/80 backdrop-blur p-5 md:p-6 shadow-[0_16px_38px_rgba(15,23,42,0.04)] flex flex-col"
+      className="rounded-3xl border border-gray-100 bg-white/80 backdrop-blur p-5 md:p-6 shadow-[0_16px_38px_rgba(15,23,42,0.04)] flex flex-col h-full"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
@@ -30,10 +40,26 @@ const JobCard = ({ job, index }) => {
           </div>
         </div>
       </div>
-      <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-4 flex-1">
-        {job.description}
-      </p>
-      <div className="pt-3 border-t border-gray-100">
+      
+      <div className="flex-1 mb-4 min-h-[80px]">
+        <p 
+          className={`text-xs md:text-sm text-gray-600 leading-relaxed ${
+            !isExpanded ? 'line-clamp-4' : ''
+          }`}
+        >
+          {displayDescription}
+        </p>
+        {isLongDescription && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 text-xs font-medium text-emerald-600 hover:text-emerald-700 transition-colors"
+          >
+            {isExpanded ? "Show less" : "Read more"}
+          </button>
+        )}
+      </div>
+      
+      <div className="pt-3 border-t border-gray-100 mt-auto">
         <Button onClick={openPopup} className="w-full text-xs">
           Apply Now
         </Button>
