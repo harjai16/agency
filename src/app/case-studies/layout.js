@@ -3,8 +3,8 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-  description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines through strategy, design, and performance optimization.",
+  title: "Website Dev Case Studies | Fast Performance | Swagatam Tech",
+  description: "Website development case studies showing fast performance websites we built for business growth. Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines through strategy, design, and performance optimization.",
   keywords: [
     "web development case studies",
     "website design case studies",
@@ -45,8 +45,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-    description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
+    title: "Website Dev Case Studies | Fast Performance | Swagatam",
+    description: "Website development case studies showing fast performance websites we built for business growth. Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
     url: `${siteUrl}/case-studies`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -68,8 +68,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Case Studies - Real Projects, Real Outcomes | Swagatam Tech",
-    description: "Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
+    title: "Website Dev Case Studies | Fast Performance | Swagatam",
+    description: "Website development case studies showing fast performance websites we built for business growth. Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",
     creator: "@swagatamtech",

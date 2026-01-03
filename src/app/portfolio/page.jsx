@@ -9,6 +9,7 @@ import Link from "next/link";
 import caseStudies from "@/data/case-studies.json";
 import portfolio from "@/data/portfolio.json";
 import { useRouter } from "next/navigation";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -36,14 +37,14 @@ const router = useRouter();
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Portfolio{" "}
+             Website Development Portfolio{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                Our Website Development Projects
+                Fast Performance Websites We Built for Business Growth
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-             Work we've shipped for teams that value clarity and performance. A selected set of websites and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each project started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind.
+             Work we've shipped for teams that value clarity and performance. A selected set of <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">project</Link> started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind. For detailed results, see our <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link>.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -270,25 +271,7 @@ const router = useRouter();
           </div>
         </motion.div>
       </Section>
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/about">Web Development Agency</a>
-        <a href="/services">Digital Marketing Agency</a>
-        <a href="/case-studies">Website Design Agency</a>
-        <a href="/blogs">Web Design Services</a>
-        <a href="/contact">Website Development Services</a>
-        <a href="/bussines-consultancy">Business Consultancy Services</a>
-        <a href="/careers">Digital Agency Careers</a>
-        <a href="/services">Custom Website Development</a>
-        <a href="/case-studies">Website Design Company</a>
-        <a href="/blogs">Web Development Company</a>
-        <a href="/contact">Digital Marketing Services</a>
-        <a href="/about">Website Agency Contact</a>
-        <a href="/">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/case-studies">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </main>
   );
 };

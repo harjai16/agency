@@ -3,8 +3,8 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "About Us - Modern Web Studio | Swagatam Tech",
-  description: "About Swagatam Tech - Modern web studio transforming websites into revenue engines. Small, senior team building high-performance sites. Started 2024.",
+  title: "About Website Dev Agency | Fast Performance | Swagatam Tech",
+  description: "Website development agency built for fast performance and business growth. We built a modern web studio transforming websites into revenue engines. Small, senior team building high-performance websites. Started 2024.",
   keywords: [
     "web development agency",
     "website design studio",
@@ -40,8 +40,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "About Us - Modern Web Studio | Swagatam Tech",
-    description: "Modern web studio transforming websites into revenue engines. Small, senior team building high-performance sites. Started 2024.",
+    title: "About Website Dev Agency | Fast Performance | Swagatam",
+    description: "Website development agency built for fast performance and business growth. We built a modern web studio transforming websites into revenue engines. Small, senior team building high-performance websites. Started 2024.",
     url: `${siteUrl}/about`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -63,8 +63,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us - Modern Web Studio | Swagatam Tech",
-    description: "Modern web studio transforming websites into revenue engines. Small, senior team building high-performance sites.",
+    title: "About Website Dev Agency | Fast Performance | Swagatam",
+    description: "Website development agency built for fast performance and business growth. We built a modern web studio transforming websites into revenue engines. Small, senior team building high-performance websites.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",
     creator: "@swagatamtech",

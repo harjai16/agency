@@ -3,8 +3,8 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-  description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses. Fast, conversion-focused websites that drive measurable growth.",
+  title: "Website Dev Portfolio | Fast Performance | Swagatam Tech",
+  description: "Website development portfolio showcasing fast performance websites we built for business growth. Real projects we've shipped for SaaS, e-commerce, and service businesses. Fast, conversion-focused websites that drive measurable growth.",
   keywords: [
     "web development portfolio",
     "website design portfolio",
@@ -46,8 +46,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-    description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses. Fast, conversion-focused websites.",
+    title: "Website Dev Portfolio | Fast Performance | Swagatam Tech",
+    description: "Website development portfolio showcasing fast performance websites we built for business growth. Real projects we've shipped for SaaS, e-commerce, and service businesses. Fast, conversion-focused websites.",
     url: `${siteUrl}/portfolio`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -69,8 +69,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio - Our Website Development Projects | Swagatam Tech",
-    description: "See our website development portfolio. Real projects we've shipped for SaaS, e-commerce, and service businesses.",
+    title: "Website Dev Portfolio | Fast Performance | Swagatam Tech",
+    description: "Website development portfolio showcasing fast performance websites we built for business growth. Real projects we've shipped for SaaS, e-commerce, and service businesses.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",
     creator: "@swagatamtech",

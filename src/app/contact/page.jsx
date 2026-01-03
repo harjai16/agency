@@ -2,9 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import ContactForm from "@/componenets/global/ContactForm";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -30,14 +32,14 @@ const ContactPage = () => {
           </p>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900">
-           Contact Us{" "}
+           Website Development Agency{" "}
            <span className="inline-block border-b border-gray-300 pb-1">
-             Get a Free Website Plan
+             Fast Performance Websites Built for Business
            </span>
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. At Swagatam Tech, we help teams plan and build modern, high-performance websites with clear goals and realistic timelines. Get a free website plan today.
+            Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. At Swagatam Tech, we help teams plan and build modern, high-performance <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with clear goals and realistic timelines. Explore our <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> and <Link href="/case-studies" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> to see our <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development</Link> work. Get a free website plan today.
           </p>
 
           <Button
@@ -69,7 +71,7 @@ const ContactPage = () => {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-           Get started with your website project
+           Website Development Services Built for Fast Performance
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-xl leading-relaxed">
@@ -106,25 +108,7 @@ const ContactPage = () => {
           <ContactForm pageName="Contact" />
         </div>
       </Section>
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/about">Web Development Agency</a>
-        <a href="/services">Digital Marketing Agency</a>
-        <a href="/portfolio">Website Design Agency</a>
-        <a href="/case-studies">Web Design Services</a>
-        <a href="/blogs">Website Development Services</a>
-        <a href="/bussines-consultancy">Business Consultancy Services</a>
-        <a href="/careers">Digital Agency Careers</a>
-        <a href="/services">Custom Website Development</a>
-        <a href="/portfolio">Website Design Company</a>
-        <a href="/case-studies">Web Development Company</a>
-        <a href="/blogs">Digital Marketing Services</a>
-        <a href="/about">Website Agency Contact</a>
-        <a href="/">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/portfolio">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </main>
   );
 };

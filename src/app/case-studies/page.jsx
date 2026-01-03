@@ -8,7 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import caseStudies from "@/data/case-studies.json";
 import { useRouter } from "next/navigation";
-import StructuredData from "@/componenets/global/StructuredData"; 
+import StructuredData from "@/componenets/global/StructuredData";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks"; 
 
 
 const fadeUp = (delay = 0) => ({
@@ -70,14 +71,14 @@ const CaseStudiesPage = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Case Studies{" "}
+             Website Development Case Studies{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                Real Projects, Real Outcomes
+                Fast Performance Websites We Built for Business
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-             Real projects, real outcomes. A closer look at websites we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. No hypotheticals. Just real work.
+             Real projects, real outcomes. A closer look at <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. Browse our <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> for more examples, or explore our <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development services</Link>.
             </p>
           </motion.div>
 
@@ -222,25 +223,7 @@ Share a bit about your goals and constraints, and we’ll suggest a clear approa
           </div>
         </motion.div>
       </Section>
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/about">Web Development Agency</a>
-        <a href="/services">Digital Marketing Agency</a>
-        <a href="/portfolio">Website Design Agency</a>
-        <a href="/blogs">Web Design Services</a>
-        <a href="/contact">Website Development Services</a>
-        <a href="/bussines-consultancy">Business Consultancy Services</a>
-        <a href="/careers">Digital Agency Careers</a>
-        <a href="/services">Custom Website Development</a>
-        <a href="/portfolio">Website Design Company</a>
-        <a href="/blogs">Web Development Company</a>
-        <a href="/contact">Digital Marketing Services</a>
-        <a href="/about">Website Agency Contact</a>
-        <a href="/">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/portfolio">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </main>
   );
 };

@@ -6,6 +6,7 @@ import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -35,14 +36,14 @@ const page = () => {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-              About Swagatam Tech{" "}
+              Website Development Agency{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                Modern Web Studio
+                Built for Fast Performance and Business Growth
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-              We&apos;re a small, senior team focused on building high-performance websites that become revenue engines. Design, development and growth engineered for modern brands. We&apos;re a modern web studio shaped by developers, designers and builders who care more about outcomes than buzzwords.
+              We&apos;re a small, senior team focused on building high-performance <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> that become revenue engines. Design, development and growth engineered for modern brands. We&apos;re a modern <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development agency</Link> shaped by developers, designers and builders who care more about outcomes than buzzwords. See our <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">work</Link> and <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> to understand our approach.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -64,21 +65,21 @@ const page = () => {
     </p>
 
     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-      Started in 2024 — built to challenge the "agency way".
+      Website Development Agency Built in 2024 — Fast Performance Websites for Business Growth
     </h2>
 
     <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
-      Born in 2024, we’re a modern web studio shaped by developers, designers and
+      Born in 2024, we're a modern <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web studio</Link> shaped by developers, designers and
       builders who care more about outcomes than buzzwords. In just a short time,
-      we’ve helped ambitious founders and growing brands turn rough ideas into
-      polished, conversion-ready websites.
+      we've helped ambitious founders and growing brands turn rough ideas into
+      polished, <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">conversion-ready websites</Link>. Browse our <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see examples of our <Link href="/case-studies" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development</Link> work.
     </p>
 
     <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-      We started this studio because we kept seeing the same problems:
+      We started this <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development agency</Link> because we kept seeing the same problems:
       slow timelines, bloated quotes, agencies that talk more than they ship.
       We flipped the script — lean execution, clear communication and
-      accountability that feels like having an internal team.
+      accountability that feels like having an internal team. Our <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development services</Link> focus on results, not just pretty designs.
     </p>
 
     <blockquote className="border-l-4 border-emerald-500 pl-4 text-sm md:text-base text-gray-900 italic">
@@ -269,7 +270,7 @@ const page = () => {
                 Process
               </p>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-                A simple, clear flow from kickoff to launch.
+                Website Development Process Built for Fast Performance and Business Growth
               </h2>
               <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-xl">
                 No mystery. No disappearing devs. Just a transparent series of
@@ -340,7 +341,7 @@ const page = () => {
               Stack
             </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-2 sm:mb-3">
-              Modern tools for fast, maintainable websites.
+              Website Development Tools Built for Fast Performance Across Devices
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">
               We work with a focused, modern stack so we&apos;re never fighting
@@ -400,7 +401,7 @@ const page = () => {
             Ready to talk?
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-            Transform your website into your best salesperson.
+            Website Development Built for Fast Performance and Business Growth
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
             Share where you are today, where you want to be, and we&apos;ll
@@ -429,25 +430,7 @@ const page = () => {
           </div>
         </motion.div>
       </Section>
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/services">Web Development Agency</a>
-        <a href="/portfolio">Digital Marketing Agency</a>
-        <a href="/case-studies">Website Design Agency</a>
-        <a href="/blogs">Web Design Services</a>
-        <a href="/contact">Website Development Services</a>
-        <a href="/bussines-consultancy">Business Consultancy Services</a>
-        <a href="/careers">Digital Agency Careers</a>
-        <a href="/services">Custom Website Development</a>
-        <a href="/portfolio">Website Design Company</a>
-        <a href="/case-studies">Web Development Company</a>
-        <a href="/blogs">Digital Marketing Services</a>
-        <a href="/contact">Website Agency Contact</a>
-        <a href="/">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/portfolio">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </main>
   );
 };

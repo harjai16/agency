@@ -3,7 +3,7 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "Careers | Join Our Team | Swagatam Tech",
+  title: "Careers at Website Dev Agency | Fast Performance | Swagatam Tech",
   description: "Join Swagatam Tech and build amazing digital experiences. We're hiring talented developers, designers, and marketing specialists. Remote positions available. Competitive salary and great culture.",
   keywords: [
     "careers",
@@ -29,7 +29,7 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Careers | Join Our Team | Swagatam Tech",
+    title: "Careers at Website Dev Agency | Fast Performance | Swagatam",
     description: "Join Swagatam Tech and build amazing digital experiences. We're hiring talented developers, designers, and marketing specialists.",
     url: `${siteUrl}/careers`,
     type: "website",
@@ -52,7 +52,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Careers | Join Our Team | Swagatam Tech",
+    title: "Careers at Website Dev Agency | Fast Performance | Swagatam",
     description: "Join Swagatam Tech and build amazing digital experiences. Remote positions available.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",

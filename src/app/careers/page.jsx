@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import careersData from "@/data/careers.json";
 import StructuredData from "@/componenets/global/StructuredData";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 import Hero from "@/componenets/careers/Hero";
 import Benefits from "@/componenets/careers/Benefits";
 import JobsList from "@/componenets/careers/JobsList";
@@ -87,25 +88,7 @@ const CareersPage = () => {
           <JobsList jobs={jobs.length > 0 ? jobs : careersData.jobs} />
         )}
       </main>
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/about">Web Development Agency</a>
-        <a href="/services">Digital Marketing Agency</a>
-        <a href="/portfolio">Website Design Agency</a>
-        <a href="/case-studies">Web Design Services</a>
-        <a href="/blogs">Website Development Services</a>
-        <a href="/contact">Business Consultancy Services</a>
-        <a href="/bussines-consultancy">Digital Agency Careers</a>
-        <a href="/services">Custom Website Development</a>
-        <a href="/portfolio">Website Design Company</a>
-        <a href="/case-studies">Web Development Company</a>
-        <a href="/blogs">Digital Marketing Services</a>
-        <a href="/contact">Website Agency Contact</a>
-        <a href="/about">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/portfolio">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </>
   );
 };

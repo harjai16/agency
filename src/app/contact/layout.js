@@ -3,8 +3,8 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "Contact Us - Get a Free Website Plan | Swagatam Tech",
-  description: "Get a free website plan and consultation. Discuss your project goals and build a modern, high-performance website that converts. Clear timelines, no pressure.",
+  title: "Contact Website Dev Agency | Fast Performance | Swagatam Tech",
+  description: "Contact our website development agency building fast performance websites for business growth. Get a free website plan and consultation. Discuss your project goals and build a modern, high-performance website that converts. Clear timelines, no pressure.",
   keywords: [
     "contact web development agency",
     "website consultation",
@@ -43,8 +43,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Contact Us - Get a Free Website Plan | Swagatam Tech",
-    description: "Get a free website plan and consultation. Discuss your project goals and build a modern, high-performance website that converts.",
+    title: "Contact Website Dev Agency | Fast Performance | Swagatam",
+    description: "Contact our website development agency building fast performance websites for business growth. Get a free website plan and consultation. Discuss your project goals and build a modern, high-performance website that converts.",
     url: `${siteUrl}/contact`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -66,8 +66,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us - Get a Free Website Plan | Swagatam Tech",
-    description: "Get a free website plan and consultation. Discuss your project goals and build a modern, high-performance website that converts.",
+    title: "Contact Website Dev Agency | Fast Performance | Swagatam",
+    description: "Contact our website development agency building fast performance websites for business growth. Get a free website plan and consultation. Discuss your project goals and build a modern, high-performance website that converts.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",
     creator: "@swagatamtech",

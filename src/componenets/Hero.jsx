@@ -7,6 +7,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import Button from "./ui/Button";
 import Section from "./ui/Section";
 import Image from "next/image";
@@ -95,7 +96,7 @@ const Hero = () => {
           >
             Website Development Agency{" "}
             <span className="inline-block border-b-2 border-gray-300 pb-1 sm:pb-1.5">
-              That Grows Your Business
+              Fast Performance Websites Built for Business Growth
             </span>
           </motion.h1>
 
@@ -106,7 +107,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.12 }}
             className="text-sm sm:text-base md:text-lg text-gray-500 max-w-3xl leading-relaxed"
           >
-           We are a website development agency that grows your business. We craft high-performance websites with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. 10+ projects delivered, 98% client satisfaction.
+           We are a <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development agency</Link> that grows your business. We craft high-performance <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see 10+ projects delivered with 98% client satisfaction, or check out our <Link href="/case-studies" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed results.
           </motion.p>
 
           {/* CTAs */}
