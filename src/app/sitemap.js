@@ -19,7 +19,7 @@ export default async function sitemap() {
   const data = await res.json();
 
   const blogPages = data.blogs.map((blog) => ({
-    url: `${baseUrl}/blogs/${blog.slug}`,
+    url: `${baseUrl}/blogs${blog.slug}`,
     lastModified: blog.updatedAt || blog.createdAt,
     changeFrequency: "weekly",
     priority: 0.7,
