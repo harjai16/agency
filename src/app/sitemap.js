@@ -1,30 +1,18 @@
-export default function sitemap() {
-  const baseUrl = "https://www.swagatamtech.com";
+export default async function sitemap() {
+  const baseUrl = "https://swagatamtech.com";
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
+  // Static routes (App Router auto-detect karta hai)
+  const staticRoutes = [
+    "",
+    "/about",
+    "/services",
+    "/contact",
   ];
+
+  return staticRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: route === "" ? 1 : 0.8,
+  }));
 }
