@@ -3,7 +3,7 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "Business Consulting Services | Strategic Business Consulting | Swagatam Tech",
+  title: "Business Consulting Services | Strategic Growth | Swagatam Tech",
   description: "Expert business consulting services to help you make better decisions, optimize operations, and scale your business. Digital strategy, market research, process improvement, and growth consulting. Data-driven insights that deliver measurable results.",
   keywords: [
     "business consulting",
@@ -54,7 +54,7 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Business Consulting Services | Strategic Business Consulting | Swagatam Tech",
+    title: "Business Consulting Services | Strategic Growth | Swagatam Tech",
     description: "Expert business consulting services to help you make better decisions, optimize operations, and scale your business. Digital strategy, market research, and growth consulting.",
     url: `${siteUrl}/bussines-consultancy`,
     type: "website",
@@ -77,7 +77,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Consulting Services | Strategic Business Consulting | Swagatam Tech",
+    title: "Business Consulting Services | Strategic Growth | Swagatam Tech",
     description: "Expert business consulting services to help you make better decisions, optimize operations, and scale your business.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",

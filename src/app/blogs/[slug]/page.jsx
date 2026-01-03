@@ -11,6 +11,7 @@ import Contact from "@/componenets/Contact";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOHead from "@/componenets/global/SEOHead";
 import SocialShare from "@/componenets/global/SocialShare";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -458,25 +459,7 @@ const BlogDetailPage = () => {
 
       {/* Contact Form Section */}
       <Contact pageName={`Blog: ${slug}`} />
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/about">Web Development Agency</a>
-        <a href="/services">Digital Marketing Agency</a>
-        <a href="/portfolio">Website Design Agency</a>
-        <a href="/case-studies">Web Design Services</a>
-        <a href="/blogs">Website Development Services</a>
-        <a href="/contact">Business Consultancy Services</a>
-        <a href="/bussines-consultancy">Digital Agency Careers</a>
-        <a href="/careers">Custom Website Development</a>
-        <a href="/services">Website Design Company</a>
-        <a href="/portfolio">Web Development Company</a>
-        <a href="/case-studies">Digital Marketing Services</a>
-        <a href="/contact">Website Agency Contact</a>
-        <a href="/about">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/portfolio">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </main>
   );
 };

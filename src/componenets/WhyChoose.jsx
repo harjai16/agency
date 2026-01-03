@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const reasons = [
   {
@@ -50,11 +51,11 @@ const WhyChoose = () => {
             Why choose us
           </p>
           <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
-           A partner that works like your in-house growth team
+           Website Development Agency Built for Fast Performance and Business Growth
           </h2>
           <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-slate-300 max-w-2xl mx-auto text-slate-900 px-4">
-           We don’t just design websites.
-We think like product owners, marketers, and engineers — building websites that load fast, convert visitors, and support real business growth.
+           We don't just design <Link href="/services" className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">websites</Link>.
+We think like product owners, marketers, and engineers — building <Link href="/portfolio" className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">websites</Link> that load fast, convert visitors, and support real business growth. See our <Link href="/case-studies" className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">case studies</Link> for examples.
           </p>
         </div>
 

@@ -11,8 +11,8 @@ import StructuredData from "@/componenets/global/StructuredData";
 
      
 export const metadata = {
-  title: "Website Development Agency | Swagatam Tech",
-  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects, 98% satisfaction.",
+  title: "Website Dev Agency | Fast Performance | Swagatam Tech",
+  description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% satisfaction.",
   keywords: [
     "website development agency",
     "custom website design",
@@ -55,8 +55,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Website Development Agency | Swagatam Tech",
-    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
+    title: "Website Dev Agency | Fast Performance | Swagatam Tech",
+    description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth.",
     url: "/",
     type: "website",
     siteName: "Swagatam Tech",
@@ -78,8 +78,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Agency | Swagatam Tech",
-    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
+    title: "Website Dev Agency | Fast Performance | Swagatam Tech",
+    description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth.",
     images: ["/logo.jpeg"],
     site: "@swagatamtech",
     creator: "@swagatamtech",
@@ -286,25 +286,7 @@ export default function Home() {
                  <Contact pageName="Home" />
                  
       {/* other sections will come here */}
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/about">Website Agency</a>
-        <a href="/services">Web Development Agency</a>
-        <a href="/portfolio">Digital Marketing Agency</a>
-        <a href="/case-studies">Website Design Agency</a>
-        <a href="/blogs">Web Design Services</a>
-        <a href="/contact">Website Development Services</a>
-        <a href="/bussines-consultancy">Business Consultancy Services</a>
-        <a href="/careers">Digital Agency Careers</a>
-        <a href="/services">Custom Website Development</a>
-        <a href="/portfolio">Website Design Company</a>
-        <a href="/case-studies">Web Development Company</a>
-        <a href="/blogs">Digital Marketing Services</a>
-        <a href="/contact">Website Agency Contact</a>
-        <a href="/about">Professional Web Agency</a>
-        <a href="/services">Website Development Agency India</a>
-        <a href="/portfolio">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </>
   );
 }

@@ -1,21 +1,42 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
-    return [
-      // Redirect non-www to www (301 permanent redirect)
-      // This works as a fallback if middleware doesn't catch it
-      {
+    // Get canonical domain from environment variable or use default
+    const canonicalDomain = process.env.NEXT_PUBLIC_CANONICAL_DOMAIN || 'www.swagatamtech.com';
+    const baseDomain = canonicalDomain.replace(/^www\./, '');
+    
+    const redirects = [];
+    
+    // Redirect non-www to www if canonical is www
+    if (canonicalDomain.startsWith('www.')) {
+      redirects.push({
         source: '/:path*',
         has: [
           {
             type: 'host',
-            value: 'swagatamtech.com',
+            value: baseDomain,
           },
         ],
-        destination: 'https://www.swagatamtech.com/:path*',
+        destination: `https://${canonicalDomain}/:path*`,
         permanent: true, // 301 redirect
-      },
-    ];
+      });
+    } 
+    // Redirect www to non-www if canonical is non-www
+    else {
+      redirects.push({
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: `www.${baseDomain}`,
+          },
+        ],
+        destination: `https://${canonicalDomain}/:path*`,
+        permanent: true, // 301 redirect
+      });
+    }
+    
+    return redirects;
   },
   images: {
     remotePatterns: [

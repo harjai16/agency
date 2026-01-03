@@ -14,15 +14,41 @@ export function middleware(request) {
     return NextResponse.next();
   }
   
-  // Canonical domain: www.swagatamtech.com
-  // Redirect non-www to www (301 permanent redirect)
-  // This ensures canonical URLs and prevents duplicate content issues for SEO
-  const hostnameWithoutPort = hostname.split(':')[0]; // Remove port if present
+  // Get canonical domain from environment variable or use default
+  // Canonical domain: www.swagatamtech.com (with www)
+  const canonicalDomain = process.env.NEXT_PUBLIC_CANONICAL_DOMAIN || 'www.swagatamtech.com';
+  const baseDomain = canonicalDomain.replace(/^www\./, ''); // Remove www if present
   
-  if (hostnameWithoutPort === 'swagatamtech.com') {
-    url.hostname = 'www.swagatamtech.com';
+  // Remove port if present
+  const hostnameWithoutPort = hostname.split(':')[0];
+  
+  // Check if this is the same domain (base domain match)
+  const isWwwDomain = hostnameWithoutPort === `www.${baseDomain}`;
+  const isNonWwwDomain = hostnameWithoutPort === baseDomain;
+  
+  // Determine if we need to redirect
+  let shouldRedirect = false;
+  let targetHostname = canonicalDomain;
+  
+  // If canonical is www, redirect non-www to www
+  if (canonicalDomain.startsWith('www.')) {
+    if (isNonWwwDomain) {
+      shouldRedirect = true;
+    }
+  } 
+  // If canonical is non-www, redirect www to non-www
+  else {
+    if (isWwwDomain) {
+      shouldRedirect = true;
+    }
+  }
+  
+  // Perform 301 redirect if needed
+  if (shouldRedirect) {
+    url.hostname = targetHostname;
     url.protocol = 'https:'; // Always use HTTPS for production redirects
-    // Preserve the path and query parameters
+    // Preserve the pathname and search params (query string)
+    // The pathname and search are already preserved in the cloned URL
     return NextResponse.redirect(url, 301);
   }
   

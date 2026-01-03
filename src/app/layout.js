@@ -11,10 +11,10 @@ import GoogleAnalytics from "@/componenets/global/GoogleAnalytics";
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com'),
   title: {
-    default: "Swagatam Tech - Website Development Agency",
+    default: "Website Dev Agency | Fast Performance | Swagatam Tech",
     template: "%s | Swagatam Tech"
   },
-  description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects, 98% satisfaction.",
+  description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects, 98% satisfaction.",
   keywords: [
     "website development",
     "web design agency",
@@ -48,8 +48,8 @@ export const metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Swagatam Tech",
-    title: "Swagatam Tech - Website Development Agency",
-    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
+    title: "Website Dev Agency | Fast Performance | Swagatam Tech",
+    description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth.",
     images: [
       {
         url: "/logo.jpeg",
@@ -67,8 +67,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swagatam Tech - Website Development Agency",
-    description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
+    title: "Website Dev Agency | Fast Performance | Swagatam Tech",
+    description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth.",
     images: ["/logo.jpeg"],
     creator: "@swagatamtech",
     site: "@swagatamtech",

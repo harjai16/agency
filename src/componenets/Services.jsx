@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Section from "./ui/Section";
 import Button from "./ui/Button";
 import services from "@/data/services.json";
@@ -28,10 +29,10 @@ const Services = () => {
             Services
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-            Built to increase enquiries, not just impressions.
+            Website Development Services Built for Fast Performance and Business Growth
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-6xl">
-            From concept to a fully launched website, we partner with you at every stage.
+            From concept to a fully launched <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website</Link>, we partner with you at every stage. Explore our <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see completed projects, or check our <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed results.
           </p>
         </div>
       </div>

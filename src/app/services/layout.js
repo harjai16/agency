@@ -3,8 +3,8 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
 export const metadata = {
-  title: "Website Development Services | Swagatam Tech",
-  description: "Transform your website into a revenue engine. Complete website services: strategy, UX design, custom development, and performance optimization. 4-6 week launches.",
+  title: "Website Dev Services | Fast Performance | Swagatam Tech",
+  description: "Website development services building fast performance websites for business growth. We built websites that transform into revenue engines. Complete website development: strategy, UX design, custom development, and performance optimization. 4-6 week launches.",
   keywords: [
     "website development services",
     "web design services",
@@ -50,8 +50,8 @@ export const metadata = {
   creator: "Swagatam Tech",
   publisher: "Swagatam Tech",
   openGraph: {
-    title: "Website Development Services | Swagatam Tech",
-    description: "Transform your website into a revenue engine. Complete website development services: strategy, UX design, custom development, and performance optimization.",
+    title: "Website Dev Services | Fast Performance | Swagatam",
+    description: "Website development services building fast performance websites for business growth. We built websites that transform into revenue engines. Complete website development: strategy, UX design, custom development, and performance optimization.",
     url: `${siteUrl}/services`,
     type: "website",
     siteName: "Swagatam Tech",
@@ -73,8 +73,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Services | Swagatam Tech",
-    description: "Transform your website into a revenue engine. Complete website development services: strategy, UX design, custom development, and performance optimization.",
+    title: "Website Dev Services | Fast Performance | Swagatam",
+    description: "Website development services building fast performance websites for business growth. We built websites that transform into revenue engines. Complete website development: strategy, UX design, custom development, and performance optimization.",
     images: [`${siteUrl}/logo.jpeg`],
     site: "@swagatamtech",
     creator: "@swagatamtech",

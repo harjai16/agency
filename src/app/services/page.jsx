@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import { useRouter } from "next/navigation";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -17,27 +18,27 @@ const services = [
   {
     id: "strategy",
     tag: "Strategy",
-    title: "Website Strategy & Structure",
+    title: "Website Development Strategy Built for Business Growth",
     summary:
-      "We plan page structure, content hierarchy, and user flows so visitors quickly understand what you do and what to do next.",
+      "We plan page structure, content hierarchy, and user flows so visitors quickly understand what you do and what to do next. Website development strategy built for business growth.",
     outcome: "Clear sitemap, focused messaging, and defined page goals.",
     meta: "Useful before new builds or redesigns",
   },
   {
     id: "ux-ui",
     tag: "Design",
-    title: "UX & UI Website Design",
+    title: "Website Design Built for Fast Performance Across Devices",
     summary:
-      "Clean, mobile-first interfaces designed to be easy to use and aligned with your brand.",
+      "Clean, mobile-first interfaces designed to be easy to use and aligned with your brand. Website design built for fast performance across devices.",
     outcome: "Polished designs ready for development or handoff.",
     meta: "Responsive layouts with key interaction states",
   },
   {
     id: "development",
     tag: "Development",
-    title: "Custom Website Development",
+    title: "Website Development Built for Fast Performance",
     summary:
-      "Fast, reliable websites built with modern frameworks like Next.js and React — no heavy themes or shortcuts.",
+      "Fast, reliable websites built with modern frameworks like Next.js and React — no heavy themes or shortcuts. We built performance-focused websites tailored to your business needs.",
     outcome: "A performance-focused site tailored to your business needs.",
     meta: "Well-suited for SaaS, service brands, and custom builds",
   },
@@ -53,9 +54,9 @@ const services = [
   {
     id: "performance",
     tag: "Performance & SEO",
-    title: "Performance & SEO Improvements",
+    title: "Website Performance Built for Fast Speed Across Devices",
     summary:
-      "We review and improve site speed, technical SEO, and Core Web Vitals to support real-world usage.",
+      "We review and improve site speed, technical SEO, and Core Web Vitals to support real-world usage. Website performance built for fast speed across devices.",
     outcome: "Faster load times, better usability, and stronger visibility.",
     meta: "Best for existing or growing websites",
   },
@@ -126,12 +127,12 @@ const ServicesPage = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
              Website Development Services{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                Built to Generate Leads, Sales, and Real Growth
+                Fast Performance Websites Built for Business Growth
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-             Website services built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast websites that convert visitors into customers. 4-6 week typical launch.
+             <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">Website services</Link> built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> that convert visitors into customers. See our <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for real results. 4-6 week typical launch.
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -219,12 +220,12 @@ const ServicesPage = () => {
                 What we do
               </p>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-                Complete website development services for your business.
+                Website Development Services Built for Fast Performance and Business Growth
               </h2>
               <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-xl">
-                Choose a single service or partner with us end-to-end. Either
+                Choose a single <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">service</Link> or partner with us end-to-end. Either
                 way, you get a senior team focused on performance and
-                conversions. Everything you need to design, build and grow your website.
+                conversions. Everything you need to design, build and grow your <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website</Link>. See our <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for examples of our <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development</Link> work.
               </p>
             </div>
           </motion.div>
@@ -289,12 +290,12 @@ const ServicesPage = () => {
               How we work
             </p>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-              Flexible engagement models for every business.
+              Website Development Services Built for Fast Performance Across Devices
             </h2>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500">
               Whether you&apos;re launching something new or leveling up what
               you already have, we&apos;ll suggest the model that fits your
-              stage, budget and team.
+              stage, budget and team. Check out our <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see examples, or read our <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development</Link> results.
             </p>
           </motion.div>
 
@@ -421,25 +422,7 @@ const ServicesPage = () => {
           </div>
         </motion.div>
       </Section>
-      {/* Hidden backlinks for SEO */}
-      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <a href="/">Website Agency</a>
-        <a href="/about">Web Development Agency</a>
-        <a href="/portfolio">Digital Marketing Agency</a>
-        <a href="/case-studies">Website Design Agency</a>
-        <a href="/blogs">Web Design Services</a>
-        <a href="/contact">Website Development Services</a>
-        <a href="/bussines-consultancy">Business Consultancy Services</a>
-        <a href="/careers">Digital Agency Careers</a>
-        <a href="/portfolio">Custom Website Development</a>
-        <a href="/case-studies">Website Design Company</a>
-        <a href="/blogs">Web Development Company</a>
-        <a href="/contact">Digital Marketing Services</a>
-        <a href="/about">Website Agency Contact</a>
-        <a href="/">Professional Web Agency</a>
-        <a href="/portfolio">Website Development Agency India</a>
-        <a href="/case-studies">Best Web Development Agency</a>
-      </div>
+      <SEOBacklinks />
     </main>
   );
 };
