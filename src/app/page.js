@@ -9,7 +9,7 @@ import WhyChoose from "@/componenets/WhyChoose";
    
 import StructuredData from "@/componenets/global/StructuredData";
 
-
+     
 export const metadata = {
   title: "Website Development Agency | Swagatam Tech",
   description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth. 10+ projects, 98% satisfaction.",
