@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
   const metaTitle = heroTitle || title;
   const metaDescription = `${snippet} ${challenge ? `Challenge: ${challenge.substring(0, 100)}...` : ''} ${solution ? `Solution: ${solution.substring(0, 100)}...` : ''}`.substring(0, 160);
   const caseStudyUrl = `/case-studies/${slug}`;
-  const imageUrl = image || '/logo.png';
+  const imageUrl = image || '/logo.jpeg';
 
   const keywords = [
     'case study',

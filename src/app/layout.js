@@ -52,13 +52,13 @@ export const metadata = {
     description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.jpeg",
         width: 1200,
         height: 630,
         alt: "Swagatam Tech - Website Development Agency",
       },
       {
-        url: "/logo.png",
+        url: "/logo.jpeg",
         width: 800,
         height: 600,
         alt: "Swagatam Tech Logo",
@@ -69,7 +69,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Swagatam Tech - Website Development Agency",
     description: "High-performance website development agency. Strategy, UX, and development focused on leads, conversions, and growth.",
-    images: ["/logo.png"],
+    images: ["/logo.jpeg"],
     creator: "@swagatamtech",
     site: "@swagatamtech",
   },
@@ -112,20 +112,20 @@ const organizationSchema = {
   "url": siteUrl,
   "logo": {
     "@type": "ImageObject",
-    "url": `${siteUrl}/logo.png`,
+    "url": `${siteUrl}/logo.jpeg`,
     "width": 512,
     "height": 512
   },
   "image": [
     {
       "@type": "ImageObject",
-      "url": `${siteUrl}/logo.png`,
+      "url": `${siteUrl}/logo.jpeg`,
       "width": 1200,
       "height": 630
     },
     {
       "@type": "ImageObject",
-      "url": `${siteUrl}/logo.png`,
+      "url": `${siteUrl}/logo.jpeg`,
       "width": 512,
       "height": 512
     }

@@ -13,7 +13,7 @@ export function generateBaseMetadata({
   description,
   keywords = [],
   path = '/',
-  image = '/logo.png',
+  image = '/logo.jpeg',
   type = 'website',
   publishedTime,
   modifiedTime,
@@ -191,7 +191,7 @@ export function generateStructuredData(type, data) {
         url: baseUrl,
         logo: {
           '@type': 'ImageObject',
-          url: `${baseUrl}/logo.png`,
+          url: `${baseUrl}/logo.jpeg`,
           width: 512,
           height: 512,
         },
@@ -218,7 +218,7 @@ export function generateStructuredData(type, data) {
         '@type': 'BlogPosting',
         headline: data.title,
         description: data.description,
-        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/logo.png`,
+        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/logo.jpeg`,
         datePublished: data.publishedTime ? new Date(data.publishedTime).toISOString() : new Date().toISOString(),
         dateModified: data.modifiedTime ? new Date(data.modifiedTime).toISOString() : new Date().toISOString(),
         author: {
@@ -230,7 +230,7 @@ export function generateStructuredData(type, data) {
           name: 'Swagatam Tech',
           logo: {
             '@type': 'ImageObject',
-            url: `${baseUrl}/logo.png`,
+            url: `${baseUrl}/logo.jpeg`,
             width: 512,
             height: 512,
           },
@@ -251,7 +251,7 @@ export function generateStructuredData(type, data) {
         name: data.title,
         description: data.description,
         url: `${baseUrl}${data.path}`,
-        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/logo.png`,
+        image: data.image ? (data.image.startsWith('http') ? data.image : `${baseUrl}${data.image}`) : `${baseUrl}/logo.jpeg`,
         author: {
           '@type': 'Organization',
           name: 'Swagatam Tech',

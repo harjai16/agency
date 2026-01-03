@@ -43,7 +43,7 @@ const Footer = () => {
           >
             <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36">
               <Image
-                src="/logo.png"
+                src="/logo.jpeg"
                 alt="Swagatam Tech Logo - Website Development Agency"
                 fill
                 className="object-contain group-hover:opacity-80 transition-opacity"

@@ -38,7 +38,7 @@ const PageLoader = ({ isLoading }) => {
                 }}
               >
                 <Image
-                  src="/logo.png"
+                  src="/logo.jpeg"
                   alt="Swagatam Tech Logo"
                   fill
                   className="object-contain"

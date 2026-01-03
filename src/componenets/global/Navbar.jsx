@@ -66,7 +66,7 @@ const Navbar = () => {
             className="relative h-12 w-32 min-[700px]:h-12 min-[700px]:w-20 sm:h-14 sm:w-24 md:h-16 md:w-28"
           >
             <Image
-              src="/logo.png"
+              src="/logo.jpeg"
               alt="Swagatam Tech Logo - Website Development Agency"
               fill
               className="object-contain"
@@ -172,7 +172,7 @@ const Navbar = () => {
                 >
                   <div className="relative h-14 w-32">
                     <Image
-                      src="/logo.png"
+                      src="/logo.jpeg"
                       alt="Swagatam Tech Logo"
                       fill
                       className="object-contain"
