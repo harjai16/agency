@@ -9,7 +9,7 @@ export default function useGoogleAnalytics() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
+    if (pathname && typeof window !== 'undefined') {
       let url = pathname;
       
       // Include search params if they exist
