@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 import { useRouter } from "next/navigation";
 import { useLeadPopup } from "./LeadPopupContext";
 import { useLoading } from "./LoadingContext";
+import { trackClick } from "@/lib/gtag";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
@@ -54,7 +55,10 @@ const Navbar = () => {
           href="/"
           className="flex items-center group transition-all"
           aria-label="Swagatam Tech - Home"
-          onClick={() => setLoading(true)}
+          onClick={() => {
+            trackClick("Logo", "navigation");
+            setLoading(true);
+          }}
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -80,7 +84,12 @@ const Navbar = () => {
               <Link
                 href={item.href}
                 className="hover:text-black transition-colors whitespace-nowrap"
-                onClick={() => setLoading(true)}
+                onClick={() => {
+                  trackClick(`${item.label} Navigation`, "navigation", {
+                    destination: item.href,
+                  });
+                  setLoading(true);
+                }}
               >
                 {item.label}
               </Link>
@@ -98,8 +107,14 @@ const Navbar = () => {
           className="hidden md:flex"
         >
           <Button 
-            onClick={openPopup}
+            onClick={() => {
+              trackClick("Book Strategy Call - Desktop", "cta", {
+                location: "navbar_desktop",
+              });
+              openPopup();
+            }}
             className="text-[10px] min-[700px]:text-xs px-2.5 min-[700px]:px-4 py-1.5 min-[700px]:py-2.5 min-h-[32px] min-[700px]:min-h-[44px] whitespace-nowrap"
+            eventLabel="Book Strategy Call - Desktop"
           >
             <span className="hidden min-[800px]:inline">Book a strategy call</span>
             <span className="min-[800px]:hidden">Book Call</span>
@@ -149,6 +164,7 @@ const Navbar = () => {
                   href="/"
                   className="flex items-center"
                   onClick={() => {
+                    trackClick("Logo - Mobile", "navigation");
                     closeMenu();
                     setLoading(true);
                   }}
@@ -192,6 +208,9 @@ const Navbar = () => {
                       href={item.href}
                       className="hover:text-black transition"
                       onClick={() => {
+                        trackClick(`${item.label} Navigation - Mobile`, "navigation", {
+                          destination: item.href,
+                        });
                         closeMenu();
                         setLoading(true);
                       }}
@@ -212,9 +231,13 @@ const Navbar = () => {
                 <Button
                   className="w-full py-3 text-base font-semibold"
                   onClick={() => {
+                    trackClick("Book Strategy Call - Mobile", "cta", {
+                      location: "navbar_mobile",
+                    });
                     closeMenu();
                     openPopup();
                   }}
+                  eventLabel="Book Strategy Call - Mobile"
                 >
                   Book a strategy call
                 </Button>
