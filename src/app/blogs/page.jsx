@@ -110,24 +110,126 @@ const BlogsPage = () => {
         aria-label="Blogs hero"
         className="pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-14"
       >
-        <div className="max-w-fullhd mx-auto space-y-4 sm:space-y-6 text-left">
-          <motion.div {...fadeUp(0)} className="space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Blog
-            </div>
+        <div className="max-w-fullhd mx-auto">
+          <div className="grid gap-8 sm:gap-10 md:grid-cols-2 items-center">
+            {/* Left text */}
+            <motion.div {...fadeUp(0)} className="space-y-6 max-w-xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                Blog
+              </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-            Blog{" "}
-              <span className="inline-block border-b border-gray-300 pb-1">
-                Web Design & Development Insights
-              </span>
-            </h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
+                Blog{" "}
+                <span className="inline-block border-b border-gray-300 pb-1">
+                  Web Design & Development Insights
+                </span>
+              </h1>
 
-            <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-            Practical insights from building real websites. Thoughts and learnings on web design, development, performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites.
-            </p>
-          </motion.div>
+              <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
+                Practical insights from building real websites. Thoughts and learnings on <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web design</Link>, <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">development</Link>, performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <Button
+                  onClick={() => router.push("/contact")}
+                >
+                  Discuss your project
+                </Button>
+                <Button
+                  variant="ghost"
+                  onClick={() =>
+                    document
+                      .getElementById("blogs-list")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Browse articles
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-6 pt-2 text-xs md:text-sm text-gray-500">
+                <div>
+                  <div className="font-semibold text-gray-900 text-base">
+                    {blogs.length}+
+                  </div>
+                  <div>Articles published</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900 text-base">
+                    Latest
+                  </div>
+                  <div>Insights & tips</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900 text-base">
+                    Practical
+                  </div>
+                  <div>Real-world examples</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right: featured blog card */}
+            {blogs.length > 0 && (
+              <motion.div {...fadeUp(0.1)} className="relative">
+                <div className="pointer-events-none absolute -top-10 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-gray-100 via-gray-50 to-white blur-3xl" />
+                <Link href={`/blogs/${blogs[0].slug}`} className="block">
+                  <article className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur shadow-[0_22px_55px_rgba(15,23,42,0.10)]">
+                    {/* Image */}
+                    {blogs[0].featuredImage && (
+                      <div className="relative h-52 md:h-60 overflow-hidden">
+                        <Image
+                          src={convertGoogleDriveUrl(blogs[0].featuredImage)}
+                          alt={blogs[0].title}
+                          fill
+                          priority
+                          className="object-cover transition-transform duration-500 hover:scale-105"
+                          sizes="(min-width: 1024px) 50vw, 100vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                        <div className="relative flex h-full items-end justify-between px-5 pb-4">
+                          <div>
+                            {blogs[0].createdAt && (
+                              <div className="text-[11px] uppercase tracking-[0.18em] text-gray-200">
+                                {formatDate(blogs[0].createdAt)}
+                              </div>
+                            )}
+                            <div className="text-sm font-semibold text-white line-clamp-2">
+                              {blogs[0].title}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Content */}
+                    <div className="px-5 pt-4 pb-5 space-y-2">
+                      <p className="text-[11px] uppercase tracking-[0.18em] text-gray-500">
+                        Featured article
+                      </p>
+                      <h2 className="text-sm md:text-base font-semibold text-gray-900 line-clamp-2">
+                        {blogs[0].title}
+                      </h2>
+                      {blogs[0].excerpt && (
+                        <p className="text-xs md:text-sm text-gray-500 leading-relaxed line-clamp-3">
+                          {blogs[0].excerpt}
+                        </p>
+                      )}
+                      <div className="flex items-center justify-between pt-2 text-[11px] text-gray-500">
+                        {blogs[0].author && (
+                          <span>{blogs[0].author}</span>
+                        )}
+                        <span className="inline-flex items-center gap-1 font-medium text-gray-800 hover:text-black hover:gap-1.5 transition-all">
+                          Read article <span className="text-xs">↗</span>
+                        </span>
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              </motion.div>
+            )}
+          </div>
         </div>
       </Section>
 
@@ -149,15 +251,31 @@ const BlogsPage = () => {
           ) : (
             <>
               {/* Optional small label row */}
-              <div className="flex items-center justify-between gap-4 text-xs md:text-sm text-gray-500">
-                <span>{blogs.length} {blogs.length === 1 ? 'article' : 'articles'}</span>
-                <span className="hidden md:inline-block">
-                  Latest insights on web design, development, and digital marketing.
-                </span>
-              </div>
+              <motion.div
+                {...fadeUp(0)}
+                className="flex flex-wrap items-center justify-between gap-4"
+              >
+                <div className="text-xs md:text-sm text-gray-500">
+                  Showing {blogs.length} {blogs.length === 1 ? 'article' : 'articles'} on web design, development, and digital marketing.
+                </div>
+                <div className="flex flex-wrap gap-2 text-[11px] md:text-xs">
+                  <button className="rounded-full border border-gray-900 bg-gray-900 px-3 py-1 text-white">
+                    All articles
+                  </button>
+                  <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
+                    Web Design
+                  </button>
+                  <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
+                    Development
+                  </button>
+                  <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
+                    SEO
+                  </button>
+                </div>
+              </motion.div>
 
               <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {blogs.map((blog, index) => (
+                {blogs.slice(1).map((blog, index) => (
                   <motion.article
                     key={blog._id || index}
                     initial={{ opacity: 0, y: 18 }}
@@ -169,8 +287,8 @@ const BlogsPage = () => {
                   >
                     <Link href={`/blogs/${blog.slug}`} className="flex flex-col h-full">
                       {/* Top image area */}
-                      {blog.featuredImage && (
-                        <div className="relative h-40 md:h-44 overflow-hidden">
+                      <div className="relative h-40 md:h-44 overflow-hidden bg-gray-50">
+                        {blog.featuredImage ? (
                           <Image
                             src={convertGoogleDriveUrl(blog.featuredImage)}
                             alt={blog.title}
@@ -179,9 +297,13 @@ const BlogsPage = () => {
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-                        </div>
-                      )}
+                        ) : (
+                          <div className="flex items-center justify-center h-full text-gray-400 text-xs">
+                            No image
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                      </div>
 
                       {/* Body */}
                       <div className="flex flex-1 flex-col px-4 pb-4 pt-3 md:px-5 md:pb-5 md:pt-4">

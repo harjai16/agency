@@ -184,11 +184,11 @@ const Navbar = () => {
 
                 <button
                   onClick={closeMenu}
-                  className="flex items-center justify-center h-10 w-10 rounded-full border-2 border-gray-300 bg-white hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-sm"
+                  className="flex items-center justify-center h-10 w-10 transition-opacity duration-200 hover:opacity-70"
                   aria-label="Close menu"
                 >
                   <span className="sr-only">Close</span>
-                  <div className="relative h-4 w-4">
+                  <div className="relative h-5 w-5">
                     <span className="absolute top-1/2 left-0 h-[2px] w-full bg-gray-800 rotate-45 -translate-y-1/2" />
                     <span className="absolute top-1/2 left-0 h-[2px] w-full bg-gray-800 -rotate-45 -translate-y-1/2" />
                   </div>

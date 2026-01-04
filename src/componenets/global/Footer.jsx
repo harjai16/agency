@@ -40,6 +40,7 @@ const Footer = () => {
               trackClick("Logo - Footer", "navigation");
               setLoading(true);
             }}
+            style={{ marginTop: '-35px' }}
           >
             <div className="relative w-60  sm:w-47  md:w-32  lg:w-53">
               <img
