@@ -2,10 +2,18 @@
  * SEOBacklinks Component
  * Internal navigation links for SEO purposes - helps search engines discover and index pages
  * Uses visually hidden but crawlable technique (search engines can still see and follow links)
+ * 
+ * UPDATED: Now uses locale-aware links for multilingual SEO
  */
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
 
 export default function SEOBacklinks() {
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
   return (
     <nav 
       className="sr-only"
@@ -23,81 +31,81 @@ export default function SEOBacklinks() {
       }}
     >
       {/* Main Pages */}
-      <Link href="/">Website Agency</Link>
-      <Link href="/">Home</Link>
-      <Link href="/about">About Us</Link>
-      <Link href="/about">Web Development Agency</Link>
-      <Link href="/about">Website Development Company</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/services">Web Development Services</Link>
-      <Link href="/services">Website Development Services</Link>
-      <Link href="/services">Custom Website Development</Link>
-      <Link href="/services">Website Design Services</Link>
-      <Link href="/services">Digital Marketing Agency</Link>
-      <Link href="/services">Website Development Agency India</Link>
-      <Link href="/portfolio">Portfolio</Link>
-      <Link href="/portfolio">Website Design Company</Link>
-      <Link href="/portfolio">Web Design Services</Link>
-      <Link href="/portfolio">Best Web Development Agency</Link>
-      <Link href="/portfolio">Professional Web Agency</Link>
-      <Link href="/case-studies">Case Studies</Link>
-      <Link href="/case-studies">Website Design Agency</Link>
-      <Link href="/case-studies">Web Development Company</Link>
-      <Link href="/case-studies">Website Development Case Studies</Link>
-      <Link href="/blogs">Blogs</Link>
-      <Link href="/blogs">Web Design Blog</Link>
-      <Link href="/blogs">Website Development Blog</Link>
-      <Link href="/blogs">Digital Marketing Services</Link>
-      <Link href="/contact">Contact</Link>
-      <Link href="/contact">Contact Us</Link>
-      <Link href="/contact">Website Agency Contact</Link>
-      <Link href="/contact">Get in Touch</Link>
-      <Link href="/bussines-consultancy">Business Consultancy</Link>
-      <Link href="/bussines-consultancy">Business Consultancy Services</Link>
-      <Link href="/bussines-consultancy">Business Consulting</Link>
-      <Link href="/careers">Careers</Link>
-      <Link href="/careers">Digital Agency Careers</Link>
-      <Link href="/careers">Web Development Jobs</Link>
-      <Link href="/careers">Join Our Team</Link>
+      <Link href={createLocalizedHref("/", currentLocale)}>Website Agency</Link>
+      <Link href={createLocalizedHref("/", currentLocale)}>Home</Link>
+      <Link href={createLocalizedHref("/about", currentLocale)}>About Us</Link>
+      <Link href={createLocalizedHref("/about", currentLocale)}>Web Development Agency</Link>
+      <Link href={createLocalizedHref("/about", currentLocale)}>Website Development Company</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Services</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Web Development Services</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Development Services</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Custom Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Design Services</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Digital Marketing Agency</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Development Agency India</Link>
+      <Link href={createLocalizedHref("/portfolio", currentLocale)}>Portfolio</Link>
+      <Link href={createLocalizedHref("/portfolio", currentLocale)}>Website Design Company</Link>
+      <Link href={createLocalizedHref("/portfolio", currentLocale)}>Web Design Services</Link>
+      <Link href={createLocalizedHref("/portfolio", currentLocale)}>Best Web Development Agency</Link>
+      <Link href={createLocalizedHref("/portfolio", currentLocale)}>Professional Web Agency</Link>
+      <Link href={createLocalizedHref("/case-studies", currentLocale)}>Case Studies</Link>
+      <Link href={createLocalizedHref("/case-studies", currentLocale)}>Website Design Agency</Link>
+      <Link href={createLocalizedHref("/case-studies", currentLocale)}>Web Development Company</Link>
+      <Link href={createLocalizedHref("/case-studies", currentLocale)}>Website Development Case Studies</Link>
+      <Link href={createLocalizedHref("/blogs", currentLocale)}>Blogs</Link>
+      <Link href={createLocalizedHref("/blogs", currentLocale)}>Web Design Blog</Link>
+      <Link href={createLocalizedHref("/blogs", currentLocale)}>Website Development Blog</Link>
+      <Link href={createLocalizedHref("/blogs", currentLocale)}>Digital Marketing Services</Link>
+      <Link href={createLocalizedHref("/contact", currentLocale)}>Contact</Link>
+      <Link href={createLocalizedHref("/contact", currentLocale)}>Contact Us</Link>
+      <Link href={createLocalizedHref("/contact", currentLocale)}>Website Agency Contact</Link>
+      <Link href={createLocalizedHref("/contact", currentLocale)}>Get in Touch</Link>
+      <Link href={createLocalizedHref("/bussines-consultancy", currentLocale)}>Business Consultancy</Link>
+      <Link href={createLocalizedHref("/bussines-consultancy", currentLocale)}>Business Consultancy Services</Link>
+      <Link href={createLocalizedHref("/bussines-consultancy", currentLocale)}>Business Consulting</Link>
+      <Link href={createLocalizedHref("/careers", currentLocale)}>Careers</Link>
+      <Link href={createLocalizedHref("/careers", currentLocale)}>Digital Agency Careers</Link>
+      <Link href={createLocalizedHref("/careers", currentLocale)}>Web Development Jobs</Link>
+      <Link href={createLocalizedHref("/careers", currentLocale)}>Join Our Team</Link>
       
       {/* SEO Keywords - Website Development */}
-      <Link href="/services">Next.js Development</Link>
-      <Link href="/services">React Development</Link>
-      <Link href="/services">WordPress Development</Link>
-      <Link href="/services">E-commerce Development</Link>
-      <Link href="/services">SaaS Website Development</Link>
-      <Link href="/services">Headless CMS Development</Link>
-      <Link href="/services">Website Redesign</Link>
-      <Link href="/services">Landing Page Development</Link>
-      <Link href="/services">Web App Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Next.js Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>React Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>WordPress Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>E-commerce Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>SaaS Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Headless CMS Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Redesign</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Landing Page Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Web App Development</Link>
       
       {/* SEO Keywords - Design & UX */}
-      <Link href="/services">UX UI Design</Link>
-      <Link href="/services">Website Design</Link>
-      <Link href="/services">Responsive Web Design</Link>
-      <Link href="/services">Mobile-First Design</Link>
-      <Link href="/services">Conversion Optimization</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>UX UI Design</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Design</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Responsive Web Design</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Mobile-First Design</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Conversion Optimization</Link>
       
       {/* SEO Keywords - Performance & SEO */}
-      <Link href="/services">SEO Services</Link>
-      <Link href="/services">SEO Optimization</Link>
-      <Link href="/services">Website Performance Optimization</Link>
-      <Link href="/services">Core Web Vitals Optimization</Link>
-      <Link href="/services">Website Speed Optimization</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>SEO Services</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>SEO Optimization</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Performance Optimization</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Core Web Vitals Optimization</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Speed Optimization</Link>
       
       {/* SEO Keywords - Location Based */}
-      <Link href="/services">Website Development Agency India</Link>
-      <Link href="/services">Web Development Company India</Link>
-      <Link href="/services">Best Web Development Agency</Link>
-      <Link href="/services">Top Website Development Agency</Link>
-      <Link href="/services">Affordable Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Website Development Agency India</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Web Development Company India</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Best Web Development Agency</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Top Website Development Agency</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Affordable Website Development</Link>
       
       {/* SEO Keywords - Industry Specific */}
-      <Link href="/services">SaaS Website Development</Link>
-      <Link href="/services">E-commerce Website Development</Link>
-      <Link href="/services">Corporate Website Development</Link>
-      <Link href="/services">Startup Website Development</Link>
-      <Link href="/services">Small Business Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>SaaS Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>E-commerce Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Corporate Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Startup Website Development</Link>
+      <Link href={createLocalizedHref("/services", currentLocale)}>Small Business Website Development</Link>
     </nav>
   );
 }

@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "Home",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "portfolio": "Portfolio",
+    "blogs": "Blogs",
+    "about": "About",
+    "contact": "Contact",
+    "careers": "Careers",
+    "businessConsultancy": "Business Consultancy",
+    "bookStrategyCall": "Book a strategy call",
+    "bookCall": "Book Call",
+    "getInTouch": "Get in Touch",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "close": "Close",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "Website Dev Agency | Fast Performance | Swagatam Tech",
+    "defaultDescription": "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects, 98% satisfaction."
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "portfolio": "Portfolio",
+    "blogs": "Blogs",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
+

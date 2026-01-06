@@ -12,12 +12,15 @@ import { LoadingProvider } from "@/componenets/global/LoadingContext";
 import LeadPopup from "@/componenets/global/LeadPopup";
 import GoogleAnalyticsTracker from "@/componenets/global/GoogleAnalyticsTracker";
 import GlobalClickTracker from "@/componenets/global/GlobalClickTracker";
+import { removeLocaleFromPath } from "@/lib/i18n";
 
 export default function ConditionalLayout({ children }) {
   const pathname = usePathname();
-  const isBlogPostPage = pathname === '/blog-post' || pathname?.startsWith('/blog-post');
-  const isRequestQueryPage = pathname === '/request-query';
-  const isJobPostPage = pathname === '/job-post' || pathname?.startsWith('/job-post');
+  // Remove locale from pathname for checking admin pages
+  const pathWithoutLocale = removeLocaleFromPath(pathname);
+  const isBlogPostPage = pathWithoutLocale === '/blog-post' || pathWithoutLocale?.startsWith('/blog-post');
+  const isRequestQueryPage = pathWithoutLocale === '/request-query';
+  const isJobPostPage = pathWithoutLocale === '/job-post' || pathWithoutLocale?.startsWith('/job-post');
 
   useEffect(() => {
     const isAdminPage = isBlogPostPage || isRequestQueryPage || isJobPostPage;

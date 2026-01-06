@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "홈",
+    "services": "서비스",
+    "caseStudies": "사례 연구",
+    "portfolio": "포트폴리오",
+    "blogs": "블로그",
+    "about": "회사 소개",
+    "contact": "연락처",
+    "careers": "채용",
+    "businessConsultancy": "비즈니스 컨설팅",
+    "bookStrategyCall": "전략 통화 예약",
+    "bookCall": "통화 예약",
+    "getInTouch": "연락하기",
+    "readMore": "더 읽기",
+    "learnMore": "더 알아보기",
+    "viewAll": "모두 보기",
+    "close": "닫기",
+    "submit": "제출",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "웹 개발 에이전시 | 고성능 | Swagatam Tech",
+    "defaultDescription": "비즈니스 성장을 위한 고성능 웹사이트를 구축하는 웹 개발 에이전시. 리드, 전환 및 측정 가능한 성장에 중점을 둔 전략, UX 디자인 및 개발로 고성능 웹사이트를 구축했습니다."
+  },
+  "navigation": {
+    "home": "홈",
+    "services": "서비스",
+    "caseStudies": "사례 연구",
+    "portfolio": "포트폴리오",
+    "blogs": "블로그",
+    "about": "회사 소개",
+    "contact": "연락처"
+  }
+}
+

@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "caseStudies": "Fallstudien",
+    "portfolio": "Portfolio",
+    "blogs": "Blogs",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "careers": "Karriere",
+    "businessConsultancy": "Unternehmensberatung",
+    "bookStrategyCall": "Strategiegespräch buchen",
+    "bookCall": "Anruf buchen",
+    "getInTouch": "Kontakt aufnehmen",
+    "readMore": "Mehr lesen",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "close": "Schließen",
+    "submit": "Absenden",
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "Webentwicklungsagentur | Hohe Leistung | Swagatam Tech",
+    "defaultDescription": "Webentwicklungsagentur, die leistungsstarke Websites für Unternehmenswachstum erstellt. Wir haben leistungsstarke Websites mit Strategie, UX-Design und Entwicklung erstellt, die sich auf Leads, Conversions und messbares Wachstum konzentrieren."
+  },
+  "navigation": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "caseStudies": "Fallstudien",
+    "portfolio": "Portfolio",
+    "blogs": "Blogs",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  }
+}
+

@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "Accueil",
+    "services": "Services",
+    "caseStudies": "Études de cas",
+    "portfolio": "Portfolio",
+    "blogs": "Blogs",
+    "about": "À propos",
+    "contact": "Contact",
+    "careers": "Carrières",
+    "businessConsultancy": "Conseil en affaires",
+    "bookStrategyCall": "Réserver un appel stratégique",
+    "bookCall": "Réserver un appel",
+    "getInTouch": "Nous contacter",
+    "readMore": "Lire la suite",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "close": "Fermer",
+    "submit": "Soumettre",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "Agence de développement web | Performance rapide | Swagatam Tech",
+    "defaultDescription": "Agence de développement web créant des sites web à haute performance pour la croissance des entreprises. Nous avons construit des sites web haute performance avec stratégie, design UX et développement axés sur les prospects, conversions et croissance mesurable."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "caseStudies": "Études de cas",
+    "portfolio": "Portfolio",
+    "blogs": "Blogs",
+    "about": "À propos",
+    "contact": "Contact"
+  }
+}
+

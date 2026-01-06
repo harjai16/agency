@@ -4,25 +4,37 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useLeadPopup } from "./LeadPopupContext";
 import { useLoading } from "./LoadingContext";
 import { trackClick } from "@/lib/gtag";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "@/lib/translations-context";
+
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { labelKey: "home", href: "/" },
+  { labelKey: "services", href: "/services" },
+  { labelKey: "caseStudies", href: "/case-studies" },
+  { labelKey: "portfolio", href: "/portfolio" },
+  { labelKey: "blogs", href: "/blogs" },
+  { labelKey: "about", href: "/about" },
+  { labelKey: "contact", href: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
   const { openPopup } = useLeadPopup();
   const { setLoading } = useLoading();
+  const t = useTranslations();
+  
+  // Get translated navigation labels
+  const getNavLabel = (labelKey) => {
+    return t?.navigation?.[labelKey] || t?.common?.[labelKey] || labelKey;
+  };
   const openMenu = () => {
     setOpen(true);
     if (typeof document !== "undefined") {
@@ -52,7 +64,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <Link
-          href="/"
+          href={createLocalizedHref("/", currentLocale)}
           className="flex items-center group transition-all"
           aria-label="Swagatam Tech - Home"
           onClick={() => {
@@ -80,18 +92,18 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-2 min-[700px]:gap-3 lg:gap-6 xl:gap-8 text-[10px] min-[700px]:text-xs font-medium tracking-wide text-gray-600">
           {navItems.map((item) => (
-            <li key={item.label} className="relative group">
+            <li key={item.labelKey} className="relative group">
               <Link
-                href={item.href}
+                href={createLocalizedHref(item.href, currentLocale)}
                 className="hover:text-black transition-colors whitespace-nowrap"
                 onClick={() => {
-                  trackClick(`${item.label} Navigation`, "navigation", {
+                  trackClick(`${getNavLabel(item.labelKey)} Navigation`, "navigation", {
                     destination: item.href,
                   });
                   setLoading(true);
                 }}
               >
-                {item.label}
+                {getNavLabel(item.labelKey)}
               </Link>
               {/* Underline animation */}
               <span
@@ -101,11 +113,12 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CTA Button (Desktop) */}
-        <motion.div
-          whileHover={{ scale: 1.04 }}
-          className="hidden md:flex"
-        >
+        {/* Language Switcher & CTA Button (Desktop) */}
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
+          <motion.div
+            whileHover={{ scale: 1.04 }}
+          >
           <Button 
             onClick={() => {
               trackClick("Book Strategy Call - Desktop", "cta", {
@@ -116,10 +129,11 @@ const Navbar = () => {
             className="text-[10px] min-[700px]:text-xs px-2.5 min-[700px]:px-4 py-1.5 min-[700px]:py-2.5 min-h-[32px] min-[700px]:min-h-[44px] whitespace-nowrap"
             eventLabel="Book Strategy Call - Desktop"
           >
-            <span className="hidden min-[800px]:inline">Book a strategy call</span>
-            <span className="min-[800px]:hidden">Book Call</span>
+            <span className="hidden min-[800px]:inline">{t?.common?.bookStrategyCall || "Book a strategy call"}</span>
+            <span className="min-[800px]:hidden">{t?.common?.bookCall || "Book Call"}</span>
           </Button>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Mobile Hamburger */}
         <motion.button
@@ -161,7 +175,7 @@ const Navbar = () => {
               {/* Top row with logo + close */}
               <div className="flex items-center justify-between mb-10">
                 <Link
-                  href="/"
+                  href={createLocalizedHref("/", currentLocale)}
                   className="flex items-center"
                   onClick={() => {
                     trackClick("Logo - Mobile", "navigation");
@@ -199,35 +213,38 @@ const Navbar = () => {
               <ul className="space-y-8 text-lg font-medium text-gray-800">
                 {navItems.map((item, i) => (
                   <motion.li
-                    key={item.label}
+                    key={item.labelKey}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: i * 0.06 }}
                   >
                     <Link
-                      href={item.href}
+                      href={createLocalizedHref(item.href, currentLocale)}
                       className="hover:text-black transition"
                       onClick={() => {
-                        trackClick(`${item.label} Navigation - Mobile`, "navigation", {
+                        trackClick(`${getNavLabel(item.labelKey)} Navigation - Mobile`, "navigation", {
                           destination: item.href,
                         });
                         closeMenu();
                         setLoading(true);
                       }}
                     >
-                      {item.label}
+                      {getNavLabel(item.labelKey)}
                     </Link>
                   </motion.li>
                 ))}
               </ul>
 
-              {/* CTA bottom */}
+              {/* Language Switcher & CTA bottom */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="mt-10 pb-4"
+                className="mt-10 pb-4 space-y-4"
               >
+                <div className="flex justify-center">
+                  <LanguageSwitcher />
+                </div>
                 <Button
                   className="w-full py-3 text-base font-semibold"
                   onClick={() => {
@@ -239,7 +256,7 @@ const Navbar = () => {
                   }}
                   eventLabel="Book Strategy Call - Mobile"
                 >
-                  Book a strategy call
+                  {t?.common?.bookStrategyCall || "Book a strategy call"}
                 </Button>
               </motion.div>
             </motion.div>

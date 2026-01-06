@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "首页",
+    "services": "服务",
+    "caseStudies": "案例研究",
+    "portfolio": "作品集",
+    "blogs": "博客",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "careers": "职业",
+    "businessConsultancy": "商业咨询",
+    "bookStrategyCall": "预约策略电话",
+    "bookCall": "预约电话",
+    "getInTouch": "联系我们",
+    "readMore": "阅读更多",
+    "learnMore": "了解更多",
+    "viewAll": "查看全部",
+    "close": "关闭",
+    "submit": "提交",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "网站开发机构 | 高性能 | Swagatam Tech",
+    "defaultDescription": "为业务增长构建高性能网站的网站开发机构。我们构建了专注于潜在客户、转化和可衡量增长的战略、UX设计和开发的高性能网站。"
+  },
+  "navigation": {
+    "home": "首页",
+    "services": "服务",
+    "caseStudies": "案例研究",
+    "portfolio": "作品集",
+    "blogs": "博客",
+    "about": "关于我们",
+    "contact": "联系我们"
+  }
+}
+

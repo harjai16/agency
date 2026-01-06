@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "ホーム",
+    "services": "サービス",
+    "caseStudies": "ケーススタディ",
+    "portfolio": "ポートフォリオ",
+    "blogs": "ブログ",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "careers": "採用情報",
+    "businessConsultancy": "ビジネスコンサルティング",
+    "bookStrategyCall": "戦略コールを予約",
+    "bookCall": "コールを予約",
+    "getInTouch": "お問い合わせ",
+    "readMore": "続きを読む",
+    "learnMore": "詳細を見る",
+    "viewAll": "すべて表示",
+    "close": "閉じる",
+    "submit": "送信",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "ウェブ開発エージェンシー | 高速パフォーマンス | Swagatam Tech",
+    "defaultDescription": "ビジネス成長のための高速パフォーマンスウェブサイトを構築するウェブ開発エージェンシー。リード、コンバージョン、測定可能な成長に焦点を当てた戦略、UXデザイン、開発で高性能ウェブサイトを構築しました。"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "services": "サービス",
+    "caseStudies": "ケーススタディ",
+    "portfolio": "ポートフォリオ",
+    "blogs": "ブログ",
+    "about": "会社概要",
+    "contact": "お問い合わせ"
+  }
+}
+

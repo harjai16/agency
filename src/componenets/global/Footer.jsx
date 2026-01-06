@@ -5,16 +5,19 @@ import { motion } from "framer-motion";
 import SocialShare from "./SocialShare";
 import { useLoading } from "./LoadingContext";
 import { trackClick, trackOutboundLink } from "@/lib/gtag";
+import { usePathname } from "next/navigation";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+import { useTranslations } from "@/lib/translations-context";
 
 const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  { labelKey: "home", href: "/" },
+  { labelKey: "services", href: "/services" },
+  { labelKey: "caseStudies", href: "/case-studies" },
+  { labelKey: "portfolio", href: "/portfolio" },
+  { labelKey: "blogs", href: "/blogs" },
+  { labelKey: "about", href: "/about" },
+  { labelKey: "careers", href: "/careers" },
+  { labelKey: "contact", href: "/contact" },
 ];
 
 const socials = [
@@ -25,6 +28,17 @@ const socials = [
 
 const Footer = () => {
   const { setLoading } = useLoading();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
+  
+  // Get translated labels
+  const getLabel = (labelKey) => {
+    if (labelKey === "contact") {
+      return t?.common?.getInTouch || "Get in touch";
+    }
+    return t?.navigation?.[labelKey] || t?.common?.[labelKey] || labelKey;
+  };
 
   return (
     <footer className="w-full border-t border-gray-100 bg-white">
@@ -33,7 +47,7 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <Link
-            href="/"
+            href={createLocalizedHref("/", currentLocale)}
             className="flex items-center mb-4 group"
             aria-label="Swagatam Tech - Home"
             onClick={() => {
@@ -65,19 +79,19 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
             {quickLinks.map((item) => (
-              <li key={item.label}>
+              <li key={item.labelKey}>
                 <Link
-                  href={item.href}
+                  href={createLocalizedHref(item.href, currentLocale)}
                   className="hover:text-black transition-colors"
-                  aria-label={`Navigate to ${item.label} page`}
+                  aria-label={`Navigate to ${getLabel(item.labelKey)} page`}
                   onClick={() => {
-                    trackClick(`${item.label} - Footer`, "navigation", {
+                    trackClick(`${getLabel(item.labelKey)} - Footer`, "navigation", {
                       destination: item.href,
                     });
                     setLoading(true);
                   }}
                 >
-                  {item.label === "Contact" ? "Get in touch" : item.label}
+                  {getLabel(item.labelKey)}
                 </Link>
               </li>
             ))}

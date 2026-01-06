@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "caseStudies": "دراسات الحالة",
+    "portfolio": "المحفظة",
+    "blogs": "المدونات",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "careers": "الوظائف",
+    "businessConsultancy": "استشارات الأعمال",
+    "bookStrategyCall": "احجز مكالمة استراتيجية",
+    "bookCall": "احجز مكالمة",
+    "getInTouch": "تواصل معنا",
+    "readMore": "اقرأ المزيد",
+    "learnMore": "اعرف المزيد",
+    "viewAll": "عرض الكل",
+    "close": "إغلاق",
+    "submit": "إرسال",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "وكالة تطوير المواقع | أداء سريع | Swagatam Tech",
+    "defaultDescription": "وكالة تطوير المواقع التي تبني مواقع ويب عالية الأداء لنمو الأعمال. قمنا ببناء مواقع ويب عالية الأداء مع الاستراتيجية وتصميم UX والتطوير الذي يركز على العملاء المحتملين والتحويلات والنمو القابل للقياس."
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "caseStudies": "دراسات الحالة",
+    "portfolio": "المحفظة",
+    "blogs": "المدونات",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  }
+}
+

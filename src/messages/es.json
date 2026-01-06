@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "caseStudies": "Casos de estudio",
+    "portfolio": "Portafolio",
+    "blogs": "Blogs",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "careers": "Carreras",
+    "businessConsultancy": "Consultoría empresarial",
+    "bookStrategyCall": "Reservar una llamada estratégica",
+    "bookCall": "Reservar llamada",
+    "getInTouch": "Ponerse en contacto",
+    "readMore": "Leer más",
+    "learnMore": "Saber más",
+    "viewAll": "Ver todo",
+    "close": "Cerrar",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito"
+  },
+  "seo": {
+    "siteName": "Swagatam Tech",
+    "defaultTitle": "Agencia de desarrollo web | Alto rendimiento | Swagatam Tech",
+    "defaultDescription": "Agencia de desarrollo web que construye sitios web de alto rendimiento para el crecimiento empresarial. Hemos construido sitios web de alto rendimiento con estrategia, diseño UX y desarrollo enfocados en leads, conversiones y crecimiento medible."
+  },
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "caseStudies": "Casos de estudio",
+    "portfolio": "Portafolio",
+    "blogs": "Blogs",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  }
+}
+
