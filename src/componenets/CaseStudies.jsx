@@ -4,13 +4,24 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "./ui/Section";
 import Button from "./ui/Button";
-import caseStudies from "@/data/case-studies.json";
+import { useLocaleData } from "@/lib/use-locale-data";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "@/lib/translations-context";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+import { usePathname } from "next/navigation";
 
 const SLIDE_DURATION = 3000; // 5s per slide
 
 const CaseStudies = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
+  const { data: caseStudies, loading } = useLocaleData('case-studies');
+  
+  // Ensure caseStudies is always an array
+  const studiesList = Array.isArray(caseStudies) ? caseStudies : [];
+  
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -36,16 +47,16 @@ const CaseStudies = () => {
 
   // Autoplay: move to next slide when duration is over
   useEffect(() => {
-    if (!caseStudies.length) return;
+    if (!studiesList.length) return;
 
     const timer = setTimeout(() => {
-      const nextIndex = (activeIndex + 1) % caseStudies.length;
+      const nextIndex = (activeIndex + 1) % studiesList.length;
       scrollToIndex(nextIndex);
       setActiveIndex(nextIndex);
     }, SLIDE_DURATION);
 
     return () => clearTimeout(timer);
-  }, [activeIndex]);
+  }, [activeIndex, studiesList.length]);
 
   return (
     <Section
@@ -57,24 +68,22 @@ const CaseStudies = () => {
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
         <div className="space-y-2 sm:space-y-3 max-w-7xl">
           <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gray-500">
-            Case studies
+            {t?.caseStudies?.badge || "Case studies"}
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-            A few websites we&apos;ve designed and built for growing brands.
+            {t?.caseStudies?.title || "A few websites we've designed and built for growing brands."}
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-5xl">
-            From marketing sites to product dashboards, we partner with teams to
-            launch fast, responsive and SEO-friendly websites that actually move
-            the numbers—load time, conversion and revenue.
+            {t?.caseStudies?.description || "From marketing sites to product dashboards, we partner with teams to launch fast, responsive and SEO-friendly websites that actually move the numbers—load time, conversion and revenue."}
           </p>
         </div>
 
         <Button
           variant="ghost"
           className="self-start md:self-auto"
-          onClick={() => router.push("/case-studies")}
+          onClick={() => router.push(createLocalizedHref("/case-studies", currentLocale))}
         >
-          View all case studies
+          {t?.caseStudies?.viewAll || "View all case studies"}
         </Button>
       </div>
 
@@ -85,7 +94,7 @@ const CaseStudies = () => {
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-6 hide-scrollbar"
         >
-          {caseStudies.map((item, index) => {
+          {studiesList.map((item, index) => {
             return (
               <motion.article
                 key={item.id}
@@ -146,7 +155,7 @@ const CaseStudies = () => {
                       className="inline-flex items-center gap-1 font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all"
                       aria-label={`Read ${item.client} case study`}
                     >
-                      View {item.client} project  
+                      {(t?.caseStudies?.viewProject || "View {client} project").replace("{client}", item.client)}
                       <span className="text-xs">↗</span>  
                     </a>
                   </div>

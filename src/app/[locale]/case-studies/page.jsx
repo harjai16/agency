@@ -6,7 +6,10 @@ import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import caseStudies from "@/data/case-studies.json";
+import { useLocaleData } from "@/lib/use-locale-data";
+import { useTranslations } from "@/lib/translations-context";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOBacklinks from "@/componenets/global/SEOBacklinks"; 
@@ -21,25 +24,37 @@ const fadeUp = (delay = 0) => ({
 
 const CaseStudiesPage = () => {
     const router = useRouter();
+    const pathname = usePathname();
+    const currentLocale = getCurrentLocale(pathname);
+    const t = useTranslations();
+    const { data: caseStudies = [], loading: caseStudiesLoading } = useLocaleData('case-studies');
+    const { data: pageData, loading: pageDataLoading } = useLocaleData('case-studies-page');
+    
+    // Ensure caseStudies is always an array
+    const studiesList = Array.isArray(caseStudies) ? caseStudies : [];
+    const hero = pageData?.hero || {};
+    const listing = pageData?.listing || {};
+    const cta = pageData?.cta || {};
+    
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
     const collectionSchema = {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "Case Studies - Swagatam Tech",
-      "description": "A closer look at websites we've designed and built — focused on speed, stability, and usability. Real projects, not concepts.",
-      "url": `${siteUrl}/case-studies`,
+      "name": hero?.title ? `${hero.title} - ${t?.seo?.siteName || 'Swagatam Tech'}` : "Case Studies - Swagatam Tech",
+      "description": hero?.description ? hero.description.replace(/\{websites\}|\{portfolio\}|\{webDevelopmentServices\}/g, '').substring(0, 160) : "A closer look at websites we've designed and built — focused on speed, stability, and usability. Real projects, not concepts.",
+      "url": `${siteUrl}${createLocalizedHref('/case-studies', currentLocale)}`,
       "mainEntity": {
         "@type": "ItemList",
-        "numberOfItems": caseStudies.length,
-        "itemListElement": caseStudies.slice(0, 10).map((caseStudy, index) => ({
+        "numberOfItems": studiesList.length,
+        "itemListElement": studiesList.slice(0, 10).map((caseStudy, index) => ({
           "@type": "ListItem",
           "position": index + 1,
           "item": {
             "@type": "CaseStudy",
             "name": caseStudy.heroTitle || caseStudy.title,
             "description": caseStudy.snippet,
-            "url": `${siteUrl}${caseStudy.href || `/case-studies/${caseStudy.id}`}`,
+            "url": `${siteUrl}${createLocalizedHref(caseStudy.href || `/case-studies/${caseStudy.id}`, currentLocale)}`,
             "image": caseStudy.image ? (caseStudy.image.startsWith('http') ? caseStudy.image : `${siteUrl}${caseStudy.image}`) : undefined,
             "about": {
               "@type": "Thing",
@@ -67,18 +82,35 @@ const CaseStudiesPage = () => {
           <motion.div {...fadeUp(0)} className="space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Case studies
+              {hero?.badge || "Case studies"}
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Website Development Case Studies{" "}
+              {hero?.title || "Website Development Case Studies"}{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                Fast Performance Websites We Built for Business
+                {hero?.titleHighlight || "Fast Performance Websites We Built for Business"}
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl">
-             Real projects, real outcomes. A closer look at <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. Browse our <Link href="/portfolio" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> for more examples, or explore our <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development services</Link>.
+              {hero?.description ? (
+                <>
+                  {hero.description.split(/(\{websites\}|\{portfolio\}|\{webDevelopmentServices\})/).map((part, idx) => {
+                    if (part === '{websites}') {
+                      return <Link key={idx} href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{hero.websites || "websites"}</Link>;
+                    } else if (part === '{portfolio}') {
+                      return <Link key={idx} href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{hero.portfolio || "portfolio"}</Link>;
+                    } else if (part === '{webDevelopmentServices}') {
+                      return <Link key={idx} href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{hero.webDevelopmentServices || "web development services"}</Link>;
+                    }
+                    return <span key={idx}>{part}</span>;
+                  })}
+                </>
+              ) : (
+                <>
+                  Real projects, real outcomes. A closer look at <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. Browse our <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> for more examples, or explore our <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development services</Link>.
+                </>
+              )}
             </p>
           </motion.div>
 
@@ -87,9 +119,9 @@ const CaseStudiesPage = () => {
             className="flex flex-wrap items-center gap-3"
           >
             <Button
-              onClick={() => router.push("/portfolio")}
+              onClick={() => router.push(createLocalizedHref("/portfolio", currentLocale))}
             >
-              Discuss your project       
+              {hero?.ctaPrimary || "Discuss your project"}
             </Button>
             <Button
               variant="ghost"
@@ -99,7 +131,7 @@ const CaseStudiesPage = () => {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Browse case studies
+              {hero?.ctaSecondary || "Browse case studies"}
             </Button>
           </motion.div>
         </div>
@@ -114,14 +146,14 @@ const CaseStudiesPage = () => {
         <div className="max-w-fullhd mx-auto space-y-4 sm:space-y-6">
           {/* Optional small label row */}
           <div className="flex items-center justify-between gap-4 text-xs md:text-sm text-gray-500">
-            <span>{caseStudies.length} projects</span>
+            <span>{listing?.projectsLabel ? listing.projectsLabel.replace('{count}', studiesList.length.toString()) : `${studiesList.length} projects`}</span>
             <span className="hidden md:inline-block">
-              From SaaS and fintech to e-commerce and modern brands.
+              {listing?.subtitle || "From SaaS and fintech to e-commerce and modern brands."}
             </span>
           </div>
 
           <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {caseStudies.map((item, index) => (
+            {studiesList.map((item, index) => (
               <motion.article
                 key={item.id + index}
                 initial={{ opacity: 0, y: 18 }}
@@ -131,7 +163,7 @@ const CaseStudiesPage = () => {
                 whileHover={{ y: -4 }}
                 className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
               >
-                <Link href={item.href} className="flex flex-col h-full">
+                <Link href={createLocalizedHref(item.href || `/case-studies/${item.id}`, currentLocale)} className="flex flex-col h-full">
                   {/* Top image area */}
                   <div className="relative w-full h-40 md:h-44 overflow-hidden bg-gray-50">
                     {item.image && (
@@ -179,7 +211,7 @@ const CaseStudiesPage = () => {
                     <div className="mt-auto flex items-center justify-between text-[11px] text-gray-500">
                       <span>{item.meta}</span>
                       <span className="inline-flex items-center gap-1 font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all">
-                        Read case study
+                        {listing?.readCaseStudy || "Read case study"}
                         <span className="text-xs">↗</span>
                       </span>
                     </div>
@@ -203,22 +235,20 @@ const CaseStudiesPage = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
-           Seen something relevant?
+            {cta?.badge || "Seen something relevant?"}
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-           Discuss your project with our team
+            {cta?.title || "Discuss your project with our team"}
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
-           If one of these projects feels close to what you’re building, let’s discuss it.
-Share a bit about your goals and constraints, and we’ll suggest a clear approach and realistic next steps.
+            {cta?.description || "If one of these projects feels close to what you're building, let's discuss it. Share a bit about your goals and constraints, and we'll suggest a clear approach and realistic next steps."}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-           
             <Button
               variant="ghost"
-             onClick={() => router.push("/contact")}
+              onClick={() => router.push(createLocalizedHref("/contact", currentLocale))}
             >
-              Send project details
+              {cta?.button || "Send project details"}
             </Button>
           </div>
         </motion.div>

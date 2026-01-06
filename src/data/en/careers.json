@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "badge": "CAREERS",
+    "title": "Join Our Team",
+    "titleHighlight": "Build Amazing Things Together",
+    "description": "We're looking for talented individuals who are passionate about creating exceptional digital experiences. Join a team that values creativity, innovation, and growth."
+  },
+  "benefits": [
+    {
+      "title": "Competitive Salary",
+      "description": "We offer competitive compensation packages that reflect your skills and experience."
+    },
+    {
+      "title": "Flexible Work",
+      "description": "Work from anywhere with flexible hours that fit your lifestyle."
+    },
+    {
+      "title": "Growth Opportunities",
+      "description": "Continuous learning and career development with mentorship and training."
+    },
+    {
+      "title": "Great Culture",
+      "description": "Collaborative environment with a supportive team and fun work atmosphere."
+    }
+  ],
+  "jobs": [
+    {
+      "id": "senior-frontend-developer",
+      "title": "Senior Frontend Developer",
+      "department": "Engineering",
+      "type": "Full-time",
+      "location": "Remote",
+      "description": "We're looking for an experienced frontend developer to join our team. You'll work with React, Next.js, and modern web technologies to build high-performance websites.",
+      "requirements": [
+        "5+ years of frontend development experience",
+        "Strong proficiency in React and Next.js",
+        "Experience with TypeScript",
+        "Knowledge of modern CSS frameworks"
+      ]
+    },
+    {
+      "id": "ui-ux-designer",
+      "title": "UI/UX Designer",
+      "department": "Design",
+      "type": "Full-time",
+      "location": "Remote",
+      "description": "Join our design team to create beautiful, user-centered interfaces. You'll work on diverse projects from concept to implementation.",
+      "requirements": [
+        "3+ years of UI/UX design experience",
+        "Strong portfolio showcasing web design work",
+        "Proficiency in Figma or similar tools",
+        "Understanding of user research and testing"
+      ]
+    },
+    {
+      "id": "full-stack-developer",
+      "title": "Full Stack Developer",
+      "department": "Engineering",
+      "type": "Full-time",
+      "location": "Remote",
+      "description": "We need a full stack developer who can work across the entire stack, from frontend to backend, to deliver complete solutions.",
+      "requirements": [
+        "4+ years of full stack development",
+        "Experience with Node.js and databases",
+        "Knowledge of React and Next.js",
+        "API design and development skills"
+      ]
+    },
+    {
+      "id": "seo-specialist",
+      "title": "SEO Specialist",
+      "department": "Marketing",
+      "type": "Full-time",
+      "location": "Remote",
+      "description": "Help our clients achieve better search rankings. You'll work on SEO strategy, optimization, and analytics.",
+      "requirements": [
+        "2+ years of SEO experience",
+        "Knowledge of technical SEO",
+        "Experience with analytics tools",
+        "Strong analytical skills"
+      ]
+    }
+  ]
+}
+

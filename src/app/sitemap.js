@@ -22,12 +22,30 @@ export default async function sitemap() {
   ];
 
   // 2️⃣ Fetch ONLY published blogs
-  const res = await fetch(
-    `${baseUrl}/api/blogs?status=published`,
-    { cache: "no-store" }
-  );
-
-  const data = await res.json();
+  // STATIC EXPORT NOTE: For static export, API routes don't work
+  // You need to either:
+  // 1. Import blog data directly from a JSON file/data source
+  // 2. Use ISR (Incremental Static Regeneration)
+  // 3. Fetch from external API at build time
+  // 
+  // For now, we'll try to fetch but handle gracefully if it fails
+  let blogData = [];
+  try {
+    // Only fetch if not in static export mode
+    if (process.env.NEXT_PHASE !== 'phase-production-build') {
+      const res = await fetch(
+        `${baseUrl}/api/blogs?status=published`,
+        { cache: "no-store" }
+      );
+      const data = await res.json();
+      blogData = data.blogs || [];
+    }
+  } catch (error) {
+    // In static export, API routes aren't available
+    // You should import blog data directly instead
+    console.warn('Could not fetch blogs for sitemap (expected in static export)');
+    blogData = [];
+  }
 
   const entries = [];
 
@@ -53,7 +71,7 @@ export default async function sitemap() {
     }
 
     // Blog pages
-    for (const blog of data.blogs || []) {
+    for (const blog of blogData) {
       entries.push({
         url: `${baseUrl}${localePrefix}/blogs${blog.slug}`,
         lastModified: blog.updatedAt || blog.createdAt,

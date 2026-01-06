@@ -77,9 +77,9 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className="relative h-12 w-60 min-[700px]:h-12 min-[700px]:w-20 sm:h-14 sm:w-24 md:h-16 md:w-64 text-center flex items-center justify-center"
           >
-            <img
+            <Image
               src="/our_logo/logo-removebg-preview.png"
-              alt="Swagatam Tech Logo - Website Development Agency"
+              alt={t?.seo?.siteName ? `${t.seo.siteName} Logo` : "Swagatam Tech Logo - Website Development Agency"}
               fill
               className="object-contain"
               style={{ backgroundColor: 'transparent' }}
@@ -185,12 +185,11 @@ const Navbar = () => {
                   aria-label="Swagatam Tech - Home"
                 >
                   <div className="relative h-14 w-54">
-                    <img
+                    <Image
                       src="/our_logo/logo-removebg-preview.png"
-                      alt="Swagatam Tech Logo"
+                      alt={t?.seo?.siteName ? `${t.seo.siteName} Logo` : "Swagatam Tech Logo"}
                       fill
                       className="object-contain"
-                     
                       sizes="128px"
                     />
                   </div>

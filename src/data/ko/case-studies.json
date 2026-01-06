@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ngo-wordpress-rebuild",
+    "client": "Khushali Mehta",
+    "industry": "비영리",
+    "title": "커스텀 WordPress 재구축으로 NGO 웹사이트 안정화",
+    "heroTitle": "업데이트 문제를 제거하고 유지보수성을 개선하기 위한 NGO 웹사이트 재구축",
+    "snippet": "테마 및 버전 업데이트로 인한 빈번한 오류를 수정하기 위해 커스텀 WordPress 테마를 사용하여 NGO 웹사이트를 재설계하고 재구축했습니다.",
+    "challenge": "이전 웹사이트는 기본 WordPress 테마에 의존했으며 업데이트 후 자주 깨져서 콘텐츠 변경이 위험하고 시간이 많이 걸렸습니다.",
+    "solution": "NGO의 콘텐츠 요구에 맞춘 깔끔한 레이아웃과 안정적인 업데이트 프로세스를 갖춘 커스텀 WordPress 테마를 사용하여 웹사이트를 재구축했습니다.",
+    "impact": "웹사이트가 안정적이 되었고 업데이트가 쉬워졌으며 일반적인 WordPress 업데이트 중에 더 이상 깨지지 않습니다.",
+    "services": [
+      "웹사이트 재설계",
+      "커스텀 WordPress 개발",
+      "UX 및 콘텐츠 구조"
+    ],
+    "deliverables": [
+      "커스텀 WordPress 테마",
+      "반응형 레이아웃",
+      "CMS 구성"
+    ],
+    "testimonial": {
+      "name": "NGO 이사",
+      "quote": "웹사이트 관리가 훨씬 쉬워졌습니다. 업데이트가 더 이상 사이트를 깨뜨리지 않으며 디자인이 우리 작업과 더 잘 맞는 느낌입니다."
+    },
+    "metric": "안정적이고 쉬운 업데이트",
+    "meta": "4–6주 내 제공",
+    "href": "/case-studies/ngo-wordpress-rebuild",
+    "liveUrl": "",
+    "image": "/casestudy/projectdeep.png",
+    "images": ["/casestudy/projectdeep.png","/casestudy/project2.png"],
+    "imageAlt": "NGO 웹사이트 재설계"
+  },
+  {
+    "id": "labelwala-nextjs",
+    "client": "Label Wala",
+    "industry": "제조 / 인쇄",
+    "title": "Next.js로 구축된 고성능 브랜드 웹사이트",
+    "heroTitle": "인쇄 브랜드를 위한 빠르고 SEO 준비된 웹사이트 구축",
+    "snippet": "속도, 성능 및 검색 가시성에 중점을 둔 Next.js로 현대적인 브랜드 웹사이트를 구축했습니다.",
+    "challenge": "비즈니스는 브랜드를 명확하게 표현하고 모든 기기에서 잘 작동하는 빠르고 전문적인 웹사이트가 필요했습니다.",
+    "solution": "성능 우선 레이아웃, 반응형 디자인 및 SEO 모범 사례를 갖춘 Next.js 웹사이트를 설계하고 개발했습니다.",
+    "impact": "웹사이트는 모바일 및 데스크톱에서 90+ 성능 점수를 달성했으며 빠르게 로드되고 SEO를 위한 강력한 기반을 제공합니다.",
+    "services": [
+      "웹사이트 디자인",
+      "Next.js 개발",
+      "성능 최적화",
+      "SEO 설정"
+    ],
+    "deliverables": [
+      "Next.js 웹사이트",
+      "반응형 UI",
+      "SEO 준비 페이지"
+    ],
+    "testimonial": {
+      "name": "Akshit Gupta",
+      "quote": "사이트가 빠르게 로드되고 깔끔해 보이며 모든 기기에서 원활하게 작동합니다. 정확히 우리가 필요로 했던 것입니다."
+    },
+    "metric": "90+ 성능 점수",
+    "meta": "SEO 및 속도 중심 구축",
+    "href": "/case-studies/labelwala-nextjs",
+    "liveUrl": "",
+    "image": "/casestudy/labelwaala1.png",
+    "images": ["/casestudy/labelwaala1.png","/casestudy/label2.png"],
+    "imageAlt": "Label Wala 웹사이트"
+  },
+  {
+    "id": "nutsquare-ecommerce",
+    "client": "NutSquare",
+    "industry": "전자상거래 / 식품",
+    "title": "로그인 마찰 없는 커스텀 전자상거래 웹사이트",
+    "heroTitle": "건강한 스낵 브랜드를 위한 빠른 전자상거래 경험 설계",
+    "snippet": "사용자가 강제 로그인 없이 탐색, 장바구니 추가 및 결제할 수 있는 커스텀 전자상거래 웹사이트를 구축했습니다.",
+    "challenge": "클라이언트는 원활한 결제 프로세스와 사용자 로그인 요구 사항이 없는 간단한 구매 경험을 원했습니다.",
+    "solution": "단순성에 중점을 둔 장바구니 추가, 주문 흐름 및 결제 통합을 갖춘 React 기반 전자상거래 사이트를 개발했습니다.",
+    "impact": "웹사이트는 강력한 성능과 SEO 준비 상태를 갖춘 빠르고 마찰 없는 쇼핑 경험을 제공합니다.",
+    "services": [
+      "전자상거래 디자인",
+      "React 개발",
+      "결제 통합",
+      "성능 최적화"
+    ],
+    "deliverables": [
+      "커스텀 스토어프론트",
+      "장바구니 및 결제 흐름",
+      "반응형 레이아웃"
+    ],
+    "testimonial": {
+      "name": "Navneet",
+      "quote": "결제 흐름이 간단하고 빠르며 고객을 위해 원했던 대로입니다."
+    },
+    "metric": "90+ 성능 점수",
+    "meta": "커스텀 React 구축",
+    "href": "/case-studies/nutsquare-ecommerce",
+    "liveUrl": "",
+    "image": "/casestudy/nuts.png",
+    "images": ["/casestudy/nuts1.png","/casestudy/nuts3.png"],
+    "imageAlt": "NutSquare 전자상거래 웹사이트"
+  },
+  {
+    "id": "recytronics-foundation",
+    "client": "Recytronics Foundation",
+    "industry": "비영리 / 지속가능성",
+    "title": "Next.js로 구축된 성능 중심 NGO 웹사이트",
+    "heroTitle": "지속가능성 중심 NGO가 영향력을 명확하게 전달하도록 지원",
+    "snippet": "인식, 확산 및 장기적인 콘텐츠 성장을 지원하기 위한 깔끔하고 빠른 웹사이트를 구축했습니다.",
+    "challenge": "재단은 빠르고 접근 가능하면서도 사명을 명확하게 전달하는 현대적인 웹사이트가 필요했습니다.",
+    "solution": "구조화된 콘텐츠, 깔끔한 UI 및 SEO 친화적인 페이지를 갖춘 Next.js 웹사이트를 설계하고 개발했습니다.",
+    "impact": "웹사이트가 빠르게 로드되고 성능에서 90+ 점수를 달성하며 재단의 작업을 명확하게 제시합니다.",
+    "services": [
+      "웹사이트 디자인",
+      "Next.js 개발",
+      "SEO 최적화"
+    ],
+    "deliverables": [
+      "Next.js 웹사이트",
+      "콘텐츠 구조",
+      "SEO 준비 페이지"
+    ],
+    "testimonial": {
+      "name": "재단 팀",
+      "quote": "웹사이트가 깔끔하고 빠르며 우리의 사명을 명확하게 전달합니다."
+    },
+    "metric": "90+ 성능 점수",
+    "meta": "명확성과 영향력을 위해 구축",
+    "href": "/case-studies/recytronics-foundation",
+    "liveUrl": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "images": ["/casestudy/r1.png","/casestudy/r2.png"],
+    "imageAlt": "Recytronics Foundation 웹사이트"
+  },
+  {
+    "id": "ads-enviro",
+    "client": "ADS Enviro Group",
+    "industry": "환경 서비스",
+    "title": "명확성과 속도를 위해 구축된 기업 웹사이트",
+    "heroTitle": "환경 서비스 회사를 위한 전문적이고 SEO 준비된 웹사이트 구축",
+    "snippet": "성능, 구조 및 장기적인 유지보수성에 중점을 둔 깔끔한 기업 웹사이트를 구축했습니다.",
+    "challenge": "회사는 서비스를 명확하게 설명하고 디지털 존재감을 개선하기 위한 현대적인 웹사이트가 필요했습니다.",
+    "solution": "깔끔한 레이아웃, 빠른 로드 시간 및 SEO 모범 사례를 갖춘 Next.js 기반 웹사이트를 개발했습니다.",
+    "impact": "웹사이트는 강력한 성능, 명확한 메시징 및 전문적인 온라인 존재감을 제공합니다.",
+    "services": [
+      "웹사이트 디자인",
+      "Next.js 개발",
+      "SEO 최적화"
+    ],
+    "deliverables": [
+      "기업 웹사이트",
+      "반응형 레이아웃",
+      "SEO 구조"
+    ],
+    "testimonial": {
+      "name": "ADS Enviro 팀",
+      "quote": "웹사이트가 우리의 작업을 명확하게 제시하고 모든 기기에서 잘 작동합니다."
+    },
+    "metric": "빠르고 최적화된 구축",
+    "meta": "Next.js 기업 사이트",
+    "href": "/case-studies/ads-enviro",
+    "liveUrl": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "images": ["/casestudy/a1.png","/casestudy/a2.png"],
+    "imageAlt": "ADS Enviro Group 웹사이트"
+  },
+  {
+    "id": "tipsy-ai-connection-platform",
+    "client": "Tipsy (내부 제품)",
+    "industry": "AI / 소셜 제품",
+    "title": "의도 기반 대화를 위한 AI 기반 플랫폼",
+    "heroTitle": "의미 있는 마인드셋 기반 연결을 위한 AI 지원 플랫폼 구축",
+    "snippet": "스와이프나 무작위 채팅이 아닌 공유된 의도와 마인드셋을 통해 사용자가 연결할 수 있도록 AI 가이드 질문을 사용하는 제품을 구축했습니다.",
+    "challenge": "대부분의 채팅 플랫폼은 이해보다 참여를 우선시하여 피상적이거나 시끄러운 대화로 이어집니다. 과제는 AI를 인간 연결의 대체물로 만들지 않고 의도적인 상호작용을 장려하는 시스템을 설계하는 것이었습니다.",
+    "solution": "Gemini 기반 질문 흐름, 마인드셋 기반 매칭 및 실시간 채팅을 사용하여 풀스택 웹 애플리케이션을 설계하고 개발했습니다. 사용자는 일대일로 연결하거나 공유된 관심사와 응답을 기반으로 그룹을 만들 수 있습니다.",
+    "impact": "플랫폼은 더 느리고 더 의도적인 대화를 가능하게 하며 자동화보다 지도에 중점을 둔 책임 있는 AI 사용을 보여줍니다.",
+    "services": [
+      "제품 디자인",
+      "풀스택 개발",
+      "AI 통합",
+      "실시간 기능"
+    ],
+    "deliverables": [
+      "AI 가이드 질문 흐름",
+      "성격 기반 매칭 로직",
+      "1:1 채팅 및 그룹 대화",
+      "확장 가능한 백엔드 아키텍처"
+    ],
+    "testimonial": {
+      "name": "내부 제품 팀",
+      "quote": "Tipsy는 AI가 의미 있는 인간 대화를 대체하지 않고 어떻게 지원할 수 있는지 탐색하는 데 도움이 되었습니다."
+    },
+    "metric": "AI 지원 매칭 및 실시간 채팅",
+    "meta": "Next.js, Node.js, MongoDB, Gemini",
+    "href": "/case-studies/tipsy",
+    "liveUrl": "",
+    "image": "/casestudy/tipsy.png",
+    "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
+    "imageAlt": "Tipsy AI 기반 대화 플랫폼"
+  }
+]

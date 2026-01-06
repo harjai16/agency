@@ -4,19 +4,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Section from "./ui/Section";
 import Button from "./ui/Button";
-import testimonials from "@/data/testimonials.json";
+import { useLocaleData } from "@/lib/use-locale-data";
+import { useTranslations } from "@/lib/translations-context";
 
 const Testimonials = () => {
+  const t = useTranslations();
+  const { data: testimonials, loading } = useLocaleData('testimonials');
+  
+  // Ensure testimonials is always an array
+  const testimonialsList = Array.isArray(testimonials) ? testimonials : [];
+  
   const perPage = 3;
 
   // Build pages of up to 3 testimonials each
   const pages = useMemo(() => {
+    if (!testimonialsList || testimonialsList.length === 0) return [];
     const chunks = [];
-    for (let i = 0; i < testimonials.length; i += perPage) {
-      chunks.push(testimonials.slice(i, i + perPage));
+    for (let i = 0; i < testimonialsList.length; i += perPage) {
+      chunks.push(testimonialsList.slice(i, i + perPage));
     }
     return chunks;
-  }, []);
+  }, [testimonialsList]);
 
   const [page, setPage] = useState(0);
   const hasSlider = pages.length > 1;
@@ -41,31 +49,29 @@ const Testimonials = () => {
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
         <div className="space-y-2 sm:space-y-3 max-w-7xl">
           <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gray-500">
-            Testimonials
+            {t?.testimonials?.badge || "Testimonials"}
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
-            Brands that build with us
-            <br className="hidden md:block" /> keep coming back for results.
+            {t?.testimonials?.title || "Brands that build with us"}
+            <br className="hidden md:block" /> {t?.testimonials?.titleLine2 || "keep coming back for results."}
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-5xl">
-    From the first kickoff call to post-launch support — our clients trust us to
-    deliver websites that are fast, beautiful, and built to convert. Here’s what
-    they have to say.
-  </p>
-</div>
+            {t?.testimonials?.description || "From the first kickoff call to post-launch support — our clients trust us to deliver websites that are fast, beautiful, and built to convert. Here's what they have to say."}
+          </p>
+        </div>
 
 
-<Button 
-  variant="ghost" 
-  className="self-start md:self-auto"
-  onClick={() => {
-    document.getElementById("contact")?.scrollIntoView({
-                  behavior: "smooth",
-                });
-  }}
->
-  Request website audit
-</Button>
+        <Button 
+          variant="ghost" 
+          className="self-start md:self-auto"
+          onClick={() => {
+            document.getElementById("contact")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          {t?.testimonials?.requestAudit || "Request website audit"}
+        </Button>
 
       </div>
 
@@ -145,7 +151,7 @@ const Testimonials = () => {
                 type="button"
                 onClick={goPrev}
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white text-xs hover:border-gray-900 hover:bg-gray-50 transition-colors"
-                aria-label="Previous testimonials"
+                aria-label={t?.testimonials?.previous || "Previous testimonials"}
               >
                 ←
               </button>
@@ -153,7 +159,7 @@ const Testimonials = () => {
                 type="button"
                 onClick={goNext}
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white text-xs hover:border-gray-900 hover:bg-gray-50 transition-colors"
-                aria-label="Next testimonials"
+                aria-label={t?.testimonials?.next || "Next testimonials"}
               >
                 →
               </button>
@@ -169,7 +175,7 @@ const Testimonials = () => {
                     type="button"
                     onClick={() => setPage(i)}
                     className="group relative flex items-center"
-                    aria-label={`Go to testimonials set ${i + 1}`}
+                    aria-label={(t?.testimonials?.goToSet || "Go to testimonials set {number}").replace("{number}", String(i + 1))}
                   >
                     <div
                       className={[

@@ -6,7 +6,9 @@ import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { getCurrentLocale, createLocalizedHref } from "@/lib/navigation";
+import { useTranslations } from "@/lib/translations-context";
 import Contact from "@/componenets/Contact";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOBacklinks from "@/componenets/global/SEOBacklinks";
@@ -20,21 +22,24 @@ const fadeUp = (delay = 0) => ({
 
 const BlogsPage = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchBlogs();
-  }, []);
+  }, [currentLocale]);
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch('/api/blogs?status=published');
+      const response = await fetch(`/api/blogs?status=published&locale=${currentLocale}`);
       const data = await response.json();
       
       if (data.success) {
         const blogsList = data.blogs || [];
-        console.log('Fetched blogs:', blogsList.map(b => ({ slug: b.slug, title: b.title, status: b.status })));
+        console.log('Fetched blogs:', blogsList.map(b => ({ slug: b.slug, title: b.title, status: b.status, locale: b.locale })));
         setBlogs(blogsList);
       }
     } catch (error) {
@@ -47,7 +52,7 @@ const BlogsPage = () => {
   const formatDate = (dateString) => {
     if (!dateString) return '';
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString(currentLocale === 'en' ? 'en-US' : currentLocale, { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
@@ -116,25 +121,25 @@ const BlogsPage = () => {
             <motion.div {...fadeUp(0)} className="space-y-6 max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Blog
+                {t?.blogs?.badge || "Blog"}
               </div>
 
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-                Blog{" "}
+                {t?.blogs?.title || "Blog"}{" "}
                 <span className="inline-block border-b border-gray-300 pb-1">
-                  Web Design & Development Insights
+                  {t?.blogs?.subtitle || "Web Design & Development Insights"}
                 </span>
               </h1>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-                Practical insights from building real websites. Thoughts and learnings on <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web design</Link>, <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">development</Link>, performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites.
+                {t?.blogs?.description || "Practical insights from building real websites. Thoughts and learnings on"} <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{t?.blogs?.webDesign || "web design"}</Link>, <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{t?.blogs?.development || "development"}</Link>, {t?.blogs?.descriptionCont || "performance, and SEO — based on real projects, not theory. Short, useful reads focused on what actually works when building and shipping websites."}
               </p>
 
               <div className="flex flex-wrap items-center gap-3">
                 <Button
-                  onClick={() => router.push("/contact")}
+                  onClick={() => router.push(createLocalizedHref("/contact", currentLocale))}
                 >
-                  Discuss your project
+                  {t?.blogs?.discussProject || "Discuss your project"}
                 </Button>
                 <Button
                   variant="ghost"
@@ -144,7 +149,7 @@ const BlogsPage = () => {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Browse articles
+                  {t?.blogs?.browseArticles || "Browse articles"}
                 </Button>
               </div>
 
@@ -174,7 +179,7 @@ const BlogsPage = () => {
             {blogs.length > 0 && (
               <motion.div {...fadeUp(0.1)} className="relative">
                 <div className="pointer-events-none absolute -top-10 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-gray-100 via-gray-50 to-white blur-3xl" />
-                <Link href={`/blogs/${blogs[0].slug}`} className="block">
+                <Link href={createLocalizedHref(`/blogs/${blogs[0].slug}`, currentLocale)} className="block">
                   <article className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur shadow-[0_22px_55px_rgba(15,23,42,0.10)]">
                     {/* Image */}
                     {blogs[0].featuredImage && (
@@ -206,7 +211,7 @@ const BlogsPage = () => {
                     {/* Content */}
                     <div className="px-5 pt-4 pb-5 space-y-2">
                       <p className="text-[11px] uppercase tracking-[0.18em] text-gray-500">
-                        Featured article
+                        {t?.blogs?.featuredArticle || "Featured article"}
                       </p>
                       <h2 className="text-sm md:text-base font-semibold text-gray-900 line-clamp-2">
                         {blogs[0].title}
@@ -221,7 +226,7 @@ const BlogsPage = () => {
                           <span>{blogs[0].author}</span>
                         )}
                         <span className="inline-flex items-center gap-1 font-medium text-gray-800 hover:text-black hover:gap-1.5 transition-all">
-                          Read article <span className="text-xs">↗</span>
+                          {t?.blogs?.readArticle || "Read article"} <span className="text-xs">↗</span>
                         </span>
                       </div>
                     </div>
@@ -256,17 +261,17 @@ const BlogsPage = () => {
                 className="flex flex-wrap items-center justify-between gap-4"
               >
                 <div className="text-xs md:text-sm text-gray-500">
-                  Showing {blogs.length} {blogs.length === 1 ? 'article' : 'articles'} on web design, development, and digital marketing.
+                  {t?.blogs?.showing || "Showing"} {blogs.length} {blogs.length === 1 ? (t?.blogs?.article || 'article') : (t?.blogs?.articles || 'articles')} {t?.blogs?.onTopics || "on web design, development, and digital marketing."}
                 </div>
                 <div className="flex flex-wrap gap-2 text-[11px] md:text-xs">
                   <button className="rounded-full border border-gray-900 bg-gray-900 px-3 py-1 text-white">
-                    All articles
+                    {t?.blogs?.allArticles || "All articles"}
                   </button>
                   <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
-                    Web Design
+                    {t?.blogs?.webDesign || "Web Design"}
                   </button>
                   <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
-                    Development
+                    {t?.blogs?.development || "Development"}
                   </button>
                   <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
                     SEO
@@ -285,7 +290,7 @@ const BlogsPage = () => {
                     whileHover={{ y: -4 }}
                     className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
                   >
-                    <Link href={`/blogs/${blog.slug}`} className="flex flex-col h-full">
+                    <Link href={createLocalizedHref(`/blogs/${blog.slug}`, currentLocale)} className="flex flex-col h-full">
                       {/* Top image area */}
                       <div className="relative h-40 md:h-44 overflow-hidden bg-gray-50">
                         {blog.featuredImage ? (
@@ -329,7 +334,7 @@ const BlogsPage = () => {
                             )}
                           </div>
                           <span className="inline-flex items-center gap-1 font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all">
-                            Read article
+                            {t?.blogs?.readArticle || "Read article"}
                             <span className="text-xs">↗</span>
                           </span>
                         </div>
@@ -360,22 +365,21 @@ const BlogsPage = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
-          Found this useful?
+          {t?.blogs?.foundUseful || "Found this useful?"}
           </p>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-           Ready to discuss your website project?
+           {t?.blogs?.readyToDiscuss || "Ready to discuss your website project?"}
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
-          If something here sparked an idea or raised a question, feel free to reach out.
-Share a bit about what you’re exploring and we’ll help you think through the next steps.
+          {t?.blogs?.ctaDescription || "If something here sparked an idea or raised a question, feel free to reach out. Share a bit about what you're exploring and we'll help you think through the next steps."}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
            
             <Button
               variant="ghost"
-             onClick={() => router.push("/contact")}
+             onClick={() => router.push(createLocalizedHref("/contact", currentLocale))}
             >
-              Start a conversation
+              {t?.blogs?.startConversation || "Start a conversation"}
             </Button>
           </div>
         </motion.div>

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ngo-wordpress",
+    "brand": "एनजीओ वेबसाइट",
+    "title": "दीर्घकालिक स्थिरता के लिए कस्टम WordPress पुनर्निर्माण",
+    "snippet": "अपडेट समस्याओं को समाप्त करने और रखरखाव में सुधार के लिए कस्टम WordPress थीम के साथ एक एनजीओ वेबसाइट को पुनर्निर्मित किया गया।",
+    "url": "",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "एनजीओ वेबसाइट पुनर्निर्माण पूर्वावलोकन"
+  },
+  {
+    "id": "labelwala",
+    "brand": "Label Wala",
+    "title": "प्रिंटिंग ब्रांड के लिए उच्च-प्रदर्शन Next.js वेबसाइट",
+    "snippet": "Next.js के साथ बनाई गई तेज़, SEO-तैयार ब्रांड वेबसाइट, मोबाइल और डेस्कटॉप पर प्रदर्शन पर केंद्रित।",
+    "url": "",
+    "image": "/casestudy/labelwaala1.png",
+    "imageAlt": "Label Wala वेबसाइट पूर्वावलोकन"
+  },
+  {
+    "id": "nutsquare",
+    "brand": "NutSquare",
+    "title": "बिना बाधा चेकआउट के साथ कस्टम ई-कॉमर्स वेबसाइट",
+    "snippet": "बिना बाध्यकारी लॉगिन के बनाया गया React-आधारित ई-कॉमर्स साइट, गति, सादगी और सुचारू भुगतान पर केंद्रित।",
+    "url": "",
+    "image": "/casestudy/nuts.png",
+    "imageAlt": "NutSquare ई-कॉमर्स वेबसाइट पूर्वावलोकन"
+  },
+  {
+    "id": "recytronics",
+    "brand": "Recytronics Foundation",
+    "title": "Next.js के साथ बनाई गई प्रदर्शन-केंद्रित एनजीओ वेबसाइट",
+    "snippet": "सस्टेनेबिलिटी पहलों को संप्रेषित करने और आउटरीच प्रयासों का समर्थन करने के लिए डिज़ाइन की गई स्वच्छ, तेज़ वेबसाइट।",
+    "url": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "imageAlt": "Recytronics Foundation वेबसाइट पूर्वावलोकन"
+  },
+  {
+    "id": "ads-enviro",
+    "brand": "ADS Enviro Group",
+    "title": "स्पष्टता और SEO के लिए अनुकूलित कॉर्पोरेट वेबसाइट",
+    "snippet": "पर्यावरणीय सेवाओं में गति, संरचना और दीर्घकालिक स्केलेबिलिटी के लिए बनाई गई Next.js कंपनी वेबसाइट।",
+    "url": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "imageAlt": "ADS Enviro Group वेबसाइट पूर्वावलोकन"
+  }
+]
+

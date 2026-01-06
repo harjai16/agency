@@ -8,21 +8,41 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const status = searchParams.get('status'); // 'draft' or 'published'
     const search = searchParams.get('search'); // Search query
+    const locale = searchParams.get('locale') || 'en'; // Locale filter
 
     let query = {};
     if (status) {
       query.status = status;
     }
 
+    // Add locale filter - if locale field exists, filter by it, otherwise show all (for backward compatibility)
+    // Blogs without locale field will be shown in all languages (fallback to English)
+    if (locale && locale !== 'en') {
+      query.$or = [
+        { locale: locale },
+        { locale: { $exists: false } } // Include blogs without locale field (backward compatibility)
+      ];
+    } else {
+      // For English, show blogs with 'en' locale or no locale field
+      query.$or = [
+        { locale: 'en' },
+        { locale: { $exists: false } }
+      ];
+    }
+
     // Add search functionality
     if (search && search.trim()) {
       const searchRegex = new RegExp(search.trim(), 'i');
-      query.$or = [
-        { title: searchRegex },
-        { excerpt: searchRegex },
-        { keywords: searchRegex },
-        { content: searchRegex }
-      ];
+      const searchQuery = {
+        $or: [
+          { title: searchRegex },
+          { excerpt: searchRegex },
+          { keywords: searchRegex },
+          { content: searchRegex }
+        ]
+      };
+      // Combine with existing query
+      query = { $and: [query, searchQuery] };
     }
 
     const blogs = await db.collection('blogs').find(query).sort({ createdAt: -1 }).toArray();

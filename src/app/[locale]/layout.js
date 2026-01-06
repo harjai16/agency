@@ -1,11 +1,18 @@
 /**
  * Locale-specific Layout
  * 
+ * STATIC EXPORT COMPATIBLE:
+ * - Uses generateStaticParams to pre-generate all locale pages at build time
+ * - Translations are loaded at build time via dynamic imports
+ * - Metadata is generated statically for each locale
+ * - No runtime dependencies or SSR-only features
+ * 
  * This layout wraps all locale-specific routes.
  * It receives the locale from the [locale] segment and:
  * - Sets the <html lang=""> attribute dynamically
  * - Supports RTL layout automatically for Arabic
  * - Provides locale context to child components
+ * - Generates static pages for all 12 supported locales
  */
 
 import { Geist, Geist_Mono } from "next/font/google";
@@ -162,7 +169,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Generate static params for all locales
+/**
+ * Generate static params for all locales
+ * 
+ * STATIC EXPORT COMPATIBLE:
+ * - This function runs at build time
+ * - Generates static pages for all 12 supported locales
+ * - Each locale gets its own pre-rendered pages
+ * - Works perfectly with `next export` or `output: 'export'`
+ */
 export function generateStaticParams() {
   return locales.map((locale) => ({
     locale: locale,

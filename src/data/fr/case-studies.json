@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ngo-wordpress-rebuild",
+    "client": "Khushali Mehta",
+    "industry": "Sans but lucratif",
+    "title": "Stabilisation d'un site web d'ONG avec une reconstruction WordPress personnalisée",
+    "heroTitle": "Reconstruction d'un site web d'ONG pour éliminer les problèmes de mise à jour et améliorer la maintenabilité",
+    "snippet": "Nous avons repensé et reconstruit un site web d'ONG en utilisant un thème WordPress personnalisé pour corriger les pannes fréquentes causées par les mises à jour du thème et de la version.",
+    "challenge": "Le site web précédent dépendait d'un thème WordPress par défaut et se cassait fréquemment après les mises à jour, rendant les modifications de contenu risquées et chronophages.",
+    "solution": "Nous avons reconstruit le site web en utilisant un thème WordPress personnalisé avec des mises en page propres et un processus de mise à jour stable, adapté aux besoins de contenu de l'ONG.",
+    "impact": "Le site web est devenu stable, plus facile à mettre à jour et ne se casse plus lors des mises à jour de routine de WordPress.",
+    "services": [
+      "Refonte du site web",
+      "Développement WordPress personnalisé",
+      "UX et structure du contenu"
+    ],
+    "deliverables": [
+      "Thème WordPress personnalisé",
+      "Mises en page responsives",
+      "Configuration CMS"
+    ],
+    "testimonial": {
+      "name": "Administrateur ONG",
+      "quote": "Gérer le site web est beaucoup plus facile maintenant. Les mises à jour ne cassent plus le site et le design semble plus aligné avec notre travail."
+    },
+    "metric": "Mises à jour stables et faciles",
+    "meta": "Livré en 4–6 semaines",
+    "href": "/case-studies/ngo-wordpress-rebuild",
+    "liveUrl": "",
+    "image": "/casestudy/projectdeep.png",
+    "images": ["/casestudy/projectdeep.png","/casestudy/project2.png"],
+    "imageAlt": "Refonte du site web de l'ONG"
+  },
+  {
+    "id": "labelwala-nextjs",
+    "client": "Label Wala",
+    "industry": "Fabrication / Impression",
+    "title": "Site web de marque haute performance construit avec Next.js",
+    "heroTitle": "Construction d'un site web rapide et prêt pour le SEO pour une marque d'impression",
+    "snippet": "Nous avons construit un site web de marque moderne en Next.js axé sur la vitesse, les performances et la visibilité dans les moteurs de recherche.",
+    "challenge": "L'entreprise avait besoin d'un site web rapide et professionnel qui représentait clairement sa marque et fonctionnait bien sur tous les appareils.",
+    "solution": "Nous avons conçu et développé un site web Next.js avec des mises en page axées sur les performances, un design responsive et les meilleures pratiques SEO.",
+    "impact": "Le site web a atteint des scores de performance de 90+ sur mobile et desktop, se chargeant rapidement et fournissant une base solide pour le SEO.",
+    "services": [
+      "Conception de site web",
+      "Développement Next.js",
+      "Optimisation des performances",
+      "Configuration SEO"
+    ],
+    "deliverables": [
+      "Site web Next.js",
+      "Interface utilisateur responsive",
+      "Pages prêtes pour le SEO"
+    ],
+    "testimonial": {
+      "name": "Akshit Gupta",
+      "quote": "Le site se charge rapidement, a l'air propre et fonctionne parfaitement sur tous les appareils. Exactement ce dont nous avions besoin."
+    },
+    "metric": "Score de performance 90+",
+    "meta": "Construction axée sur le SEO et la vitesse",
+    "href": "/case-studies/labelwala-nextjs",
+    "liveUrl": "",
+    "image": "/casestudy/labelwaala1.png",
+    "images": ["/casestudy/labelwaala1.png","/casestudy/label2.png"],
+    "imageAlt": "Site web Label Wala"
+  },
+  {
+    "id": "nutsquare-ecommerce",
+    "client": "NutSquare",
+    "industry": "E-commerce / Alimentation",
+    "title": "Site web e-commerce personnalisé sans friction de connexion",
+    "heroTitle": "Conception d'une expérience e-commerce rapide pour une marque de snacks sains",
+    "snippet": "Nous avons construit un site web e-commerce personnalisé qui permet aux utilisateurs de naviguer, ajouter au panier et passer à la caisse sans connexion forcée.",
+    "challenge": "Le client voulait une expérience d'achat simple avec un processus de paiement fluide et aucune exigence de connexion utilisateur.",
+    "solution": "Nous avons développé un site e-commerce basé sur React avec ajout au panier, flux de commande et intégration de paiement axée sur la simplicité.",
+    "impact": "Le site web offre une expérience d'achat rapide et sans friction avec de solides performances et une préparation SEO.",
+    "services": [
+      "Conception e-commerce",
+      "Développement React",
+      "Intégration de paiement",
+      "Optimisation des performances"
+    ],
+    "deliverables": [
+      "Vitrine personnalisée",
+      "Flux panier et paiement",
+      "Mises en page responsives"
+    ],
+    "testimonial": {
+      "name": "Navneet",
+      "quote": "Le flux de paiement est simple et rapide, exactement comme nous le voulions pour nos clients."
+    },
+    "metric": "Score de performance 90+",
+    "meta": "Construction React personnalisée",
+    "href": "/case-studies/nutsquare-ecommerce",
+    "liveUrl": "",
+    "image": "/casestudy/nuts.png",
+    "images": ["/casestudy/nuts1.png","/casestudy/nuts3.png"],
+    "imageAlt": "Site web e-commerce NutSquare"
+  },
+  {
+    "id": "recytronics-foundation",
+    "client": "Recytronics Foundation",
+    "industry": "Sans but lucratif / Durabilité",
+    "title": "Site web d'ONG axé sur les performances construit avec Next.js",
+    "heroTitle": "Aider une ONG axée sur la durabilité à communiquer clairement son impact",
+    "snippet": "Nous avons construit un site web propre et rapide pour soutenir la sensibilisation, la portée et la croissance du contenu à long terme.",
+    "challenge": "La fondation avait besoin d'un site web moderne qui communiquait clairement sa mission tout en restant rapide et accessible.",
+    "solution": "Nous avons conçu et développé un site web Next.js avec du contenu structuré, une interface utilisateur propre et des pages conviviales pour le SEO.",
+    "impact": "Le site web se charge rapidement, obtient des scores de 90+ en performance et présente le travail de la fondation avec clarté.",
+    "services": [
+      "Conception de site web",
+      "Développement Next.js",
+      "Optimisation SEO"
+    ],
+    "deliverables": [
+      "Site web Next.js",
+      "Structure du contenu",
+      "Pages prêtes pour le SEO"
+    ],
+    "testimonial": {
+      "name": "Équipe de la Fondation",
+      "quote": "Le site web semble propre, rapide et communique clairement notre mission."
+    },
+    "metric": "Score de performance 90+",
+    "meta": "Construit pour la clarté et l'impact",
+    "href": "/case-studies/recytronics-foundation",
+    "liveUrl": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "images": ["/casestudy/r1.png","/casestudy/r2.png"],
+    "imageAlt": "Site web Recytronics Foundation"
+  },
+  {
+    "id": "ads-enviro",
+    "client": "ADS Enviro Group",
+    "industry": "Services Environnementaux",
+    "title": "Site web d'entreprise construit pour la clarté et la vitesse",
+    "heroTitle": "Construction d'un site web professionnel et prêt pour le SEO pour une entreprise de services environnementaux",
+    "snippet": "Nous avons construit un site web d'entreprise propre axé sur les performances, la structure et la maintenabilité à long terme.",
+    "challenge": "L'entreprise avait besoin d'un site web moderne pour expliquer clairement ses services et améliorer sa présence numérique.",
+    "solution": "Nous avons développé un site web basé sur Next.js avec des mises en page propres, des temps de chargement rapides et les meilleures pratiques SEO.",
+    "impact": "Le site web offre de solides performances, une messagerie claire et une présence en ligne professionnelle.",
+    "services": [
+      "Conception de site web",
+      "Développement Next.js",
+      "Optimisation SEO"
+    ],
+    "deliverables": [
+      "Site web d'entreprise",
+      "Mises en page responsives",
+      "Structure SEO"
+    ],
+    "testimonial": {
+      "name": "Équipe ADS Enviro",
+      "quote": "Le site web présente clairement notre travail et fonctionne bien sur tous les appareils."
+    },
+    "metric": "Construction rapide et optimisée",
+    "meta": "Site d'entreprise Next.js",
+    "href": "/case-studies/ads-enviro",
+    "liveUrl": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "images": ["/casestudy/a1.png","/casestudy/a2.png"],
+    "imageAlt": "Site web ADS Enviro Group"
+  },
+  {
+    "id": "tipsy-ai-connection-platform",
+    "client": "Tipsy (Produit Interne)",
+    "industry": "IA / Produit Social",
+    "title": "Plateforme alimentée par l'IA pour des conversations basées sur l'intention",
+    "heroTitle": "Construction d'une plateforme assistée par l'IA pour des connexions significatives basées sur l'état d'esprit",
+    "snippet": "Nous avons construit un produit qui utilise des questions guidées par l'IA pour aider les utilisateurs à se connecter grâce à une intention et un état d'esprit partagés plutôt que par des balayages ou des chats aléatoires.",
+    "challenge": "La plupart des plateformes de chat privilégient l'engagement plutôt que la compréhension, ce qui conduit à des conversations superficielles ou bruyantes. Le défi était de concevoir un système qui encourage l'interaction intentionnelle sans transformer l'IA en remplacement de la connexion humaine.",
+    "solution": "Nous avons conçu et développé une application web full-stack utilisant des flux de questions alimentés par Gemini, un appariement basé sur l'état d'esprit et un chat en temps réel. Les utilisateurs peuvent se connecter en tête-à-tête ou créer des groupes basés sur des intérêts et des réponses partagés.",
+    "impact": "La plateforme permet des conversations plus lentes et intentionnelles et démontre une utilisation responsable de l'IA axée sur l'orientation plutôt que sur l'automation.",
+    "services": [
+      "Conception de produit",
+      "Développement full-stack",
+      "Intégration IA",
+      "Fonctionnalités en temps réel"
+    ],
+    "deliverables": [
+      "Flux de questions guidé par l'IA",
+      "Logique d'appariement basée sur la personnalité",
+      "Chat 1:1 et conversations de groupe",
+      "Architecture backend scalable"
+    ],
+    "testimonial": {
+      "name": "Équipe Produit Interne",
+      "quote": "Tipsy nous a aidés à explorer comment l'IA peut soutenir des conversations humaines significatives sans les remplacer."
+    },
+    "metric": "Appariement assisté par l'IA et chat en temps réel",
+    "meta": "Next.js, Node.js, MongoDB, Gemini",
+    "href": "/case-studies/tipsy",
+    "liveUrl": "",
+    "image": "/casestudy/tipsy.png",
+    "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
+    "imageAlt": "Plateforme de conversation alimentée par l'IA Tipsy"
+  }
+]

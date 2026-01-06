@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "Fallstudien",
+    "title": "Webentwicklungs-Fallstudien",
+    "titleHighlight": "Hochleistungs-Websites, die wir für Unternehmen gebaut haben",
+    "description": "Echte Projekte, echte Ergebnisse. Ein genauerer Blick auf {websites}, die wir entworfen und gebaut haben — fokussiert auf Geschwindigkeit, Stabilität und Benutzerfreundlichkeit. Von schnelleren Ladezeiten bis zu reibungsloseren Abläufen und klareren Inhalten, dies sind ausgelieferte Projekte, keine Konzepte. Durchsuchen Sie unser {portfolio} für weitere Beispiele oder erkunden Sie unsere {webDevelopmentServices}.",
+    "websites": "Websites",
+    "portfolio": "Portfolio",
+    "webDevelopmentServices": "Webentwicklungsdienstleistungen",
+    "ctaPrimary": "Besprechen Sie Ihr Projekt",
+    "ctaSecondary": "Fallstudien durchsuchen"
+  },
+  "listing": {
+    "projectsLabel": "{count} Projekte",
+    "subtitle": "Von SaaS und Fintech bis zu E-Commerce und modernen Marken.",
+    "readCaseStudy": "Fallstudie lesen"
+  },
+  "cta": {
+    "badge": "Etwas Relevantes gesehen?",
+    "title": "Besprechen Sie Ihr Projekt mit unserem Team",
+    "description": "Wenn eines dieser Projekte dem nahekommt, was Sie bauen, lassen Sie uns darüber sprechen. Teilen Sie ein wenig über Ihre Ziele und Einschränkungen mit, und wir schlagen einen klaren Ansatz und realistische nächste Schritte vor.",
+    "button": "Projektdetails senden"
+  }
+}

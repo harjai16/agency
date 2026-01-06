@@ -57,9 +57,9 @@ const Footer = () => {
             style={{ marginTop: '-35px' }}
           >
             <div className="relative w-60  sm:w-47  md:w-32  lg:w-53">
-              <img
+              <Image
                 src="/our_logo/logo-removebg-preview.png"
-                alt="Swagatam Tech Logo - Website Development Agency"
+                alt={t?.seo?.siteName ? `${t.seo.siteName} Logo` : "Swagatam Tech Logo - Website Development Agency"}
                 fill
                 className="object-contain group-hover:opacity-80 transition-opacity"
                 style={{ backgroundColor: 'transparent' }}

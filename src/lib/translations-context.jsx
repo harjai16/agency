@@ -1,8 +1,14 @@
 /**
  * Translations Context
  * 
+ * STATIC EXPORT COMPATIBLE:
+ * - Translations are passed as props from server component (loaded at build time)
+ * - Client components access translations via context (no runtime loading)
+ * - No API calls or server dependencies
+ * - Works perfectly with static export
+ * 
  * Provides translations to client components
- * Loads translations based on current locale
+ * Translations are loaded at build time in the layout and passed down
  */
 
 "use client";

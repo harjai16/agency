@@ -3,10 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import ContactForm from "@/componenets/global/ContactForm";
 import SEOBacklinks from "@/componenets/global/SEOBacklinks";
+import { useTranslations } from "@/lib/translations-context";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -16,6 +19,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const ContactPage = () => {
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
   return (
     <main className="bg-white text-gray-900">
 
@@ -28,18 +34,42 @@ const ContactPage = () => {
           className="max-w-fullhd mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 space-y-4 sm:space-y-6"
         >
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500">
-            Get in touch
+            {t?.contact?.getInTouch || "Get in touch"}
           </p>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900">
-           Website Development Agency{" "}
+           {t?.contact?.heroTitle || "Website Development Agency"}{" "}
            <span className="inline-block border-b border-gray-300 pb-1">
-             Fast Performance Websites Built for Business
+             {t?.contact?.heroSubtitle || "Fast Performance Websites Built for Business"}
            </span>
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. At Swagatam Tech, we help teams plan and build modern, high-performance <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with clear goals and realistic timelines. Explore our <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> and <Link href="/case-studies" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> to see our <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development</Link> work. Get a free website plan today.
+            {t?.contact?.heroDescription ? (
+              <>
+                {t.contact.heroDescription.split('{websites}')[0]}
+                <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                  {t.contact.websites}
+                </Link>
+                {t.contact.heroDescription.split('{websites}')[1]?.split('{portfolio}')[0]}
+                <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                  {t.contact.portfolio}
+                </Link>
+                {t.contact.heroDescription.split('{portfolio}')[1]?.split('{caseStudies}')[0]}
+                <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                  {t.contact.caseStudies}
+                </Link>
+                {t.contact.heroDescription.split('{caseStudies}')[1]?.split('{webDevelopment}')[0]}
+                <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                  {t.contact.webDevelopment}
+                </Link>
+                {t.contact.heroDescription.split('{webDevelopment}')[1]}
+              </>
+            ) : (
+              <>
+                Let's talk about what you're building. Tell us where you are today and what you're trying to achieve. At Swagatam Tech, we help teams plan and build modern, high-performance <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with clear goals and realistic timelines. Explore our <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> and <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> to see our <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">web development</Link> work. Get a free website plan today.
+              </>
+            )}
           </p>
 
           <Button
@@ -50,7 +80,7 @@ const ContactPage = () => {
             }
             className="mt-2"
           >
-            Talk to the team
+            {t?.contact?.talkToTeam || "Talk to the team"}
           </Button>
         </motion.div>
       </section>
@@ -67,20 +97,20 @@ const ContactPage = () => {
           <motion.div {...fadeUp(0)} className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-             Planning a new website or an improvement?
+             {t?.contact?.planningBadge || "Planning a new website or an improvement?"}
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-           Website Development Services Built for Fast Performance
+           {t?.contact?.pageTitle || "Website Development Services Built for Fast Performance"}
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-xl leading-relaxed">
-             Whether you’re starting from scratch or improving an existing site, we’ll help you prioritize what matters most and outline a clear path forward.
+             {t?.contact?.pageDescription || "Whether you're starting from scratch or improving an existing site, we'll help you prioritize what matters most and outline a clear path forward."}
             </p>
 
             <div className="space-y-2 text-xs md:text-sm text-gray-500">
               <p>
-                You can also email us directly at{" "}
+                {t?.contact?.emailDirectly || "You can also email us directly at"}{" "}
                 <a
                   href="mailto:contact@swagatamtech.com"
                   className="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-800"
@@ -90,17 +120,17 @@ const ContactPage = () => {
                 .
               </p>
               <p>
-               We usually respond within{" "}
+               {t?.contact?.respondWithin || "We usually respond within"}{" "}
                 <span className="font-medium text-gray-900">
-                  one business day.
+                  {t?.contact?.oneBusinessDay || "one business day"}
                 </span>
                 .
               </p>
             </div>
 
             <div className="text-xs md:text-sm text-gray-400 pt-2">
-              Already have a brief? 
-           Paste the key details in the form or share a document or link — whatever’s easiest.
+              {t?.contact?.alreadyHaveBrief || "Already have a brief?"}{" "}
+           {t?.contact?.briefDescription || "Paste the key details in the form or share a document or link — whatever's easiest."}
             </div>
           </motion.div>
 

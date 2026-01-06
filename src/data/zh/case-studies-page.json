@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "案例研究",
+    "title": "网站开发案例研究",
+    "titleHighlight": "我们为企业构建的高性能网站",
+    "description": "真实项目，真实结果。深入了解我们设计和构建的{websites} — 专注于速度、稳定性和可用性。从更快的加载时间到更流畅的流程和更清晰的内容，这些都是已交付的项目，而不是概念。浏览我们的{portfolio}查看更多示例，或探索我们的{webDevelopmentServices}。",
+    "websites": "网站",
+    "portfolio": "作品集",
+    "webDevelopmentServices": "网站开发服务",
+    "ctaPrimary": "讨论您的项目",
+    "ctaSecondary": "浏览案例研究"
+  },
+  "listing": {
+    "projectsLabel": "{count}个项目",
+    "subtitle": "从SaaS和金融科技到电子商务和现代品牌。",
+    "readCaseStudy": "阅读案例研究"
+  },
+  "cta": {
+    "badge": "看到相关内容了吗？",
+    "title": "与我们的团队讨论您的项目",
+    "description": "如果这些项目中的任何一个与您正在构建的内容接近，让我们讨论一下。分享一些关于您的目标和约束的信息，我们将建议一个清晰的方法和现实的下一步。",
+    "button": "发送项目详情"
+  }
+}

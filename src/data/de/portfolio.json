@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ngo-wordpress",
+    "brand": "NGO-Website",
+    "title": "Benutzerdefinierter WordPress-Neubau für langfristige Stabilität",
+    "snippet": "Umgestaltung und Neubau einer NGO-Website mit einem benutzerdefinierten WordPress-Theme, um Update-Probleme zu beseitigen und die Wartbarkeit zu verbessern.",
+    "url": "",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "Vorschau der NGO-Website-Neugestaltung"
+  },
+  {
+    "id": "labelwala",
+    "brand": "Label Wala",
+    "title": "Hochleistungs-Next.js-Website für eine Druckmarke",
+    "snippet": "Schnelle, SEO-optimierte Markenwebsite, die mit Next.js erstellt wurde und sich auf Leistung auf Mobilgeräten und Desktop konzentriert.",
+    "url": "",
+    "image": "/casestudy/labelwaala1.png",
+    "imageAlt": "Vorschau der Label Wala-Website"
+  },
+  {
+    "id": "nutsquare",
+    "brand": "NutSquare",
+    "title": "Benutzerdefinierte E-Commerce-Website mit reibungslosem Checkout",
+    "snippet": "React-basierte E-Commerce-Site ohne erzwungenes Login, die sich auf Geschwindigkeit, Einfachheit und reibungslose Zahlungen konzentriert.",
+    "url": "",
+    "image": "/casestudy/nuts.png",
+    "imageAlt": "Vorschau der NutSquare E-Commerce-Website"
+  },
+  {
+    "id": "recytronics",
+    "brand": "Recytronics Foundation",
+    "title": "Leistungsorientierte NGO-Website, erstellt mit Next.js",
+    "snippet": "Saubere, schnelle Website, die darauf ausgelegt ist, Nachhaltigkeitsinitiativen zu kommunizieren und Outreach-Bemühungen zu unterstützen.",
+    "url": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "imageAlt": "Vorschau der Recytronics Foundation-Website"
+  },
+  {
+    "id": "ads-enviro",
+    "brand": "ADS Enviro Group",
+    "title": "Unternehmenswebsite optimiert für Klarheit und SEO",
+    "snippet": "Next.js-Unternehmenswebsite, die für Geschwindigkeit, Struktur und langfristige Skalierbarkeit in Umweltdienstleistungen erstellt wurde.",
+    "url": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "imageAlt": "Vorschau der ADS Enviro Group-Website"
+  }
+]
+

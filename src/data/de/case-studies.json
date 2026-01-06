@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ngo-wordpress-rebuild",
+    "client": "Khushali Mehta",
+    "industry": "Gemeinnützig",
+    "title": "Stabilisierung einer NGO-Website mit einem benutzerdefinierten WordPress-Rebuild",
+    "heroTitle": "Wiederaufbau einer NGO-Website zur Beseitigung von Update-Problemen und Verbesserung der Wartbarkeit",
+    "snippet": "Wir haben eine NGO-Website mit einem benutzerdefinierten WordPress-Theme neu gestaltet und wiederaufgebaut, um häufige Ausfälle zu beheben, die durch Theme- und Versions-Updates verursacht wurden.",
+    "challenge": "Die vorherige Website stützte sich auf ein Standard-WordPress-Theme und brach nach Updates häufig zusammen, was Inhaltsänderungen riskant und zeitaufwändig machte.",
+    "solution": "Wir haben die Website mit einem benutzerdefinierten WordPress-Theme mit sauberen Layouts und einem stabilen Update-Prozess wiederaufgebaut, der auf die Inhaltsanforderungen der NGO zugeschnitten ist.",
+    "impact": "Die Website wurde stabil, einfacher zu aktualisieren und brach nicht mehr bei routinemäßigen WordPress-Updates zusammen.",
+    "services": [
+      "Website-Redesign",
+      "Benutzerdefinierte WordPress-Entwicklung",
+      "UX & Inhaltsstruktur"
+    ],
+    "deliverables": [
+      "Benutzerdefiniertes WordPress-Theme",
+      "Responsive Layouts",
+      "CMS-Konfiguration"
+    ],
+    "testimonial": {
+      "name": "NGO-Vertrauensperson",
+      "quote": "Die Verwaltung der Website ist jetzt viel einfacher. Updates brechen die Website nicht mehr und das Design fühlt sich besser auf unsere Arbeit abgestimmt an."
+    },
+    "metric": "Stabile und einfache Updates",
+    "meta": "Geliefert in 4–6 Wochen",
+    "href": "/case-studies/ngo-wordpress-rebuild",
+    "liveUrl": "",
+    "image": "/casestudy/projectdeep.png",
+    "images": ["/casestudy/projectdeep.png","/casestudy/project2.png"],
+    "imageAlt": "NGO-Website-Redesign"
+  },
+  {
+    "id": "labelwala-nextjs",
+    "client": "Label Wala",
+    "industry": "Fertigung / Druck",
+    "title": "Hochleistungs-Brand-Website mit Next.js erstellt",
+    "heroTitle": "Aufbau einer schnellen, SEO-fähigen Website für eine Druckmarke",
+    "snippet": "Wir haben eine moderne Brand-Website in Next.js erstellt, die sich auf Geschwindigkeit, Leistung und Sichtbarkeit in Suchmaschinen konzentriert.",
+    "challenge": "Das Unternehmen benötigte eine schnelle, professionelle Website, die ihre Marke klar repräsentierte und auf allen Geräten gut funktionierte.",
+    "solution": "Wir haben eine Next.js-Website mit leistungsorientierten Layouts, responsivem Design und SEO-Best-Practices entworfen und entwickelt.",
+    "impact": "Die Website erreichte Leistungswerte von 90+ auf Mobilgeräten und Desktop, lädt schnell und bietet eine solide Grundlage für SEO.",
+    "services": [
+      "Website-Design",
+      "Next.js-Entwicklung",
+      "Leistungsoptimierung",
+      "SEO-Einrichtung"
+    ],
+    "deliverables": [
+      "Next.js-Website",
+      "Responsive UI",
+      "SEO-fähige Seiten"
+    ],
+    "testimonial": {
+      "name": "Akshit Gupta",
+      "quote": "Die Website lädt schnell, sieht sauber aus und funktioniert reibungslos auf allen Geräten. Genau das, was wir brauchten."
+    },
+    "metric": "90+ Leistungswert",
+    "meta": "SEO- und geschwindigkeitsorientierter Build",
+    "href": "/case-studies/labelwala-nextjs",
+    "liveUrl": "",
+    "image": "/casestudy/labelwaala1.png",
+    "images": ["/casestudy/labelwaala1.png","/casestudy/label2.png"],
+    "imageAlt": "Label Wala Website"
+  },
+  {
+    "id": "nutsquare-ecommerce",
+    "client": "NutSquare",
+    "industry": "E-Commerce / Lebensmittel",
+    "title": "Benutzerdefinierte E-Commerce-Website ohne Login-Reibung",
+    "heroTitle": "Gestaltung einer schnellen E-Commerce-Erfahrung für eine Marke für gesunde Snacks",
+    "snippet": "Wir haben eine benutzerdefinierte E-Commerce-Website erstellt, die es Benutzern ermöglicht, zu stöbern, zum Warenkorb hinzuzufügen und ohne erzwungenes Login zu bezahlen.",
+    "challenge": "Der Kunde wollte eine einfache Einkaufserfahrung mit reibungslosem Checkout und ohne Benutzer-Login-Anforderung.",
+    "solution": "Wir haben eine React-basierte E-Commerce-Site mit Warenkorb-Funktion, Bestellablauf und Zahlungsintegration entwickelt, die sich auf Einfachheit konzentriert.",
+    "impact": "Die Website bietet eine schnelle, reibungslose Einkaufserfahrung mit starker Leistung und SEO-Bereitschaft.",
+    "services": [
+      "E-Commerce-Design",
+      "React-Entwicklung",
+      "Zahlungsintegration",
+      "Leistungsoptimierung"
+    ],
+    "deliverables": [
+      "Benutzerdefinierter Storefront",
+      "Warenkorb & Checkout-Ablauf",
+      "Responsive Layouts"
+    ],
+    "testimonial": {
+      "name": "Navneet",
+      "quote": "Der Checkout-Ablauf ist einfach und schnell, genau wie wir es für unsere Kunden wollten."
+    },
+    "metric": "90+ Leistungswert",
+    "meta": "Benutzerdefinierter React-Build",
+    "href": "/case-studies/nutsquare-ecommerce",
+    "liveUrl": "",
+    "image": "/casestudy/nuts.png",
+    "images": ["/casestudy/nuts1.png","/casestudy/nuts3.png"],
+    "imageAlt": "NutSquare E-Commerce-Website"
+  },
+  {
+    "id": "recytronics-foundation",
+    "client": "Recytronics Foundation",
+    "industry": "Gemeinnützig / Nachhaltigkeit",
+    "title": "Leistungsorientierte NGO-Website mit Next.js erstellt",
+    "heroTitle": "Hilfe für eine nachhaltigkeitsorientierte NGO, ihre Wirkung klar zu kommunizieren",
+    "snippet": "Wir haben eine saubere, schnelle Website erstellt, um Bewusstsein, Reichweite und langfristiges Inhaltswachstum zu unterstützen.",
+    "challenge": "Die Stiftung benötigte eine moderne Website, die ihre Mission klar kommunizierte und dabei schnell und zugänglich blieb.",
+    "solution": "Wir haben eine Next.js-Website mit strukturierten Inhalten, sauberer UI und SEO-freundlichen Seiten entworfen und entwickelt.",
+    "impact": "Die Website lädt schnell, erreicht Leistungswerte von 90+ und präsentiert die Arbeit der Stiftung mit Klarheit.",
+    "services": [
+      "Website-Design",
+      "Next.js-Entwicklung",
+      "SEO-Optimierung"
+    ],
+    "deliverables": [
+      "Next.js-Website",
+      "Inhaltsstruktur",
+      "SEO-fähige Seiten"
+    ],
+    "testimonial": {
+      "name": "Stiftungsteam",
+      "quote": "Die Website wirkt sauber, schnell und kommuniziert unsere Mission klar."
+    },
+    "metric": "90+ Leistungswert",
+    "meta": "Für Klarheit & Wirkung gebaut",
+    "href": "/case-studies/recytronics-foundation",
+    "liveUrl": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "images": ["/casestudy/r1.png","/casestudy/r2.png"],
+    "imageAlt": "Recytronics Foundation Website"
+  },
+  {
+    "id": "ads-enviro",
+    "client": "ADS Enviro Group",
+    "industry": "Umweltdienstleistungen",
+    "title": "Unternehmenswebsite für Klarheit und Geschwindigkeit erstellt",
+    "heroTitle": "Aufbau einer professionellen, SEO-fähigen Website für ein Unternehmen für Umweltdienstleistungen",
+    "snippet": "Wir haben eine saubere Unternehmenswebsite erstellt, die sich auf Leistung, Struktur und langfristige Wartbarkeit konzentriert.",
+    "challenge": "Das Unternehmen benötigte eine moderne Website, um Dienstleistungen klar zu erklären und die digitale Präsenz zu verbessern.",
+    "solution": "Wir haben eine Next.js-basierte Website mit sauberen Layouts, schnellen Ladezeiten und SEO-Best-Practices entwickelt.",
+    "impact": "Die Website bietet starke Leistung, klare Botschaften und eine professionelle Online-Präsenz.",
+    "services": [
+      "Website-Design",
+      "Next.js-Entwicklung",
+      "SEO-Optimierung"
+    ],
+    "deliverables": [
+      "Unternehmenswebsite",
+      "Responsive Layouts",
+      "SEO-Struktur"
+    ],
+    "testimonial": {
+      "name": "ADS Enviro Team",
+      "quote": "Die Website präsentiert unsere Arbeit klar und funktioniert gut auf allen Geräten."
+    },
+    "metric": "Schneller und optimierter Build",
+    "meta": "Next.js-Unternehmenswebsite",
+    "href": "/case-studies/ads-enviro",
+    "liveUrl": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "images": ["/casestudy/a1.png","/casestudy/a2.png"],
+    "imageAlt": "ADS Enviro Group Website"
+  },
+  {
+    "id": "tipsy-ai-connection-platform",
+    "client": "Tipsy (Internes Produkt)",
+    "industry": "KI / Soziales Produkt",
+    "title": "KI-gestützte Plattform für absichtsbasierte Gespräche",
+    "heroTitle": "Aufbau einer KI-gestützten Plattform für bedeutungsvolle, mentalitätsbasierte Verbindungen",
+    "snippet": "Wir haben ein Produkt erstellt, das KI-gesteuerte Fragen verwendet, um Benutzern zu helfen, sich durch gemeinsame Absicht und Mentalität zu verbinden, anstatt durch Swipes oder zufällige Chats.",
+    "challenge": "Die meisten Chat-Plattformen priorisieren Engagement über Verständnis, was zu oberflächlichen oder lauten Gesprächen führt. Die Herausforderung bestand darin, ein System zu entwerfen, das absichtliche Interaktion fördert, ohne KI zu einem Ersatz für menschliche Verbindung zu machen.",
+    "solution": "Wir haben eine Full-Stack-Webanwendung mit Gemini-gestützten Frageflüssen, mentalitätsbasiertem Matching und Echtzeit-Chat entworfen und entwickelt. Benutzer können sich eins-zu-eins verbinden oder Gruppen basierend auf gemeinsamen Interessen und Antworten erstellen.",
+    "impact": "Die Plattform ermöglicht langsamere, absichtsvollere Gespräche und demonstriert verantwortungsvollen KI-Einsatz, der sich auf Anleitung statt Automatisierung konzentriert.",
+    "services": [
+      "Produktdesign",
+      "Full-Stack-Entwicklung",
+      "KI-Integration",
+      "Echtzeit-Funktionen"
+    ],
+    "deliverables": [
+      "KI-gesteuerter Fragefluss",
+      "Persönlichkeitsbasiertes Matching",
+      "1:1-Chat und Gruppengespräche",
+      "Skalierbare Backend-Architektur"
+    ],
+    "testimonial": {
+      "name": "Internes Produktteam",
+      "quote": "Tipsy half uns zu erkunden, wie KI bedeutungsvolle menschliche Gespräche unterstützen kann, ohne sie zu ersetzen."
+    },
+    "metric": "KI-gestütztes Matching & Echtzeit-Chat",
+    "meta": "Next.js, Node.js, MongoDB, Gemini",
+    "href": "/case-studies/tipsy",
+    "liveUrl": "",
+    "image": "/casestudy/tipsy.png",
+    "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
+    "imageAlt": "KI-gestützte Gesprächsplattform Tipsy"
+  }
+]

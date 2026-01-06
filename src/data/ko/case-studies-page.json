@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "사례 연구",
+    "title": "웹 개발 사례 연구",
+    "titleHighlight": "비즈니스를 위해 구축한 고성능 웹사이트",
+    "description": "실제 프로젝트, 실제 결과。우리가 설계하고 구축한 {websites}를 자세히 살펴보기 — 속도, 안정성 및 사용 편의성에 중점을 둡니다。더 빠른 로드 시간부터 더 부드러운 흐름 및 더 명확한 콘텐츠까지, 이것들은 출시된 프로젝트이며 개념이 아닙니다。더 많은 예제는 {portfolio}를 탐색하거나 {webDevelopmentServices}를 탐색하세요。",
+    "websites": "웹사이트",
+    "portfolio": "포트폴리오",
+    "webDevelopmentServices": "웹 개발 서비스",
+    "ctaPrimary": "프로젝트 논의",
+    "ctaSecondary": "사례 연구 탐색"
+  },
+  "listing": {
+    "projectsLabel": "{count}개 프로젝트",
+    "subtitle": "SaaS 및 fintech부터 전자상거래 및 현대 브랜드까지。",
+    "readCaseStudy": "사례 연구 읽기"
+  },
+  "cta": {
+    "badge": "관련된 것을 보셨나요?",
+    "title": "팀과 프로젝트 논의",
+    "description": "이 프로젝트 중 하나가 구축 중인 것과 가깝다고 느껴지면 논의해 봅시다。목표와 제약 조건에 대해 조금 공유해 주시면 명확한 접근 방식과 현실적인 다음 단계를 제안하겠습니다。",
+    "button": "프로젝트 세부 정보 보내기"
+  }
+}

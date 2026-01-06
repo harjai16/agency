@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ngo-wordpress",
+    "brand": "非营利组织网站",
+    "title": "为长期稳定性定制的WordPress重建",
+    "snippet": "使用自定义WordPress主题重新设计和重建非营利组织网站，以消除更新问题并提高可维护性。",
+    "url": "",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "非营利组织网站重新设计预览"
+  },
+  {
+    "id": "labelwala",
+    "brand": "Label Wala",
+    "title": "为印刷品牌打造的高性能Next.js网站",
+    "snippet": "使用Next.js构建的快速、SEO就绪的品牌网站，专注于移动端和桌面端的性能。",
+    "url": "",
+    "image": "/casestudy/labelwaala1.png",
+    "imageAlt": "Label Wala网站预览"
+  },
+  {
+    "id": "nutsquare",
+    "brand": "NutSquare",
+    "title": "具有无摩擦结账功能的定制电子商务网站",
+    "snippet": "基于React构建的电子商务网站，无需强制登录，专注于速度、简洁性和流畅支付。",
+    "url": "",
+    "image": "/casestudy/nuts.png",
+    "imageAlt": "NutSquare电子商务网站预览"
+  },
+  {
+    "id": "recytronics",
+    "brand": "Recytronics Foundation",
+    "title": "使用Next.js构建的以性能为中心的非营利组织网站",
+    "snippet": "设计简洁快速的网站，用于传达可持续发展倡议并支持外展工作。",
+    "url": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "imageAlt": "Recytronics Foundation网站预览"
+  },
+  {
+    "id": "ads-enviro",
+    "brand": "ADS Enviro Group",
+    "title": "为清晰度和SEO优化的企业网站",
+    "snippet": "使用Next.js构建的企业网站，专注于环境服务中的速度、结构和长期可扩展性。",
+    "url": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "imageAlt": "ADS Enviro Group网站预览"
+  }
+]
+

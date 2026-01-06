@@ -6,8 +6,10 @@ import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import caseStudies from "@/data/case-studies.json";
+import { useParams, usePathname } from "next/navigation";
+import { useLocaleData } from "@/lib/use-locale-data";
+import { getCurrentLocale, createLocalizedHref } from "@/lib/navigation";
+import { useTranslations } from "@/lib/translations-context";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOHead from "@/componenets/global/SEOHead";
 import SocialShare from "@/componenets/global/SocialShare";
@@ -22,29 +24,50 @@ const fadeUp = (delay = 0) => ({
 
 const CaseStudyPage = () => {
 const params = useParams();
+const pathname = usePathname();
+const currentLocale = getCurrentLocale(pathname);
+const t = useTranslations();
+const { data: caseStudies = [], loading: caseStudiesLoading } = useLocaleData('case-studies');
 const rawSlug = params?.slug;
 
 // Normalize slug (because on dynamic catch routes slug could be array)
 const slug = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug || "";
 
+// Ensure caseStudies is always an array
+const studiesList = Array.isArray(caseStudies) ? caseStudies : [];
+
 // Find case study
-const currentIndex = caseStudies.findIndex((cs) => cs.id === slug);
+const currentIndex = studiesList.findIndex((cs) => cs.id === slug);
 
 // Return null if not found
-const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
+const caseStudy = currentIndex >= 0 ? studiesList[currentIndex] : null
+  if (caseStudiesLoading) {
+    return (
+      <main className="bg-white text-gray-900">
+        <Section className="py-24 md:py-32">
+          <div className="max-w-fullhd mx-auto text-center">
+            <p className="text-sm md:text-base text-gray-500">Loading...</p>
+          </div>
+        </Section>
+      </main>
+    );
+  }
+
   if (!caseStudy) {
     return (
       <main className="bg-white text-gray-900">
         <Section className="py-24 md:py-32">
           <div className="max-w-fullhd mx-auto text-center space-y-4">
             <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Case study not found
+              {t?.caseStudies?.notFound || "Case study not found"}
             </h1>
             <p className="text-sm md:text-base text-gray-500">
-              The project you&apos;re looking for doesn&apos;t exist or has been moved.
+              {t?.caseStudies?.notFoundDesc || "The project you're looking for doesn't exist or has been moved."}
             </p>
             <Button asChild>
-              <Link href="/case-studies">Back to all case studies</Link>
+              <Link href={createLocalizedHref("/case-studies", currentLocale)}>
+                {t?.caseStudies?.backToList || "Back to all case studies"}
+              </Link>
             </Button>
           </div>
         </Section>
@@ -73,10 +96,10 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
   } = caseStudy;
 
   const heroImage = images?.[0] || image;
-  const prevCase = currentIndex > 0 ? caseStudies[currentIndex - 1] : null;
+  const prevCase = currentIndex > 0 ? studiesList[currentIndex - 1] : null;
   const nextCase =
-    currentIndex < caseStudies.length - 1
-      ? caseStudies[currentIndex + 1]
+    currentIndex < studiesList.length - 1
+      ? studiesList[currentIndex + 1]
       : null;
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
@@ -210,10 +233,10 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
               {/* Breadcrumbs */}
               <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-gray-500">
                 <Link
-                  href="/case-studies"
+                  href={createLocalizedHref("/case-studies", currentLocale)}
                   className="hover:text-gray-900 transition-colors"
                 >
-                  Case studies
+                  {t?.navigation?.caseStudies || "Case studies"}
                 </Link>
                 <span className="h-[1px] w-6 bg-gray-300" />
                 <span>{client}</span>
@@ -259,14 +282,16 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
                   </Button>
                 )}
                 <Button variant="ghost" asChild>
-                  <Link href="/contact">Discuss a similar project</Link>
+                  <Link href={createLocalizedHref("/contact", currentLocale)}>
+                    {t?.caseStudies?.discussProject || "Discuss a similar project"}
+                  </Link>
                 </Button>
               </div>
 
               {/* Social Share */}
               <div className="pt-4">
                 <SocialShare 
-                  url={`/case-studies/${slug}`}
+                  url={createLocalizedHref(`/case-studies/${slug}`, currentLocale)}
                   title={heroTitle || title}
                   description={snippet}
                   variant="compact"
@@ -466,12 +491,12 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
         <div className="max-w-fullhd mx-auto flex flex-col md:flex-row items-stretch justify-between gap-4 text-sm">
           {prevCase ? (
             <Link
-              href={prevCase.href}
+              href={createLocalizedHref(prevCase.href, currentLocale)}
               className="group flex-1 rounded-2xl border border-gray-100 bg-gray-50/80 px-4 py-3 flex items-center justify-between gap-3 hover:bg-gray-100 transition-colors"
             >
               <div className="text-left">
                 <div className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
-                  Previous case study
+                  {t?.caseStudies?.previousCase || "Previous case study"}
                 </div>
                 <div className="font-medium text-gray-900 line-clamp-1">
                   {prevCase.title}
@@ -487,12 +512,12 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
 
           {nextCase ? (
             <Link
-              href={nextCase.href}
+              href={createLocalizedHref(nextCase.href, currentLocale)}
               className="group flex-1 rounded-2xl border border-gray-100 bg-gray-50/80 px-4 py-3 flex items-center justify-between gap-3 hover:bg-gray-100 transition-colors"
             >
               <div className="text-right">
                 <div className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
-                  Next case study
+                  {t?.caseStudies?.nextCase || "Next case study"}
                 </div>
                 <div className="font-medium text-gray-900 line-clamp-1">
                   {nextCase.title}
@@ -524,10 +549,14 @@ const caseStudy = currentIndex >= 0 ? caseStudies[currentIndex] : null
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button asChild>
-              <Link href="/contact">Talk to the team</Link>
+              <Link href={createLocalizedHref("/contact", currentLocale)}>
+                {t?.caseStudies?.talkToTeam || "Talk to the team"}
+              </Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="/case-studies">Browse more case studies</Link>
+              <Link href={createLocalizedHref("/case-studies", currentLocale)}>
+                {t?.caseStudies?.browseMore || "Browse more case studies"}
+              </Link>
             </Button>
           </div>
         </motion.div>

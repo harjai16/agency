@@ -1,0 +1,35 @@
+[
+  {
+    "id": "strategy",
+    "label": "Conversion-Focused Website Strategy",
+    "tag": "Strategy",
+    "description": "We plan site structure, content flow, SEO foundations and conversion paths so your website is built to drive business results.",
+    "outcome": "Clear messaging, improved user flow & higher conversions.",
+    "meta": "Typically 1–2 weeks"
+  },
+  {
+    "id": "design",
+    "label": "UI/UX That Guides Users to Take Action",
+    "tag": "Design",
+    "description": "Modern, clean and brand-aligned designs that feel premium. We design responsive pages for real users across devices.",
+    "outcome": "A visual identity and experience your audience trusts.",
+    "meta": "Wireframes + high-fidelity design"
+  },
+  {
+    "id": "development",
+    "label": "Fast, SEO-Ready Websites That Load in Seconds",
+    "tag": "Development",
+    "description": "We develop fast, SEO-focused websites using modern frameworks and scalable CMS solutions like Next.js, WordPress, or Headless CMS.",
+    "outcome": "Blazing fast, easy-to-manage website you fully own.",
+    "meta": "4–8 week delivery"
+  },
+  {
+    "id": "maintenance",
+    "label": "Ongoing Optimisation to Increase Leads Month After Month",
+    "tag": "Optimization",
+    "description": "We iterate after launch — improving speed, SEO, security, content & CRO so your site keeps performing better over time.",
+    "outcome": "Continuous improvements & measurable revenue growth.",
+    "meta": "Ideal for ongoing support"
+  }
+]
+

@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "Études de cas",
+    "title": "Études de cas de développement web",
+    "titleHighlight": "Sites web haute performance que nous avons construits pour les entreprises",
+    "description": "Vrais projets, vrais résultats. Un regard plus approfondi sur les {websites} que nous avons conçus et construits — axés sur la vitesse, la stabilité et la facilité d'utilisation. Des temps de chargement plus rapides aux flux plus fluides et au contenu plus clair, ce sont des projets livrés, pas des concepts. Parcourez notre {portfolio} pour plus d'exemples, ou explorez nos {webDevelopmentServices}.",
+    "websites": "sites web",
+    "portfolio": "portfolio",
+    "webDevelopmentServices": "services de développement web",
+    "ctaPrimary": "Discutez de votre projet",
+    "ctaSecondary": "Parcourir les études de cas"
+  },
+  "listing": {
+    "projectsLabel": "{count} projets",
+    "subtitle": "De SaaS et fintech à l'e-commerce et aux marques modernes.",
+    "readCaseStudy": "Lire l'étude de cas"
+  },
+  "cta": {
+    "badge": "Vu quelque chose de pertinent?",
+    "title": "Discutez de votre projet avec notre équipe",
+    "description": "Si l'un de ces projets vous semble proche de ce que vous construisez, discutons-en. Partagez un peu vos objectifs et contraintes, et nous suggérerons une approche claire et des prochaines étapes réalistes.",
+    "button": "Envoyer les détails du projet"
+  }
+}

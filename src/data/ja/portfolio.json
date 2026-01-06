@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ngo-wordpress",
+    "brand": "NGOウェブサイト",
+    "title": "長期的な安定性のためのカスタムWordPress再構築",
+    "snippet": "更新の問題を排除し、保守性を向上させるために、カスタムWordPressテーマを使用してNGOウェブサイトを再設計および再構築しました。",
+    "url": "",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "NGOウェブサイト再設計のプレビュー"
+  },
+  {
+    "id": "labelwala",
+    "brand": "Label Wala",
+    "title": "印刷ブランド向けの高性能Next.jsウェブサイト",
+    "snippet": "Next.jsで構築された高速でSEO対応のブランドウェブサイトで、モバイルとデスクトップのパフォーマンスに焦点を当てています。",
+    "url": "",
+    "image": "/casestudy/labelwaala1.png",
+    "imageAlt": "Label Walaウェブサイトのプレビュー"
+  },
+  {
+    "id": "nutsquare",
+    "brand": "NutSquare",
+    "title": "摩擦のないチェックアウトを備えたカスタムEコマースウェブサイト",
+    "snippet": "強制ログインなしで構築されたReactベースのEコマースサイトで、速度、シンプルさ、スムーズな支払いに焦点を当てています。",
+    "url": "",
+    "image": "/casestudy/nuts.png",
+    "imageAlt": "NutSquare Eコマースウェブサイトのプレビュー"
+  },
+  {
+    "id": "recytronics",
+    "brand": "Recytronics Foundation",
+    "title": "Next.jsで構築されたパフォーマンス重視のNGOウェブサイト",
+    "snippet": "持続可能性イニシアチブを伝え、アウトリーチ活動をサポートするために設計されたクリーンで高速なウェブサイト。",
+    "url": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "imageAlt": "Recytronics Foundationウェブサイトのプレビュー"
+  },
+  {
+    "id": "ads-enviro",
+    "brand": "ADS Enviro Group",
+    "title": "明確さとSEOに最適化されたコーポレートウェブサイト",
+    "snippet": "環境サービスにおける速度、構造、長期的なスケーラビリティのために構築されたNext.jsコーポレートウェブサイト。",
+    "url": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "imageAlt": "ADS Enviro Groupウェブサイトのプレビュー"
+  }
+]
+

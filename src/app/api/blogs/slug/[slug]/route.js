@@ -27,20 +27,50 @@ export async function GET(request, { params }) {
     const decodedSlug = decodeURIComponent(slug);
     console.log('Fetching blog with slug:', decodedSlug);
 
-    // Try to find the blog - first with exact slug match
-    let blog = await db.collection('blogs').findOne({ 
-      slug: decodedSlug
-    });
+    // Get locale from query params
+    const { searchParams } = new URL(request.url);
+    const locale = searchParams.get('locale') || 'en';
+
+    // Try to find the blog - first with exact slug match and locale
+    let query = { slug: decodedSlug };
+    
+    // Add locale filter - prefer locale-specific blog, but fallback to blogs without locale
+    if (locale && locale !== 'en') {
+      query.$or = [
+        { ...query, locale: locale },
+        { ...query, locale: { $exists: false } } // Fallback to blogs without locale
+      ];
+    } else {
+      // For English, prefer 'en' locale or no locale field
+      query.$or = [
+        { ...query, locale: 'en' },
+        { ...query, locale: { $exists: false } }
+      ];
+    }
+
+    let blog = await db.collection('blogs').findOne(query);
 
     // If not found with exact match, try case-insensitive search
     if (!blog) {
       console.log('Exact match not found, trying case-insensitive search');
-      blog = await db.collection('blogs').findOne({ 
+      const caseInsensitiveQuery = {
         $or: [
           { slug: { $regex: new RegExp(`^${decodedSlug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') } },
           { slug: decodedSlug.toLowerCase() }
         ]
-      });
+      };
+      
+      // Add locale filter for case-insensitive search too
+      if (locale && locale !== 'en') {
+        caseInsensitiveQuery.$or = [
+          { ...caseInsensitiveQuery.$or[0], locale: locale },
+          { ...caseInsensitiveQuery.$or[0], locale: { $exists: false } },
+          { ...caseInsensitiveQuery.$or[1], locale: locale },
+          { ...caseInsensitiveQuery.$or[1], locale: { $exists: false } }
+        ];
+      }
+      
+      blog = await db.collection('blogs').findOne(caseInsensitiveQuery);
     }
 
     // Also try without status filter to see all blogs (for debugging)

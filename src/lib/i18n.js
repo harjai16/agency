@@ -73,21 +73,35 @@ export function addLocaleToPath(pathname, locale) {
 
 /**
  * Load translations for a locale
- * This function will be used by components to load translation files
+ * 
+ * STATIC EXPORT COMPATIBLE:
+ * - Uses dynamic imports which are resolved at build time
+ * - Translations are bundled into the static pages
+ * - No runtime API calls or server dependencies
+ * - Works with SSG/static export
+ * 
+ * @param {string} locale - The locale code (e.g., 'en', 'hi', 'ar')
+ * @returns {Promise<Object>} Translation object
  */
 export async function getTranslations(locale) {
   try {
-    // Dynamic import of translation file
+    // Dynamic import - Next.js will bundle this at build time
+    // This works with static export because imports are resolved during build
     const translations = await import(`@/messages/${locale}.json`);
-    return translations.default;
+    return translations.default || {};
   } catch (error) {
-    console.warn(`Translation file for locale "${locale}" not found, falling back to English`);
+    // In production, log warning but don't break the build
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`Translation file for locale "${locale}" not found, falling back to English`);
+    }
+    
     // Fallback to English if translation file doesn't exist
     if (locale !== defaultLocale) {
       try {
         const translations = await import(`@/messages/${defaultLocale}.json`);
-        return translations.default;
+        return translations.default || {};
       } catch (fallbackError) {
+        // Return empty object if even fallback fails (shouldn't happen)
         return {};
       }
     }

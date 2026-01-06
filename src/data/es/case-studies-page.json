@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "Casos de estudio",
+    "title": "Casos de estudio de desarrollo web",
+    "titleHighlight": "Sitios web de alto rendimiento que construimos para empresas",
+    "description": "Proyectos reales, resultados reales. Una mirada más cercana a los {websites} que hemos diseñado y construido — enfocados en velocidad, estabilidad y usabilidad. Desde tiempos de carga más rápidos hasta flujos más suaves y contenido más claro, estos son proyectos entregados, no conceptos. Navegue nuestro {portfolio} para más ejemplos, o explore nuestros {webDevelopmentServices}.",
+    "websites": "sitios web",
+    "portfolio": "portafolio",
+    "webDevelopmentServices": "servicios de desarrollo web",
+    "ctaPrimary": "Discuta su proyecto",
+    "ctaSecondary": "Navegar casos de estudio"
+  },
+  "listing": {
+    "projectsLabel": "{count} proyectos",
+    "subtitle": "Desde SaaS y fintech hasta comercio electrónico y marcas modernas.",
+    "readCaseStudy": "Leer caso de estudio"
+  },
+  "cta": {
+    "badge": "¿Viste algo relevante?",
+    "title": "Discuta su proyecto con nuestro equipo",
+    "description": "Si uno de estos proyectos se siente cercano a lo que está construyendo, discutámoslo. Comparta un poco sobre sus objetivos y limitaciones, y sugeriremos un enfoque claro y pasos realistas siguientes.",
+    "button": "Enviar detalles del proyecto"
+  }
+}

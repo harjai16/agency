@@ -11,6 +11,9 @@ import Link from "next/link";
 import Button from "./ui/Button";
 import Section from "./ui/Section";
 import Image from "next/image";
+import { useTranslations } from "@/lib/translations-context";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+import { usePathname } from "next/navigation";
 
 // Animated stat counter for the card
 const StatCounter = ({ value, suffix = "+" }) => {
@@ -66,6 +69,9 @@ const HERO_LOGOS_LOOP = [...HERO_LOGOS, ...HERO_LOGOS, ...HERO_LOGOS];
 
 const Hero = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
 
   return (
     <Section
@@ -84,7 +90,7 @@ const Hero = () => {
             className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-gray-200 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-gray-600 bg-white/70 backdrop-blur"
           >
             <span className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-emerald-500" />
-            BUILDING BRANDS ONLINE Ashwani
+            {t?.hero?.badge || "BUILDING BRANDS ONLINE"}
           </motion.div>
 
           {/* Heading */}
@@ -94,9 +100,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.1rem] font-semibold tracking-tight text-gray-900 leading-[1.2] sm:leading-tight md:leading-tight"
           >
-            Website Development Agency{" "}
+            {t?.hero?.title || "Website Development Agency"}{" "}
             <span className="inline-block border-b-2 border-gray-300 pb-1 sm:pb-1.5">
-              Fast Performance Websites Built for Business Growth
+              {t?.hero?.titleHighlight || "Fast Performance Websites Built for Business Growth"}
             </span>
           </motion.h1>
 
@@ -107,7 +113,26 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.12 }}
             className="text-sm sm:text-base md:text-lg text-gray-500 max-w-3xl leading-relaxed"
           >
-           We are a <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development agency</Link> that grows your business. We craft high-performance <Link href="/services" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see 10+ projects delivered with 98% client satisfaction, or check out our <Link href="/case-studies" className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed results.
+            {t?.hero?.description ? (
+              <>
+                {t.hero.description.split(/(\{websiteDevelopmentAgency\}|\{websites\}|\{portfolio\}|\{caseStudies\})/).map((part, idx) => {
+                  if (part === '{websiteDevelopmentAgency}') {
+                    return <Link key={idx} href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{t.hero.websiteDevelopmentAgency || "website development agency"}</Link>;
+                  } else if (part === '{websites}') {
+                    return <Link key={idx} href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{t.hero.websites || "websites"}</Link>;
+                  } else if (part === '{portfolio}') {
+                    return <Link key={idx} href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{t.hero.portfolio || "portfolio"}</Link>;
+                  } else if (part === '{caseStudies}') {
+                    return <Link key={idx} href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">{t.hero.caseStudies || "case studies"}</Link>;
+                  }
+                  return <span key={idx}>{part}</span>;
+                })}
+              </>
+            ) : (
+              <>
+                We are a <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development agency</Link> that grows your business. We craft high-performance <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see 10+ projects delivered with 98% client satisfaction, or check out our <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed results.
+              </>
+            )}
           </motion.p>
 
           {/* CTAs */}
@@ -125,15 +150,15 @@ const Hero = () => {
               }
               className="w-full sm:w-auto"
             >
-              Get a free conversion audit
+              {t?.common?.getFreeAudit || "Get a free conversion audit"}
             </Button>
 
             <Button
               variant="ghost"
-              onClick={() => router.push("/portfolio")}
+              onClick={() => router.push(createLocalizedHref("/portfolio", currentLocale))}
               className="w-full sm:w-auto"
             >
-              View portfolio
+              {t?.common?.viewPortfolio || "View portfolio"}
             </Button>
           </motion.div>
 
@@ -148,19 +173,19 @@ const Hero = () => {
               <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
                 10+
               </div>
-              <div className="text-[10px] sm:text-xs leading-tight">Websites Delivered</div>
+              <div className="text-[10px] sm:text-xs leading-tight">{t?.hero?.stats?.websitesDelivered || "Websites Delivered"}</div>
             </div>
             <div className="text-center sm:text-left">
               <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
                 98%
               </div>
-              <div className="text-[10px] sm:text-xs leading-tight">Client success score</div>
+              <div className="text-[10px] sm:text-xs leading-tight">{t?.hero?.stats?.clientSuccessScore || "Client success score"}</div>
             </div>
             <div className="text-center sm:text-left">
               <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
                 4–6 weeks
               </div>
-              <div className="text-[10px] sm:text-xs leading-tight">Average timeline</div>
+              <div className="text-[10px] sm:text-xs leading-tight">{t?.hero?.stats?.averageTimeline || "Average timeline"}</div>
             </div>
           </motion.div>
         </div>
@@ -180,14 +205,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-4 sm:mb-5 md:mb-6">
               <div className="flex-1 min-w-0">
                 <div className="text-[10px] sm:text-xs uppercase tracking-[0.16em] text-gray-500">
-                  By the numbers
+                  {t?.hero?.card?.byTheNumbers || "By the numbers"}
                 </div>
                 <div className="text-sm sm:text-base md:text-lg font-medium text-gray-900 mt-1">
-                  A quick look at our track record.
+                  {t?.hero?.card?.quickLook || "A quick look at our track record."}
                 </div>
               </div>
               <span className="text-[10px] sm:text-xs rounded-full border border-emerald-100 bg-emerald-50 px-2 sm:px-2.5 py-1 sm:py-1.5 text-emerald-700 self-start sm:self-auto whitespace-nowrap">
-                Updated live
+                {t?.hero?.card?.updatedLive || "Updated live"}
               </span>
             </div>
 
@@ -196,28 +221,27 @@ const Hero = () => {
               <div className="flex flex-col items-center">
                 <StatCounter value={10} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
-                  Happy Clients
+                  {t?.hero?.card?.happyClients || "Happy Clients"}
                 </span>
               </div>
 
               <div className="flex flex-col items-center">
                 <StatCounter value={10} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
-                  Projects Delivered
+                  {t?.hero?.card?.projectsDelivered || "Projects Delivered"}
                 </span>
               </div>
 
               <div className="flex flex-col items-center">
                 <StatCounter value={6} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
-                  Years Experience
+                  {t?.hero?.card?.yearsExperience || "Years Experience"}
                 </span>
               </div>
             </div>
 
             <p className="mt-4 sm:mt-5 text-[10px] sm:text-xs text-gray-400 leading-relaxed">
-              Based on completed projects, repeat clients and long-term
-              partnerships across different industries.
+              {t?.hero?.card?.basedOn || "Based on completed projects, repeat clients and long-term partnerships across different industries."}
             </p>
           </div>
 
@@ -225,7 +249,7 @@ const Hero = () => {
           <div className="mt-4 sm:mt-5 rounded-xl sm:rounded-2xl border border-gray-100 bg-white/90 sm:bg-white/80 backdrop-blur-sm px-3 sm:px-4 md:px-5 py-3 sm:py-3.5 md:py-4">
             <div className="flex items-center justify-between gap-2 sm:gap-3 mb-2 sm:mb-2.5">
               <span className="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.18em] text-gray-500 font-medium">
-                Brands we&apos;ve worked with
+                {t?.hero?.card?.brandsWeWorkedWith || "Brands we've worked with"}
               </span>
             </div>
 

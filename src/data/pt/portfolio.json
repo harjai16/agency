@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ngo-wordpress",
+    "brand": "Site Web ONG",
+    "title": "Reconstrução WordPress personalizada para estabilidade de longo prazo",
+    "snippet": "Redesenhado e reconstruído um site web de ONG com um tema WordPress personalizado para eliminar problemas de atualização e melhorar a manutenibilidade.",
+    "url": "",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "Pré-visualização do redesign do site web da ONG"
+  },
+  {
+    "id": "labelwala",
+    "brand": "Label Wala",
+    "title": "Site web Next.js de alto desempenho para uma marca de impressão",
+    "snippet": "Site web de marca rápido e otimizado para SEO construído com Next.js, focado no desempenho em dispositivos móveis e desktop.",
+    "url": "",
+    "image": "/casestudy/labelwaala1.png",
+    "imageAlt": "Pré-visualização do site web Label Wala"
+  },
+  {
+    "id": "nutsquare",
+    "brand": "NutSquare",
+    "title": "Site web de comércio eletrônico personalizado com checkout sem fricção",
+    "snippet": "Site de comércio eletrônico baseado em React construído sem login forçado, focado em velocidade, simplicidade e pagamentos suaves.",
+    "url": "",
+    "image": "/casestudy/nuts.png",
+    "imageAlt": "Pré-visualização do site web de comércio eletrônico NutSquare"
+  },
+  {
+    "id": "recytronics",
+    "brand": "Recytronics Foundation",
+    "title": "Site web de ONG focado em desempenho construído com Next.js",
+    "snippet": "Site web limpo e rápido projetado para comunicar iniciativas de sustentabilidade e apoiar esforços de divulgação.",
+    "url": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "imageAlt": "Pré-visualização do site web da Recytronics Foundation"
+  },
+  {
+    "id": "ads-enviro",
+    "brand": "ADS Enviro Group",
+    "title": "Site web corporativo otimizado para clareza e SEO",
+    "snippet": "Site web corporativo Next.js construído para velocidade, estrutura e escalabilidade de longo prazo em serviços ambientais.",
+    "url": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "imageAlt": "Pré-visualização do site web da ADS Enviro Group"
+  }
+]
+

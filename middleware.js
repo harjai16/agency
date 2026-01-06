@@ -1,12 +1,21 @@
 /**
  * Next.js Middleware for Multilingual Support
  * 
+ * STATIC EXPORT COMPATIBLE:
+ * - Middleware runs at edge/runtime (not build time)
+ * - Works with static export on platforms that support edge functions
+ * - For pure static hosting, configure redirects in hosting platform
+ * - Alternative: Use client-side redirect (see LanguageSwitcher component)
+ * 
  * This middleware handles:
  * 1. Language detection from cookie → browser header → default to "en"
  * 2. Redirects URLs without locale to locale-prefixed URLs
  * 3. Preserves the full path when redirecting
  * 
  * Supported languages: en, hi, ar, fr, es, de, pt, ru, ja, ko, zh, it
+ * 
+ * NOTE: For static export without edge support, use hosting platform redirects
+ * or implement client-side redirect in app/layout.js
  */
 
 import { NextResponse } from 'next/server';

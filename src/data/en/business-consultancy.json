@@ -1,0 +1,219 @@
+{
+  "hero": {
+    "badge": "BUSINESS CONSULTANCY",
+    "title": "Strategic Business Consulting",
+    "titleHighlight": "That Drives Real Growth",
+    "description": "Expert guidance to help you make better decisions, optimize operations, and scale your business. From digital strategy to process improvement—we provide actionable insights that deliver measurable results.",
+    "stats": [
+      {
+        "value": "50+",
+        "label": "businesses advised"
+      },
+      {
+        "value": "Data-driven",
+        "label": "strategies & insights"
+      },
+      {
+        "value": "Custom solutions",
+        "label": "tailored to your needs"
+      }
+    ],
+    "card": {
+      "label": "What you get",
+      "title": "Comprehensive business consulting",
+      "badge": "Strategic",
+      "items": [
+        "Deep market research and competitive analysis",
+        "Custom growth strategies aligned with your goals",
+        "Process optimization and efficiency improvements",
+        "Technology recommendations and implementation plans"
+      ],
+      "footer": "No generic templates. Real solutions for your business."
+    }
+  },
+  "services": {
+    "section": {
+      "tag": "Our services",
+      "title": "Complete business consulting services.",
+      "description": "From strategy to implementation, we provide expert guidance across all areas of your business. Choose individual services or partner with us for comprehensive support."
+    },
+    "items": [
+      {
+        "id": "digital-strategy",
+        "tag": "Strategy",
+        "title": "Digital Strategy & Planning",
+        "summary": "We analyze your business goals, target audience, and competitive landscape to create a comprehensive digital strategy that drives growth.",
+        "outcome": "Clear roadmap, defined KPIs, and actionable growth plan.",
+        "meta": "Ideal for businesses ready to scale"
+      },
+      {
+        "id": "market-research",
+        "tag": "Research",
+        "title": "Market Research & Analysis",
+        "summary": "Deep dive into your market, customer behavior, and industry trends to identify opportunities and optimize your positioning.",
+        "outcome": "Data-driven insights and competitive advantage.",
+        "meta": "Essential for new launches or pivots"
+      },
+      {
+        "id": "business-model",
+        "tag": "Optimization",
+        "title": "Business Model Optimization",
+        "summary": "Review and refine your revenue streams, pricing strategies, and operational processes to maximize profitability.",
+        "outcome": "Improved margins and scalable business operations.",
+        "meta": "Best for established businesses"
+      },
+      {
+        "id": "growth-consulting",
+        "tag": "Growth",
+        "title": "Growth Consulting & Scaling",
+        "summary": "Strategic guidance on scaling your business, entering new markets, and building sustainable growth engines.",
+        "outcome": "Scalable growth framework and expansion roadmap.",
+        "meta": "For businesses ready to accelerate"
+      },
+      {
+        "id": "process-improvement",
+        "tag": "Operations",
+        "title": "Process Improvement & Efficiency",
+        "summary": "Streamline workflows, eliminate bottlenecks, and optimize operations to reduce costs and improve productivity.",
+        "outcome": "Faster delivery, lower costs, and better team efficiency.",
+        "meta": "Perfect for operational challenges"
+      },
+      {
+        "id": "technology-consulting",
+        "tag": "Technology",
+        "title": "Technology Strategy & Implementation",
+        "summary": "Align technology investments with business goals, select the right tools, and implement systems that drive results.",
+        "outcome": "Tech stack that supports growth and reduces friction.",
+        "meta": "For digital transformation initiatives"
+      }
+    ]
+  },
+  "benefits": {
+    "section": {
+      "tag": "Why work with us",
+      "title": "Expert guidance that delivers measurable results.",
+      "description": "We combine deep industry knowledge with practical experience to help you make better decisions, optimize operations, and achieve sustainable growth."
+    },
+    "items": [
+      {
+        "title": "Expert Guidance",
+        "description": "Work with experienced consultants who've helped dozens of businesses scale and succeed.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Data-Driven Decisions",
+        "description": "Make informed choices based on market research, analytics, and proven frameworks.",
+        "icon": "📊"
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Every business is unique. We create tailored strategies that fit your specific needs and goals.",
+        "icon": "✨"
+      },
+      {
+        "title": "Actionable Plans",
+        "description": "Get clear, step-by-step roadmaps you can implement immediately—no vague recommendations.",
+        "icon": "🚀"
+      }
+    ]
+  },
+  "process": {
+    "section": {
+      "tag": "Our process",
+      "title": "A clear, structured approach to solving your challenges.",
+      "description": "We follow a proven methodology that ensures we understand your business deeply, develop the right strategy, and support you through implementation."
+    },
+    "steps": [
+      {
+        "title": "Discovery & Assessment",
+        "desc": "We start by understanding your business, challenges, goals, and current state through detailed discussions and analysis."
+      },
+      {
+        "title": "Research & Analysis",
+        "desc": "We conduct market research, competitive analysis, and internal audits to identify opportunities and gaps."
+      },
+      {
+        "title": "Strategy Development",
+        "desc": "We create a comprehensive strategy with clear objectives, timelines, and success metrics tailored to your business."
+      },
+      {
+        "title": "Implementation Support",
+        "desc": "We provide ongoing guidance and support as you execute the strategy, ensuring you stay on track and adapt as needed."
+      }
+    ]
+  },
+  "useCases": {
+    "section": {
+      "tag": "Who we help",
+      "title": "We work with businesses at every stage.",
+      "description": "Whether you're launching a new venture, scaling an existing business, or optimizing operations, we provide the strategic guidance you need."
+    },
+    "items": [
+      {
+        "title": "Startups & New Ventures",
+        "description": "Strategic planning, market research, and business model development for new businesses ready to launch.",
+        "examples": [
+          "Market validation",
+          "Go-to-market strategy",
+          "Business model design"
+        ]
+      },
+      {
+        "title": "Growing Businesses",
+        "description": "Scaling strategies, process optimization, and growth consulting for businesses ready to accelerate.",
+        "examples": [
+          "Growth planning",
+          "Operational efficiency",
+          "Market expansion"
+        ]
+      },
+      {
+        "title": "Established Companies",
+        "description": "Digital transformation, process improvement, and strategic optimization for mature businesses.",
+        "examples": [
+          "Digital strategy",
+          "Cost optimization",
+          "Technology adoption"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "section": {
+      "tag": "FAQs",
+      "title": "Common questions about our consulting services."
+    },
+    "items": [
+      {
+        "question": "How long does a typical consulting engagement last?",
+        "answer": "Most engagements range from 4-12 weeks depending on scope. We can also provide ongoing advisory support for businesses that need continuous guidance."
+      },
+      {
+        "question": "What industries do you work with?",
+        "answer": "We work across industries including SaaS, e-commerce, professional services, D2C brands, and technology companies. Our methodologies apply broadly."
+      },
+      {
+        "question": "Do you help with implementation or just strategy?",
+        "answer": "Both. We provide strategic guidance and can also support implementation, depending on your needs. We'll clarify scope and deliverables upfront."
+      },
+      {
+        "question": "What's the first step to get started?",
+        "answer": "We start with a discovery call to understand your challenges and goals. Then we'll share a proposal with scope, timeline, and investment."
+      },
+      {
+        "question": "Can you work with remote teams?",
+        "answer": "Absolutely. We work with businesses worldwide through video calls, async communication, and collaborative tools. Location is not a barrier."
+      },
+      {
+        "question": "What makes your consulting different?",
+        "answer": "We focus on actionable, data-driven strategies rather than generic advice. Every recommendation is tailored to your specific business and backed by research."
+      }
+    ]
+  },
+  "cta": {
+    "tag": "Ready to grow?",
+    "title": "Let's discuss how we can help your business succeed.",
+    "description": "One conversation. Clear insights. Actionable next steps."
+  }
+}
+

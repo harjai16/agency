@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import Button from "@/componenets/ui/Button";
 import { useToast } from "./Toast";
 import { trackFormSubmit } from "@/lib/gtag";
+import { useTranslations } from "@/lib/translations-context";
 
 const ContactForm = ({ pageName = "Unknown Page" }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { showToast } = useToast();
+  const t = useTranslations();
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -53,14 +55,14 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
                 page_name: pageName,
                 project_type: data.projectType,
               });
-              showToast("Form submitted successfully!", "success");
+              showToast(t?.contact?.formSuccess || "Form submitted successfully!", "success");
               e.target.reset();
             } else {
-              showToast(result.error || "Failed to submit form", "error");
+              showToast(result.error || (t?.contact?.formError || "Failed to submit form"), "error");
             }
           } catch (error) {
             console.error("Error submitting form:", error);
-            showToast("Failed to submit form. Please try again.", "error");
+            showToast(t?.contact?.formErrorRetry || "Failed to submit form. Please try again.", "error");
           } finally {
             setIsSubmitting(false);
           }
@@ -73,7 +75,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
               htmlFor="name"
               className="text-xs font-medium text-gray-700"
             >
-              Name
+              {t?.contact?.formName || "Name"}
             </label>
             <input
               id="name"
@@ -82,7 +84,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
               autoComplete="name"
               required
               className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-gray-900 outline-none transition focus:border-gray-900 focus:ring-0"
-              placeholder="Your name"
+              placeholder={t?.contact?.formNamePlaceholder || "Your name"}
             />
           </div>
 
@@ -92,7 +94,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
               htmlFor="email"
               className="text-xs font-medium text-gray-700"
             >
-              Email
+              {t?.contact?.formEmail || "Email"}
             </label>
             <input
               id="email"
@@ -101,7 +103,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
               autoComplete="email"
               required
               className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-gray-900 outline-none transition focus:border-gray-900 focus:ring-0"
-              placeholder="Your email address"
+              placeholder={t?.contact?.formEmailPlaceholder || "Your email address"}
             />
           </div>
         </div>
@@ -112,14 +114,14 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
             htmlFor="company"
             className="text-xs font-medium text-gray-700"
           >
-            Company / Brand
+            {t?.contact?.formCompany || "Company / Brand"}
           </label>
           <input
             id="company"
             name="company"
             type="text"
             className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-gray-900 outline-none transition focus:border-gray-900 focus:ring-0"
-            placeholder="Swagatam Foods, Studio XYZ…"
+            placeholder={t?.contact?.formCompanyPlaceholder || "Swagatam Foods, Studio XYZ…"}
           />
         </div>
 
@@ -129,7 +131,7 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
             htmlFor="projectType"
             className="text-xs font-medium text-gray-700"
           >
-            What are you looking to build?
+            {t?.contact?.formProjectType || "What are you looking to build?"}
           </label>
           <select
             id="projectType"
@@ -138,14 +140,14 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
             defaultValue=""
           >
             <option value="" disabled>
-              Select an option
+              {t?.contact?.formSelectOption || "Select an option"}
             </option>
-            <option value="new-website">New website from scratch</option>
-            <option value="redesign">Redesign of existing website</option>
-            <option value="landing-page">High-converting landing page</option>
-            <option value="ecommerce">E-commerce / product website</option>
-            <option value="web-app">Web app / dashboard UI</option>
-            <option value="other">Something else</option>
+            <option value="new-website">{t?.contact?.formNewWebsite || "New website from scratch"}</option>
+            <option value="redesign">{t?.contact?.formRedesign || "Redesign of existing website"}</option>
+            <option value="landing-page">{t?.contact?.formLandingPage || "High-converting landing page"}</option>
+            <option value="ecommerce">{t?.contact?.formEcommerce || "E-commerce / product website"}</option>
+            <option value="web-app">{t?.contact?.formWebApp || "Web app / dashboard UI"}</option>
+            <option value="other">{t?.contact?.formOther || "Something else"}</option>
           </select>
         </div>
 
@@ -155,25 +157,24 @@ const ContactForm = ({ pageName = "Unknown Page" }) => {
             htmlFor="message"
             className="text-xs font-medium text-gray-700"
           >
-            Project details & goals
+            {t?.contact?.formMessage || "Project details & goals"}
           </label>
           <textarea
             id="message"
             name="message"
             rows={4}
             className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-gray-900 outline-none transition focus:border-gray-900 focus:ring-0 resize-none"
-            placeholder="Share where your current website is today (or if you don’t have one) and what you’d like it to achieve in the next 3–6 months."
+            placeholder={t?.contact?.formMessagePlaceholder || "Share where your current website is today (or if you don't have one) and what you'd like it to achieve in the next 3–6 months."}
           />
         </div>
 
         {/* Submit + note */}
         <div className="flex flex-col gap-2 pt-2">
           <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send message"}
+            {isSubmitting ? (t?.contact?.formSending || "Sending...") : (t?.contact?.formSendMessage || "Send message")}
           </Button>
           <p className="text-[11px] text-gray-400">
-            Swagatam Tech will only use your details to respond to this inquiry.
-            No newsletters, no spam.
+            {t?.contact?.formPrivacy || "Swagatam Tech will only use your details to respond to this inquiry. No newsletters, no spam."}
           </p>
         </div>
       </form>

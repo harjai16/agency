@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "SERVICES",
+    "title": "Website Development Services",
+    "titleHighlight": "Fast Performance Websites Built for Business Growth",
+    "description": "{websiteServices} built to generate leads, sales, and real growth. Strategy, design, and development focused on performance — fast {websites} that convert visitors into customers. See our {caseStudies} for real results. 4-6 week typical launch.",
+    "websiteServices": "Website services",
+    "websites": "websites",
+    "caseStudies": "case studies",
+    "ctaPrimary": "Get a free website plan",
+    "ctaSecondary": "View real projects",
+    "stats": {
+      "projects": {
+        "value": "10+",
+        "label": "projects delivered"
+      },
+      "timeline": {
+        "value": "4–6 weeks",
+        "label": "weeks typical launch"
+      },
+      "focus": {
+        "value": "Performance-focused",
+        "label": "Performance-first builds"
+      }
+    },
+    "typicalProject": {
+      "badge": "4–6 weeks",
+      "label": "Typical project",
+      "title": "What a typical website project includes",
+      "items": [
+        "Clear strategy aligned with your business goals",
+        "UX & UI for key pages and conversion flows",
+        "Performance-focused Next.js or WordPress build",
+        "SEO, analytics, and launch support baked in"
+      ],
+      "footer": "No templates. No copy-paste packages. Built for your needs."
+    }
+  },
+  "services": {
+    "badge": "What we do",
+    "title": "Website Development Services Built for Fast Performance and Business Growth",
+    "description": "Choose a single {service} or partner with us end-to-end. Either way, you get a senior team focused on performance and conversions. Everything you need to design, build and grow your {website}. See our {caseStudies} for examples of our {webDevelopment} work.",
+    "service": "service",
+    "website": "website",
+    "caseStudies": "case studies",
+    "webDevelopment": "web development",
+    "outcome": "Outcome:",
+    "items": [
+      {
+        "id": "strategy",
+        "tag": "Strategy",
+        "title": "Website Development Strategy Built for Business Growth",
+        "summary": "We plan page structure, content hierarchy, and user flows so visitors quickly understand what you do and what to do next. Website development strategy built for business growth.",
+        "outcome": "Clear sitemap, focused messaging, and defined page goals.",
+        "meta": "Useful before new builds or redesigns"
+      },
+      {
+        "id": "ux-ui",
+        "tag": "Design",
+        "title": "Website Design Built for Fast Performance Across Devices",
+        "summary": "Clean, mobile-first interfaces designed to be easy to use and aligned with your brand. Website design built for fast performance across devices.",
+        "outcome": "Polished designs ready for development or handoff.",
+        "meta": "Responsive layouts with key interaction states"
+      },
+      {
+        "id": "development",
+        "tag": "Development",
+        "title": "Website Development Built for Fast Performance",
+        "summary": "Fast, reliable websites built with modern frameworks like Next.js and React — no heavy themes or shortcuts. We built performance-focused websites tailored to your business needs.",
+        "outcome": "A performance-focused site tailored to your business needs.",
+        "meta": "Well-suited for SaaS, service brands, and custom builds"
+      },
+      {
+        "id": "cms",
+        "tag": "CMS",
+        "title": "CMS & Content Management",
+        "summary": "Flexible CMS setups using WordPress or headless solutions so your team can manage content confidently.",
+        "outcome": "Editable pages, structured content, and SEO-ready fields.",
+        "meta": "Includes basic training and documentation"
+      },
+      {
+        "id": "performance",
+        "tag": "Performance & SEO",
+        "title": "Website Performance Built for Fast Speed Across Devices",
+        "summary": "We review and improve site speed, technical SEO, and Core Web Vitals to support real-world usage. Website performance built for fast speed across devices.",
+        "outcome": "Faster load times, better usability, and stronger visibility.",
+        "meta": "Best for existing or growing websites"
+      },
+      {
+        "id": "support",
+        "tag": "Support",
+        "title": "Ongoing Support & Improvements",
+        "summary": "We help keep your site stable, secure, and improving as your product or business evolves.",
+        "outcome": "Planned updates, small iterations, and ongoing refinements.",
+        "meta": "Flexible monthly support options"
+      }
+    ]
+  },
+  "engagementModels": {
+    "badge": "How we work",
+    "title": "Website Development Services Built for Fast Performance Across Devices",
+    "description": "Whether you're launching something new or leveling up what you already have, we'll suggest the model that fits your stage, budget and team. Check out our {portfolio} to see examples, or read our {caseStudies} for detailed {webDevelopment} results.",
+    "portfolio": "portfolio",
+    "caseStudies": "case studies",
+    "webDevelopment": "website development",
+    "footer": "We'll recommend this if it fits your goals in our first call.",
+    "items": [
+      {
+        "title": "Project-based builds",
+        "description": "Best for teams that need a complete website build, redesign, or migration with a defined scope.",
+        "bullets": [
+          "Clear scope and predictable timelines",
+          "Good fit for new launches or major changes",
+          "Typically delivered in 4–6 weeks"
+        ]
+      },
+      {
+        "title": "Ongoing product partner",
+        "description": "For teams who want consistent design and development support without expanding headcount.",
+        "bullets": [
+          "Monthly engagement with flexible usage",
+          "Ongoing updates, fixes, and improvements",
+          "Works well for SaaS and evolving products"
+        ]
+      },
+      {
+        "title": "White-label for agencies",
+        "description": "We support agencies by handling design and development while you stay client-facing.",
+        "bullets": [
+          "Adaptable to your workflows",
+          "Discreet and NDA-friendly",
+          "Reliable delivery capacity"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQs",
+    "title": "Frequently asked questions about our services.",
+    "items": [
+      {
+        "question": "How long does a typical website project take?",
+        "answer": "Most projects are completed in 4–6 weeks. Timelines depend on scope, content readiness, and feedback cycles. We'll confirm a clear timeline before starting."
+      },
+      {
+        "question": "Do you handle full projects or just specific parts?",
+        "answer": "Both. We can manage everything from strategy to launch, or support your team with design or development only."
+      },
+      {
+        "question": "Can our team update content after launch?",
+        "answer": "Yes. We use CMS and reusable components so your team can update pages, text, and SEO fields without technical help."
+      },
+      {
+        "question": "What's the first step to get started?",
+        "answer": "We start with a short call to understand your goals and constraints. After that, we share a clear scope, timeline, and next steps."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Next step",
+    "title": "Ready to build a website that delivers results?",
+    "description": "One short call. Clear next steps. No pressure.",
+    "primary": "Get a free website plan",
+    "secondary": "View case studies"
+  }
+}
+

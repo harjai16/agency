@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "सेवाएं",
+    "title": "वेबसाइट डेवलपमेंट सेवाएं",
+    "titleHighlight": "व्यापार वृद्धि के लिए तेज़ प्रदर्शन वेबसाइट",
+    "description": "{websiteServices} लीड, बिक्री और वास्तविक वृद्धि उत्पन्न करने के लिए बनाई गई। रणनीति, डिज़ाइन और विकास प्रदर्शन पर केंद्रित — तेज़ {websites} जो visitors को customers में बदलती हैं। वास्तविक परिणामों के लिए हमारे {caseStudies} देखें। 4-6 सप्ताह का सामान्य लॉन्च।",
+    "websiteServices": "वेबसाइट सेवाएं",
+    "websites": "वेबसाइट",
+    "caseStudies": "केस स्टडी",
+    "ctaPrimary": "मुफ्त वेबसाइट योजना प्राप्त करें",
+    "ctaSecondary": "वास्तविक परियोजनाएं देखें",
+    "stats": {
+      "projects": {
+        "value": "10+",
+        "label": "वितरित परियोजनाएं"
+      },
+      "timeline": {
+        "value": "4–6 सप्ताह",
+        "label": "सामान्य लॉन्च सप्ताह"
+      },
+      "focus": {
+        "value": "प्रदर्शन-केंद्रित",
+        "label": "प्रदर्शन-प्रथम निर्माण"
+      }
+    },
+    "typicalProject": {
+      "badge": "4–6 सप्ताह",
+      "label": "सामान्य परियोजना",
+      "title": "एक सामान्य वेबसाइट परियोजना में क्या शामिल है",
+      "items": [
+        "आपके व्यापारिक लक्ष्यों के साथ संरेखित स्पष्ट रणनीति",
+        "मुख्य पृष्ठों और रूपांतरण प्रवाह के लिए UX और UI",
+        "प्रदर्शन-केंद्रित Next.js या WordPress निर्माण",
+        "SEO, analytics, और लॉन्च सपोर्ट शामिल"
+      ],
+      "footer": "कोई टेम्प्लेट नहीं। कोई कॉपी-पेस्ट पैकेज नहीं। आपकी जरूरतों के लिए बनाया गया।"
+    }
+  },
+  "services": {
+    "badge": "हम क्या करते हैं",
+    "title": "तेज़ प्रदर्शन और व्यापार वृद्धि के लिए निर्मित वेबसाइट डेवलपमेंट सेवाएं",
+    "description": "एक {service} चुनें या हमारे साथ end-to-end साझेदारी करें। किसी भी तरह से, आपको प्रदर्शन और रूपांतरण पर केंद्रित एक वरिष्ठ टीम मिलती है। अपनी {website} को डिज़ाइन, बनाने और बढ़ाने के लिए आपको जो कुछ चाहिए। हमारे {webDevelopment} काम के उदाहरणों के लिए हमारे {caseStudies} देखें।",
+    "service": "सेवा",
+    "website": "वेबसाइट",
+    "caseStudies": "केस स्टडी",
+    "webDevelopment": "वेब विकास",
+    "outcome": "परिणाम:",
+    "items": [
+      {
+        "id": "strategy",
+        "tag": "रणनीति",
+        "title": "व्यापार वृद्धि के लिए निर्मित वेबसाइट डेवलपमेंट रणनीति",
+        "summary": "हम पृष्ठ संरचना, सामग्री hierarchy, और उपयोगकर्ता प्रवाह की योजना बनाते हैं ताकि visitors जल्दी समझ सकें कि आप क्या करते हैं और आगे क्या करना है। व्यापार वृद्धि के लिए निर्मित वेबसाइट डेवलपमेंट रणनीति।",
+        "outcome": "स्पष्ट sitemap, केंद्रित messaging, और परिभाषित पृष्ठ लक्ष्य।",
+        "meta": "नए निर्माण या redesigns से पहले उपयोगी"
+      },
+      {
+        "id": "ux-ui",
+        "tag": "डिज़ाइन",
+        "title": "सभी उपकरणों में तेज़ प्रदर्शन के लिए निर्मित वेबसाइट डिज़ाइन",
+        "summary": "साफ, mobile-first interfaces जो उपयोग में आसान हैं और आपके ब्रांड के साथ संरेखित हैं। सभी उपकरणों में तेज़ प्रदर्शन के लिए निर्मित वेबसाइट डिज़ाइन।",
+        "outcome": "विकास या handoff के लिए तैयार polished designs।",
+        "meta": "मुख्य interaction states के साथ responsive layouts"
+      },
+      {
+        "id": "development",
+        "tag": "विकास",
+        "title": "तेज़ प्रदर्शन के लिए निर्मित वेबसाइट विकास",
+        "summary": "Next.js और React जैसे आधुनिक frameworks के साथ बनाई गई तेज़, विश्वसनीय वेबसाइट — कोई भारी themes या shortcuts नहीं। हमने आपकी व्यापारिक जरूरतों के अनुरूप प्रदर्शन-केंद्रित वेबसाइट बनाई हैं।",
+        "outcome": "आपकी व्यापारिक जरूरतों के अनुरूप एक प्रदर्शन-केंद्रित साइट।",
+        "meta": "SaaS, service brands, और custom builds के लिए उपयुक्त"
+      },
+      {
+        "id": "cms",
+        "tag": "CMS",
+        "title": "CMS और सामग्री प्रबंधन",
+        "summary": "WordPress या headless solutions का उपयोग करके flexible CMS setups ताकि आपकी टीम आत्मविश्वास से सामग्री प्रबंधित कर सके।",
+        "outcome": "संपादन योग्य पृष्ठ, संरचित सामग्री, और SEO-ready fields।",
+        "meta": "बुनियादी training और documentation शामिल है"
+      },
+      {
+        "id": "performance",
+        "tag": "प्रदर्शन और SEO",
+        "title": "सभी उपकरणों में तेज़ गति के लिए निर्मित वेबसाइट प्रदर्शन",
+        "summary": "हम साइट की गति, technical SEO, और Core Web Vitals की समीक्षा और सुधार करते हैं ताकि real-world usage का समर्थन कर सकें। सभी उपकरणों में तेज़ गति के लिए निर्मित वेबसाइट प्रदर्शन।",
+        "outcome": "तेज़ लोड समय, बेहतर usability, और मजबूत visibility।",
+        "meta": "मौजूदा या बढ़ती वेबसाइटों के लिए सर्वश्रेष्ठ"
+      },
+      {
+        "id": "support",
+        "tag": "सपोर्ट",
+        "title": "चल रहा सपोर्ट और सुधार",
+        "summary": "हम आपकी साइट को स्थिर, सुरक्षित रखने और आपके उत्पाद या व्यापार के विकसित होने के साथ सुधार करने में मदद करते हैं।",
+        "outcome": "नियोजित updates, छोटे iterations, और चल रहे refinements।",
+        "meta": "लचीले monthly support options"
+      }
+    ]
+  },
+  "engagementModels": {
+    "badge": "हम कैसे काम करते हैं",
+    "title": "सभी उपकरणों में तेज़ प्रदर्शन के लिए निर्मित वेबसाइट डेवलपमेंट सेवाएं",
+    "description": "चाहे आप कुछ नया launch कर रहे हों या जो आपके पास पहले से है उसे level up कर रहे हों, हम आपके stage, budget और team के अनुरूप model सुझाएंगे। उदाहरण देखने के लिए हमारे {portfolio} देखें, या विस्तृत {webDevelopment} परिणामों के लिए हमारे {caseStudies} पढ़ें।",
+    "portfolio": "पोर्टफोलियो",
+    "caseStudies": "केस स्टडी",
+    "webDevelopment": "वेब विकास",
+    "footer": "हम इसे recommend करेंगे यदि यह हमारी पहली कॉल में आपके लक्ष्यों के अनुरूप है।",
+    "items": [
+      {
+        "title": "प्रोजेक्ट-आधारित निर्माण",
+        "description": "उन teams के लिए सर्वश्रेष्ठ जिन्हें defined scope के साथ complete website build, redesign, या migration की आवश्यकता है।",
+        "bullets": [
+          "स्पष्ट scope और predictable timelines",
+          "नए launches या major changes के लिए अच्छा fit",
+          "आमतौर पर 4–6 सप्ताह में वितरित"
+        ]
+      },
+      {
+        "title": "चल रहा product partner",
+        "description": "उन teams के लिए जो headcount बढ़ाए बिना consistent design और development support चाहते हैं।",
+        "bullets": [
+          "लचीले usage के साथ monthly engagement",
+          "चल रहे updates, fixes, और improvements",
+          "SaaS और evolving products के लिए अच्छी तरह काम करता है"
+        ]
+      },
+      {
+        "title": "एजेंसियों के लिए white-label",
+        "description": "हम design और development को handle करके agencies का समर्थन करते हैं जबकि आप client-facing रहते हैं।",
+        "bullets": [
+          "आपके workflows के अनुकूल",
+          "discreet और NDA-friendly",
+          "विश्वसनीय delivery capacity"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQs",
+    "title": "हमारी सेवाओं के बारे में अक्सर पूछे जाने वाले प्रश्न।",
+    "items": [
+      {
+        "question": "एक सामान्य वेबसाइट परियोजना में कितना समय लगता है?",
+        "answer": "अधिकांश परियोजनाएं 4–6 सप्ताह में पूरी होती हैं। Timelines scope, content readiness, और feedback cycles पर निर्भर करती हैं। हम शुरू करने से पहले एक स्पष्ट timeline confirm करेंगे।"
+      },
+      {
+        "question": "क्या आप full projects handle करते हैं या सिर्फ specific parts?",
+        "answer": "दोनों। हम strategy से launch तक सब कुछ manage कर सकते हैं, या design या development only के साथ आपकी team का समर्थन कर सकते हैं।"
+      },
+      {
+        "question": "क्या हमारी team launch के बाद content update कर सकती है?",
+        "answer": "हाँ। हम CMS और reusable components का उपयोग करते हैं ताकि आपकी team technical help के बिना pages, text, और SEO fields update कर सके।"
+      },
+      {
+        "question": "शुरू करने के लिए पहला कदम क्या है?",
+        "answer": "हम आपके goals और constraints को समझने के लिए एक short call से शुरू करते हैं। उसके बाद, हम एक स्पष्ट scope, timeline, और next steps share करते हैं।"
+      }
+    ]
+  },
+  "cta": {
+    "badge": "अगला कदम",
+    "title": "परिणाम देने वाली वेबसाइट बनाने के लिए तैयार?",
+    "description": "एक short call। स्पष्ट next steps। कोई pressure नहीं।",
+    "primary": "मुफ्त वेबसाइट योजना प्राप्त करें",
+    "secondary": "केस स्टडी देखें"
+  }
+}
+

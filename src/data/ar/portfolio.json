@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ngo-wordpress",
+    "brand": "موقع منظمة غير ربحية",
+    "title": "إعادة بناء WordPress مخصصة للاستقرار طويل الأمد",
+    "snippet": "إعادة تصميم وإعادة بناء موقع منظمة غير ربحية باستخدام قالب WordPress مخصص للقضاء على مشاكل التحديثات وتحسين الصيانة.",
+    "url": "",
+    "image": "/casestudy/projectdeep.png",
+    "imageAlt": "معاينة إعادة تصميم موقع منظمة غير ربحية"
+  },
+  {
+    "id": "labelwala",
+    "brand": "Label Wala",
+    "title": "موقع Next.js عالي الأداء لعلامة طباعة",
+    "snippet": "موقع علامة تجارية سريع وجاهز لمحركات البحث مبني بـ Next.js، يركز على الأداء عبر الهاتف المحمول وسطح المكتب.",
+    "url": "",
+    "image": "/casestudy/labelwaala1.png",
+    "imageAlt": "معاينة موقع Label Wala"
+  },
+  {
+    "id": "nutsquare",
+    "brand": "NutSquare",
+    "title": "موقع تجارة إلكترونية مخصص مع دفع بدون عوائق",
+    "snippet": "موقع تجارة إلكترونية مبني على React بدون تسجيل دخول إلزامي، يركز على السرعة والبساطة والمدفوعات السلسة.",
+    "url": "",
+    "image": "/casestudy/nuts.png",
+    "imageAlt": "معاينة موقع NutSquare للتجارة الإلكترونية"
+  },
+  {
+    "id": "recytronics",
+    "brand": "Recytronics Foundation",
+    "title": "موقع منظمة غير ربحية يركز على الأداء مبني بـ Next.js",
+    "snippet": "موقع نظيف وسريع مصمم لنقل مبادرات الاستدامة ودعم جهود التوعية.",
+    "url": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "imageAlt": "معاينة موقع Recytronics Foundation"
+  },
+  {
+    "id": "ads-enviro",
+    "brand": "ADS Enviro Group",
+    "title": "موقع شركة محسّن للوضوح ومحركات البحث",
+    "snippet": "موقع شركة مبني بـ Next.js مصمم للسرعة والهيكلة والقابلية للتوسع طويلة الأمد في الخدمات البيئية.",
+    "url": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "imageAlt": "معاينة موقع ADS Enviro Group"
+  }
+]
+

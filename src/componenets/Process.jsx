@@ -1,9 +1,16 @@
 "use client";
 
 import React from "react";
-import processSteps from "@/data/process.json";
+import { useLocaleData } from "@/lib/use-locale-data";
+import { useTranslations } from "@/lib/translations-context";
 
 const Process = () => {
+  const t = useTranslations();
+  const { data: processSteps, loading } = useLocaleData('process');
+  
+  // Ensure processSteps is always an array
+  const stepsList = Array.isArray(processSteps) ? processSteps : [];
+
   return (
     <section
       id="process"
@@ -14,10 +21,10 @@ const Process = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
           <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gray-400">
-            Workflow
+            {t?.process?.badge || "Workflow"}
           </p>
           <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">
-            How we work
+            {t?.process?.title || "How we work"}
           </h2>
         </div>
 
@@ -28,7 +35,7 @@ const Process = () => {
             <div className="absolute left-0 right-0 top-10 h-px bg-gray-200" />
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-              {processSteps.map((step, index) => {
+              {stepsList.map((step, index) => {
                 const stepNumber = String(index + 1).padStart(2, "0");
                 return (
                   <div
@@ -37,7 +44,7 @@ const Process = () => {
                   >
                     {/* Step label */}
                     <p className="text-sm font-medium text-gray-800 mb-6">
-                      Step {stepNumber}
+                      {t?.process?.step || "Step"} {stepNumber}
                     </p>
 
                     {/* Dot on the line */}
@@ -68,7 +75,7 @@ const Process = () => {
 
         {/* Mobile stacked version */}
         <div className="md:hidden space-y-10">
-          {processSteps.map((step, index) => {
+          {stepsList.map((step, index) => {
             const stepNumber = String(index + 1).padStart(2, "0");
             return (
               <div
@@ -79,7 +86,7 @@ const Process = () => {
                 <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-lime-400 border-4 border-white shadow-[0_0_0_2px_rgba(190,242,100,0.55)]" />
 
                 <p className="text-xs font-medium text-gray-600 mb-1">
-                  Step {stepNumber}
+                  {t?.process?.step || "Step"} {stepNumber}
                 </p>
                 <div className="text-base font-semibold text-gray-900">
                   {step.label}

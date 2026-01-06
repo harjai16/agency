@@ -6,10 +6,12 @@ import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import caseStudies from "@/data/case-studies.json";
-import portfolio from "@/data/portfolio.json";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import SEOBacklinks from "@/componenets/global/SEOBacklinks";
+import { useTranslations } from "@/lib/translations-context";
+import { useLocaleData } from "@/lib/use-locale-data";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -18,8 +20,17 @@ const fadeUp = (delay = 0) => ({
 });
 
 const PortfolioPage = () => {
-  const [featured, ...rest] = caseStudies;
-const router = useRouter();
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
+  const { data: caseStudies, loading: caseStudiesLoading } = useLocaleData('case-studies');
+  const { data: portfolio, loading: portfolioLoading } = useLocaleData('portfolio');
+  
+  // Ensure data is available
+  const caseStudiesList = Array.isArray(caseStudies) ? caseStudies : [];
+  const portfolioList = Array.isArray(portfolio) ? portfolio : [];
+  const [featured, ...rest] = caseStudiesList;
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
@@ -33,25 +44,45 @@ const router = useRouter();
           <motion.div {...fadeUp(0)} className="space-y-6 max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Portfolio
+              {t?.portfolio?.badge || "Portfolio"}
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
-             Website Development Portfolio{" "}
+             {t?.portfolio?.heroTitle || "Website Development Portfolio"}{" "}
               <span className="inline-block border-b border-gray-300 pb-1">
-                Fast Performance Websites We Built for Business Growth
+                {t?.portfolio?.heroSubtitle || "Fast Performance Websites We Built for Business Growth"}
               </span>
             </h1>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed max-w-xl">
-             Work we've shipped for teams that value clarity and performance. A selected set of <Link href="/services" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">project</Link> started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind. For detailed results, see our <Link href="/case-studies" className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link>.
+             {t?.portfolio?.heroDescription ? (
+               <>
+                 {t.portfolio.heroDescription.split('{websites}')[0]}
+                 <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                   {t.portfolio.websites}
+                 </Link>
+                 {t.portfolio.heroDescription.split('{websites}')[1]?.split('{project}')[0]}
+                 <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                   {t.portfolio.project}
+                 </Link>
+                 {t.portfolio.heroDescription.split('{project}')[1]?.split('{caseStudies}')[0]}
+                 <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">
+                   {t.portfolio.caseStudies}
+                 </Link>
+                 {t.portfolio.heroDescription.split('{caseStudies}')[1]}
+               </>
+             ) : (
+               <>
+                 Work we've shipped for teams that value clarity and performance. A selected set of <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> and digital products built across SaaS, e-commerce, non-profits, and service businesses. Each <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">project</Link> started with a clear goal — speed, usability, or maintainability — and shipped with those priorities in mind. For detailed results, see our <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-600 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link>.
+               </>
+             )}
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
              <Button
-      onClick={() => router.push("/contact")}
+      onClick={() => router.push(createLocalizedHref("/contact", currentLocale))}
     >
-      Start a project
+      {t?.portfolio?.startProject || "Start a project"}
     </Button>
               <Button
                 variant="ghost"
@@ -61,7 +92,7 @@ const router = useRouter();
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Browse the work
+                {t?.portfolio?.browseWork || "Browse the work"}
               </Button>
             </div>
 
@@ -70,19 +101,19 @@ const router = useRouter();
                 <div className="font-semibold text-gray-900 text-base">
                   10+
                 </div>
-                <div>Projects delivered</div>
+                <div>{t?.portfolio?.projectsDelivered || "Projects delivered"}</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">
                   10+
                 </div>
-                <div>Happy clients</div>
+                <div>{t?.portfolio?.happyClients || "Happy clients"}</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">
                   4–6 weeks
                 </div>
-                <div>Average build time</div>
+                <div>{t?.portfolio?.averageBuildTime || "Average build time"}</div>
               </div>
             </div>
           </motion.div>
@@ -91,7 +122,7 @@ const router = useRouter();
           {featured && (
             <motion.div {...fadeUp(0.1)} className="relative">
               <div className="pointer-events-none absolute -top-10 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-gray-100 via-gray-50 to-white blur-3xl" />
-              <Link href={featured.href} className="block">
+              <Link href={createLocalizedHref(featured.href, currentLocale)} className="block">
                 <article className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur shadow-[0_22px_55px_rgba(15,23,42,0.10)]">
                   {/* Image */}
                   <div className="relative h-52 md:h-60 overflow-hidden">
@@ -126,7 +157,7 @@ const router = useRouter();
                   {/* Content */}
                   <div className="px-5 pt-4 pb-5 space-y-2">
                     <p className="text-[11px] uppercase tracking-[0.18em] text-gray-500">
-                      Featured case study
+                      {t?.portfolio?.featuredCaseStudy || "Featured case study"}
                     </p>
                     <h2 className="text-sm md:text-base font-semibold text-gray-900">
                       {featured.title}
@@ -137,7 +168,7 @@ const router = useRouter();
                     <div className="flex items-center justify-between pt-2 text-[11px] text-gray-500">
                       <span>{featured.meta}</span>
                       <span className="inline-flex items-center gap-1 font-medium text-gray-800 hover:text-black hover:gap-1.5 transition-all">
-                        View project <span className="text-xs">↗</span>
+                        {t?.portfolio?.viewProject || "View project"} <span className="text-xs">↗</span>
                       </span>
                     </div>
                   </div>
@@ -161,28 +192,29 @@ const router = useRouter();
             className="flex flex-wrap items-center justify-between gap-4"
           >
             <div className="text-xs md:text-sm text-gray-500">
-              Showing {caseStudies.length} projects across SaaS, e-commerce and
-              fintech.
+              {t?.portfolio?.showingProjects 
+                ? t.portfolio.showingProjects.replace('{count}', caseStudiesList.length)
+                : `Showing ${caseStudiesList.length} projects across SaaS, e-commerce and fintech.`}
             </div>
             <div className="flex flex-wrap gap-2 text-[11px] md:text-xs">
               <button className="rounded-full border border-gray-900 bg-gray-900 px-3 py-1 text-white">
-                All work
+                {t?.portfolio?.allWork || "All work"}
               </button>
               <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
-                SaaS
+                {t?.portfolio?.saas || "SaaS"}
               </button>
               <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
-                E-commerce
+                {t?.portfolio?.ecommerce || "E-commerce"}
               </button>
               <button className="rounded-full border border-gray-200 px-3 py-1 text-gray-600 hover:border-gray-300">
-                Fintech
+                {t?.portfolio?.fintech || "Fintech"}
               </button>
             </div>
           </motion.div>
 
           {/* Grid of remaining projects */}
          <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  {portfolio.map((item, index) => (
+  {portfolioList.map((item, index) => (
     <motion.article
       key={item.id}
       initial={{ opacity: 0, y: 18 }}
@@ -204,7 +236,7 @@ const router = useRouter();
           />
         ) : (
           <div className="flex items-center justify-center h-full text-gray-400 text-xs">
-            No image available
+            {t?.portfolio?.noImageAvailable || "No image available"}
           </div>
         )}
       </div>
@@ -229,7 +261,7 @@ const router = useRouter();
           rel="noopener noreferrer"
           className="mt-auto inline-flex items-center gap-1 font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all"
         >
-          Visit website <span className="text-xs">↗</span>
+          {t?.portfolio?.visitWebsite || "Visit website"} <span className="text-xs">↗</span>
         </a>
       </div>
 
@@ -250,23 +282,21 @@ const router = useRouter();
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
-            Seen enough?
+            {t?.portfolio?.seenEnough || "Seen enough?"}
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900 mb-3">
-            Ready to start your next website project?
+            {t?.portfolio?.readyToStart || "Ready to start your next website project?"}
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl mx-auto mb-4 sm:mb-6">
-            Share what you&apos;re building, who it&apos;s for and what success
-            looks like. We&apos;ll come back with a clear plan, rough timeline
-            and recommended starting point.
+            {t?.portfolio?.finalDescription || "Share what you're building, who it's for and what success looks like. We'll come back with a clear plan, rough timeline and recommended starting point."}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
            
             <Button
               variant="ghost"
-             onClick={() => router.push("/contact")}
+             onClick={() => router.push(createLocalizedHref("/contact", currentLocale))}
             >
-              Send project details
+              {t?.portfolio?.sendProjectDetails || "Send project details"}
             </Button>
           </div>
         </motion.div>

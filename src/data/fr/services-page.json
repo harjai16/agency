@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "SERVICES",
+    "title": "Services de développement web",
+    "titleHighlight": "Sites web haute performance pour la croissance des entreprises",
+    "description": "{websiteServices} conçus pour générer des prospects, des ventes et une croissance réelle. Stratégie, design et développement axés sur la performance — {websites} rapides qui convertissent les visiteurs en clients. Consultez nos {caseStudies} pour des résultats réels. Lancement typique de 4-6 semaines.",
+    "websiteServices": "Services de sites web",
+    "websites": "sites web",
+    "caseStudies": "études de cas",
+    "ctaPrimary": "Obtenir un plan de site gratuit",
+    "ctaSecondary": "Voir les vrais projets",
+    "stats": {
+      "projects": {
+        "value": "10+",
+        "label": "projets livrés"
+      },
+      "timeline": {
+        "value": "4–6 semaines",
+        "label": "semaines de lancement typique"
+      },
+      "focus": {
+        "value": "Axé sur la performance",
+        "label": "Constructions axées sur la performance"
+      }
+    },
+    "typicalProject": {
+      "badge": "4–6 semaines",
+      "label": "Projet typique",
+      "title": "Ce qu'inclut un projet de site web typique",
+      "items": [
+        "Stratégie claire alignée avec vos objectifs commerciaux",
+        "UX et UI pour les pages clés et les flux de conversion",
+        "Construction Next.js ou WordPress axée sur la performance",
+        "SEO, analytics et support de lancement intégrés"
+      ],
+      "footer": "Pas de modèles. Pas de packages copier-coller. Construit pour vos besoins."
+    }
+  },
+  "services": {
+    "badge": "Ce que nous faisons",
+    "title": "Services de développement web pour performance rapide et croissance",
+    "description": "Choisissez un seul {service} ou partenaire avec nous de bout en bout. Dans tous les cas, vous obtenez une équipe senior axée sur la performance et les conversions. Tout ce dont vous avez besoin pour concevoir, construire et développer votre {website}. Voir nos {caseStudies} pour des exemples de notre travail de {webDevelopment}.",
+    "service": "service",
+    "website": "site web",
+    "caseStudies": "études de cas",
+    "webDevelopment": "développement web",
+    "outcome": "Résultat:",
+    "items": [
+      {
+        "id": "strategy",
+        "tag": "Stratégie",
+        "title": "Stratégie de développement web pour la croissance",
+        "summary": "Nous planifions la structure des pages, la hiérarchie du contenu et les flux utilisateur pour que les visiteurs comprennent rapidement ce que vous faites et ce qu'il faut faire ensuite. Stratégie de développement web pour la croissance.",
+        "outcome": "Plan de site clair, messages ciblés et objectifs de page définis.",
+        "meta": "Utile avant les nouvelles constructions ou redesigns"
+      },
+      {
+        "id": "ux-ui",
+        "tag": "Design",
+        "title": "Design de site web pour performance rapide sur tous les appareils",
+        "summary": "Interfaces propres et mobile-first conçues pour être faciles à utiliser et alignées avec votre marque. Design de site web pour performance rapide sur tous les appareils.",
+        "outcome": "Designs polis prêts pour le développement ou la remise.",
+        "meta": "Mises en page responsives avec états d'interaction clés"
+      },
+      {
+        "id": "development",
+        "tag": "Développement",
+        "title": "Développement web pour performance rapide",
+        "summary": "Sites web rapides et fiables construits avec des frameworks modernes comme Next.js et React — pas de thèmes lourds ou de raccourcis. Nous avons construit des sites web axés sur la performance adaptés à vos besoins commerciaux.",
+        "outcome": "Un site axé sur la performance adapté à vos besoins commerciaux.",
+        "meta": "Bien adapté pour SaaS, marques de services et constructions personnalisées"
+      },
+      {
+        "id": "cms",
+        "tag": "CMS",
+        "title": "CMS et gestion de contenu",
+        "summary": "Configurations CMS flexibles utilisant WordPress ou des solutions headless pour que votre équipe puisse gérer le contenu en toute confiance.",
+        "outcome": "Pages modifiables, contenu structuré et champs prêts pour SEO.",
+        "meta": "Comprend formation de base et documentation"
+      },
+      {
+        "id": "performance",
+        "tag": "Performance et SEO",
+        "title": "Performance de site web pour vitesse rapide sur tous les appareils",
+        "summary": "Nous examinons et améliorons la vitesse du site, le SEO technique et Core Web Vitals pour soutenir l'utilisation réelle. Performance de site web pour vitesse rapide sur tous les appareils.",
+        "outcome": "Temps de chargement plus rapides, meilleure utilisabilité et visibilité renforcée.",
+        "meta": "Meilleur pour les sites existants ou en croissance"
+      },
+      {
+        "id": "support",
+        "tag": "Support",
+        "title": "Support et améliorations continues",
+        "summary": "Nous aidons à maintenir votre site stable, sécurisé et en amélioration au fur et à mesure que votre produit ou entreprise évolue.",
+        "outcome": "Mises à jour planifiées, petites itérations et améliorations continues.",
+        "meta": "Options de support mensuel flexibles"
+      }
+    ]
+  },
+  "engagementModels": {
+    "badge": "Comment nous travaillons",
+    "title": "Services de développement web pour performance rapide sur tous les appareils",
+    "description": "Que vous lanciez quelque chose de nouveau ou amélioriez ce que vous avez déjà, nous suggérerons le modèle qui correspond à votre étape, budget et équipe. Consultez notre {portfolio} pour voir des exemples, ou lisez nos {caseStudies} pour des résultats {webDevelopment} détaillés.",
+    "portfolio": "portfolio",
+    "caseStudies": "études de cas",
+    "webDevelopment": "développement web",
+    "footer": "Nous le recommanderons s'il correspond à vos objectifs lors de notre premier appel.",
+    "items": [
+      {
+        "title": "Constructions basées sur projet",
+        "description": "Meilleur pour les équipes qui ont besoin d'une construction de site complète, redesign ou migration avec un périmètre défini.",
+        "bullets": [
+          "Périmètre clair et délais prévisibles",
+          "Bon ajustement pour nouveaux lancements ou changements majeurs",
+          "Typiquement livré en 4–6 semaines"
+        ]
+      },
+      {
+        "title": "Partenaire produit continu",
+        "description": "Pour les équipes qui veulent un support de design et développement cohérent sans augmenter les effectifs.",
+        "bullets": [
+          "Engagement mensuel avec utilisation flexible",
+          "Mises à jour, corrections et améliorations continues",
+          "Fonctionne bien pour SaaS et produits en évolution"
+        ]
+      },
+      {
+        "title": "White-label pour agences",
+        "description": "Nous soutenons les agences en gérant le design et le développement pendant que vous restez orienté client.",
+        "bullets": [
+          "Adaptable à vos flux de travail",
+          "Discret et compatible NDA",
+          "Capacité de livraison fiable"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQs",
+    "title": "Questions fréquemment posées sur nos services.",
+    "items": [
+      {
+        "question": "Combien de temps prend un projet de site web typique?",
+        "answer": "La plupart des projets sont terminés en 4–6 semaines. Les délais dépendent du périmètre, de la préparation du contenu et des cycles de retour. Nous confirmerons un délai clair avant de commencer."
+      },
+      {
+        "question": "Gérez-vous des projets complets ou seulement des parties spécifiques?",
+        "answer": "Les deux. Nous pouvons tout gérer de la stratégie au lancement, ou soutenir votre équipe avec seulement le design ou le développement."
+      },
+      {
+        "question": "Notre équipe peut-elle mettre à jour le contenu après le lancement?",
+        "answer": "Oui. Nous utilisons CMS et composants réutilisables pour que votre équipe puisse mettre à jour les pages, texte et champs SEO sans aide technique."
+      },
+      {
+        "question": "Quelle est la première étape pour commencer?",
+        "answer": "Nous commençons par un court appel pour comprendre vos objectifs et contraintes. Après cela, nous partageons un périmètre, délai et prochaines étapes clairs."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Prochaine étape",
+    "title": "Prêt à construire un site qui livre des résultats?",
+    "description": "Un court appel. Prochaines étapes claires. Sans pression.",
+    "primary": "Obtenir un plan de site gratuit",
+    "secondary": "Voir les études de cas"
+  }
+}
+

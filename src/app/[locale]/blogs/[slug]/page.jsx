@@ -6,7 +6,9 @@ import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, usePathname } from "next/navigation";
+import { getCurrentLocale, createLocalizedHref } from "@/lib/navigation";
+import { useTranslations } from "@/lib/translations-context";
 import Contact from "@/componenets/Contact";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOHead from "@/componenets/global/SEOHead";
@@ -23,6 +25,9 @@ const fadeUp = (delay = 0) => ({
 const BlogDetailPage = () => {
   const params = useParams();
   const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
   const rawSlug = params?.slug;
   const slug = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug || "";
 
@@ -40,7 +45,7 @@ const BlogDetailPage = () => {
     } else {
       setLoading(false);
     }
-  }, [slug]);
+  }, [slug, currentLocale]);
 
   // Style links in blog content
   useEffect(() => {
@@ -84,8 +89,8 @@ const BlogDetailPage = () => {
         return;
       }
 
-      console.log('Fetching blog with slug:', slug);
-      const apiUrl = `/api/blogs/slug/${encodeURIComponent(slug)}`;
+      console.log('Fetching blog with slug:', slug, 'locale:', currentLocale);
+      const apiUrl = `/api/blogs/slug/${encodeURIComponent(slug)}?locale=${currentLocale}`;
       console.log('API URL:', apiUrl);
 
       const response = await fetch(apiUrl);
@@ -126,7 +131,7 @@ const BlogDetailPage = () => {
 
   const fetchRelatedBlogs = async () => {
     try {
-      const response = await fetch('/api/blogs?status=published');
+      const response = await fetch(`/api/blogs?status=published&locale=${currentLocale}`);
       const data = await response.json();
 
       if (data.success && data.blogs) {
@@ -186,13 +191,15 @@ const BlogDetailPage = () => {
         <Section className="py-24 md:py-32">
           <div className="max-w-fullhd mx-auto text-center space-y-4">
             <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Blog post not found
+              {t?.blogs?.notFoundTitle || "Blog post not found"}
             </h1>
             <p className="text-sm md:text-base text-gray-500">
-              The article you&apos;re looking for doesn&apos;t exist or has been moved.
+              {t?.blogs?.notFoundDescription || "The article you're looking for doesn't exist or has been moved."}
             </p>
             <Button asChild>
-              <Link href="/blogs">Back to all blogs</Link>
+              <Link href={createLocalizedHref("/blogs", currentLocale)}>
+                {t?.blogs?.backToBlogs || "Back to all blogs"}
+              </Link>
             </Button>
           </div>
         </Section>
@@ -201,7 +208,7 @@ const BlogDetailPage = () => {
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
-  const blogUrl = `${siteUrl}/blogs/${slug}`;
+  const blogUrl = `${siteUrl}${createLocalizedHref(`/blogs/${slug}`, currentLocale)}`;
 
   // Auto-generated schema (fallback)
   const defaultArticleSchema = blog ? {
@@ -299,10 +306,10 @@ const BlogDetailPage = () => {
             <motion.div {...fadeUp(0)}>
               <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-gray-500">
                 <Link
-                  href="/blogs"
+                  href={createLocalizedHref("/blogs", currentLocale)}
                   className="hover:text-gray-900 transition-colors"
                 >
-                  Blog
+                  {t?.blogs?.title || "Blog"}
                 </Link>
                 <span className="h-[1px] w-6 bg-gray-300" />
                 <span className="line-clamp-1">{blog.title}</span>
@@ -345,7 +352,7 @@ const BlogDetailPage = () => {
                 {/* Social Share */}
                 <div className="pt-4">
                   <SocialShare 
-                    url={`/blogs/${slug}`}
+                    url={createLocalizedHref(`/blogs/${slug}`, currentLocale)}
                     title={blog.title}
                     description={blog.excerpt || blog.title}
                     variant="compact"
@@ -403,10 +410,10 @@ const BlogDetailPage = () => {
           <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
             <motion.div {...fadeUp(0)}>
               <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-2">
-                Related articles
+                {t?.blogs?.relatedArticles || "Related articles"}
               </p>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
-                More from our blog
+                {t?.blogs?.moreFromBlog || "More from our blog"}
               </h2>
             </motion.div>
 
@@ -421,7 +428,7 @@ const BlogDetailPage = () => {
                   whileHover={{ y: -4 }}
                   className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
                 >
-                  <Link href={`/blogs/${relatedBlog.slug}`} className="flex flex-col h-full">
+                  <Link href={createLocalizedHref(`/blogs/${relatedBlog.slug}`, currentLocale)} className="flex flex-col h-full">
                     {relatedBlog.featuredImage && (
                       <div className="relative h-40 md:h-44 overflow-hidden">
                         <Image
@@ -445,7 +452,7 @@ const BlogDetailPage = () => {
                         </p>
                       )}
                       <span className="inline-flex items-center gap-1 text-[11px] font-medium text-gray-800 group-hover:text-black group-hover:gap-1.5 transition-all mt-auto">
-                        Read article
+                        {t?.blogs?.readArticle || "Read article"}
                         <span className="text-xs">↗</span>
                       </span>
                     </div>

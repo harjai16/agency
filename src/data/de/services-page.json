@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "badge": "DIENSTLEISTUNGEN",
+    "title": "Webentwicklungsdienstleistungen",
+    "titleHighlight": "Hochleistungs-Websites für Unternehmenswachstum",
+    "description": "{websiteServices} zur Generierung von Leads, Verkäufen und echtem Wachstum. Strategie, Design und Entwicklung mit Fokus auf Leistung — schnelle {websites}, die Besucher in Kunden umwandeln. Sehen Sie unsere {caseStudies} für echte Ergebnisse. Typischer Launch in 4-6 Wochen.",
+    "websiteServices": "Website-Dienstleistungen",
+    "websites": "Websites",
+    "caseStudies": "Fallstudien",
+    "ctaPrimary": "Kostenlosen Website-Plan erhalten",
+    "ctaSecondary": "Echte Projekte ansehen",
+    "stats": {
+      "projects": {
+        "value": "10+",
+        "label": "gelieferte Projekte"
+      },
+      "timeline": {
+        "value": "4–6 Wochen",
+        "label": "Wochen typischer Launch"
+      },
+      "focus": {
+        "value": "Leistungsorientiert",
+        "label": "Leistungsorientierte Builds"
+      }
+    },
+    "typicalProject": {
+      "badge": "4–6 Wochen",
+      "label": "Typisches Projekt",
+      "title": "Was ein typisches Website-Projekt beinhaltet",
+      "items": [
+        "Klare Strategie, die mit Ihren Geschäftszielen übereinstimmt",
+        "UX & UI für wichtige Seiten und Conversion-Flows",
+        "Leistungsorientierter Next.js oder WordPress Build",
+        "SEO, Analytics und Launch-Support integriert"
+      ],
+      "footer": "Keine Vorlagen. Keine Copy-Paste-Pakete. Für Ihre Bedürfnisse gebaut."
+    }
+  },
+  "services": {
+    "badge": "Was wir tun",
+    "title": "Webentwicklungsdienstleistungen für schnelle Leistung und Wachstum",
+    "description": "Wählen Sie einen einzelnen {service} oder arbeiten Sie mit uns von Anfang bis Ende zusammen. So oder so erhalten Sie ein erfahrenes Team, das sich auf Leistung und Conversions konzentriert. Alles, was Sie brauchen, um Ihre {website} zu gestalten, zu bauen und zu wachsen. Sehen Sie unsere {caseStudies} für Beispiele unserer {webDevelopment}-Arbeit.",
+    "service": "Service",
+    "website": "Website",
+    "caseStudies": "Fallstudien",
+    "webDevelopment": "Webentwicklung",
+    "outcome": "Ergebnis:",
+    "items": [
+      {
+        "id": "strategy",
+        "tag": "Strategie",
+        "title": "Webentwicklungsstrategie für Geschäftswachstum",
+        "summary": "Wir planen Seitenstruktur, Inhaltshierarchie und Benutzerflüsse, damit Besucher schnell verstehen, was Sie tun und was als Nächstes zu tun ist. Webentwicklungsstrategie für Geschäftswachstum.",
+        "outcome": "Klares Sitemap, fokussierte Nachrichten und definierte Seitenziele.",
+        "meta": "Nützlich vor neuen Builds oder Redesigns"
+      },
+      {
+        "id": "ux-ui",
+        "tag": "Design",
+        "title": "Website-Design für schnelle Leistung auf allen Geräten",
+        "summary": "Saubere, mobile-first Interfaces, die einfach zu verwenden sind und zu Ihrer Marke passen. Website-Design für schnelle Leistung auf allen Geräten.",
+        "outcome": "Polierte Designs, bereit für Entwicklung oder Übergabe.",
+        "meta": "Responsive Layouts mit wichtigen Interaktionszuständen"
+      },
+      {
+        "id": "development",
+        "tag": "Entwicklung",
+        "title": "Webentwicklung für schnelle Leistung",
+        "summary": "Schnelle, zuverlässige Websites, die mit modernen Frameworks wie Next.js und React gebaut wurden — keine schweren Themes oder Abkürzungen. Wir haben leistungsorientierte Websites gebaut, die auf Ihre Geschäftsbedürfnisse zugeschnitten sind.",
+        "outcome": "Eine leistungsorientierte Website, die auf Ihre Geschäftsbedürfnisse zugeschnitten ist.",
+        "meta": "Gut geeignet für SaaS, Service-Marken und Custom Builds"
+      },
+      {
+        "id": "cms",
+        "tag": "CMS",
+        "title": "CMS & Content Management",
+        "summary": "Flexible CMS-Einrichtungen mit WordPress oder Headless-Lösungen, damit Ihr Team Inhalte sicher verwalten kann.",
+        "outcome": "Bearbeitbare Seiten, strukturierte Inhalte und SEO-ready Felder.",
+        "meta": "Beinhaltet Grundschulung und Dokumentation"
+      },
+      {
+        "id": "performance",
+        "tag": "Leistung & SEO",
+        "title": "Website-Leistung für schnelle Geschwindigkeit auf allen Geräten",
+        "summary": "Wir überprüfen und verbessern Site-Geschwindigkeit, technisches SEO und Core Web Vitals, um realen Einsatz zu unterstützen. Website-Leistung für schnelle Geschwindigkeit auf allen Geräten.",
+        "outcome": "Schnellere Ladezeiten, bessere Benutzerfreundlichkeit und stärkere Sichtbarkeit.",
+        "meta": "Am besten für bestehende oder wachsende Websites"
+      },
+      {
+        "id": "support",
+        "tag": "Support",
+        "title": "Laufender Support & Verbesserungen",
+        "summary": "Wir helfen dabei, Ihre Website stabil, sicher und verbessernd zu halten, während sich Ihr Produkt oder Geschäft entwickelt.",
+        "outcome": "Geplante Updates, kleine Iterationen und laufende Verbesserungen.",
+        "meta": "Flexible monatliche Support-Optionen"
+      }
+    ]
+  },
+  "engagementModels": {
+    "badge": "Wie wir arbeiten",
+    "title": "Webentwicklungsdienstleistungen für schnelle Leistung auf allen Geräten",
+    "description": "Ob Sie etwas Neues starten oder das, was Sie bereits haben, verbessern, wir schlagen das Modell vor, das zu Ihrer Phase, Ihrem Budget und Ihrem Team passt. Schauen Sie sich unser {portfolio} an, um Beispiele zu sehen, oder lesen Sie unsere {caseStudies} für detaillierte {webDevelopment}-Ergebnisse.",
+    "portfolio": "Portfolio",
+    "caseStudies": "Fallstudien",
+    "webDevelopment": "Webentwicklung",
+    "footer": "Wir empfehlen dies, wenn es zu Ihren Zielen in unserem ersten Anruf passt.",
+    "items": [
+      {
+        "title": "Projektbasierte Builds",
+        "description": "Am besten für Teams, die einen vollständigen Website-Build, Redesign oder Migration mit definiertem Umfang benötigen.",
+        "bullets": [
+          "Klarer Umfang und vorhersehbare Zeitpläne",
+          "Gut geeignet für neue Launches oder größere Änderungen",
+          "Typischerweise in 4–6 Wochen geliefert"
+        ]
+      },
+      {
+        "title": "Laufender Produktpartner",
+        "description": "Für Teams, die konsistenten Design- und Entwicklungs-Support ohne Personalausweitung wollen.",
+        "bullets": [
+          "Monatliches Engagement mit flexiblem Einsatz",
+          "Laufende Updates, Fixes und Verbesserungen",
+          "Funktioniert gut für SaaS und sich entwickelnde Produkte"
+        ]
+      },
+      {
+        "title": "White-Label für Agenturen",
+        "description": "Wir unterstützen Agenturen, indem wir Design und Entwicklung übernehmen, während Sie kundenorientiert bleiben.",
+        "bullets": [
+          "Anpassbar an Ihre Workflows",
+          "Diskret und NDA-freundlich",
+          "Zuverlässige Lieferkapazität"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQs",
+    "title": "Häufig gestellte Fragen zu unseren Dienstleistungen.",
+    "items": [
+      {
+        "question": "Wie lange dauert ein typisches Website-Projekt?",
+        "answer": "Die meisten Projekte werden in 4–6 Wochen abgeschlossen. Zeitpläne hängen vom Umfang, der Inhaltsbereitschaft und Feedback-Zyklen ab. Wir bestätigen einen klaren Zeitplan vor dem Start."
+      },
+      {
+        "question": "Bearbeiten Sie vollständige Projekte oder nur bestimmte Teile?",
+        "answer": "Beides. Wir können alles von Strategie bis Launch verwalten oder Ihr Team nur mit Design oder Entwicklung unterstützen."
+      },
+      {
+        "question": "Kann unser Team Inhalte nach dem Launch aktualisieren?",
+        "answer": "Ja. Wir verwenden CMS und wiederverwendbare Komponenten, damit Ihr Team Seiten, Text und SEO-Felder ohne technische Hilfe aktualisieren kann."
+      },
+      {
+        "question": "Was ist der erste Schritt, um zu beginnen?",
+        "answer": "Wir beginnen mit einem kurzen Anruf, um Ihre Ziele und Einschränkungen zu verstehen. Danach teilen wir einen klaren Umfang, Zeitplan und nächste Schritte."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Nächster Schritt",
+    "title": "Bereit, eine Website zu bauen, die Ergebnisse liefert?",
+    "description": "Ein kurzer Anruf. Klare nächste Schritte. Kein Druck.",
+    "primary": "Kostenlosen Website-Plan erhalten",
+    "secondary": "Fallstudien ansehen"
+  }
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "khushali-ngo",
+    "name": "Khushali Mehta",
+    "role": "Trustee, NGO",
+    "quote": "Our earlier WordPress site kept breaking with updates and was hard to manage. Swagatam Tech rebuilt it with a custom theme, and since then the site has been stable and much easier to update. The design also feels more aligned with our work.",
+    "company": "NGO Website",
+    "badge": "Custom WordPress rebuild",
+    "avatar": "/images/testimonials/khushali.webp"
+  },
+  {
+    "id": "labelwala",
+    "name": "Akshit Gupta",
+    "role": "Founder, Label Wala",
+    "quote": "We needed a fast, professional website that represented our brand properly. The team built it in Next.js with a strong focus on performance and SEO. The site loads quickly and works well across devices.",
+    "company": "Label Wala",
+    "badge": "Next.js brand website",
+    "avatar": "/images/testimonials/akshit.webp"
+  },
+  {
+    "id": "nutsquare",
+    "name": "Navneet",
+    "role": "Founder, NutSquare",
+    "quote": "Our requirement was a simple e-commerce setup without forcing users to log in. Swagatam Tech understood this clearly and delivered a smooth, fast website with an easy checkout flow. The experience has been very practical.",
+    "company": "NutSquare",
+    "badge": "Custom e-commerce build",
+    "avatar": "/images/testimonials/navneet.webp"
+  },
+  {
+    "id": "recytronics",
+    "name": "Recytronics Foundation",
+    "role": "Non-Profit Organization",
+    "quote": "We wanted a clean, modern website to communicate our mission around sustainability and community impact. The new site is fast, well-structured, and easy to navigate, helping us present our work more clearly.",
+    "company": "Recytronics Foundation",
+    "badge": "Next.js non-profit website",
+    "avatar": "/images/testimonials/recytronics.webp"
+  },
+  {
+    "id": "ads-enviro",
+    "name": "ADS Enviro Group",
+    "role": "Environmental Services Company",
+    "quote": "Swagatam Tech helped us build a professional company website that clearly explains our services. The site is fast, optimized for search, and gives us a solid digital presence without unnecessary complexity.",
+    "company": "ADS Enviro Group",
+    "badge": "Corporate website development",
+    "avatar": "/images/testimonials/ads.webp"
+  }
+]
+

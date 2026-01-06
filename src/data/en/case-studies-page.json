@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "badge": "Case studies",
+    "title": "Website Development Case Studies",
+    "titleHighlight": "Fast Performance Websites We Built for Business",
+    "description": "Real projects, real outcomes. A closer look at {websites} we've designed and built — focused on speed, stability, and usability. From faster load times to smoother flows and clearer content, these are shipped projects, not concepts. Browse our {portfolio} for more examples, or explore our {webDevelopmentServices}.",
+    "websites": "websites",
+    "portfolio": "portfolio",
+    "webDevelopmentServices": "web development services",
+    "ctaPrimary": "Discuss your project",
+    "ctaSecondary": "Browse case studies"
+  },
+  "listing": {
+    "projectsLabel": "{count} projects",
+    "subtitle": "From SaaS and fintech to e-commerce and modern brands.",
+    "readCaseStudy": "Read case study"
+  },
+  "cta": {
+    "badge": "Seen something relevant?",
+    "title": "Discuss your project with our team",
+    "description": "If one of these projects feels close to what you're building, let's discuss it. Share a bit about your goals and constraints, and we'll suggest a clear approach and realistic next steps.",
+    "button": "Send project details"
+  }
+}
+

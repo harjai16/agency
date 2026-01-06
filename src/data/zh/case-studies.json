@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ngo-wordpress-rebuild",
+    "client": "Khushali Mehta",
+    "industry": "非营利组织",
+    "title": "使用自定义WordPress重建稳定NGO网站",
+    "heroTitle": "重建NGO网站以消除更新问题并提高可维护性",
+    "snippet": "我们使用自定义WordPress主题重新设计和重建了一个NGO网站，以修复由主题和版本更新引起的频繁故障。",
+    "challenge": "之前的网站依赖于默认的WordPress主题，更新后经常出现问题，使内容更改变得有风险且耗时。",
+    "solution": "我们使用具有干净布局和稳定更新过程的自定义WordPress主题重建了网站，以适应NGO的内容需求。",
+    "impact": "网站变得稳定，更容易更新，并且在常规WordPress更新期间不再出现问题。",
+    "services": [
+      "网站重新设计",
+      "自定义WordPress开发",
+      "用户体验和内容结构"
+    ],
+    "deliverables": [
+      "自定义WordPress主题",
+      "响应式布局",
+      "CMS配置"
+    ],
+    "testimonial": {
+      "name": "NGO受托人",
+      "quote": "现在管理网站要容易得多。更新不再破坏网站，设计感觉更符合我们的工作。"
+    },
+    "metric": "稳定且易于更新",
+    "meta": "4-6周内交付",
+    "href": "/case-studies/ngo-wordpress-rebuild",
+    "liveUrl": "",
+    "image": "/casestudy/projectdeep.png",
+    "images": ["/casestudy/projectdeep.png","/casestudy/project2.png"],
+    "imageAlt": "NGO网站重新设计"
+  },
+  {
+    "id": "labelwala-nextjs",
+    "client": "Label Wala",
+    "industry": "制造业 / 印刷",
+    "title": "使用Next.js构建的高性能品牌网站",
+    "heroTitle": "为印刷品牌构建快速、SEO就绪的网站",
+    "snippet": "我们在Next.js中构建了一个现代品牌网站，专注于速度、性能和搜索可见性。",
+    "challenge": "企业需要一个快速、专业的网站，能够清晰地代表其品牌并在所有设备上表现良好。",
+    "solution": "我们设计并开发了一个Next.js网站，具有性能优先的布局、响应式设计和SEO最佳实践。",
+    "impact": "网站在移动端和桌面端实现了90+的性能分数，加载速度快，为SEO提供了坚实的基础。",
+    "services": [
+      "网站设计",
+      "Next.js开发",
+      "性能优化",
+      "SEO设置"
+    ],
+    "deliverables": [
+      "Next.js网站",
+      "响应式用户界面",
+      "SEO就绪页面"
+    ],
+    "testimonial": {
+      "name": "Akshit Gupta",
+      "quote": "网站加载速度快，看起来干净，在所有设备上都能流畅运行。正是我们所需要的。"
+    },
+    "metric": "90+性能分数",
+    "meta": "专注于SEO和速度的构建",
+    "href": "/case-studies/labelwala-nextjs",
+    "liveUrl": "",
+    "image": "/casestudy/labelwaala1.png",
+    "images": ["/casestudy/labelwaala1.png","/casestudy/label2.png"],
+    "imageAlt": "Label Wala网站"
+  },
+  {
+    "id": "nutsquare-ecommerce",
+    "client": "NutSquare",
+    "industry": "电子商务 / 食品",
+    "title": "无登录摩擦的自定义电子商务网站",
+    "heroTitle": "为健康零食品牌设计快速电子商务体验",
+    "snippet": "我们构建了一个自定义电子商务网站，允许用户浏览、添加到购物车并在没有强制登录的情况下结账。",
+    "challenge": "客户希望有一个简单的购买体验，具有流畅的结账流程，无需用户登录要求。",
+    "solution": "我们开发了一个基于React的电子商务网站，具有添加到购物车、订单流程和专注于简单性的支付集成。",
+    "impact": "网站提供快速、无摩擦的购物体验，具有强大的性能和SEO就绪性。",
+    "services": [
+      "电子商务设计",
+      "React开发",
+      "支付集成",
+      "性能优化"
+    ],
+    "deliverables": [
+      "自定义店面",
+      "购物车和结账流程",
+      "响应式布局"
+    ],
+    "testimonial": {
+      "name": "Navneet",
+      "quote": "结账流程简单快速，正是我们为客户想要的。"
+    },
+    "metric": "90+性能分数",
+    "meta": "自定义React构建",
+    "href": "/case-studies/nutsquare-ecommerce",
+    "liveUrl": "",
+    "image": "/casestudy/nuts.png",
+    "images": ["/casestudy/nuts1.png","/casestudy/nuts3.png"],
+    "imageAlt": "NutSquare电子商务网站"
+  },
+  {
+    "id": "recytronics-foundation",
+    "client": "Recytronics Foundation",
+    "industry": "非营利组织 / 可持续性",
+    "title": "使用Next.js构建的以性能为重点的NGO网站",
+    "heroTitle": "帮助专注于可持续性的NGO清晰地传达其影响",
+    "snippet": "我们构建了一个干净、快速的网站，以支持意识、外展和长期内容增长。",
+    "challenge": "基金会需要一个现代网站，能够清晰地传达其使命，同时保持快速和可访问性。",
+    "solution": "我们设计并开发了一个Next.js网站，具有结构化内容、干净的UI和SEO友好的页面。",
+    "impact": "网站加载速度快，在性能方面得分90+，并清晰地展示了基金会的工作。",
+    "services": [
+      "网站设计",
+      "Next.js开发",
+      "SEO优化"
+    ],
+    "deliverables": [
+      "Next.js网站",
+      "内容结构",
+      "SEO就绪页面"
+    ],
+    "testimonial": {
+      "name": "基金会团队",
+      "quote": "网站感觉干净、快速，并清晰地传达了我们的使命。"
+    },
+    "metric": "90+性能分数",
+    "meta": "为清晰度和影响力而构建",
+    "href": "/case-studies/recytronics-foundation",
+    "liveUrl": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "images": ["/casestudy/r1.png","/casestudy/r2.png"],
+    "imageAlt": "Recytronics Foundation网站"
+  },
+  {
+    "id": "ads-enviro",
+    "client": "ADS Enviro Group",
+    "industry": "环境服务",
+    "title": "为清晰度和速度而构建的企业网站",
+    "heroTitle": "为环境服务公司构建专业、SEO就绪的网站",
+    "snippet": "我们构建了一个干净的企业网站，专注于性能、结构和长期可维护性。",
+    "challenge": "公司需要一个现代网站来清楚地解释服务并改善数字存在。",
+    "solution": "我们开发了一个基于Next.js的网站，具有干净的布局、快速的加载时间和SEO最佳实践。",
+    "impact": "网站提供强大的性能、清晰的消息传递和专业的在线存在。",
+    "services": [
+      "网站设计",
+      "Next.js开发",
+      "SEO优化"
+    ],
+    "deliverables": [
+      "企业网站",
+      "响应式布局",
+      "SEO结构"
+    ],
+    "testimonial": {
+      "name": "ADS Enviro团队",
+      "quote": "网站清晰地展示了我们的工作，并在所有设备上表现良好。"
+    },
+    "metric": "快速且优化的构建",
+    "meta": "Next.js企业网站",
+    "href": "/case-studies/ads-enviro",
+    "liveUrl": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "images": ["/casestudy/a1.png","/casestudy/a2.png"],
+    "imageAlt": "ADS Enviro Group网站"
+  },
+  {
+    "id": "tipsy-ai-connection-platform",
+    "client": "Tipsy (内部产品)",
+    "industry": "AI / 社交产品",
+    "title": "基于意图对话的AI驱动平台",
+    "heroTitle": "构建AI辅助平台，实现有意义的、基于心态的连接",
+    "snippet": "我们构建了一个产品，使用AI引导的问题帮助用户通过共享意图和心态进行连接，而不是滑动或随机聊天。",
+    "challenge": "大多数聊天平台优先考虑参与度而非理解，导致肤浅或嘈杂的对话。挑战在于设计一个鼓励有意交互的系统，而不将AI变成人类连接的替代品。",
+    "solution": "我们设计并开发了一个全栈Web应用程序，使用Gemini驱动的问题流程、基于心态的匹配和实时聊天。用户可以一对一连接或基于共享兴趣和响应创建群组。",
+    "impact": "该平台支持更慢、更有意的对话，并展示了专注于指导而非自动化的负责任的AI使用。",
+    "services": [
+      "产品设计",
+      "全栈开发",
+      "AI集成",
+      "实时功能"
+    ],
+    "deliverables": [
+      "AI引导的问题流程",
+      "基于个性的匹配逻辑",
+      "1对1聊天和群组对话",
+      "可扩展的后端架构"
+    ],
+    "testimonial": {
+      "name": "内部产品团队",
+      "quote": "Tipsy帮助我们探索AI如何支持有意义的人类对话而不取代它们。"
+    },
+    "metric": "AI辅助匹配和实时聊天",
+    "meta": "Next.js, Node.js, MongoDB, Gemini",
+    "href": "/case-studies/tipsy",
+    "liveUrl": "",
+    "image": "/casestudy/tipsy.png",
+    "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
+    "imageAlt": "Tipsy AI驱动的对话平台"
+  }
+]

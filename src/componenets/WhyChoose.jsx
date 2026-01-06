@@ -3,6 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from "@/lib/translations-context";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
+import { usePathname } from "next/navigation";
 
 const reasons = [
   {
@@ -37,6 +40,10 @@ const reasons = [
 
 
 const WhyChoose = () => {
+  const pathname = usePathname();
+  const currentLocale = getCurrentLocale(pathname);
+  const t = useTranslations();
+
   return (
     <section
       id="why-choose-us"
@@ -48,14 +55,30 @@ const WhyChoose = () => {
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 sm:px-3 py-1 text-xs sm:text-sm md:text-base uppercase tracking-[0.22em] text-slate-900">
             <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
-            Why choose us
+            {t?.whyChoose?.badge || "Why choose us"}
           </p>
           <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
-           Website Development Agency Built for Fast Performance and Business Growth
+            {t?.whyChoose?.title || "Website Development Agency Built for Fast Performance and Business Growth"}
           </h2>
           <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-slate-300 max-w-2xl mx-auto text-slate-900 px-4">
-           We don't just design <Link href="/services" className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">websites</Link>.
-We think like product owners, marketers, and engineers — building <Link href="/portfolio" className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">websites</Link> that load fast, convert visitors, and support real business growth. See our <Link href="/case-studies" className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">case studies</Link> for examples.
+            {t?.whyChoose?.description ? (
+              <>
+                {t.whyChoose.description.split(/(\{websites\}|\{websites2\}|\{caseStudies\})/).map((part, idx) => {
+                  if (part === '{websites}') {
+                    return <Link key={idx} href={createLocalizedHref("/services", currentLocale)} className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">{t.whyChoose.websites || "websites"}</Link>;
+                  } else if (part === '{websites2}') {
+                    return <Link key={idx} href={createLocalizedHref("/portfolio", currentLocale)} className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">{t.whyChoose.websites2 || "websites"}</Link>;
+                  } else if (part === '{caseStudies}') {
+                    return <Link key={idx} href={createLocalizedHref("/case-studies", currentLocale)} className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">{t.whyChoose.caseStudies || "case studies"}</Link>;
+                  }
+                  return <span key={idx}>{part}</span>;
+                })}
+              </>
+            ) : (
+              <>
+                We don't just design <Link href={createLocalizedHref("/services", currentLocale)} className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">websites</Link>. We think like product owners, marketers, and engineers — building <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">websites</Link> that load fast, convert visitors, and support real business growth. See our <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-slate-700 hover:text-slate-900 underline underline-offset-2 decoration-slate-300 hover:decoration-slate-500 transition-colors">case studies</Link> for examples.
+              </>
+            )}
           </p>
         </div>
 
@@ -92,33 +115,33 @@ We think like product owners, marketers, and engineers — building <Link href="
         <div className="mt-8 sm:mt-10 md:mt-12 pt-4 sm:pt-6 justify-center border-t border-gray-200 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-xs sm:text-sm text-gray-900">
           <div>
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gray-500 mb-1">
-              Projects
+              {t?.whyChoose?.projects || "Projects"}
             </p>
-            <p className="text-lg sm:text-xl font-semibold text-gray-900">10+ launches</p>
+            <p className="text-lg sm:text-xl font-semibold text-gray-900">{t?.whyChoose?.launches || "10+ launches"}</p>
             <p className="text-[10px] sm:text-xs mt-1 text-gray-600">
-              Static sites, CMS and e-commerce projects.
+              {t?.whyChoose?.launchesDesc || "Static sites, CMS and e-commerce projects."}
             </p>
           </div>
           <div>
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gray-500 mb-1">
-              Performance
+              {t?.whyChoose?.performance || "Performance"}
             </p>
             <p className="text-lg sm:text-xl font-semibold text-gray-900">
-              Speed-first builds  
+              {t?.whyChoose?.speedFirst || "Speed-first builds"}
             </p>
             <p className="text-[10px] sm:text-xs mt-1 text-gray-600">
-             Clean code with Core Web Vitals in mind.
+              {t?.whyChoose?.speedFirstDesc || "Clean code with Core Web Vitals in mind."}
             </p>
           </div>
           <div>
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gray-500 mb-1">
-              Relationships
+              {t?.whyChoose?.relationships || "Relationships"}
             </p>
             <p className="text-lg sm:text-xl font-semibold text-gray-900">
-              Long-term work 
+              {t?.whyChoose?.longTerm || "Long-term work"}
             </p>
             <p className="text-[10px] sm:text-xs mt-1 text-gray-600">
-             Clients return for updates and new launches.
+              {t?.whyChoose?.longTermDesc || "Clients return for updates and new launches."}
             </p>
           </div>
         </div>

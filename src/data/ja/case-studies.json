@@ -1,0 +1,198 @@
+[
+  {
+    "id": "ngo-wordpress-rebuild",
+    "client": "Khushali Mehta",
+    "industry": "非営利",
+    "title": "カスタムWordPress再構築によるNGOウェブサイトの安定化",
+    "heroTitle": "更新問題を排除し、保守性を向上させるためのNGOウェブサイトの再構築",
+    "snippet": "テーマとバージョンの更新によって頻繁に発生する障害を修正するため、カスタムWordPressテーマを使用してNGOウェブサイトを再設計および再構築しました。",
+    "challenge": "以前のウェブサイトはデフォルトのWordPressテーマに依存しており、更新後に頻繁に壊れ、コンテンツの変更がリスクが高く時間がかかるものでした。",
+    "solution": "NGOのコンテンツニーズに合わせて、クリーンなレイアウトと安定した更新プロセスを備えたカスタムWordPressテーマを使用してウェブサイトを再構築しました。",
+    "impact": "ウェブサイトは安定し、更新が容易になり、通常のWordPress更新中に壊れることがなくなりました。",
+    "services": [
+      "ウェブサイトの再設計",
+      "カスタムWordPress開発",
+      "UXとコンテンツ構造"
+    ],
+    "deliverables": [
+      "カスタムWordPressテーマ",
+      "レスポンシブレイアウト",
+      "CMS設定"
+    ],
+    "testimonial": {
+      "name": "NGO理事",
+      "quote": "ウェブサイトの管理がはるかに簡単になりました。更新がサイトを壊すことはなくなり、デザインが私たちの仕事により適していると感じます。"
+    },
+    "metric": "安定した簡単な更新",
+    "meta": "4–6週間で納品",
+    "href": "/case-studies/ngo-wordpress-rebuild",
+    "liveUrl": "",
+    "image": "/casestudy/projectdeep.png",
+    "images": ["/casestudy/projectdeep.png","/casestudy/project2.png"],
+    "imageAlt": "NGOウェブサイトの再設計"
+  },
+  {
+    "id": "labelwala-nextjs",
+    "client": "Label Wala",
+    "industry": "製造 / 印刷",
+    "title": "Next.jsで構築された高性能ブランドウェブサイト",
+    "heroTitle": "印刷ブランド向けの高速SEO対応ウェブサイトの構築",
+    "snippet": "速度、パフォーマンス、検索の可視性に焦点を当てたNext.jsでモダンなブランドウェブサイトを構築しました。",
+    "challenge": "ビジネスには、ブランドを明確に表現し、すべてのデバイスで良好に機能する高速でプロフェッショナルなウェブサイトが必要でした。",
+    "solution": "パフォーマンス重視のレイアウト、レスポンシブデザイン、SEOのベストプラクティスを備えたNext.jsウェブサイトを設計および開発しました。",
+    "impact": "ウェブサイトはモバイルとデスクトップで90+のパフォーマンススコアを達成し、迅速に読み込まれ、SEOの強固な基盤を提供します。",
+    "services": [
+      "ウェブサイトデザイン",
+      "Next.js開発",
+      "パフォーマンス最適化",
+      "SEO設定"
+    ],
+    "deliverables": [
+      "Next.jsウェブサイト",
+      "レスポンシブUI",
+      "SEO対応ページ"
+    ],
+    "testimonial": {
+      "name": "Akshit Gupta",
+      "quote": "サイトは高速に読み込まれ、クリーンに見え、すべてのデバイスでスムーズに動作します。まさに私たちが必要としていたものです。"
+    },
+    "metric": "90+パフォーマンススコア",
+    "meta": "SEOと速度に焦点を当てた構築",
+    "href": "/case-studies/labelwala-nextjs",
+    "liveUrl": "",
+    "image": "/casestudy/labelwaala1.png",
+    "images": ["/casestudy/labelwaala1.png","/casestudy/label2.png"],
+    "imageAlt": "Label Walaウェブサイト"
+  },
+  {
+    "id": "nutsquare-ecommerce",
+    "client": "NutSquare",
+    "industry": "Eコマース / 食品",
+    "title": "ログインの摩擦がないカスタムEコマースウェブサイト",
+    "heroTitle": "健康的なスナックブランド向けの高速Eコマース体験の設計",
+    "snippet": "ユーザーが強制ログインなしで閲覧、カートに追加、チェックアウトできるカスタムEコマースウェブサイトを構築しました。",
+    "challenge": "クライアントは、スムーズなチェックアウトとユーザーログイン要件のないシンプルな購入体験を望んでいました。",
+    "solution": "シンプルさに焦点を当てたカート追加、注文フロー、決済統合を備えたReactベースのEコマースサイトを開発しました。",
+    "impact": "ウェブサイトは、強力なパフォーマンスとSEO対応を備えた高速で摩擦のないショッピング体験を提供します。",
+    "services": [
+      "Eコマースデザイン",
+      "React開発",
+      "決済統合",
+      "パフォーマンス最適化"
+    ],
+    "deliverables": [
+      "カスタムストアフロント",
+      "カートとチェックアウトフロー",
+      "レスポンシブレイアウト"
+    ],
+    "testimonial": {
+      "name": "Navneet",
+      "quote": "チェックアウトフローはシンプルで高速で、まさに顧客のために望んでいた通りです。"
+    },
+    "metric": "90+パフォーマンススコア",
+    "meta": "カスタムReact構築",
+    "href": "/case-studies/nutsquare-ecommerce",
+    "liveUrl": "",
+    "image": "/casestudy/nuts.png",
+    "images": ["/casestudy/nuts1.png","/casestudy/nuts3.png"],
+    "imageAlt": "NutSquare Eコマースウェブサイト"
+  },
+  {
+    "id": "recytronics-foundation",
+    "client": "Recytronics Foundation",
+    "industry": "非営利 / 持続可能性",
+    "title": "Next.jsで構築されたパフォーマンス重視のNGOウェブサイト",
+    "heroTitle": "持続可能性に焦点を当てたNGOが影響を明確に伝えるのを支援",
+    "snippet": "意識向上、リーチ、長期的なコンテンツ成長をサポートするクリーンで高速なウェブサイトを構築しました。",
+    "challenge": "財団は、高速でアクセス可能でありながら、その使命を明確に伝えるモダンなウェブサイトが必要でした。",
+    "solution": "構造化されたコンテンツ、クリーンなUI、SEOフレンドリーなページを備えたNext.jsウェブサイトを設計および開発しました。",
+    "impact": "ウェブサイトは迅速に読み込まれ、パフォーマンスで90+のスコアを獲得し、財団の仕事を明確に提示します。",
+    "services": [
+      "ウェブサイトデザイン",
+      "Next.js開発",
+      "SEO最適化"
+    ],
+    "deliverables": [
+      "Next.jsウェブサイト",
+      "コンテンツ構造",
+      "SEO対応ページ"
+    ],
+    "testimonial": {
+      "name": "財団チーム",
+      "quote": "ウェブサイトはクリーンで高速に感じられ、私たちの使命を明確に伝えます。"
+    },
+    "metric": "90+パフォーマンススコア",
+    "meta": "明確さと影響のために構築",
+    "href": "/case-studies/recytronics-foundation",
+    "liveUrl": "https://www.recytronicsfoundation.org",
+    "image": "/casestudy/r.png",
+    "images": ["/casestudy/r1.png","/casestudy/r2.png"],
+    "imageAlt": "Recytronics Foundationウェブサイト"
+  },
+  {
+    "id": "ads-enviro",
+    "client": "ADS Enviro Group",
+    "industry": "環境サービス",
+    "title": "明確さと速度のために構築された企業ウェブサイト",
+    "heroTitle": "環境サービス会社向けのプロフェッショナルなSEO対応ウェブサイトの構築",
+    "snippet": "パフォーマンス、構造、長期的な保守性に焦点を当てたクリーンな企業ウェブサイトを構築しました。",
+    "challenge": "会社は、サービスを明確に説明し、デジタルプレゼンスを向上させるモダンなウェブサイトが必要でした。",
+    "solution": "クリーンなレイアウト、高速な読み込み時間、SEOのベストプラクティスを備えたNext.jsベースのウェブサイトを開発しました。",
+    "impact": "ウェブサイトは強力なパフォーマンス、明確なメッセージ、プロフェッショナルなオンラインプレゼンスを提供します。",
+    "services": [
+      "ウェブサイトデザイン",
+      "Next.js開発",
+      "SEO最適化"
+    ],
+    "deliverables": [
+      "企業ウェブサイト",
+      "レスポンシブレイアウト",
+      "SEO構造"
+    ],
+    "testimonial": {
+      "name": "ADS Enviroチーム",
+      "quote": "ウェブサイトは私たちの仕事を明確に提示し、すべてのデバイスで良好に機能します。"
+    },
+    "metric": "高速で最適化された構築",
+    "meta": "Next.js企業サイト",
+    "href": "/case-studies/ads-enviro",
+    "liveUrl": "https://www.adsenviro.in",
+    "image": "/casestudy/a.png",
+    "images": ["/casestudy/a1.png","/casestudy/a2.png"],
+    "imageAlt": "ADS Enviro Groupウェブサイト"
+  },
+  {
+    "id": "tipsy-ai-connection-platform",
+    "client": "Tipsy (内部製品)",
+    "industry": "AI / ソーシャル製品",
+    "title": "意図ベースの会話のためのAI駆動プラットフォーム",
+    "heroTitle": "意味のあるマインドセットベースの接続のためのAI支援プラットフォームの構築",
+    "snippet": "スワイプやランダムチャットではなく、共有された意図とマインドセットを通じてユーザーが接続できるよう、AIガイド付き質問を使用する製品を構築しました。",
+    "challenge": "ほとんどのチャットプラットフォームは理解よりもエンゲージメントを優先し、表面的またはノイズの多い会話につながります。課題は、AIを人間の接続の代替にすることなく、意図的な相互作用を促進するシステムを設計することでした。",
+    "solution": "Gemini駆動の質問フロー、マインドセットベースのマッチング、リアルタイムチャットを使用してフルスタックWebアプリケーションを設計および開発しました。ユーザーは1対1で接続したり、共有された興味と回答に基づいてグループを作成したりできます。",
+    "impact": "プラットフォームは、より遅く、より意図的な会話を可能にし、自動化ではなくガイダンスに焦点を当てた責任あるAI使用を示しています。",
+    "services": [
+      "製品デザイン",
+      "フルスタック開発",
+      "AI統合",
+      "リアルタイム機能"
+    ],
+    "deliverables": [
+      "AIガイド付き質問フロー",
+      "パーソナリティベースのマッチングロジック",
+      "1対1チャットとグループ会話",
+      "スケーラブルなバックエンドアーキテクチャ"
+    ],
+    "testimonial": {
+      "name": "内部製品チーム",
+      "quote": "Tipsyは、AIがそれらを置き換えることなく、意味のある人間の会話をサポートする方法を探るのに役立ちました。"
+    },
+    "metric": "AI支援マッチングとリアルタイムチャット",
+    "meta": "Next.js、Node.js、MongoDB、Gemini",
+    "href": "/case-studies/tipsy",
+    "liveUrl": "",
+    "image": "/casestudy/tipsy.png",
+    "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
+    "imageAlt": "Tipsy AI駆動会話プラットフォーム"
+  }
+]

@@ -1,6 +1,12 @@
 /**
  * Language Switcher Component
  * 
+ * STATIC EXPORT COMPATIBLE:
+ * - Pure client-side component (no server dependencies)
+ * - Uses Next.js router for navigation (works with static export)
+ * - Saves preference in cookie (client-side)
+ * - No API calls or server-side logic
+ * 
  * Allows users to manually select their preferred language.
  * - Saves selection in a cookie named "lang"
  * - Preserves current route/path when switching languages

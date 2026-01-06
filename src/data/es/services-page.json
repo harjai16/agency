@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "SERVICIOS",
+    "title": "Servicios de desarrollo web",
+    "titleHighlight": "Sitios web de alto rendimiento para crecimiento empresarial",
+    "description": "{websiteServices} construidos para generar leads, ventas y crecimiento real. Estrategia, diseño y desarrollo enfocados en el rendimiento — {websites} rápidos que convierten visitantes en clientes. Vea nuestros {caseStudies} para resultados reales. Lanzamiento típico de 4-6 semanas.",
+    "websiteServices": "Servicios de sitios web",
+    "websites": "sitios web",
+    "caseStudies": "casos de estudio",
+    "ctaPrimary": "Obtener un plan de sitio gratuito",
+    "ctaSecondary": "Ver proyectos reales",
+    "stats": {
+      "projects": {
+        "value": "10+",
+        "label": "proyectos entregados"
+      },
+      "timeline": {
+        "value": "4–6 semanas",
+        "label": "semanas de lanzamiento típico"
+      },
+      "focus": {
+        "value": "Enfocado en rendimiento",
+        "label": "Construcciones centradas en rendimiento"
+      }
+    },
+    "typicalProject": {
+      "badge": "4–6 semanas",
+      "label": "Proyecto típico",
+      "title": "Lo que incluye un proyecto de sitio web típico",
+      "items": [
+        "Estrategia clara alineada con sus objetivos comerciales",
+        "UX y UI para páginas clave y flujos de conversión",
+        "Construcción Next.js o WordPress enfocada en rendimiento",
+        "SEO, analytics y soporte de lanzamiento integrados"
+      ],
+      "footer": "Sin plantillas. Sin paquetes copiar-pegar. Construido para sus necesidades."
+    }
+  },
+  "services": {
+    "badge": "Lo que hacemos",
+    "title": "Servicios de desarrollo web para rendimiento rápido y crecimiento",
+    "description": "Elija un solo {service} o asóciese con nosotros de extremo a extremo. De cualquier manera, obtiene un equipo senior enfocado en rendimiento y conversiones. Todo lo que necesita para diseñar, construir y hacer crecer su {website}. Vea nuestros {caseStudies} para ejemplos de nuestro trabajo de {webDevelopment}.",
+    "service": "servicio",
+    "website": "sitio web",
+    "caseStudies": "casos de estudio",
+    "webDevelopment": "desarrollo web",
+    "outcome": "Resultado:",
+    "items": [
+      {
+        "id": "strategy",
+        "tag": "Estrategia",
+        "title": "Estrategia de desarrollo web para crecimiento",
+        "summary": "Planificamos estructura de páginas, jerarquía de contenido y flujos de usuario para que los visitantes entiendan rápidamente lo que hace y qué hacer a continuación. Estrategia de desarrollo web para crecimiento.",
+        "outcome": "Mapa del sitio claro, mensajes enfocados y objetivos de página definidos.",
+        "meta": "Útil antes de nuevas construcciones o rediseños"
+      },
+      {
+        "id": "ux-ui",
+        "tag": "Diseño",
+        "title": "Diseño de sitio web para rendimiento rápido en todos los dispositivos",
+        "summary": "Interfaces limpias y mobile-first diseñadas para ser fáciles de usar y alineadas con su marca. Diseño de sitio web para rendimiento rápido en todos los dispositivos.",
+        "outcome": "Diseños pulidos listos para desarrollo o entrega.",
+        "meta": "Diseños responsivos con estados de interacción clave"
+      },
+      {
+        "id": "development",
+        "tag": "Desarrollo",
+        "title": "Desarrollo web para rendimiento rápido",
+        "summary": "Sitios web rápidos y confiables construidos con frameworks modernos como Next.js y React — sin temas pesados o atajos. Construimos sitios web enfocados en rendimiento adaptados a sus necesidades comerciales.",
+        "outcome": "Un sitio enfocado en rendimiento adaptado a sus necesidades comerciales.",
+        "meta": "Bien adaptado para SaaS, marcas de servicios y construcciones personalizadas"
+      },
+      {
+        "id": "cms",
+        "tag": "CMS",
+        "title": "CMS y gestión de contenido",
+        "summary": "Configuraciones CMS flexibles usando WordPress o soluciones headless para que su equipo pueda gestionar contenido con confianza.",
+        "outcome": "Páginas editables, contenido estructurado y campos listos para SEO.",
+        "meta": "Incluye capacitación básica y documentación"
+      },
+      {
+        "id": "performance",
+        "tag": "Rendimiento y SEO",
+        "title": "Rendimiento de sitio web para velocidad rápida en todos los dispositivos",
+        "summary": "Revisamos y mejoramos velocidad del sitio, SEO técnico y Core Web Vitals para soportar uso real. Rendimiento de sitio web para velocidad rápida en todos los dispositivos.",
+        "outcome": "Tiempos de carga más rápidos, mejor usabilidad y visibilidad más fuerte.",
+        "meta": "Mejor para sitios existentes o en crecimiento"
+      },
+      {
+        "id": "support",
+        "tag": "Soporte",
+        "title": "Soporte y mejoras continuas",
+        "summary": "Ayudamos a mantener su sitio estable, seguro y mejorando a medida que su producto o negocio evoluciona.",
+        "outcome": "Actualizaciones planificadas, pequeñas iteraciones y mejoras continuas.",
+        "meta": "Opciones de soporte mensual flexibles"
+      }
+    ]
+  },
+  "engagementModels": {
+    "badge": "Cómo trabajamos",
+    "title": "Servicios de desarrollo web para rendimiento rápido en todos los dispositivos",
+    "description": "Ya sea que esté lanzando algo nuevo o mejorando lo que ya tiene, sugeriremos el modelo que se ajuste a su etapa, presupuesto y equipo. Consulte nuestro {portfolio} para ver ejemplos, o lea nuestros {caseStudies} para resultados {webDevelopment} detallados.",
+    "portfolio": "portafolio",
+    "caseStudies": "casos de estudio",
+    "webDevelopment": "desarrollo web",
+    "footer": "Lo recomendaremos si se ajusta a sus objetivos en nuestra primera llamada.",
+    "items": [
+      {
+        "title": "Construcciones basadas en proyecto",
+        "description": "Mejor para equipos que necesitan una construcción de sitio completa, rediseño o migración con un alcance definido.",
+        "bullets": [
+          "Alcance claro y cronogramas predecibles",
+          "Buen ajuste para nuevos lanzamientos o cambios mayores",
+          "Típicamente entregado en 4–6 semanas"
+        ]
+      },
+      {
+        "title": "Socio de producto continuo",
+        "description": "Para equipos que quieren soporte de diseño y desarrollo consistente sin expandir personal.",
+        "bullets": [
+          "Compromiso mensual con uso flexible",
+          "Actualizaciones, correcciones y mejoras continuas",
+          "Funciona bien para SaaS y productos en evolución"
+        ]
+      },
+      {
+        "title": "White-label para agencias",
+        "description": "Apoyamos agencias manejando diseño y desarrollo mientras usted permanece orientado al cliente.",
+        "bullets": [
+          "Adaptable a sus flujos de trabajo",
+          "Discreto y compatible con NDA",
+          "Capacidad de entrega confiable"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQs",
+    "title": "Preguntas frecuentes sobre nuestros servicios.",
+    "items": [
+      {
+        "question": "¿Cuánto tiempo toma un proyecto de sitio web típico?",
+        "answer": "La mayoría de los proyectos se completan en 4–6 semanas. Los cronogramas dependen del alcance, preparación del contenido y ciclos de retroalimentación. Confirmaremos un cronograma claro antes de comenzar."
+      },
+      {
+        "question": "¿Manejan proyectos completos o solo partes específicas?",
+        "answer": "Ambos. Podemos gestionar todo desde estrategia hasta lanzamiento, o apoyar a su equipo solo con diseño o desarrollo."
+      },
+      {
+        "question": "¿Puede nuestro equipo actualizar contenido después del lanzamiento?",
+        "answer": "Sí. Usamos CMS y componentes reutilizables para que su equipo pueda actualizar páginas, texto y campos SEO sin ayuda técnica."
+      },
+      {
+        "question": "¿Cuál es el primer paso para comenzar?",
+        "answer": "Comenzamos con una llamada corta para entender sus objetivos y limitaciones. Después de eso, compartimos un alcance, cronograma y próximos pasos claros."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Próximo paso",
+    "title": "¿Listo para construir un sitio que entregue resultados?",
+    "description": "Una llamada corta. Próximos pasos claros. Sin presión.",
+    "primary": "Obtener un plan de sitio gratuito",
+    "secondary": "Ver casos de estudio"
+  }
+}
+
