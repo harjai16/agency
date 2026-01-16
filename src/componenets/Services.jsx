@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Section from "./ui/Section";
 import Button from "./ui/Button";
 import { useLocaleData } from "@/lib/use-locale-data";
@@ -10,11 +11,29 @@ import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
 import { usePathname } from "next/navigation";
 
 const cardVariants = {
-  initial: { opacity: 0, y: 18 },
+  initial: { opacity: 0, y: 30, scale: 0.9 },
   animate: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, delay: i * 0.06 },
+    scale: 1,
+    transition: { 
+      duration: 0.6, 
+      delay: i * 0.2,
+      ease: [0.22, 1, 0.36, 1]
+    },
+  }),
+};
+
+const imageVariants = {
+  initial: { opacity: 0, scale: 1.1 },
+  animate: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { 
+      duration: 0.8, 
+      delay: i * 0.2 + 0.1,
+      ease: [0.22, 1, 0.36, 1]
+    },
   }),
 };
 
@@ -26,6 +45,14 @@ const Services = () => {
   
   // Ensure services is always an array
   const servicesList = Array.isArray(services) ? services : [];
+
+  // Map service IDs to SEO-friendly image names
+  const serviceImageMap = {
+    "strategy": "seo-optimization.jpg",
+    "design": "ui-ux-design.jpg",
+    "development": "content-writer.jpg",
+    "maintenance": "website-optimization.jpg"
+  };
 
   return (
     <Section
@@ -65,7 +92,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Services Grid */}
+      {/* Services Grid with hover tooltips */}
       {loading && servicesList.length === 0 ? (
         <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2">
           {/* Loading skeleton */}
@@ -84,41 +111,53 @@ const Services = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
             whileHover={{ y: -4 }}
-            className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-4 sm:p-5 md:p-6 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
+            className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
           >
-            {/* Top row */}
-            <div className="flex items-center justify-between mb-3 sm:mb-4">
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-gray-500">
-                {service.tag}
-              </span>
-              <span className="text-[9px] sm:text-[10px] md:text-[11px] rounded-full border border-gray-200 px-1.5 sm:px-2 py-0.5 sm:py-1 text-gray-600 group-hover:border-gray-900 group-hover:text-gray-900 transition-colors">
-                {service.meta}
-              </span>
+            {/* Service Image */}
+            {serviceImageMap[service.id] && (
+              <motion.div 
+                className="relative w-full h-64 sm:h-72 md:h-80"
+                custom={index}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={imageVariants}
+              >
+                <Image
+                  src={`/service/${serviceImageMap[service.id]}`}
+                  alt={service.label || "Service image"}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </motion.div>
+            )}
+
+            {/* Tooltip - Service Title and Description (visible on hover) */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-5 md:p-6 flex flex-col justify-end">
+              <div className="max-w-full">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
+                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">
+                    {service.tag}
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] rounded-full border border-white/30 px-2 py-0.5 text-white/80">
+                    {service.meta}
+                  </span>
+                </div>
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">
+                  {service.label}
+                </h3>
+                <p className="text-xs sm:text-sm text-white/90 mb-2 leading-relaxed line-clamp-2">
+                  {service.description}
+                </p>
+                <div className="text-[10px] sm:text-xs text-white/80">
+                  <span className="font-medium text-white">
+                    {t?.services?.outcome || "Outcome:"}
+                  </span>{" "}
+                  <span className="line-clamp-1">{service.outcome}</span>
+                </div>
+              </div>
             </div>
-
-            {/* Title */}
-            <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2">
-              {service.label}
-            </h3>
-
-            {/* Description */}
-            <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 leading-relaxed">
-              {service.description}
-            </p>
-
-            {/* Outcome */}
-            <div className="flex items-center justify-between text-[10px] sm:text-xs text-gray-500">
-              <p className="max-w-[70%]">
-                <span className="font-medium text-gray-900">
-                  {t?.services?.outcome || "Outcome:"}
-                </span>{" "}
-                {service.outcome}
-              </p>
-             
-            </div>
-
-            {/* Subtle hover overlay */}
-            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-gray-50/80 via-transparent to-transparent" />
           </motion.article>
           ))}
         </div>
