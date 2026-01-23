@@ -21,9 +21,9 @@ const quickLinks = [
 ];
 
 const socials = [
-  { label: "Twitter", href: "https://twitter.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Instagram", href: "https://instagram.com" },
+  { label: "WhatsApp", href: "https://wa.me/919217731381?text=Hi%20Swagatam%20Team" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/swagatam-tech/?viewAsMember=true" },
+  { label: "Instagram", href: "https://www.instagram.com/swagatamtechi?igsh=MXd4Nnh3aDdqYWIxMg==" },
 ];
 
 const Footer = () => {
