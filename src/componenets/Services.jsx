@@ -103,16 +103,20 @@ const Services = () => {
       ) : (
         <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2">
           {servicesList.map((service, index) => (
-          <motion.article
+          <Link
             key={service.id}
-            custom={index}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={cardVariants}
-            whileHover={{ y: -4 }}
-            className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
+            href={createLocalizedHref(`/services/${service.id}`, currentLocale)}
+            className="block"
           >
+            <motion.article
+              custom={index}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={cardVariants}
+              whileHover={{ y: -4 }}
+              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)] cursor-pointer"
+            >
             {/* Service Image */}
             {serviceImageMap[service.id] && (
               <motion.div 
@@ -158,7 +162,8 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </motion.article>
+            </motion.article>
+          </Link>
           ))}
         </div>
       )}

@@ -3,6 +3,7 @@
 import React, { use } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Section from "@/componenets/ui/Section";
 import Button from "@/componenets/ui/Button";
 import { useRouter } from "next/navigation";
@@ -19,6 +20,33 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.5, delay },
 });
 
+const cardVariants = {
+  initial: { opacity: 0, y: 30, scale: 0.9 },
+  animate: (i) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { 
+      duration: 0.6, 
+      delay: i * 0.2,
+      ease: [0.22, 1, 0.36, 1]
+    },
+  }),
+};
+
+const imageVariants = {
+  initial: { opacity: 0, scale: 1.1 },
+  animate: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { 
+      duration: 0.8, 
+      delay: i * 0.2 + 0.1,
+      ease: [0.22, 1, 0.36, 1]
+    },
+  }),
+};
+
 const ServicesPage = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -32,6 +60,16 @@ const ServicesPage = () => {
   const engagementModels = pageData?.engagementModels?.items || [];
   const faq = pageData?.faq || {};
   const cta = pageData?.cta || {};
+
+  // Map service IDs to SEO-friendly image names (all 6 images)
+  const serviceImageMap = {
+    "strategy": "seo-optimization.jpg",
+    "ux-ui": "ui-ux-design.jpg",
+    "development": "content-writer.jpg",
+    "cms": "social-media-management.jpg",
+    "performance": "website-optimization.jpg",
+    "support": "video-shoot-and-editing.jpg"
+  };
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
@@ -189,48 +227,70 @@ const ServicesPage = () => {
 
           <motion.div
             {...fadeUp(0.05)}
-            className="grid gap-4 sm:gap-5 md:grid-cols-2"
+            className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           >
             {services.map((service, index) => (
-              <motion.article
+              <Link
                 key={service.id}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: index * 0.05 }}
-                className="group relative flex flex-col rounded-3xl border border-gray-100 bg-white/80 backdrop-blur p-5 md:p-6 shadow-[0_16px_38px_rgba(15,23,42,0.04)]"
+                href={createLocalizedHref(`/services/${service.id}`, currentLocale)}
+                className="block"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="inline-flex items-center rounded-full border border-gray-100 bg-gray-50 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-gray-500">
-                    {service.tag}
-                  </span>
-                  <span className="text-[11px] text-gray-400">
-                    {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                  </span>
-                </div>
+                <motion.article
+                  custom={index}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={cardVariants}
+                  whileHover={{ y: -4 }}
+                  className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)] cursor-pointer"
+                >
+                {/* Service Image */}
+                {serviceImageMap[service.id] && (
+                  <motion.div 
+                    className="relative w-full h-64 sm:h-72 md:h-80"
+                    custom={index}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={imageVariants}
+                  >
+                    <Image
+                      src={`/service/${serviceImageMap[service.id]}`}
+                      alt={service.title || "Service image"}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </motion.div>
+                )}
 
-                <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-2">
-                  {service.title}
-                </h3>
-
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3">
-                  {service.summary}
-                </p>
-
-                <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
-                  <div className="text-[11px] text-gray-500">
-                    <span className="block font-medium text-gray-900">
-                      {pageData?.services?.outcome || "Outcome:"}
-                    </span>
-                    <span>{service.outcome}</span>
+                {/* Tooltip - Service Title and Description (visible on hover) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-5 md:p-6 flex flex-col justify-end">
+                  <div className="max-w-full">
+                    <div className="flex items-center gap-2 mb-2 flex-wrap">
+                      <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">
+                        {service.tag}
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] rounded-full border border-white/30 px-2 py-0.5 text-white/80">
+                        {service.meta}
+                      </span>
+                    </div>
+                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-white/90 mb-2 leading-relaxed line-clamp-2">
+                      {service.summary}
+                    </p>
+                    <div className="text-[10px] sm:text-xs text-white/80">
+                      <span className="font-medium text-white">
+                        {pageData?.services?.outcome || "Outcome:"}
+                      </span>{" "}
+                      <span className="line-clamp-1">{service.outcome}</span>
+                    </div>
                   </div>
-                  <span className="text-[11px] text-gray-400 whitespace-nowrap">
-                    {service.meta}
-                  </span>
                 </div>
-
-                <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-gray-50/90 via-transparent to-transparent" />
-              </motion.article>
+                </motion.article>
+              </Link>
             ))}
           </motion.div>
         </div>
