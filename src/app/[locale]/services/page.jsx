@@ -247,7 +247,7 @@ const ServicesPage = () => {
                 {/* Service Image */}
                 {serviceImageMap[service.id] && (
                   <motion.div 
-                    className="relative w-full h-64 sm:h-72 md:h-80"
+                    className="relative w-full h-64 sm:h-72 md:h-80 z-0"
                     custom={index}
                     initial="initial"
                     whileInView="animate"
@@ -264,8 +264,22 @@ const ServicesPage = () => {
                   </motion.div>
                 )}
 
-                {/* Tooltip - Service Title and Description (visible on hover) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-5 md:p-6 flex flex-col justify-end">
+                {/* Title only - always visible at bottom of image */}
+                {serviceImageMap[service.id] && (
+                <div
+                  className="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5 md:p-6 flex flex-col justify-end pointer-events-none"
+                  style={{
+                    background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)",
+                  }}
+                >
+                  <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white">
+                    {service.title}
+                  </h3>
+                </div>
+                )}
+                {/* Full details - visible on hover only */}
+                {serviceImageMap[service.id] && (
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-5 md:p-6 flex flex-col justify-end pointer-events-none">
                   <div className="max-w-full">
                     <div className="flex items-center gap-2 mb-2 flex-wrap">
                       <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">
@@ -289,6 +303,7 @@ const ServicesPage = () => {
                     </div>
                   </div>
                 </div>
+                )}
                 </motion.article>
               </Link>
             ))}
