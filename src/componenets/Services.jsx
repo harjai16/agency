@@ -108,7 +108,7 @@ const Services = () => {
 
       {/* Services Grid with hover tooltips */}
       {loading && servicesList.length === 0 ? (
-        <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-2 md:grid-cols-3">
           {/* Loading skeleton */}
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="h-48 bg-gray-100 animate-pulse rounded-2xl" />
