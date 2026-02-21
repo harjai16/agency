@@ -10,8 +10,12 @@ import WhyChoose from "@/componenets/WhyChoose";
 import StructuredData from "@/componenets/global/StructuredData";
 import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 
-     
-export const metadata = {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const path = locale ? `/${locale}` : '';
+  return {
   title: "Website Dev Agency | Fast Performance | Swagatam Tech",
   description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% satisfaction.",
   keywords: [
@@ -58,22 +62,12 @@ export const metadata = {
   openGraph: {
     title: "Website Dev Agency | Fast Performance | Swagatam Tech",
     description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth.",
-    url: "/",
+    url: `${siteUrl}${path}`,
     type: "website",
     siteName: "Swagatam Tech",
     images: [
-      {
-        url: "/logo.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "Swagatam Tech - Website Development Agency",
-      },
-      {
-        url: "/logo.jpeg",
-        width: 800,
-        height: 600,
-        alt: "Swagatam Tech Logo",
-      },
+      { url: "/logo.jpeg", width: 1200, height: 630, alt: "Swagatam Tech - Website Development Agency" },
+      { url: "/logo.jpeg", width: 800, height: 600, alt: "Swagatam Tech Logo" },
     ],
     locale: "en_US",
   },
@@ -86,7 +80,7 @@ export const metadata = {
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: "https://www.swagatamtech.com/",
+    canonical: `${siteUrl}${path}`,
   },
   robots: {
     index: true,
@@ -103,7 +97,8 @@ export const metadata = {
     'geo.region': 'IN',
     'geo.placename': 'India',
   },
-};
+  };
+}
 
 export default function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';

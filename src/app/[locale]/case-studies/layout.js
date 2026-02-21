@@ -1,8 +1,11 @@
 import { Metadata } from "next";
+import { getLocaleFromHeaders } from "@/lib/i18n";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
-export const metadata = {
+export async function generateMetadata() {
+  const locale = await getLocaleFromHeaders();
+  return {
   title: "Website Dev Case Studies | Fast Performance | Swagatam Tech",
   description: "Website development case studies showing fast performance websites we built for business growth. Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines through strategy, design, and performance optimization.",
   keywords: [
@@ -47,7 +50,7 @@ export const metadata = {
   openGraph: {
     title: "Website Dev Case Studies | Fast Performance | Swagatam",
     description: "Website development case studies showing fast performance websites we built for business growth. Real website projects with measurable results. Explore case studies showing how we transformed websites into revenue engines.",
-    url: `${siteUrl}/case-studies`,
+    url: `${siteUrl}/${locale}/case-studies`,
     type: "website",
     siteName: "Swagatam Tech",
     images: [
@@ -75,7 +78,7 @@ export const metadata = {
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: `${siteUrl}/case-studies`,
+    canonical: `${siteUrl}/${locale}/case-studies`,
   },
   robots: {
     index: true,
@@ -92,7 +95,8 @@ export const metadata = {
     'geo.region': 'IN',
     'geo.placename': 'India',
   },
-};
+  };
+}
 
 export default function CaseStudiesLayout({ children }) {
   return children;

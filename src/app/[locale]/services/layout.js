@@ -1,8 +1,11 @@
 import { Metadata } from "next";
+import { getLocaleFromHeaders } from "@/lib/i18n";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
-export const metadata = {
+export async function generateMetadata() {
+  const locale = await getLocaleFromHeaders();
+  return {
   title: "Website Dev Services | Fast Performance | Swagatam Tech",
   description: "Website development services building fast performance websites for business growth. We built websites that transform into revenue engines. Complete website development: strategy, UX design, custom development, and performance optimization. 4-6 week launches.",
   keywords: [
@@ -52,7 +55,7 @@ export const metadata = {
   openGraph: {
     title: "Website Dev Services | Fast Performance | Swagatam",
     description: "Website development services building fast performance websites for business growth. We built websites that transform into revenue engines. Complete website development: strategy, UX design, custom development, and performance optimization.",
-    url: `${siteUrl}/services`,
+    url: `${siteUrl}/${locale}/services`,
     type: "website",
     siteName: "Swagatam Tech",
     images: [
@@ -80,7 +83,7 @@ export const metadata = {
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: `${siteUrl}/services`,
+    canonical: `${siteUrl}/${locale}/services`,
   },
   robots: {
     index: true,
@@ -97,7 +100,8 @@ export const metadata = {
     'geo.region': 'IN',
     'geo.placename': 'India',
   },
-};
+  };
+}
 
 export default function ServicesLayout({ children }) {
   return children;

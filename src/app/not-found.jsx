@@ -2,13 +2,18 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "@/componenets/ui/Button";
 import Section from "@/componenets/ui/Section";
 import NotFoundHero from "@/componenets/404/NotFoundHero";
 import PageLinksGrid from "@/componenets/404/PageLinksGrid";
 import MiniGame from "@/componenets/404/MiniGame";
+import { createLocalizedHref, getCurrentLocale } from "@/lib/navigation";
 
 export default function NotFound() {
+  const pathname = usePathname();
+  const locale = getCurrentLocale(pathname);
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 flex items-center justify-center py-12 sm:py-16 md:py-20">
       <Section className="w-full">
@@ -16,7 +21,7 @@ export default function NotFound() {
           {/* Hero Section */}
           <NotFoundHero />
 
-          {/* Action Buttons */}
+          {/* Action Buttons – locale-aware to avoid redirects */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,10 +29,10 @@ export default function NotFound() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button asChild>
-              <Link href="/">Go to Homepage</Link>
+              <Link href={createLocalizedHref("/", locale)}>Go to Homepage</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="/contact">Contact Us</Link>
+              <Link href={createLocalizedHref("/contact", locale)}>Contact Us</Link>
             </Button>
           </motion.div>
 
@@ -37,7 +42,7 @@ export default function NotFound() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
           >
-            <PageLinksGrid />
+            <PageLinksGrid locale={locale} />
           </motion.div>
 
           {/* Mini Game */}

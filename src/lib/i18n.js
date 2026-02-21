@@ -12,6 +12,21 @@
 export const locales = ['en', 'hi', 'ar', 'fr', 'es', 'de', 'pt', 'ru', 'ja', 'ko', 'zh', 'it'];
 export const defaultLocale = 'en';
 
+/**
+ * Get locale from request headers (set by middleware). Use in server layouts for canonical URLs.
+ * @returns {Promise<string>} Locale code (e.g. 'en')
+ */
+export async function getLocaleFromHeaders() {
+  try {
+    const { headers } = await import('next/headers');
+    const h = await headers();
+    const locale = h.get('x-next-locale');
+    return locale && locales.includes(locale) ? locale : defaultLocale;
+  } catch {
+    return defaultLocale;
+  }
+}
+
 // RTL languages
 export const rtlLocales = ['ar'];
 

@@ -62,18 +62,17 @@ export async function generateMetadata({ params }) {
 
   const ogLocale = ogLocaleMap[validLocale] || 'en_US';
 
-  // Build hreflang alternates for all supported languages
-  // For default locale (en), use root path; for others, use /locale path
-  const canonicalPath = validLocale === defaultLocale ? '' : `/${validLocale}`;
+  // Build hreflang alternates – use actual URL structure (all locales in path, including /en)
+  // so canonical matches sitemap and avoids "alternative page with canonical" in GSC
+  const canonicalPath = `/${validLocale}`;
   const alternates = {
     canonical: `${siteUrl}${canonicalPath}`,
     languages: {},
   };
 
-  // Add hreflang for all locales
+  // Add hreflang for all locales (each locale URL includes /locale)
   locales.forEach((loc) => {
-    const langPath = loc === defaultLocale ? '' : `/${loc}`;
-    alternates.languages[loc] = `${siteUrl}${langPath}`;
+    alternates.languages[loc] = `${siteUrl}/${loc}`;
   });
 
   return {
@@ -114,7 +113,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       type: "website",
       locale: ogLocale,
-      url: `${siteUrl}${canonicalPath}`,
+      url: `${siteUrl}/${validLocale}`,
       siteName: "Swagatam Tech",
       title: translations.seo?.defaultTitle || "Website Dev Agency | Fast Performance | Swagatam Tech",
       description: translations.seo?.defaultDescription || "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth.",

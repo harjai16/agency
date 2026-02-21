@@ -1,24 +1,33 @@
-import { locales, defaultLocale } from '@/lib/i18n';
+import { locales } from '@/lib/i18n';
+
+const serviceIds = ['strategy', 'ux-ui', 'development', 'cms', 'performance', 'support'];
 
 /**
- * Sitemap Generator
- * 
- * UPDATED: Now generates sitemap entries for all supported locales
+ * Sitemap Generator – SEO: URLs must match actual routes (all locales in path, including /en)
+ * so canonicals and sitemap align; excludes admin/redirect-only pages.
  */
 export default async function sitemap() {
-  const baseUrl = "https://swagatamtech.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
-  // 1️⃣ Static pages (without locale prefix)
-  const staticPages = [
-    "",
-    "/about",
-    "/services",
-    "/contact",
-    "/blogs",
-    "/portfolio",
-    "/case-studies",
-    "/careers",
-    "/bussines-consultancy",
+  let caseStudySlugs = [];
+  try {
+    const caseStudies = (await import('@/data/case-studies.json')).default;
+    caseStudySlugs = Array.isArray(caseStudies) ? caseStudies.map((cs) => cs.id).filter(Boolean) : [];
+  } catch {
+    caseStudySlugs = [];
+  }
+
+  // Static paths (no leading locale – we add /locale for each)
+  const staticPaths = [
+    '',
+    '/about',
+    '/services',
+    '/contact',
+    '/blogs',
+    '/portfolio',
+    '/case-studies',
+    '/careers',
+    '/bussines-consultancy',
   ];
 
   // 2️⃣ Fetch ONLY published blogs
@@ -49,40 +58,65 @@ export default async function sitemap() {
 
   const entries = [];
 
-  // Generate entries for each locale
+  // One entry set per locale – URLs match actual routes (e.g. /en, /en/services)
   for (const locale of locales) {
-    const localePrefix = locale === defaultLocale ? '' : `/${locale}`;
+    const localePrefix = `/${locale}`;
 
-    // Static pages
-    for (const page of staticPages) {
+    for (const path of staticPaths) {
+      const urlPath = path ? `${localePrefix}${path}` : localePrefix;
       entries.push({
-        url: `${baseUrl}${localePrefix}${page}`,
+        url: `${baseUrl}${urlPath}`,
         lastModified: new Date(),
-        changeFrequency: "weekly",
-        priority: page === "" ? 1 : 0.8,
+        changeFrequency: 'weekly',
+        priority: path === '' ? 1 : 0.8,
         alternates: {
-          languages: locales.reduce((acc, loc) => {
-            const locPrefix = loc === defaultLocale ? '' : `/${loc}`;
-            acc[loc] = `${baseUrl}${locPrefix}${page}`;
-            return acc;
-          }, {}),
+          languages: Object.fromEntries(
+            locales.map((loc) => [`${loc}`, `${baseUrl}/${loc}${path}`])
+          ),
         },
       });
     }
 
-    // Blog pages
-    for (const blog of blogData) {
+    for (const serviceId of serviceIds) {
       entries.push({
-        url: `${baseUrl}${localePrefix}/blogs${blog.slug}`,
-        lastModified: blog.updatedAt || blog.createdAt,
-        changeFrequency: "weekly",
+        url: `${baseUrl}${localePrefix}/services/${serviceId}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
         priority: 0.7,
         alternates: {
-          languages: locales.reduce((acc, loc) => {
-            const locPrefix = loc === defaultLocale ? '' : `/${loc}`;
-            acc[loc] = `${baseUrl}${locPrefix}/blogs${blog.slug}`;
-            return acc;
-          }, {}),
+          languages: Object.fromEntries(
+            locales.map((loc) => [`${loc}`, `${baseUrl}/${loc}/services/${serviceId}`])
+          ),
+        },
+      });
+    }
+
+    for (const slug of caseStudySlugs) {
+      entries.push({
+        url: `${baseUrl}${localePrefix}/case-studies/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((loc) => [`${loc}`, `${baseUrl}/${loc}/case-studies/${slug}`])
+          ),
+        },
+      });
+    }
+
+    for (const blog of blogData) {
+      if (!blog.slug) continue;
+      const slugPath = blog.slug.startsWith('/') ? blog.slug : `/${blog.slug}`;
+      entries.push({
+        url: `${baseUrl}${localePrefix}/blogs${slugPath}`,
+        lastModified: blog.updatedAt || blog.createdAt ? new Date(blog.updatedAt || blog.createdAt) : new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((loc) => [`${loc}`, `${baseUrl}/${loc}/blogs${slugPath}`])
+          ),
         },
       });
     }

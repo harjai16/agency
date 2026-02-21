@@ -12,14 +12,14 @@ export async function generateMetadata({ params }) {
   const title = t?.blogs?.metaTitle || t?.blogs?.title || 'Blog - Web Design & Development Insights | Swagatam Tech';
   const description = t?.blogs?.metaDescription || t?.blogs?.description || 'Learn from real website projects. Practical insights on web design, development, performance, and SEO from building conversion-focused websites. Real projects, not theory.';
 
-  // Generate hreflang alternates
+  // Generate hreflang alternates – use actual URL (all locales in path, including /en)
   const alternates = {
-    canonical: `${siteUrl}/${locale === 'en' ? '' : locale}/blogs`,
+    canonical: `${siteUrl}/${locale}/blogs`,
     languages: {},
   };
 
   for (const loc of locales) {
-    alternates.languages[loc] = `${siteUrl}/${loc === 'en' ? '' : loc}/blogs`;
+    alternates.languages[loc] = `${siteUrl}/${loc}/blogs`;
   }
 
   // Map locale to OpenGraph locale format
@@ -85,7 +85,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      url: `${siteUrl}/${locale === 'en' ? '' : locale}/blogs`,
+      url: `${siteUrl}/${locale}/blogs`,
       type: 'website',
       siteName: 'Swagatam Tech',
       images: [

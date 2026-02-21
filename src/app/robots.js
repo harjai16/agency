@@ -12,6 +12,7 @@ export default function robots() {
           '/api/',
           '/admin/',
           '/blog-post/',
+          '/job-post/',
           '/request-query/',
           '/test/',
         ],

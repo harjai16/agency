@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { createLocalizedHref } from "@/lib/navigation";
 
 const pageLinks = [
   { href: "/", label: "Home", icon: "🏠" },
@@ -15,7 +16,7 @@ const pageLinks = [
   { href: "/bussines-consultancy", label: "Business Consultancy", icon: "💡" },
 ];
 
-const PageLinksGrid = () => {
+const PageLinksGrid = ({ locale = "en" }) => {
   return (
     <div className="space-y-4">
       <motion.h3
@@ -38,7 +39,7 @@ const PageLinksGrid = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href={link.href}
+              href={createLocalizedHref(link.href, locale)}
               className="flex flex-col items-center justify-center p-4 sm:p-5 rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm hover:border-gray-300 hover:bg-gray-50 transition-all duration-200 group"
             >
               <span className="text-3xl sm:text-4xl mb-2 group-hover:scale-110 transition-transform">

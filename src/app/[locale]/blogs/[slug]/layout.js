@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
       };
     }
 
-    const blogUrl = `/${locale === 'en' ? '' : locale}/blogs/${slug}`;
+    const blogUrl = `/${locale}/blogs/${slug}`;
     
     // Use SEO utility for consistent metadata generation
     const keywords = blog.keywords 
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
     };
 
     for (const loc of locales) {
-      alternates.languages[loc] = `${siteUrl}/${loc === 'en' ? '' : loc}/blogs/${slug}`;
+      alternates.languages[loc] = `${siteUrl}/${loc}/blogs/${slug}`;
     }
 
     // Map locale to OpenGraph locale format

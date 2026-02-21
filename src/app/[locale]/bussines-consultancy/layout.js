@@ -1,8 +1,11 @@
 import { Metadata } from "next";
+import { getLocaleFromHeaders } from "@/lib/i18n";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
 
-export const metadata = {
+export async function generateMetadata() {
+  const locale = await getLocaleFromHeaders();
+  return {
   title: "Business Consulting Services | Strategic Growth | Swagatam Tech",
   description: "Expert business consulting services to help you make better decisions, optimize operations, and scale your business. Digital strategy, market research, process improvement, and growth consulting. Data-driven insights that deliver measurable results.",
   keywords: [
@@ -56,7 +59,7 @@ export const metadata = {
   openGraph: {
     title: "Business Consulting Services | Strategic Growth | Swagatam Tech",
     description: "Expert business consulting services to help you make better decisions, optimize operations, and scale your business. Digital strategy, market research, and growth consulting.",
-    url: `${siteUrl}/bussines-consultancy`,
+    url: `${siteUrl}/${locale}/bussines-consultancy`,
     type: "website",
     siteName: "Swagatam Tech",
     images: [
@@ -84,7 +87,7 @@ export const metadata = {
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: `${siteUrl}/bussines-consultancy`,
+    canonical: `${siteUrl}/${locale}/bussines-consultancy`,
   },
   robots: {
     index: true,
@@ -101,7 +104,8 @@ export const metadata = {
     'geo.region': 'IN',
     'geo.placename': 'India',
   },
-};
+  };
+}
 
 export default function BusinessConsultancyLayout({ children }) {
   return children;
