@@ -263,7 +263,7 @@ const ServicesPage = () => {
                     />
                   </motion.div>
                 )}
-
+  
                 {/* Title only - always visible at bottom of image */}
                 {serviceImageMap[service.id] && (
                 <div
