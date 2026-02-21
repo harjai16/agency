@@ -1,70 +1,103 @@
 import { NextResponse } from 'next/server';
 
+const locales = ['en', 'hi', 'ar', 'fr', 'es', 'de', 'pt', 'ru', 'ja', 'ko', 'zh', 'it'];
+const defaultLocale = 'en';
+
+function getLocale(request) {
+  const cookieLocale = request.cookies.get('lang')?.value;
+  if (cookieLocale && locales.includes(cookieLocale)) return cookieLocale;
+
+  const acceptLanguage = request.headers.get('accept-language');
+  if (acceptLanguage) {
+    const languages = acceptLanguage
+      .split(',')
+      .map((lang) => lang.trim().split(';')[0].toLowerCase().split('-')[0]);
+
+    for (const lang of languages) {
+      if (locales.includes(lang)) return lang;
+    }
+  }
+
+  return defaultLocale;
+}
+
+function hasLocale(pathname) {
+  const segments = pathname.split('/').filter(Boolean);
+  return segments.length > 0 && locales.includes(segments[0]);
+}
+
+function extractLocale(pathname) {
+  const segments = pathname.split('/').filter(Boolean);
+  return segments.length > 0 && locales.includes(segments[0]) ? segments[0] : null;
+}
+
 export function proxy(request) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host') || '';
-  
-  // Skip redirects for localhost and development environments
+  const pathname = url.pathname;
+
+  // Skip dev environments
   if (
-    hostname.includes('localhost') || 
+    hostname.includes('localhost') ||
     hostname.includes('127.0.0.1') ||
     hostname.includes('.vercel.app') ||
     hostname.includes('.netlify.app')
   ) {
     return NextResponse.next();
   }
-  
-  // Get canonical domain from environment variable or use default
-  // Canonical domain: www.swagatamtech.com (with www)
-  const canonicalDomain = process.env.NEXT_PUBLIC_CANONICAL_DOMAIN || 'www.swagatamtech.com';
-  const baseDomain = canonicalDomain.replace(/^www\./, ''); // Remove www if present
-  
-  // Remove port if present
+
+  // Skip internal/static files
+  if (
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/favicon') ||
+    pathname.match(/\.(ico|png|jpg|jpeg|svg|webp|json|xml|txt|css|js|woff|woff2|ttf|eot)$/)
+  ) {
+    return NextResponse.next();
+  }
+
+  // 🌍 Canonical Domain Redirect
+  const canonicalDomain =
+    process.env.NEXT_PUBLIC_CANONICAL_DOMAIN || 'www.swagatamtech.com';
+
+  const baseDomain = canonicalDomain.replace(/^www\./, '');
   const hostnameWithoutPort = hostname.split(':')[0];
-  
-  // Check if this is the same domain (base domain match)
+
   const isWwwDomain = hostnameWithoutPort === `www.${baseDomain}`;
   const isNonWwwDomain = hostnameWithoutPort === baseDomain;
-  
-  // Determine if we need to redirect
-  let shouldRedirect = false;
-  let targetHostname = canonicalDomain;
-  
-  // If canonical is www, redirect non-www to www
+
+  let shouldRedirectDomain = false;
+
   if (canonicalDomain.startsWith('www.')) {
-    if (isNonWwwDomain) {
-      shouldRedirect = true;
-    }
-  } 
-  // If canonical is non-www, redirect www to non-www
-  else {
-    if (isWwwDomain) {
-      shouldRedirect = true;
-    }
+    if (isNonWwwDomain) shouldRedirectDomain = true;
+  } else {
+    if (isWwwDomain) shouldRedirectDomain = true;
   }
-  
-  // Perform 301 redirect if needed
-  if (shouldRedirect) {
-    url.hostname = targetHostname;
-    url.protocol = 'https:'; // Always use HTTPS for production redirects
-    // Preserve the pathname and search params (query string)
-    // The pathname and search are already preserved in the cloned URL
+
+  if (shouldRedirectDomain) {
+    url.hostname = canonicalDomain;
+    url.protocol = 'https:';
     return NextResponse.redirect(url, 301);
   }
-  
-  return NextResponse.next();
+
+  // 🌐 Locale Redirect
+  if (!hasLocale(pathname)) {
+    const locale = getLocale(request);
+    const newPathname = `/${locale}${pathname === '/' ? '' : pathname}`;
+    const newUrl = new URL(newPathname, request.url);
+    newUrl.search = request.nextUrl.search;
+
+    return NextResponse.redirect(newUrl, 301);
+  }
+
+  // Attach locale header
+  const response = NextResponse.next();
+  const locale = extractLocale(pathname);
+  if (locale) response.headers.set('x-next-locale', locale);
+
+  return response;
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
 };
-
