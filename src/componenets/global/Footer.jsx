@@ -54,16 +54,15 @@ const Footer = () => {
               trackClick("Logo - Footer", "navigation");
               setLoading(true);
             }}
-            style={{ marginTop: '-35px' }}
           >
-            <div className="relative w-60  sm:w-47  md:w-32  lg:w-53">
+            <div className="relative h-10 w-36 sm:h-11 sm:w-40 md:h-12 md:w-44">
               <Image
                 src="/our_logo/logo-removebg-preview.png"
                 alt={t?.seo?.siteName ? `${t.seo.siteName} Logo` : "Swagatam Tech Logo - Website Development Agency"}
                 fill
-                className="object-contain group-hover:opacity-80 transition-opacity"
+                className="object-contain object-left group-hover:opacity-80 transition-opacity"
                 style={{ backgroundColor: 'transparent' }}
-                sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 128px, 144px"
+                sizes="(max-width: 640px) 144px, (max-width: 768px) 160px, 176px"
               />
             </div>
           </Link>
