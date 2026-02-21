@@ -21,6 +21,7 @@ import "../globals.css";
 import ConditionalLayout from "../ConditionalLayout";
 import StructuredData from "@/componenets/global/StructuredData";
 import GoogleAnalytics from "@/componenets/global/GoogleAnalytics";
+import LocaleHtmlAttributes from "@/componenets/global/LocaleHtmlAttributes";
 import { locales, defaultLocale, isRTL } from "@/lib/i18n";
 import { getTranslations } from "@/lib/i18n";
 import { TranslationsProvider } from "@/lib/translations-context";
@@ -242,19 +243,18 @@ export default async function LocaleLayout({ children, params }) {
   const translations = await getTranslations(validLocale);
 
   return (
-    <html lang={validLocale} dir={dir} suppressHydrationWarning>
-      <head>
-        <StructuredData data={organizationSchema} />
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-white text-black`} suppressHydrationWarning>
+    <>
+      <LocaleHtmlAttributes locale={validLocale} dir={dir} />
+      <StructuredData data={organizationSchema} />
+      <div className={`${geistSans.variable} ${geistMono.variable} bg-white text-black min-h-screen`}>
         <GoogleAnalytics />
         <TranslationsProvider translations={translations}>
           <ConditionalLayout>
             {children}
           </ConditionalLayout>
         </TranslationsProvider>
-      </body>
-    </html>
+      </div>
+    </>
   );
 }
 

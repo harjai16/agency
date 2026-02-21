@@ -1,12 +1,16 @@
 /**
- * Root Layout (Minimal Wrapper)
- * 
- * This is the minimal root layout that wraps the [locale] segment.
- * All locale-specific logic is handled in [locale]/layout.js
- * 
- * This layout exists to satisfy Next.js App Router requirements.
+ * Root Layout
+ *
+ * Next.js requires the root layout to include <html> and <body>.
+ * Locale-specific lang/dir and styles are set in [locale]/layout.js.
  */
 
 export default function RootLayout({ children }) {
-  return children;
+  return (
+    <html suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
+      </body>
+    </html>
+  );
 }

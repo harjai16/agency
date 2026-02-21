@@ -37,21 +37,35 @@ const imageVariants = {
   }),
 };
 
+// Map home/legacy service IDs to detail page IDs (so card clicks open the right page)
+const SERVICE_ID_TO_DETAIL = {
+  design: "ux-ui",
+  maintenance: "support",
+};
+
 const Services = () => {
   const pathname = usePathname();
   const currentLocale = getCurrentLocale(pathname);
   const t = useTranslations();
-  const { data: services, loading } = useLocaleData('services');
-  
-  // Ensure services is always an array
-  const servicesList = Array.isArray(services) ? services : [];
+  const { data: pageData, loading } = useLocaleData('services-page');
+  const servicesList = pageData?.services?.items || [];
 
-  // Map service IDs to SEO-friendly image names
+  // Map service IDs to SEO-friendly image names (covers both services.json and services-page IDs)
   const serviceImageMap = {
-    "strategy": "seo-optimization.jpg",
-    "design": "ui-ux-design.jpg",
-    "development": "content-writer.jpg",
-    "maintenance": "website-optimization.jpg"
+    strategy: "seo-optimization.jpg",
+    design: "ui-ux-design.jpg",
+    "ux-ui": "ui-ux-design.jpg",
+    development: "content-writer.jpg",
+    cms: "social-media-management.jpg",
+    performance: "website-optimization.jpg",
+    support: "video-shoot-and-editing.jpg",
+    maintenance: "website-optimization.jpg",
+  };
+
+  // Link href: use detail-page ID so every card opens a valid service page
+  const getServiceHref = (service) => {
+    const detailId = SERVICE_ID_TO_DETAIL[service.id] || service.id;
+    return createLocalizedHref(`/services/${detailId}`, currentLocale);
   };
 
   return (
@@ -102,10 +116,13 @@ const Services = () => {
         </div>
       ) : (
         <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2">
-          {servicesList.map((service, index) => (
+          {servicesList.map((service, index) => {
+            const imageKey = SERVICE_ID_TO_DETAIL[service.id] || service.id;
+            const hasImage = serviceImageMap[imageKey] || serviceImageMap[service.id];
+            return (
           <Link
             key={service.id}
-            href={createLocalizedHref(`/services/${service.id}`, currentLocale)}
+            href={getServiceHref(service)}
             className="block"
           >
             <motion.article
@@ -118,7 +135,7 @@ const Services = () => {
               className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)] cursor-pointer"
             >
             {/* Service Image */}
-            {serviceImageMap[service.id] && (
+            {hasImage && (
               <motion.div 
                 className="relative w-full h-64 sm:h-72 md:h-80"
                 custom={index}
@@ -128,8 +145,8 @@ const Services = () => {
                 variants={imageVariants}
               >
                 <Image
-                  src={`/service/${serviceImageMap[service.id]}`}
-                  alt={service.label || "Service image"}
+                  src={`/service/${serviceImageMap[imageKey] || serviceImageMap[service.id]}`}
+                  alt={service.title || service.label || "Service image"}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -149,10 +166,10 @@ const Services = () => {
                   </span>
                 </div>
                 <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">
-                  {service.label}
+                  {service.title || service.label}
                 </h3>
                 <p className="text-xs sm:text-sm text-white/90 mb-2 leading-relaxed line-clamp-2">
-                  {service.description}
+                  {service.summary || service.description}
                 </p>
                 <div className="text-[10px] sm:text-xs text-white/80">
                   <span className="font-medium text-white">
@@ -164,7 +181,8 @@ const Services = () => {
             </div>
             </motion.article>
           </Link>
-          ))}
+          );
+          })}
         </div>
       )}
     </Section>
