@@ -59,7 +59,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full fixed left-0 z-50 bg-white/90 sm:bg-white/80 backdrop-blur-xl border-b border-gray-100">
+    <nav className="w-full relative z-50 bg-white/90 sm:bg-white/80 backdrop-blur-xl border-b border-gray-100">
       <div className="max-w-fullhd mx-auto px-3 sm:px-4 md:px-4 min-[700px]:px-6 lg:px-8 xl:px-12 2xl:px-20 flex items-center justify-between">
         
         {/* Logo */}

@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
+/* Tailwind v4: custom theme (v4 ignores tailwind.config.js; define here so max-w-fullhd, etc. work) */
+@theme {
+  --container-8xl: 90rem;    /* 1440px */
+  --container-9xl: 100rem;   /* 1600px */
+  --container-fullhd: 120rem; /* 1920px */
+}
 
- body {
+body {
   cursor: none;
 }
 
