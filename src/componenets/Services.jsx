@@ -134,11 +134,20 @@ const Services = () => {
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] cursor-pointer transition-shadow duration-300 hover:shadow-[0_26px_70px_rgba(15,23,42,0.12)] h-full"
             >
-            <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)]">
+            {/* Premium hover border glow */}
+            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-emerald-200/60 via-transparent to-emerald-100/40" />
+              <div className="absolute inset-[1px] rounded-3xl bg-white" />
+            </div>
+
+            <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] min-h-[420px] md:min-h-[280px]">
               {/* Left: Copy */}
-              <div className="p-5 sm:p-6 md:p-7">
+              <div className="relative p-5 sm:p-6 md:p-7 flex flex-col">
+                {/* Subtle accent */}
+                <div className="pointer-events-none absolute -top-16 -left-16 h-40 w-40 rounded-full bg-emerald-200/20 blur-3xl opacity-70" />
+
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-emerald-700">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
@@ -157,20 +166,20 @@ const Services = () => {
                   {service.summary || service.description}
                 </p>
 
-                <div className="mt-4 flex items-center justify-between gap-4">
+                <div className="mt-auto pt-4 flex items-center justify-between gap-4">
                   <div className="text-[10px] sm:text-xs text-gray-500 line-clamp-1">
                     <span className="font-medium text-gray-800">{t?.services?.outcome || "Outcome:"}</span>{" "}
                     <span>{service.outcome}</span>
                   </div>
                   <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-medium text-emerald-700">
                     <span>Explore</span>
-                    <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                    <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                   </div>
                 </div>
               </div>
 
               {/* Right: Image */}
-              <div className="relative md:min-h-[240px] min-h-[200px]">
+              <div className="relative md:min-h-[280px] min-h-[220px]">
                 {hasImage ? (
                   <motion.div
                     className="absolute inset-0 z-0"
@@ -184,10 +193,13 @@ const Services = () => {
                       src={`/service/${serviceImageMap[imageKey] || serviceImageMap[service.id]}`}
                       alt={service.title || service.label || "Service image"}
                       fill
-                      className="object-cover md:rounded-tr-3xl md:rounded-br-3xl group-hover:scale-[1.02] transition-transform duration-300"
+                      className="object-cover md:rounded-tr-3xl md:rounded-br-3xl group-hover:scale-[1.04] transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent md:rounded-tr-3xl md:rounded-br-3xl" />
+                    {/* Always-on readability layer */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent md:rounded-tr-3xl md:rounded-br-3xl" />
+                    {/* Glass highlight */}
+                    <div className="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-white/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-white md:rounded-tr-3xl md:rounded-br-3xl" />

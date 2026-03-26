@@ -243,11 +243,11 @@ const ServicesPage = () => {
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                   whileHover={{ y: -6 }}
-                  className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] cursor-pointer"
+                  className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] cursor-pointer h-full"
                 >
-                  <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)]">
+                  <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] min-h-[420px] md:min-h-[280px]">
                     {/* Left: Copy */}
-                    <div className="p-5 sm:p-6 md:p-7">
+                    <div className="p-5 sm:p-6 md:p-7 flex flex-col">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-emerald-700">
                           <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
@@ -266,7 +266,7 @@ const ServicesPage = () => {
                         {service.summary}
                       </p>
 
-                      <div className="mt-4 flex items-center justify-between gap-4">
+                      <div className="mt-auto pt-4 flex items-center justify-between gap-4">
                         <div className="text-[10px] sm:text-xs text-gray-500 line-clamp-1">
                           <span className="font-medium text-gray-800">{pageData?.services?.outcome || "Outcome:"}</span>{" "}
                           <span>{service.outcome}</span>
@@ -279,7 +279,7 @@ const ServicesPage = () => {
                     </div>
 
                     {/* Right: Image */}
-                    <div className="relative md:min-h-[240px] min-h-[200px]">
+                    <div className="relative md:min-h-[280px] min-h-[220px]">
                       {serviceImageMap[service.id] ? (
                         <motion.div
                           className="absolute inset-0 z-0"
