@@ -1,14 +1,19 @@
 import { locales } from '@/lib/i18n';
 import { getAllStaticBlogSlugs } from '@/lib/staticBlogs';
 
-const serviceIds = ['strategy', 'ux-ui', 'development', 'cms', 'performance', 'support'];
-
 /**
  * Sitemap Generator – SEO: URLs must match actual routes (all locales in path, including /en)
  * so canonicals and sitemap align; excludes admin/redirect-only pages.
  */
 export default async function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
+  let serviceIds = [];
+  try {
+    const services = (await import('@/data/services.json')).default;
+    serviceIds = Array.isArray(services) ? services.map((service) => service.id).filter(Boolean) : [];
+  } catch {
+    serviceIds = [];
+  }
 
   let caseStudySlugs = [];
   try {
