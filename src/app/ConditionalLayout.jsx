@@ -12,6 +12,7 @@ import { LoadingProvider } from "@/componenets/global/LoadingContext";
 import LeadPopup from "@/componenets/global/LeadPopup";
 import GoogleAnalyticsTracker from "@/componenets/global/GoogleAnalyticsTracker";
 import GlobalClickTracker from "@/componenets/global/GlobalClickTracker";
+import SEOBacklinks from "@/componenets/global/SEOBacklinks";
 import { removeLocaleFromPath } from "@/lib/i18n";
 
 export default function ConditionalLayout({ children }) {
@@ -78,6 +79,7 @@ export default function ConditionalLayout({ children }) {
           <LoadingProvider>
             <GoogleAnalyticsTracker />
             <GlobalClickTracker />
+            <SEOBacklinks />
             <main className="min-h-screen">
               {children}
             </main>
@@ -96,6 +98,7 @@ export default function ConditionalLayout({ children }) {
           <GlobalClickTracker />
           <CustomCursor />
           <LeadPopup />
+          <SEOBacklinks />
           {/* Fixed header: stripe + navbar */}
           <div className="fixed top-0 left-0 w-full z-50">
             <CapabilitiesStrip />

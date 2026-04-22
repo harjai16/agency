@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { connectToDatabase } from '@/lib/mongodb';
 import { generateArticleMetadata as generateSEO } from '@/lib/seo';
 import { locales } from '@/lib/i18n';
+import { getStaticBlogBySlug } from '@/lib/staticBlogs';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
 
@@ -27,7 +28,10 @@ export async function generateMetadata({ params }) {
       ];
     }
     
-    const blog = await db.collection('blogs').findOne(query);
+    let blog = await db.collection('blogs').findOne(query);
+    if (!blog) {
+      blog = getStaticBlogBySlug(slug, locale);
+    }
 
     if (!blog) {
       return {
@@ -96,6 +100,22 @@ export async function generateMetadata({ params }) {
     };
   } catch (error) {
     console.error('Error generating metadata:', error);
+    const resolved = await params;
+    const staticBlog = getStaticBlogBySlug(resolved?.slug, resolved?.locale || 'en');
+    if (staticBlog) {
+      const blogUrl = `/${resolved.locale || 'en'}/blogs/${resolved.slug}`;
+      return generateSEO({
+        title: staticBlog.metaTitle || staticBlog.title,
+        description: staticBlog.metaDescription || staticBlog.excerpt || staticBlog.title,
+        keywords: staticBlog.keywords ? staticBlog.keywords.split(',').map((k) => k.trim()) : [],
+        path: blogUrl,
+        image: staticBlog.featuredImage || '/logo.jpeg',
+        publishedTime: staticBlog.createdAt,
+        modifiedTime: staticBlog.updatedAt || staticBlog.createdAt,
+        author: staticBlog.author || 'Swagatam Tech',
+        section: 'Web Development',
+      });
+    }
     return {
       title: 'Blog Post | Swagatam Tech',
       description: 'Read our latest blog post.',
