@@ -70,6 +70,21 @@ export const metadata = {
     "best web development company in India",
     "SEO agency India",
     "local SEO services India"
+    ,"fast website build"
+    ,"fast website development"
+    ,"quick website launch"
+    ,"rapid website development"
+    ,"website built in 4 weeks"
+    ,"fast business website"
+    ,"high speed website development"
+    ,"performance first website agency"
+    ,"fast loading website design"
+    ,"conversion focused website build"
+    ,"fast seo friendly website"
+    ,"website development with fast delivery"
+    ,"quick turnaround web development"
+    ,"fast website redesign service"
+    ,"modern fast website agency"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",
