@@ -1,5 +1,5 @@
 import { locales } from '@/lib/i18n';
-import { getAllStaticBlogSlugs } from '@/lib/staticBlogs';
+import { getAllStaticBlogSlugs, getStaticBlogs } from '@/lib/staticBlogs';
 
 /**
  * Sitemap Generator – SEO: URLs must match actual routes (all locales in path, including /en)
@@ -57,6 +57,8 @@ export default async function sitemap() {
     blogData = [];
   }
 
+  const staticBlogs = getStaticBlogs('en');
+  const staticBlogsBySlug = new Map(staticBlogs.map((blog) => [blog.slug, blog]));
   const staticBlogSlugs = getAllStaticBlogSlugs();
   const sitemapBlogs = new Map();
   for (const blog of blogData) {
@@ -66,7 +68,7 @@ export default async function sitemap() {
   }
   for (const slug of staticBlogSlugs) {
     if (!sitemapBlogs.has(slug)) {
-      sitemapBlogs.set(slug, { slug });
+      sitemapBlogs.set(slug, staticBlogsBySlug.get(slug) || { slug });
     }
   }
 

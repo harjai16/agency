@@ -11,51 +11,60 @@ ${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("\n")}
     .join("\n");
 }
 
+function toSlug(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 function buildRichSections(topic, focus) {
   return [
     {
-      heading: `Why ${topic} matters for modern businesses`,
+      heading: `Why ${topic} matters in 2026`,
       paragraphs: [
-        `${topic} is no longer a nice-to-have project that teams postpone until traffic grows. It is a core growth lever because visitors compare your website speed, clarity, and trust signals against the best experience they had this week, not against direct competitors alone. When design, messaging, and performance align with business goals, the website becomes a reliable channel for qualified leads and better sales conversations. Most companies lose opportunities because pages are built feature-first instead of intent-first. Start with user intent, map page outcomes, and create content blocks that answer decision questions quickly and confidently.`,
-        `A practical way to improve outcomes is to connect every page to one measurable action. If a service page exists to generate consultation requests, then structure the content around credibility, relevance, and momentum: prove domain expertise, show process transparency, and provide a low-friction next step. Teams that win consistently avoid overloading pages with vague statements and instead use specific examples, before-and-after outcomes, and clear scope language. This helps users self-qualify, reduces unnecessary calls, and improves lead quality. It also helps search engines understand topical depth because the page naturally covers related terms in meaningful context.`,
+        `${topic} directly impacts how quickly visitors trust your brand and decide whether to contact your team. Many websites lose opportunities because they speak in broad claims instead of answering decision-stage questions. Strong execution starts with intent mapping, clear messaging, and page structure that makes next steps obvious. Search engines also favor pages that explain a topic from multiple useful angles, which means depth is not optional anymore. When your page combines technical quality, practical examples, and specific outcomes, both rankings and conversion rates usually improve together rather than competing with each other.`,
+        `For service businesses, this topic often determines whether traffic turns into qualified leads or low-fit inquiries. A good page clarifies who the offer is for, what process is used, how long work takes, and what results are realistic. Instead of keyword stuffing, use plain language that matches what buyers actually ask in calls and emails. This approach improves readability, keeps bounce rates lower, and gives search engines stronger contextual signals. The best-performing pages feel like expert guidance, not sales-heavy copy, and that balance is what improves both user trust and long-term SEO stability.`,
       ],
     },
     {
-      heading: `A framework you can use this month`,
+      heading: `A practical monthly execution framework`,
       paragraphs: [
-        `Begin with a weekly content and performance review cycle. In week one, identify your highest-intent pages and audit each page against four checkpoints: search intent alignment, message clarity, technical performance, and conversion friction. In week two, rewrite headlines, intros, and call-to-action blocks so they match buyer language instead of internal language. In week three, improve page speed by compressing media, reducing blocking scripts, and tightening layout shifts. In week four, publish a long-form insight piece and interlink it with service pages, case studies, and contact pathways. This sequence creates compounding gains because content and technical signals improve together.`,
-        `Do not treat SEO, UX, and development as separate tracks. They work best as one system. Search visibility brings visitors, UX helps visitors evaluate quickly, and development quality ensures interactions stay smooth under real-world conditions. If one layer is weak, the full funnel underperforms. Teams that align these layers usually see stronger engagement metrics, more qualified inquiries, and better close rates over a quarter. Keep documentation simple: one planning doc for target keywords, one page brief for each URL, and one change log for implemented updates. This keeps the team accountable and makes iteration faster.`,
+        `Use a four-week cycle to keep momentum without overcomplicating operations. Week one: audit top pages for intent alignment, content clarity, and crawl/index signals. Week two: rewrite headlines, service intros, FAQs, and call-to-action blocks using customer language and problem-first framing. Week three: improve performance by reducing render-blocking scripts, compressing assets, and tightening layout behavior across mobile devices. Week four: publish one long-form blog and connect it internally to service pages and case studies. This recurring cycle gives your site consistent freshness while improving technical quality and business relevance at the same time.`,
+        `The framework works best when documentation stays lean. Keep one sheet for target queries, one brief for each URL, and one changelog for edits. This makes performance reviews easier because you can connect metric movement to specific updates. If rankings rise but leads do not, improve conversion blocks. If leads rise but impressions stall, expand topical coverage. Treat each page as a product you iterate, not a static asset you publish once. Teams that review and improve pages every month usually outperform teams that rely on occasional redesign projects with no follow-up optimization process.`,
       ],
     },
     {
-      heading: `Common mistakes and how to avoid them`,
+      heading: `Common implementation mistakes`,
       paragraphs: [
-        `The most common mistake is publishing thin pages that repeat generic claims. Search engines and users both detect this quickly. Replace weak statements with practical specifics: what you do, for whom, with what process, and what timelines are realistic. Another frequent issue is broken internal linking. Important pages remain disconnected, so authority and crawl attention do not flow where needed. Build deliberate internal pathways from blog articles to service pages, from service pages to case studies, and from case studies to conversion pages. This not only supports discovery but also helps users move forward without guessing where to click next.`,
-        `Teams also underestimate maintenance. A page that ranked six months ago may lose relevance if competitors update content more frequently or if your own offerings evolve. Create a refresh schedule based on business value: refresh top commercial pages every month, update cornerstone blog guides every quarter, and retire obsolete content when it no longer supports positioning. Use analytics and Search Console signals to choose priorities instead of relying on instinct alone. Consistent updates communicate freshness and reliability, which helps both crawling and ranking stability.`,
+        `A major mistake is publishing thin content that repeats similar points without adding useful detail. Another issue is weak internal linking, where blogs, service pages, and proof pages remain disconnected. This limits crawl efficiency and prevents authority flow toward high-value URLs. A third mistake is vague call-to-action language that creates friction at the decision moment. Replace broad phrases with clear next actions that match page intent, such as requesting an audit, booking a consultation, or reviewing a relevant case study. Every section on the page should help visitors move forward with confidence.`,
+        `Technical hygiene also matters more than many teams expect. Broken links, inconsistent canonicals, duplicate variants, and poor mobile rendering can block otherwise strong content from indexing well. Regularly test core templates and route behavior after deployments, especially on multilingual sites. If Google crawls pages but does not index them, improve uniqueness, strengthen internal relevance, and reduce low-value duplicates. Search performance is not only about adding keywords; it is about delivering a clean, understandable site architecture where each URL has a clear role in the user journey and in topical coverage.`,
       ],
     },
     {
-      heading: `${focus} and long-term growth`,
+      heading: `${focus}: turning traffic into qualified pipeline`,
       paragraphs: [
-        `Long-term growth comes from repeatable execution, not one-time optimization bursts. Treat your site as an operational asset that your team improves every sprint. Build reusable content components, establish a review checklist before publishing, and align marketing with development planning so technical debt does not slow campaign goals. Over time, this approach creates a stronger content moat and better user trust. It also gives search engines clearer signals because your information architecture remains stable while content depth improves. Businesses that follow this model usually outperform competitors that rely on sporadic redesign cycles.`,
-        `If you need a next action, pick one key page and one supporting article this week. Upgrade both using the same language model, intent mapping, and internal linking structure. Then measure changes in impressions, clicks, engagement, and lead actions over the next 30 days. The result is rarely dramatic overnight, but it is consistently positive when execution quality is high. Keep the loop simple: plan, publish, measure, refine. That process is what turns website traffic into predictable revenue outcomes.`,
+        `${focus} should be treated as a growth system, not a one-off checklist. Your content strategy, UX decisions, and development standards need to support the same business objective. Start by defining what a qualified lead means for your team, then shape each page around that definition. Include credibility signals, implementation detail, and expectation-setting language. This reduces low-intent inquiries and improves sales conversations. It also improves behavioral metrics that often correlate with stronger organic performance over time, especially on competitive service terms where trust and clarity are major ranking differentiators.`,
+        `A useful benchmark is whether a visitor can answer three questions in under sixty seconds: what you do, why your approach is credible, and what step to take next. If the answer is unclear, redesign the page flow and rewrite key blocks before publishing more content. Scaling without clarity usually creates noise, not growth. The best SEO outcomes happen when every page is built to be helpful first, technically sound second, and strategically connected third. That sequence keeps your site both crawl-friendly and conversion-ready as traffic increases month by month.`,
+      ],
+    },
+    {
+      heading: `Long-term growth playbook`,
+      paragraphs: [
+        `Long-term gains come from consistency and controlled iteration. Keep publishing useful, specific content while maintaining technical standards across templates and route patterns. Refresh high-value pages quarterly with updated examples, expanded FAQs, and stronger internal links. Monitor Search Console for indexing gaps, canonical conflicts, and query shifts, then adjust content priorities accordingly. When multiple pages target similar intent, consolidate instead of competing against yourself. This makes signals cleaner for search engines and simpler for users. A disciplined update rhythm builds compounding visibility and better lead quality over time.`,
+        `If you need a practical next step this week, pick one service page and one related blog article. Improve both for clarity, depth, and internal linking, then measure impressions, click-through rate, engagement, and lead actions over thirty days. Small improvements repeated consistently produce larger results than occasional large redesigns. Teams that treat SEO as operational work, not campaign work, usually see steadier growth and fewer indexing surprises. Keep your process simple, evidence-based, and user-focused, and you will build durable performance that supports both search visibility and business outcomes.`,
       ],
     },
   ];
 }
 
-function buildBlog({
-  id,
-  title,
-  slug,
-  excerpt,
-  keywords,
-  daysAgo,
-  topic,
-  focus,
-}) {
+function buildBlog({ id, title, keywords, daysAgo, topic, focus }) {
   const createdAt = new Date(Date.now() - daysAgo * DAY_MS).toISOString();
-  const updatedAt = new Date(Date.now() - Math.max(daysAgo - 2, 0) * DAY_MS).toISOString();
+  const updatedAt = new Date(Date.now() - Math.max(daysAgo - 3, 0) * DAY_MS).toISOString();
+  const excerpt = `Practical guidance on ${topic} with an implementation-focused approach for service businesses that want faster growth and stronger SEO outcomes.`;
 
   return {
     _id: `static-${id}`,
@@ -63,7 +72,7 @@ function buildBlog({
     status: "published",
     author: "Swagatam Tech",
     title,
-    slug,
+    slug: toSlug(title),
     excerpt,
     keywords,
     metaTitle: title,
@@ -76,88 +85,55 @@ function buildBlog({
   };
 }
 
-const STATIC_BLOGS = [
-  buildBlog({
-    id: 1,
-    title: "Technical SEO for Service Websites: A Practical 90-Day Roadmap",
-    slug: "technical-seo-service-websites-90-day-roadmap",
-    excerpt: "A practical, step-by-step plan to improve crawlability, indexing, and qualified lead flow for service business websites.",
-    keywords: "technical seo, service website seo, crawlability, indexing, core web vitals",
-    daysAgo: 60,
-    topic: "technical SEO",
-    focus: "crawl coverage and indexing consistency",
-  }),
-  buildBlog({
-    id: 2,
-    title: "How to Build High-Converting Service Pages with Clear User Intent",
-    slug: "high-converting-service-pages-user-intent",
-    excerpt: "Learn how to structure service pages so users understand value fast and move toward contact or consultation actions.",
-    keywords: "service page optimization, conversion copywriting, website leads, user intent",
-    daysAgo: 52,
-    topic: "service page optimization",
-    focus: "conversion-focused information architecture",
-  }),
-  buildBlog({
-    id: 3,
-    title: "Next.js SEO Checklist: Metadata, Sitemaps, and International URLs",
-    slug: "nextjs-seo-checklist-metadata-sitemaps-international-urls",
-    excerpt: "A detailed checklist for Next.js teams to implement scalable metadata, multilingual canonicals, and reliable sitemap coverage.",
-    keywords: "next.js seo, sitemap nextjs, metadata, hreflang, international seo",
-    daysAgo: 45,
-    topic: "Next.js SEO implementation",
-    focus: "metadata quality and multilingual structure",
-  }),
-  buildBlog({
-    id: 4,
-    title: "Internal Linking Strategy That Improves Crawl Depth and User Navigation",
-    slug: "internal-linking-strategy-crawl-depth-user-navigation",
-    excerpt: "Use a practical internal linking model to improve page discovery, content authority flow, and navigation clarity.",
-    keywords: "internal linking, crawl depth, seo architecture, content clusters",
-    daysAgo: 38,
-    topic: "internal linking architecture",
-    focus: "discoverability and topical authority",
-  }),
-  buildBlog({
-    id: 5,
-    title: "Core Web Vitals for Lead Generation Websites: What Actually Moves the Needle",
-    slug: "core-web-vitals-lead-generation-websites",
-    excerpt: "Focus on the performance improvements that matter most for user trust, rankings, and lead generation outcomes.",
-    keywords: "core web vitals, website speed optimization, lead generation website",
-    daysAgo: 30,
-    topic: "website performance optimization",
-    focus: "real-world speed and conversion impact",
-  }),
-  buildBlog({
-    id: 6,
-    title: "SEO Content Operations for Agencies: From Topic Planning to Refresh Cycles",
-    slug: "seo-content-operations-topic-planning-refresh-cycles",
-    excerpt: "Create a repeatable SEO content workflow that helps agencies publish useful pages and keep rankings stable over time.",
-    keywords: "seo content operations, agency seo workflow, content refresh strategy",
-    daysAgo: 24,
-    topic: "SEO content operations",
-    focus: "repeatable publishing and refresh systems",
-  }),
-  buildBlog({
-    id: 7,
-    title: "B2B Website Trust Signals: On-Page Elements That Improve Qualified Inquiries",
-    slug: "b2b-website-trust-signals-qualified-inquiries",
-    excerpt: "Understand which trust signals reduce friction, increase credibility, and support stronger B2B inbound conversions.",
-    keywords: "b2b website optimization, trust signals, conversion optimization",
-    daysAgo: 16,
-    topic: "B2B website credibility optimization",
-    focus: "trust-led conversion design",
-  }),
-  buildBlog({
-    id: 8,
-    title: "International SEO for Localized Websites: Canonical, Hreflang, and Routing Basics",
-    slug: "international-seo-canonical-hreflang-routing-basics",
-    excerpt: "A no-fluff guide to canonical handling, hreflang implementation, and locale routing for multilingual SEO success.",
-    keywords: "international seo, hreflang, canonical tags, multilingual website seo",
-    daysAgo: 10,
-    topic: "international SEO",
-    focus: "locale routing and canonical clarity",
-  }),
+const BLOG_TOPICS = [
+  { title: "Technical SEO for Service Websites: A Practical 90-Day Roadmap", keywords: "technical seo, service website seo, crawlability, indexing, core web vitals", topic: "technical SEO", focus: "crawl coverage and indexing consistency" },
+  { title: "How to Build High-Converting Service Pages with Clear User Intent", keywords: "service page optimization, conversion copywriting, website leads, user intent", topic: "service page optimization", focus: "conversion-focused information architecture" },
+  { title: "Next.js SEO Checklist: Metadata, Sitemaps, and International URLs", keywords: "next.js seo, sitemap nextjs, metadata, hreflang, international seo", topic: "Next.js SEO implementation", focus: "metadata quality and multilingual structure" },
+  { title: "Internal Linking Strategy That Improves Crawl Depth and User Navigation", keywords: "internal linking, crawl depth, seo architecture, content clusters", topic: "internal linking architecture", focus: "discoverability and topical authority" },
+  { title: "Core Web Vitals for Lead Generation Websites: What Actually Works", keywords: "core web vitals, website speed optimization, lead generation website", topic: "website performance optimization", focus: "real-world speed and conversion impact" },
+  { title: "SEO Content Operations for Agencies: From Topic Planning to Refresh Cycles", keywords: "seo content operations, agency seo workflow, content refresh strategy", topic: "SEO content operations", focus: "repeatable publishing and refresh systems" },
+  { title: "B2B Website Trust Signals That Increase Qualified Inquiries", keywords: "b2b website optimization, trust signals, conversion optimization", topic: "B2B website credibility", focus: "trust-led conversion design" },
+  { title: "International SEO Basics for Localized Websites", keywords: "international seo, hreflang, canonical tags, multilingual website seo", topic: "international SEO", focus: "locale routing and canonical clarity" },
+  { title: "How to Structure SEO-Friendly Service Pages for Better Rankings", keywords: "seo service pages, service page seo, on page seo", topic: "on-page SEO for service pages", focus: "relevance and conversion alignment" },
+  { title: "Website Speed Optimization Checklist for Growing Businesses", keywords: "website speed optimization, fast website build, page speed", topic: "website speed optimization", focus: "performance-led lead generation" },
+  { title: "SEO for Web Development Agencies: Positioning and Content Strategy", keywords: "seo for agencies, web development agency seo, agency marketing", topic: "agency SEO strategy", focus: "positioning for high-intent clients" },
+  { title: "How to Write SEO Blog Content That Actually Generates Leads", keywords: "seo blog writing, blog content strategy, lead generation content", topic: "SEO blog content", focus: "traffic-to-lead conversion pathways" },
+  { title: "Conversion-Focused UX Patterns for Service Business Websites", keywords: "ux for conversion, service website ux, conversion design", topic: "conversion-focused UX", focus: "decision-stage user experience" },
+  { title: "A Practical Guide to Canonical Tags for Multi-Page Websites", keywords: "canonical tags, duplicate content seo, technical seo guide", topic: "canonical strategy", focus: "duplicate URL control and indexing quality" },
+  { title: "How to Improve Crawl Budget on Medium-Sized Business Sites", keywords: "crawl budget optimization, google crawl, technical seo", topic: "crawl budget optimization", focus: "indexing efficiency and URL priority" },
+  { title: "Local SEO for Multi-City Service Businesses", keywords: "local seo, multi city seo, geo targeted seo", topic: "local SEO", focus: "city page relevance and authority flow" },
+  { title: "How to Build a Fast Website in 4 to 6 Weeks", keywords: "fast website build, quick website launch, rapid web development", topic: "fast website delivery", focus: "speed without sacrificing quality" },
+  { title: "SEO-Friendly URL Structures for Content and Service Hubs", keywords: "seo url structure, content hub seo, site architecture", topic: "URL architecture", focus: "clean routing and relevance mapping" },
+  { title: "Landing Page SEO: Balancing Performance and Conversion", keywords: "landing page seo, conversion landing page, fast landing page", topic: "landing page SEO", focus: "commercial intent capture" },
+  { title: "How to Use Case Studies for Better SEO and Trust", keywords: "case study seo, social proof marketing, b2b content", topic: "case study content strategy", focus: "proof-driven organic growth" },
+  { title: "SEO Metrics That Matter for Service Businesses", keywords: "seo metrics, lead generation metrics, organic growth", topic: "SEO measurement", focus: "business-aligned reporting" },
+  { title: "How to Build Topic Clusters for Long-Term SEO Growth", keywords: "topic clusters, seo content clusters, semantic seo", topic: "topic cluster planning", focus: "topical authority development" },
+  { title: "Technical SEO Audit Workflow for Small Teams", keywords: "technical seo audit, seo workflow, website audit", topic: "technical SEO auditing", focus: "high-impact issue prioritization" },
+  { title: "Optimizing Blog Templates for Better Indexing", keywords: "blog template seo, blog indexing, structured content", topic: "blog template optimization", focus: "template-level SEO improvements" },
+  { title: "Mobile-First SEO for Fast Growing Brands", keywords: "mobile first seo, mobile website optimization, core web vitals", topic: "mobile-first optimization", focus: "mobile performance and engagement" },
+  { title: "How to Improve CTR from Search Without Rewriting Everything", keywords: "improve ctr seo, title tag optimization, meta description", topic: "search CTR optimization", focus: "snippet-level conversion improvements" },
+  { title: "Content Refresh Strategy for Existing SEO Pages", keywords: "content refresh seo, update old content, ranking recovery", topic: "content refresh operations", focus: "sustained ranking performance" },
+  { title: "SEO for Portfolio Pages: Turning Views into Leads", keywords: "portfolio seo, project page seo, service business leads", topic: "portfolio page optimization", focus: "proof-driven conversion pathways" },
+  { title: "How to Build Strong Internal Links Across Services and Blogs", keywords: "internal links seo, service and blog linking, crawl depth", topic: "internal link strategy", focus: "authority flow and user navigation" },
+  { title: "SEO Roadmap for New Websites in Competitive Niches", keywords: "new website seo roadmap, competitive seo strategy, launch seo", topic: "new site SEO planning", focus: "launch-stage visibility growth" },
+  { title: "How to Reduce Soft 404s and Improve Index Quality", keywords: "soft 404 fix, indexing quality, technical seo issues", topic: "index quality management", focus: "eliminating low-value URL signals" },
+  { title: "Website Redesign SEO Checklist to Protect Rankings", keywords: "website redesign seo, migration checklist, seo preservation", topic: "redesign SEO", focus: "risk reduction during redesign" },
+  { title: "Fast Website Design Principles for Better Engagement", keywords: "fast website design, performance design, engagement ux", topic: "performance-first design", focus: "speed, clarity, and conversion alignment" },
+  { title: "SEO-Friendly Copywriting Framework for Service Brands", keywords: "seo copywriting, service business copywriting, conversion copy", topic: "SEO copywriting", focus: "intent-match messaging and action clarity" },
+  { title: "How to Improve Time on Page with Better Content Structure", keywords: "time on page seo, content structure, user engagement", topic: "content structure optimization", focus: "engagement metrics and readability" },
+  { title: "Practical Schema Markup for Business Websites", keywords: "schema markup, structured data seo, rich results", topic: "structured data implementation", focus: "entity clarity and rich result readiness" },
 ];
+
+const STATIC_BLOGS = BLOG_TOPICS.map((entry, index) =>
+  buildBlog({
+    id: index + 1,
+    title: entry.title,
+    keywords: entry.keywords,
+    daysAgo: 220 - index * 4,
+    topic: entry.topic,
+    focus: entry.focus,
+  })
+);
 
 export function getStaticBlogs(locale = "en") {
   if (!locale || locale === "en") {

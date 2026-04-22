@@ -27,10 +27,16 @@ const BlogsPage = () => {
   const t = useTranslations();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const BLOGS_PER_PAGE = 12;
 
   useEffect(() => {
     fetchBlogs();
   }, [currentLocale]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [currentLocale, blogs.length]);
 
   const fetchBlogs = async () => {
     try {
@@ -77,6 +83,13 @@ const BlogsPage = () => {
   };
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+  const featuredBlog = blogs[0];
+  const archiveBlogs = blogs.slice(1);
+  const totalPages = Math.max(1, Math.ceil(archiveBlogs.length / BLOGS_PER_PAGE));
+  const paginatedArchiveBlogs = archiveBlogs.slice(
+    (currentPage - 1) * BLOGS_PER_PAGE,
+    currentPage * BLOGS_PER_PAGE
+  );
   
   const blogCollectionSchema = {
     "@context": "https://schema.org",
@@ -176,17 +189,17 @@ const BlogsPage = () => {
             </motion.div>
 
             {/* Right: featured blog card */}
-            {blogs.length > 0 && (
+            {featuredBlog && (
               <motion.div {...fadeUp(0.1)} className="relative">
                 <div className="pointer-events-none absolute -top-10 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-gray-100 via-gray-50 to-white blur-3xl" />
-                <Link href={createLocalizedHref(`/blogs/${blogs[0].slug}`, currentLocale)} className="block">
+                <Link href={createLocalizedHref(`/blogs/${featuredBlog.slug}`, currentLocale)} className="block">
                   <article className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white/80 backdrop-blur shadow-[0_22px_55px_rgba(15,23,42,0.10)]">
                     {/* Image */}
-                    {blogs[0].featuredImage && (
+                    {featuredBlog.featuredImage && (
                       <div className="relative h-52 md:h-60 overflow-hidden">
                         <Image
-                          src={convertGoogleDriveUrl(blogs[0].featuredImage)}
-                          alt={blogs[0].title}
+                          src={convertGoogleDriveUrl(featuredBlog.featuredImage)}
+                          alt={featuredBlog.title}
                           fill
                           priority
                           className="object-cover transition-transform duration-500 hover:scale-105"
@@ -195,13 +208,13 @@ const BlogsPage = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
                         <div className="relative flex h-full items-end justify-between px-5 pb-4">
                           <div>
-                            {blogs[0].createdAt && (
+                            {featuredBlog.createdAt && (
                               <div className="text-[11px] uppercase tracking-[0.18em] text-gray-200">
-                                {formatDate(blogs[0].createdAt)}
+                                {formatDate(featuredBlog.createdAt)}
                               </div>
                             )}
                             <div className="text-sm font-semibold text-white line-clamp-2">
-                              {blogs[0].title}
+                              {featuredBlog.title}
                             </div>
                           </div>
                         </div>
@@ -214,16 +227,16 @@ const BlogsPage = () => {
                         {t?.blogs?.featuredArticle || "Featured article"}
                       </p>
                       <h2 className="text-sm md:text-base font-semibold text-gray-900 line-clamp-2">
-                        {blogs[0].title}
+                        {featuredBlog.title}
                       </h2>
-                      {blogs[0].excerpt && (
+                      {featuredBlog.excerpt && (
                         <p className="text-xs md:text-sm text-gray-500 leading-relaxed line-clamp-3">
-                          {blogs[0].excerpt}
+                          {featuredBlog.excerpt}
                         </p>
                       )}
                       <div className="flex items-center justify-between pt-2 text-[11px] text-gray-500">
-                        {blogs[0].author && (
-                          <span>{blogs[0].author}</span>
+                        {featuredBlog.author && (
+                          <span>{featuredBlog.author}</span>
                         )}
                         <span className="inline-flex items-center gap-1 font-medium text-gray-800 hover:text-black hover:gap-1.5 transition-all">
                           {t?.blogs?.readArticle || "Read article"} <span className="text-xs">↗</span>
@@ -280,7 +293,7 @@ const BlogsPage = () => {
               </motion.div>
 
               <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {blogs.slice(1).map((blog, index) => (
+                {paginatedArchiveBlogs.map((blog, index) => (
                   <motion.article
                     key={blog._id || index}
                     initial={{ opacity: 0, y: 18 }}
@@ -345,6 +358,47 @@ const BlogsPage = () => {
                     <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-gray-50/90 via-transparent to-transparent" />
                   </motion.article>
                 ))}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+                  <button
+                    className="rounded-full border border-gray-300 px-3 py-1 text-xs text-gray-700 disabled:opacity-40"
+                    onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                    disabled={currentPage === 1}
+                  >
+                    Previous
+                  </button>
+                  <span className="text-xs text-gray-500">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <button
+                    className="rounded-full border border-gray-300 px-3 py-1 text-xs text-gray-700 disabled:opacity-40"
+                    onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+                    disabled={currentPage === totalPages}
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
+
+              {/* Crawl-friendly blog index */}
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 px-4 py-5 md:px-6">
+                <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-3">
+                  Blog Index
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {blogs.map((blog, idx) => (
+                    <Link
+                      key={`index-${blog.slug}-${idx}`}
+                      href={createLocalizedHref(`/blogs/${blog.slug}`, currentLocale)}
+                      className="text-xs md:text-sm text-gray-700 hover:text-gray-900 underline underline-offset-2"
+                    >
+                      {blog.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </>
           )}
