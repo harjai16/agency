@@ -79,7 +79,6 @@ export default function ConditionalLayout({ children }) {
           <LoadingProvider>
             <GoogleAnalyticsTracker />
             <GlobalClickTracker />
-            <SEOBacklinks />
             <main className="min-h-screen">
               {children}
             </main>

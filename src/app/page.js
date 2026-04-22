@@ -120,13 +120,13 @@ export const metadata = {
     creator: "@swagatamtech",
   },
   alternates: {
-    canonical: "https://www.swagatamtech.com/",
+    canonical: "https://www.swagatamtech.com/en",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
     googleBot: {
-      index: true,
+      index: false,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
