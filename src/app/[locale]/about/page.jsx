@@ -280,7 +280,7 @@ const page = () => {
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
           <motion.div {...fadeUp(0)} className="flex-1 min-w-[140px]">
             <div className="text-2xl md:text-3xl font-semibold text-gray-900">
-              10+
+              24+
             </div>
             <div className="text-xs md:text-sm text-gray-500 mt-1">
              {t?.about?.websitesDelivered || "Websites Delivered"}
@@ -288,7 +288,7 @@ const page = () => {
           </motion.div>
           <motion.div {...fadeUp(0.05)} className="flex-1 min-w-[140px]">
             <div className="text-2xl md:text-3xl font-semibold text-gray-900">
-              10+
+              25+
             </div>
             <div className="text-xs md:text-sm text-gray-500 mt-1">
               {t?.about?.happyClients || "Happy clients."}

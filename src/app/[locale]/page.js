@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   const path = locale ? `/${locale}` : '';
   return {
   title: "Website Dev Agency | Fast Performance | Swagatam Tech",
-  description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% satisfaction.",
+  description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 24+ projects delivered, 98% satisfaction.",
   keywords: [
     "website development agency",
     "custom website design",
@@ -54,7 +54,26 @@ export async function generateMetadata({ params }) {
     "mobile-first web design",
     "progressive web app development",
     "website analytics setup",
-    "website security services"
+    "website security services",
+    "web development India",
+    "website development in India",
+    "web design India",
+    "website development Delhi",
+    "website development Mumbai",
+    "website development Bangalore",
+    "website development Pune",
+    "website development Hyderabad",
+    "website development Kolkata",
+    "website development Chennai",
+    "website development Dubai",
+    "website development UAE",
+    "website development United States",
+    "website development United Kingdom",
+    "website development Canada",
+    "website development Australia",
+    "best web development company in India",
+    "SEO agency India",
+    "local SEO services India"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",
@@ -157,7 +176,17 @@ export default function Home() {
       "Performance Optimization",
       "CMS Development"
     ],
-    "areaServed": "Worldwide",
+    "areaServed": [
+      "India",
+      "Dubai, UAE",
+      "Germany",
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Australia",
+      "Singapore",
+      "Saudi Arabia"
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Website Development Services",

@@ -26,7 +26,7 @@
   "seo": {
     "siteName": "Swagatam Tech",
     "defaultTitle": "Website Dev Agency | Fast Performance | Swagatam Tech",
-    "defaultDescription": "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects, 98% satisfaction."
+    "defaultDescription": "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 24+ projects, 98% satisfaction."
   },
   "navigation": {
     "home": "Home",
@@ -41,7 +41,7 @@
     "badge": "BUILDING BRANDS ONLINE",
     "title": "Website Development Agency",
     "titleHighlight": "Fast Performance Websites Built for Business Growth",
-    "description": "We are a {websiteDevelopmentAgency} that grows your business. We craft high-performance {websites} with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our {portfolio} to see 10+ projects delivered with 98% client satisfaction, or check out our {caseStudies} for detailed results.",
+    "description": "We are a {websiteDevelopmentAgency} that grows your business. We craft high-performance {websites} with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our {portfolio} to see 24+ projects delivered with 98% client satisfaction, or check out our {caseStudies} for detailed results.",
     "websiteDevelopmentAgency": "website development agency",
     "websites": "websites",
     "portfolio": "portfolio",
@@ -103,7 +103,7 @@
     "projects": "Projects",
     "performance": "Performance",
     "relationships": "Relationships",
-    "launches": "10+ launches",
+    "launches": "24+ launches",
     "launchesDesc": "Static sites, CMS and e-commerce projects.",
     "speedFirst": "Speed-first builds",
     "speedFirstDesc": "Clean code with Core Web Vitals in mind.",
@@ -212,7 +212,7 @@
     "focus": "Focus",
     "focusDesc": "Strategy, UX/UI & development for web.",
     "clients": "Clients",
-    "clientsDesc": "SaaS, D2C, agencies & growing service brands.",
+    "clientsDesc": "SaaS, D2C, agencies and growing service brands across India, Dubai (UAE), Germany, America, UK, Canada and Australia.",
     "approach": "Approach",
     "approachDesc": "Conversion-driven, performance-first builds.",
     "collaboration": "Collaboration",
