@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import faqData from '@/data/faq.json';
+import SEOBacklinks from '@/componenets/global/SEOBacklinks';
 
 const TestPage = () => {
   const [books, setBooks] = useState([]);
@@ -449,6 +450,7 @@ const TestPage = () => {
           )}
         </div>
       </div>
+      <SEOBacklinks />
     </div>
   );
 };

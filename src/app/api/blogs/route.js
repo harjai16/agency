@@ -1,14 +1,16 @@
 import { connectToDatabase } from '@/lib/mongodb';
 import { NextResponse } from 'next/server';
+import { mergeBlogsBySlug } from '@/lib/staticBlogs';
 
 // GET all blogs
 export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const status = searchParams.get('status'); // 'draft' or 'published'
+  const search = searchParams.get('search'); // Search query
+  const locale = searchParams.get('locale') || 'en'; // Locale filter
+
   try {
     const { db } = await connectToDatabase();
-    const { searchParams } = new URL(request.url);
-    const status = searchParams.get('status'); // 'draft' or 'published'
-    const search = searchParams.get('search'); // Search query
-    const locale = searchParams.get('locale') || 'en'; // Locale filter
 
     let query = {};
     if (status) {
@@ -46,10 +48,16 @@ export async function GET(request) {
     }
 
     const blogs = await db.collection('blogs').find(query).sort({ createdAt: -1 }).toArray();
-    
-    return NextResponse.json({ success: true, blogs });
+    const mergedBlogs = status === 'published' ? mergeBlogsBySlug(blogs, locale) : blogs;
+
+    return NextResponse.json({ success: true, blogs: mergedBlogs });
   } catch (error) {
     console.error('Error fetching blogs:', error);
+    // Fallback for SEO and uptime: still return static published blogs if DB is unreachable.
+    if (status === 'published') {
+      const fallbackBlogs = mergeBlogsBySlug([], locale);
+      return NextResponse.json({ success: true, blogs: fallbackBlogs });
+    }
     return NextResponse.json(
       { success: false, error: error.message || 'Failed to fetch blogs' },
       { status: 500 }

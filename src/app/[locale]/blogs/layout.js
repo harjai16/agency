@@ -77,7 +77,16 @@ export async function generateMetadata({ params }) {
       'website development trends',
       'web development case studies blog',
       'website development news',
-      'web development expert blog'
+      'web development expert blog',
+      'fast website build blog',
+      'high volume seo keyword guide',
+      'website redesign tips',
+      'technical seo checklist blog',
+      'web development trends 2026',
+      'core web vitals blog',
+      'service business seo blog',
+      'b2b marketing website blog',
+      'website performance case study'
     ],
     authors: [{ name: 'Swagatam Tech' }],
     creator: 'Swagatam Tech',

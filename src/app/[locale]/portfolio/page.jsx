@@ -99,13 +99,13 @@ const PortfolioPage = () => {
             <div className="flex flex-wrap gap-6 pt-2 text-xs md:text-sm text-gray-500">
               <div>
                 <div className="font-semibold text-gray-900 text-base">
-                  10+
+                  24+
                 </div>
                 <div>{t?.portfolio?.projectsDelivered || "Projects delivered"}</div>
               </div>
               <div>
                 <div className="font-semibold text-gray-900 text-base">
-                  10+
+                  25+
                 </div>
                 <div>{t?.portfolio?.happyClients || "Happy clients"}</div>
               </div>

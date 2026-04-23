@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   const path = locale ? `/${locale}` : '';
   return {
   title: "Website Dev Agency | Fast Performance | Swagatam Tech",
-  description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 10+ projects delivered, 98% satisfaction.",
+  description: "Website development agency building fast performance websites for business growth. We built high-performance websites with strategy, UX design, and development focused on leads, conversions, and measurable growth. 24+ projects delivered, 98% satisfaction.",
   keywords: [
     "website development agency",
     "custom website design",
@@ -54,7 +54,90 @@ export async function generateMetadata({ params }) {
     "mobile-first web design",
     "progressive web app development",
     "website analytics setup",
-    "website security services"
+    "website security services",
+    "web development India",
+    "website development in India",
+    "web design India",
+    "website development Delhi",
+    "website development Mumbai",
+    "website development Bangalore",
+    "website development Pune",
+    "website development Hyderabad",
+    "website development Kolkata",
+    "website development Chennai",
+    "website development Dubai",
+    "website development UAE",
+    "website development United States",
+    "website development United Kingdom",
+    "website development Canada",
+    "website development Australia",
+    "best web development company in India",
+    "SEO agency India",
+    "local SEO services India"
+    ,"fast website build"
+    ,"fast website development"
+    ,"quick website launch"
+    ,"rapid website development"
+    ,"website built in 4 weeks"
+    ,"fast business website"
+    ,"high speed website development"
+    ,"performance first website agency"
+    ,"fast loading website design"
+    ,"conversion focused website build"
+    ,"fast seo friendly website"
+    ,"website development with fast delivery"
+    ,"quick turnaround web development"
+    ,"fast website redesign service"
+    ,"modern fast website agency"
+    ,"web development services near me"
+    ,"website design company near me"
+    ,"best web design company"
+    ,"best website development company"
+    ,"affordable web design services"
+    ,"professional website design services"
+    ,"small business website design"
+    ,"ecommerce website development company"
+    ,"wordpress website development services"
+    ,"seo services for small business"
+    ,"local seo company"
+    ,"digital marketing services"
+    ,"social media marketing agency"
+    ,"branding and website design"
+    ,"ui ux design agency"
+    ,"landing page design services"
+    ,"website maintenance company"
+    ,"website optimization services"
+    ,"online marketing agency"
+    ,"web development agency for startups"
+    ,"website development USA"
+    ,"website development in America"
+    ,"web design company USA"
+    ,"website development UK"
+    ,"web design agency UK"
+    ,"website development Germany"
+    ,"web development company Germany"
+    ,"website development France"
+    ,"website development Spain"
+    ,"website development Italy"
+    ,"website development Netherlands"
+    ,"website development Europe"
+    ,"web development agency Europe"
+    ,"website development UAE"
+    ,"website development Dubai"
+    ,"website development Abu Dhabi"
+    ,"website development Saudi Arabia"
+    ,"website development Qatar"
+    ,"website development Kuwait"
+    ,"website development Singapore"
+    ,"website development Malaysia"
+    ,"website development Australia"
+    ,"website development New Zealand"
+    ,"website development Canada"
+    ,"website development South Africa"
+    ,"international web development agency"
+    ,"global web design agency"
+    ,"offshore web development company"
+    ,"remote web development team"
   ],
   authors: [{ name: "Swagatam Tech" }],
   creator: "Swagatam Tech",
@@ -157,7 +240,17 @@ export default function Home() {
       "Performance Optimization",
       "CMS Development"
     ],
-    "areaServed": "Worldwide",
+    "areaServed": [
+      "India",
+      "Dubai, UAE",
+      "Germany",
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Australia",
+      "Singapore",
+      "Saudi Arabia"
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Website Development Services",

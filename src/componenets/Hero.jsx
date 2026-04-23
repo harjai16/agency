@@ -130,7 +130,7 @@ const Hero = () => {
               </>
             ) : (
               <>
-                We are a <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development agency</Link> that grows your business. We craft high-performance <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see 10+ projects delivered with 98% client satisfaction, or check out our <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed results.
+                We are a <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">website development agency</Link> that grows your business. We craft high-performance <Link href={createLocalizedHref("/services", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">websites</Link> with strategy, UX, and development focused on leads, conversions, and measurable growth — not vanity design. Explore our <Link href={createLocalizedHref("/portfolio", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">portfolio</Link> to see 24+ projects delivered with 98% client satisfaction, or check out our <Link href={createLocalizedHref("/case-studies", currentLocale)} className="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300 hover:decoration-gray-500 transition-colors">case studies</Link> for detailed results.
               </>
             )}
           </motion.p>
@@ -171,7 +171,7 @@ const Hero = () => {
           >
             <div className="text-center sm:text-left">
               <div className="font-semibold text-gray-900 text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1">
-                10+
+                24+
               </div>
               <div className="text-[10px] sm:text-xs leading-tight">{t?.hero?.stats?.websitesDelivered || "Websites Delivered"}</div>
             </div>
@@ -219,21 +219,21 @@ const Hero = () => {
             {/* Horizontal stats row */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
               <div className="flex flex-col items-center">
-                <StatCounter value={10} suffix="+" />
+                <StatCounter value={25} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   {t?.hero?.card?.happyClients || "Happy Clients"}
                 </span>
               </div>
 
               <div className="flex flex-col items-center">
-                <StatCounter value={10} suffix="+" />
+                <StatCounter value={24} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   {t?.hero?.card?.projectsDelivered || "Projects Delivered"}
                 </span>
               </div>
 
               <div className="flex flex-col items-center">
-                <StatCounter value={6} suffix="+" />
+                <StatCounter value={4} suffix="+" />
                 <span className="text-[10px] sm:text-xs text-gray-500 mt-1.5 sm:mt-2 text-center leading-tight">
                   {t?.hero?.card?.yearsExperience || "Years Experience"}
                 </span>

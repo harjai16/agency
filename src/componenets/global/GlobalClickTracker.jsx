@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { trackOutboundLink, trackClick, trackScroll } from "@/lib/gtag";
+import { trackOutboundLink, trackClick, trackScroll, trackContact, trackCTA } from "@/lib/gtag";
 
 /**
  * GlobalClickTracker - Automatically tracks clicks on external links and other key interactions
@@ -78,6 +78,7 @@ export default function GlobalClickTracker() {
           type: "email",
           email: email,
         });
+        trackContact("email", email, { page: pathname });
       }
 
       // Track tel links
@@ -87,6 +88,19 @@ export default function GlobalClickTracker() {
           type: "phone",
           phone: phone,
         });
+        trackContact("phone", phone, { page: pathname });
+      }
+
+      // Track WhatsApp as contact intent
+      if (href.includes("wa.me") || href.includes("whatsapp")) {
+        trackContact("whatsapp", href, { page: pathname });
+      }
+
+      // Track key CTA links (internal or external)
+      const linkText = link.textContent?.trim()?.toLowerCase() || "";
+      const ctaKeywords = ["contact", "get started", "book", "call", "audit", "start project", "send message"];
+      if (ctaKeywords.some((keyword) => linkText.includes(keyword))) {
+        trackCTA(linkText, pathname, { href });
       }
     };
 

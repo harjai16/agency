@@ -1,8 +1,12 @@
 import { connectToDatabase } from '@/lib/mongodb';
 import { NextResponse } from 'next/server';
+import { getStaticBlogBySlug } from '@/lib/staticBlogs';
 
 // GET blog by slug
 export async function GET(request, { params }) {
+  const { searchParams } = new URL(request.url);
+  const locale = searchParams.get('locale') || 'en';
+
   try {
     const { db } = await connectToDatabase();
     
@@ -26,10 +30,6 @@ export async function GET(request, { params }) {
     // Decode the slug in case it's URL encoded
     const decodedSlug = decodeURIComponent(slug);
     console.log('Fetching blog with slug:', decodedSlug);
-
-    // Get locale from query params
-    const { searchParams } = new URL(request.url);
-    const locale = searchParams.get('locale') || 'en';
 
     // Try to find the blog - first with exact slug match and locale
     let query = { slug: decodedSlug };
@@ -101,11 +101,15 @@ export async function GET(request, { params }) {
     }
 
     if (!blog) {
-      console.error('Blog not found for slug:', decodedSlug);
-      return NextResponse.json(
-        { success: false, error: 'Blog not found', slug: decodedSlug },
-        { status: 404 }
-      );
+      const staticBlog = getStaticBlogBySlug(decodedSlug, locale);
+      if (!staticBlog) {
+        console.error('Blog not found for slug:', decodedSlug);
+        return NextResponse.json(
+          { success: false, error: 'Blog not found', slug: decodedSlug },
+          { status: 404 }
+        );
+      }
+      blog = staticBlog;
     }
 
     // Convert MongoDB _id to string for JSON serialization
@@ -117,6 +121,16 @@ export async function GET(request, { params }) {
     return NextResponse.json({ success: true, blog });
   } catch (error) {
     console.error('Error fetching blog by slug:', error);
+    let slug = params?.slug;
+    if (params && typeof params.then === 'function') {
+      const resolvedParams = await params;
+      slug = resolvedParams?.slug;
+    }
+    const decodedSlug = slug ? decodeURIComponent(slug) : '';
+    const staticBlog = decodedSlug ? getStaticBlogBySlug(decodedSlug, locale) : null;
+    if (staticBlog) {
+      return NextResponse.json({ success: true, blog: staticBlog });
+    }
     return NextResponse.json(
       { success: false, error: 'Failed to fetch blog', details: error.message },
       { status: 500 }

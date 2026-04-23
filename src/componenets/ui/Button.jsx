@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import clsx from "clsx";
-import { trackClick } from "@/lib/gtag";
+import { trackClick, trackCTA } from "@/lib/gtag";
 
 const Button = ({ 
   children, 
@@ -20,6 +20,10 @@ const Button = ({
         button_variant: variant,
         button_text: typeof children === 'string' ? children : 'Button',
       });
+      const labelLower = String(label).toLowerCase();
+      if (["contact", "book", "audit", "start", "submit", "send"].some((k) => labelLower.includes(k))) {
+        trackCTA(label, "button");
+      }
     }
     
     // Call original onClick if provided
@@ -50,6 +54,10 @@ const Button = ({
             button_variant: variant,
             button_text: typeof children === 'string' ? children : 'Button',
           });
+          const labelLower = String(label).toLowerCase();
+          if (["contact", "book", "audit", "start", "submit", "send"].some((k) => labelLower.includes(k))) {
+            trackCTA(label, "button");
+          }
         }
         if (children.props?.onClick) {
           children.props.onClick(e);

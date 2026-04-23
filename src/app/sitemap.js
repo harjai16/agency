@@ -1,6 +1,5 @@
 import { locales } from '@/lib/i18n';
-
-const serviceIds = ['strategy', 'ux-ui', 'development', 'cms', 'performance', 'support'];
+import { getAllStaticBlogSlugs, getStaticBlogs } from '@/lib/staticBlogs';
 
 /**
  * Sitemap Generator – SEO: URLs must match actual routes (all locales in path, including /en)
@@ -8,6 +7,13 @@ const serviceIds = ['strategy', 'ux-ui', 'development', 'cms', 'performance', 's
  */
 export default async function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
+  let serviceIds = [];
+  try {
+    const services = (await import('@/data/services.json')).default;
+    serviceIds = Array.isArray(services) ? services.map((service) => service.id).filter(Boolean) : [];
+  } catch {
+    serviceIds = [];
+  }
 
   let caseStudySlugs = [];
   try {
@@ -40,20 +46,30 @@ export default async function sitemap() {
   // For now, we'll try to fetch but handle gracefully if it fails
   let blogData = [];
   try {
-    // Only fetch if not in static export mode
-    if (process.env.NEXT_PHASE !== 'phase-production-build') {
-      const res = await fetch(
-        `${baseUrl}/api/blogs?status=published`,
-        { cache: "no-store" }
-      );
-      const data = await res.json();
-      blogData = data.blogs || [];
-    }
+    const res = await fetch(
+      `${baseUrl}/api/blogs?status=published&locale=en`,
+      { next: { revalidate: 3600 } }
+    );
+    const data = await res.json();
+    blogData = data.blogs || [];
   } catch (error) {
-    // In static export, API routes aren't available
-    // You should import blog data directly instead
     console.warn('Could not fetch blogs for sitemap (expected in static export)');
     blogData = [];
+  }
+
+  const staticBlogs = getStaticBlogs('en');
+  const staticBlogsBySlug = new Map(staticBlogs.map((blog) => [blog.slug, blog]));
+  const staticBlogSlugs = getAllStaticBlogSlugs();
+  const sitemapBlogs = new Map();
+  for (const blog of blogData) {
+    if (blog?.slug) {
+      sitemapBlogs.set(blog.slug, blog);
+    }
+  }
+  for (const slug of staticBlogSlugs) {
+    if (!sitemapBlogs.has(slug)) {
+      sitemapBlogs.set(slug, staticBlogsBySlug.get(slug) || { slug });
+    }
   }
 
   const entries = [];
@@ -105,7 +121,7 @@ export default async function sitemap() {
       });
     }
 
-    for (const blog of blogData) {
+    for (const blog of sitemapBlogs.values()) {
       if (!blog.slug) continue;
       const slugPath = blog.slug.startsWith('/') ? blog.slug : `/${blog.slug}`;
       entries.push({
