@@ -8,7 +8,7 @@ export async function DELETE(request, { params }) {
     const { db } = await connectToDatabase();
     const { id } = await params;
 
-    if (!ObjectId.isValid(id)) {
+    if (!ObjectId.isValid(id)) {   
       return NextResponse.json(
         { success: false, error: 'Invalid submission ID' },
         { status: 400 }
