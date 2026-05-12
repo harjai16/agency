@@ -27,6 +27,17 @@ export async function getLocaleFromHeaders() {
   }
 }
 
+/**
+ * Build `alternates.languages` map for metadata (hreflang-style URLs per locale).
+ * @param {string} pathWithoutLocale - Path starting with / (e.g. `/ai-video/corporate`)
+ */
+export function buildAlternateLanguageUrls(pathWithoutLocale) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.swagatamtech.com';
+  const path =
+    pathWithoutLocale.startsWith('/') ? pathWithoutLocale : `/${pathWithoutLocale}`;
+  return Object.fromEntries(locales.map((loc) => [`${loc}`, `${baseUrl}/${loc}${path}`]));
+}
+
 // RTL languages
 export const rtlLocales = ['ar'];
 

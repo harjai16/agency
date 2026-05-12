@@ -34,6 +34,9 @@ export default async function sitemap() {
     '/case-studies',
     '/careers',
     '/bussines-consultancy',
+    '/ai-video',
+    '/ai-video/corporate',
+    '/ai-video/invitations',
   ];
 
   // 2️⃣ Fetch ONLY published blogs
@@ -128,7 +131,7 @@ export default async function sitemap() {
         url: `${baseUrl}${localePrefix}/blogs${slugPath}`,
         lastModified: blog.updatedAt || blog.createdAt ? new Date(blog.updatedAt || blog.createdAt) : new Date(),
         changeFrequency: 'weekly',
-        priority: 0.7,
+        priority: 0.7, 
         alternates: {
           languages: Object.fromEntries(
             locales.map((loc) => [`${loc}`, `${baseUrl}/${loc}/blogs${slugPath}`])

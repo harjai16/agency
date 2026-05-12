@@ -1,0 +1,347 @@
+{
+  "hub": {
+    "hero": {
+      "badge": "AI VIDEO PRODUCTION",
+      "title": "AI Video for Every Channel",
+      "titleHighlight": "Corporate, Social & Invitations",
+      "description": "From company vision films and product explainers to cinematic invitation videos—we combine creative direction with AI-assisted production for faster iterations, consistent branding, and formats tuned for web SEO and paid campaigns.",
+      "stats": [
+        { "value": "All formats", "label": "explainer • social • invite" },
+        { "value": "Structured delivery", "label": "aspect ratios & captions" },
+        { "value": "Brand-safe", "label": "tone & visual guidelines" }
+      ],
+      "card": {
+        "label": "What we ship",
+        "title": "End-to-end AI-assisted video",
+        "badge": "Full funnel",
+        "items": [
+          "Corporate brand films, hiring stories, and leadership messages",
+          "Invitation & celebration edits—weddings, launches, milestones",
+          "Explainer, demo, and product hero cuts optimized for clarity",
+          "Social ads, hooks, and vertical variants with captions"
+        ],
+        "footer": "Creative direction first—AI accelerates production without diluting your brand."
+      }
+    },
+    "services": {
+      "section": {
+        "tag": "Formats we produce",
+        "title": "AI video production across use cases.",
+        "description": "Pick a single deliverable or bundle formats for a launch. We align scripts, visuals, pacing, and exports with where the video will live—homepage, YouTube, Meta, LinkedIn, invites, or events."
+      },
+      "items": [
+        {
+          "id": "corporate-brand",
+          "tag": "Corporate",
+          "title": "Company & Brand Films",
+          "summary": "Vision films, culture stories, employer branding, leadership updates, and stakeholder messages that feel deliberate—not generic.",
+          "outcome": "On-brand narrative, multiple cuts for web and internal channels.",
+          "meta": "Ideal for positioning & trust",
+          "href": "/ai-video/corporate"
+        },
+        {
+          "id": "invitations-events",
+          "tag": "Invitations",
+          "title": "Invitation & Event Videos",
+          "summary": "Save-the-dates, wedding invitations, anniversary teasers, launch countdowns, and celebration announcements with cinematic pacing.",
+          "outcome": "Shareable edits sized for WhatsApp, reels, and large screens.",
+          "meta": "Perfect for personal milestones",
+          "href": "/ai-video/invitations"
+        },
+        {
+          "id": "explainers-demos",
+          "tag": "Product",
+          "title": "Explainers & Product Demos",
+          "summary": "Clarify complex offers with crisp voiceover, scene progression, and visual metaphors tailored to your audience.",
+          "outcome": "Landing-page-ready files + shorter clips for ads.",
+          "meta": "Best for SaaS & complex SKUs"
+        },
+        {
+          "id": "social-ads",
+          "tag": "Growth",
+          "title": "Social Ads & Hooks",
+          "summary": "Attention-first hooks, vertical variants, captions, and safe zones so paid social teams can test angles quickly.",
+          "outcome": "Creative batches sized for Meta, TikTok, Shorts, and LinkedIn.",
+          "meta": "Built for experimentation"
+        },
+        {
+          "id": "localized-seo",
+          "tag": "SEO",
+          "title": "SEO-Aware Publishing Support",
+          "summary": "Titles, descriptions, chapters, and transcript-ready workflows so your published videos pair cleanly with indexed landing pages.",
+          "outcome": "Cleaner discovery when embedded on site or uploaded to YouTube.",
+          "meta": "Pairs with our web builds"
+        },
+        {
+          "id": "retainers",
+          "tag": "Scale",
+          "title": "Monthly Video Retainers",
+          "summary": "Predictable output for teams that need recurring launches—campaign teasers, feature drops, and weekly social cuts.",
+          "outcome": "Calendar-aligned delivery with shared creative direction.",
+          "meta": "For active marketing teams"
+        }
+      ]
+    },
+    "benefits": {
+      "section": {
+        "tag": "Why teams choose us",
+        "title": "Creative quality with production velocity.",
+        "description": "AI assists editing, variants, and iteration—but strategy, narrative, and QC stay human-led so your story stays credible."
+      },
+      "items": [
+        {
+          "title": "Brand-consistency",
+          "description": "Locked palettes, typography cues, tone guides, and approval checkpoints before anything ships.",
+          "icon": "◎"
+        },
+        {
+          "title": "Multi-format delivery",
+          "description": "Landscape, vertical, square, and invite-friendly cuts so one shoot concept travels everywhere.",
+          "icon": "▢"
+        },
+        {
+          "title": "Faster iterations",
+          "description": "More angles to test for ads and social without multiplying manual edit time.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Measurement-ready",
+          "description": "Structured filenames, hooks variants, and caption tracks that plug into analytics experiments.",
+          "icon": "📈"
+        }
+      ]
+    },
+    "process": {
+      "section": {
+        "tag": "Process",
+        "title": "Clear phases from brief to export.",
+        "description": "Transparent checkpoints—so marketing, founders, and families always know what ships next."
+      },
+      "steps": [
+        {
+          "title": "Brief & positioning",
+          "desc": "Goals, audience, placements, tone, must-have shots, legal/compliance notes, and timeline."
+        },
+        {
+          "title": "Script & storyboard",
+          "desc": "Narrative arc, scene list, VO direction, and visual references aligned to your brand."
+        },
+        {
+          "title": "AI-assisted production",
+          "desc": "Scene builds, VO assembly, music timing, captions, and variants tuned per channel."
+        },
+        {
+          "title": "Review & delivery",
+          "desc": "Structured revisions, master exports, social trims, and optional SEO publishing guidance."
+        }
+      ]
+    },
+    "useCases": {
+      "section": {
+        "tag": "Where it fits",
+        "title": "Companies, creators, and milestone moments.",
+        "description": "Whether you are scaling GTM or celebrating a personal event—delivery stays thoughtful and deadline-aware."
+      },
+      "items": [
+        {
+          "title": "Growth & marketing teams",
+          "description": "Campaign starters, product launches, webinars promos, and always-on social proof.",
+          "examples": ["Hero films", "Ads batches", "Evergreen explainers"]
+        },
+        {
+          "title": "Founders & HR",
+          "description": "Investor updates, hiring pushes, onboarding explainers, and vision narratives.",
+          "examples": ["Culture edits", "Leadership notes", "Team intros"]
+        },
+        {
+          "title": "Families & hosts",
+          "description": "Invitation storytelling for weddings and celebrations—crafted to feel premium on any screen.",
+          "examples": ["Save-the-dates", "Ceremony invites", "Event teasers"]
+        }
+      ]
+    },
+    "faq": {
+      "section": {
+        "tag": "FAQs",
+        "title": "Common questions about AI-assisted video."
+      },
+      "items": [
+        {
+          "question": "Do you only use AI, or is there human creative direction?",
+          "answer": "Human directors lead narrative, brand alignment, and approvals. AI accelerates variants, edits, and iteration—but never replaces creative judgment."
+        },
+        {
+          "question": "What formats can you deliver?",
+          "answer": "Horizontal long-form for websites and YouTube, vertical/reels for social, square for feeds, and invitation-friendly cuts with captions—plus derivative thumbnails when needed."
+        },
+        {
+          "question": "Can you help with SEO for video?",
+          "answer": "Yes—titles, descriptions, chapters, transcripts, and pairing videos with indexed landing pages so discovery stays coherent."
+        },
+        {
+          "question": "How fast can we ship?",
+          "answer": "Timelines depend on scope and approvals. Lighter social batches move fastest; corporate narratives may require stakeholder review cycles—we quote timelines after the brief."
+        },
+        {
+          "question": "Do you produce invitation-only videos?",
+          "answer": "Absolutely—see our dedicated invitation page for wedding, anniversary, and celebration-focused storytelling."
+        },
+        {
+          "question": "What do you need from us to start?",
+          "answer": "Brand references (if corporate), event details (if invitations), desired placements, key dates, and any must-include messaging—we guide the rest."
+        }
+      ]
+    },
+    "cta": {
+      "tag": "Ready for your cut?",
+      "title": "Tell us about your company film or invitation.",
+      "description": "Share placements, deadlines, and references—we will propose formats, variants, and a production timeline."
+    }
+  },
+  "corporate": {
+    "hero": {
+      "badge": "CORPORATE AI VIDEO",
+      "title": "Corporate AI Video Production",
+      "titleHighlight": "Trusted Storytelling",
+      "description": "Position your company with polished AI-assisted films—vision narratives, employer branding, leadership updates, explainers, and product stories engineered for websites, campaigns, and LinkedIn distribution.",
+      "stats": [
+        { "value": "Brand-safe", "label": "tone & visual QA" },
+        { "value": "Campaign-ready", "label": "hooks & variants" },
+        { "value": "Global teams", "label": "remote-friendly delivery" }
+      ],
+      "card": {
+        "label": "Built for B2B & growth teams",
+        "title": "Corporate storytelling at scale",
+        "badge": "GTM",
+        "items": [
+          "Executive narratives and keynote-style cuts",
+          "Product explainers that simplify complex offers",
+          "Culture & hiring films candidates actually watch",
+          "Ad-ready derivatives for testing angles fast"
+        ],
+        "footer": "Creative direction stays human-led; AI speeds structured edits and multi-format exports."
+      }
+    },
+    "contentSections": [
+      {
+        "title": "Why corporate AI video matters now",
+        "paragraphs": [
+          "Buyers binge video before they ever talk to sales. A concise vision film, crisp demo, or HR narrative reduces friction and lifts trust—especially when every placement (site hero, LinkedIn, paid social) needs the right aspect ratio and pacing.",
+          "AI-assisted workflows mean more thoughtful iterations: alternate hooks for ads, trimmed chapters for executives, and caption-first edits for silent autoplay feeds—all without blowing the production calendar."
+        ]
+      },
+      {
+        "title": "Formats we tailor for enterprise use",
+        "paragraphs": [
+          "Homepage hero narratives, annual kickoff films, category explainers, onboarding micro-learning, compliance-light walkthroughs (subject to your policies), and evergreen social proof loops.",
+          "Every deliverable is packaged with naming clarity so marketing ops can trace experiments and route files to agencies without confusion."
+        ]
+      },
+      {
+        "title": "SEO and discovery alignment",
+        "paragraphs": [
+          "Publishing corporate videos alongside optimized landing pages helps intent-driven searches connect to proof. We coordinate titles, meta descriptions, transcripts, and embedded players so technical SEO and content SEO stay aligned.",
+          "If you host on YouTube or Vimeo, we advise chapters and descriptions that reflect how prospects actually search—not generic filler."
+        ]
+      }
+    ],
+    "faq": {
+      "section": {
+        "tag": "FAQs",
+        "title": "Corporate AI video questions."
+      },
+      "items": [
+        {
+          "question": "Can we match our existing brand guidelines?",
+          "answer": "Yes—fonts, color cues, motion rules, and approval workflows can mirror your brand system; we document guardrails before editing begins."
+        },
+        {
+          "question": "Do you handle sensitive internal messaging?",
+          "answer": "We follow mutually agreed confidentiality practices and can align with your legal/comms review cadence—limits depend on scope and jurisdiction."
+        },
+        {
+          "question": "How do we reuse assets across campaigns?",
+          "answer": "We plan square, vertical, and landscape masters up front, plus shorter hooks so paid teams can rotate creatives without re-cutting from scratch."
+        }
+      ]
+    },
+    "cta": {
+      "tag": "Upgrade your corporate narrative",
+      "title": "Share your roadmap—get a production plan.",
+      "description": "Tell us audiences, funnel stages, and deadlines; we will recommend formats and export packages."
+    }
+  },
+  "invitations": {
+    "hero": {
+      "badge": "AI INVITATION VIDEO",
+      "title": "AI Invitation Videos",
+      "titleHighlight": "Weddings & Celebrations",
+      "description": "Cinematic invitation edits—save-the-dates, wedding films, anniversary surprises, family milestones, and launch teasers—styled for sharing on phones, large displays, and social.",
+      "stats": [
+        { "value": "Share-ready", "label": "vertical & wide cuts" },
+        { "value": "Personal tone", "label": "your story first" },
+        { "value": "Keepsakes", "label": "downloadable masters" }
+      ],
+      "card": {
+        "label": "Hosts & families",
+        "title": "Moments people replay",
+        "badge": "Celebrate",
+        "items": [
+          "Story-led invitations with music pacing that fits your ceremony",
+          "Names, dates, venues, and rituals woven into the narrative",
+          "Multiple trims—WhatsApp-friendly to banquet screens",
+          "Optional captions for accessibility and noisy venues"
+        ],
+        "footer": "We respect cultural nuances—tell us traditions to honor and pacing you prefer."
+      }
+    },
+    "contentSections": [
+      {
+        "title": "Invitation videos guests actually open",
+        "paragraphs": [
+          "Static cards get lost in chats; short invitation films create anticipation and make logistics memorable—especially when couples or hosts want emotional tone, not template slideshows.",
+          "AI-assisted editing helps iterate on pacing, music beds, and scene order quickly while keeping your voice central."
+        ]
+      },
+      {
+        "title": "Formats for every screen",
+        "paragraphs": [
+          "We export portrait-first clips for phones, cinematic wides for banquet intros, and neutral masters you can archive forever.",
+          "Need QR-ready snippets or teaser countdowns? We structure filenames so planners and vendors stay coordinated."
+        ]
+      },
+      {
+        "title": "SEO when invitations live online",
+        "paragraphs": [
+          "Many couples publish invitation films on private sites or password pages—when public teasers exist, we align titles and descriptions with how guests search (venue city, family names, date).",
+          "Our goal is tasteful discoverability without compromising privacy—scope depends on what you choose to publish."
+        ]
+      }
+    ],
+    "faq": {
+      "section": {
+        "tag": "FAQs",
+        "title": "Invitation video questions."
+      },
+      "items": [
+        {
+          "question": "Can we include religious or cultural elements?",
+          "answer": "Yes—share references, readings, or rituals you want reflected and we will honor pacing and symbolism thoughtfully."
+        },
+        {
+          "question": "What assets should we provide?",
+          "answer": "Photos, short phone clips, venue references, names/date copy, music preferences, and any must-have wording—we guide shot lists even if you only have casual footage."
+        },
+        {
+          "question": "How private is the process?",
+          "answer": "We treat milestone content discreetly; distribution choices stay yours—private links, downloads only, or selective public teasers."
+        }
+      ]
+    },
+    "cta": {
+      "tag": "Planning something meaningful?",
+      "title": "Tell us your date, tone, and sharing plan.",
+      "description": "We will propose scenes, music direction, and export packages suited to your celebration."
+    }
+  }
+}
