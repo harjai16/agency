@@ -46,6 +46,10 @@ const primaryPages = [
   { path: "/bussines-consultancy", label: "Business Consultancy" },
   { path: "/bussines-consultancy", label: "Business Consultancy Services" },
   { path: "/bussines-consultancy", label: "Business Consulting" },
+  { path: "/ai-video", label: "AI Video Production" },
+  { path: "/ai-video", label: "AI Video Services" },
+  { path: "/ai-video/corporate", label: "Corporate AI Video" },
+  { path: "/ai-video/invitations", label: "AI Invitation Video" },
   { path: "/careers", label: "Careers" },
   { path: "/careers", label: "Digital Agency Careers" },
   { path: "/careers", label: "Web Development Jobs" },
@@ -121,6 +125,18 @@ const seoKeywordLinks = [
   "Modern Fast Website Agency",
 ];
 
+/** Keyword-rich anchors pointing at AI video landing pages (not generic /services). */
+const aiVideoKeywordLinks = [
+  { path: "/ai-video", label: "AI Video Production" },
+  { path: "/ai-video", label: "AI Assisted Video Production" },
+  { path: "/ai-video/corporate", label: "Corporate AI Video" },
+  { path: "/ai-video/corporate", label: "Company Brand Video Production" },
+  { path: "/ai-video/invitations", label: "AI Invitation Video" },
+  { path: "/ai-video/invitations", label: "AI Wedding Invitation Video" },
+  { path: "/ai-video", label: "AI Explainer Video Services" },
+  { path: "/ai-video", label: "AI Social Video Ads" },
+];
+
 export default function SEOBacklinks() {
   const pathname = usePathname();
   const currentLocale = getCurrentLocale(pathname);
@@ -171,6 +187,12 @@ export default function SEOBacklinks() {
       {seoKeywordLinks.map((label, index) => (
         <Link key={`keyword-${index}`} href={createLocalizedHref("/services", currentLocale)}>
           {label}
+        </Link>
+      ))}
+
+      {aiVideoKeywordLinks.map((item, index) => (
+        <Link key={`ai-video-keyword-${index}`} href={createLocalizedHref(item.path, currentLocale)}>
+          {item.label}
         </Link>
       ))}
     </nav>
